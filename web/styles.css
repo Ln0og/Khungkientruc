@@ -1,0 +1,143 @@
+/* =========================================================
+   HỆ THỐNG QUẢN LÝ KHUNG KIẾN TRÚC SỐ
+   Theme: Vietnam Digital Government (BKHCN / QĐ 1425)
+   ========================================================= */
+
+:root {
+  --primary: #1e3a8a;
+  --primary-hover: #1d4ed8;
+  --primary-dark: #0f172a;
+  --accent: #b45309;
+  --gov-red: #dc2626;
+  --gov-yellow: #f59e0b;
+  --gov-blue: #0284c7;
+  --bg-main: #f8fafc;
+  --text-main: #1e293b;
+  --sidebar-w: 260px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-main);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Header badge pulse */
+.pulse-badge {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes pulse-ring {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.1); }
+}
+
+/* Architecture Layer Card Visuals */
+.arch-layer-card {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left-width: 6px;
+}
+.arch-layer-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Active Nav Item */
+.nav-item.active {
+  background: linear-gradient(90deg, #1e40af 0%, #1d4ed8 100%);
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 6px -1px rgba(30, 64, 175, 0.3);
+}
+.nav-item.active i {
+  color: #fef08a !important;
+}
+
+/* Side Drawer Animation */
+#detailDrawer {
+  transition: transform 0.3s ease-in-out;
+}
+#detailDrawer.open {
+  transform: translateX(0);
+}
+#detailDrawer.closed {
+  transform: translateX(100%);
+}
+
+/* Canvas Graph Container */
+#topologyCanvasContainer {
+  background: radial-gradient(circle at 50% 50%, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+/* Grid overlay for Topology */
+.bg-grid-pattern {
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgba(203, 213, 225, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(203, 213, 225, 0.35) 1px, transparent 1px);
+}
+
+/* Status Badges */
+.badge-orig {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+.badge-ref {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+.badge-active {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+.badge-pending {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+}
+
+/* Public Mode Masking Overlay */
+.public-mode-blur {
+  filter: blur(4px);
+  user-select: none;
+  pointer-events: none;
+}
+.public-tag {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px dashed #f87171;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Print Rules */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+}

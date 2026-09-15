@@ -1,0 +1,3954 @@
+
+=== [TRANG 1] ===
+BỘ KHOA HỌC VÀ CÔNG NGHỆ
+ 
+CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+Độc lập - Tự do - Hạnh phúc
+TÀI LIỆU HƯỚNG DẪN
+XÂY DỰNG, CẬP NHẬT VÀ DUY TRÌ
+KHUNG KIẾN TRÚC SỐ CỦA CƠ QUAN, TỔ CHỨC
+(Kèm theo Công văn số        /BKHCN-CĐSQG ngày      tháng      năm 2026
+ của Bộ Khoa học và Công nghệ)
+ 
+Áp dụng đối với Khung kiến trúc Chính phủ số cấp bộ, Khung kiến trúc Chính
+quyền số cấp tỉnh và Khung kiến trúc số của cơ quan, tổ chức khác trong hệ thống
+chính trị (sau đây gọi chung là Khung).
+YÊU CẦU THỐNG NHẤT VỀ SẢN PHẨM KHUNG
+Mỗi cơ quan, tổ chức xây dựng mới hoặc rà soát, cập nhật và ban hành 01
+Khung kiến trúc số thuộc phạm vi quản lý của mình theo Quyết định số
+1425/QĐ-TTg ngày 29 tháng 7 năm 2026 của Thủ tướng Chính phủ ban hành
+Khung kiến trúc tổng thể quốc gia số (phiên bản 1.0), cụ thể như sau:
+a) Bộ, cơ quan ngang bộ xây dựng Khung kiến trúc Chính phủ số cấp bộ,
+cụ thể hóa Hình 5 và Hình 6;
+b) Ủy ban nhân dân tỉnh, thành phố trực thuộc Trung ương xây dựng Khung
+kiến trúc Chính quyền số cấp tỉnh, cụ thể hóa Hình 7 và Hình 8; đồng thời cụ thể
+hóa Kiến trúc của Mô hình chuyển đổi số cấp xã tại Hình 9;
+c) Các cơ quan, tổ chức khác trong hệ thống chính trị xây dựng Khung kiến
+trúc số của cơ quan, tổ chức, cụ thể hóa Hình 3 và Hình 4.
+Các hình là các góc nhìn của cùng một Khung, không phải các Khung độc lập.
+Hồ sơ Khung gồm 03 mẫu cấu thành; các mẫu được xây dựng, cập nhật và
+quản lý đồng bộ.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Hà Nội, 2026
+DỰ THẢO
+13/9/2026
+
+=== [TRANG 2] ===
+2
+MỤC LỤC
+PHẦN A. HƯỚNG DẪN CHUNG ......................................................................5
+I. MỤC ĐÍCH, PHẠM VI VÀ ĐỐI TƯỢNG SỬ DỤNG ............................ 5
+1. Mục đích .................................................................................................... 5
+2. Phạm vi ...................................................................................................... 5
+3. Đối tượng sử dụng ..................................................................................... 5
+4. Xác định loại Khung và hình tham chiếu ...................................................6
+II. CẤU TRÚC HỒ SƠ KHUNG ...................................................................7
+1. Các mẫu cấu thành hồ sơ Khung ............................................................... 7
+2. Mối quan hệ giữa ba mẫu ...........................................................................7
+3. Phân định phạm vi quản trị........................................................................ 7
+4. Quan hệ giữa Khung kiến trúc số và các khung kiến trúc chuyên 
+ngành ..............................................................................................................7
+III. CÁCH SỬ DỤNG HƯỚNG DẪN VÀ CÁC MẪU ................................ 8
+1. Cách sử dụng ..............................................................................................8
+2. Cách hiểu một số khái niệm sử dụng trong Hướng dẫn .............................8
+3. Mức độ yêu cầu ........................................................................................10
+4. Năm câu hỏi cần trả lời ............................................................................12
+IV. QUY TRÌNH XÂY DỰNG, CẬP NHẬT VÀ BAN HÀNH 
+KHUNG ..........................................................................................................12
+V. TRÁCH NHIỆM CUNG CẤP VÀ XÁC NHẬN THÔNG TIN 
+PHỤC VỤ XÂY DỰNG, CẬP NHẬT VÀ DUY TRÌ KHUNG .................15
+VI. QUẢN TRỊ, DUY TRÌ VÀ CẬP NHẬT KHUNG ...............................17
+VII. YÊU CẦU KỸ THUẬT, BÀN GIAO VÀ KIỂM TRA CHẤT 
+LƯỢNG ..........................................................................................................19
+1. Sản phẩm bàn giao tối thiểu .....................................................................19
+2. Định dạng, xác lập bản chính thức và quản lý phiên bản ........................ 19
+3. Phân loại, truyền nhận, lưu trữ và khai thác hồ sơ Khung .......................20
+4. Danh mục kiểm tra trước khi ban hành ....................................................21
+PHẦN B. CÁC MẪU CẤU THÀNH HỒ SƠ KHUNG .................................... 23
+MẪU SỐ 01 TÀI LIỆU [TÊN KHUNG] CỦA [TÊN CƠ QUAN, TỔ 
+CHỨC] ........................................................................................................... 23
+I. MỤC ĐÍCH, PHẠM VI ÁP DỤNG .........................................................23
+1. Mục đích ............................................................................................... 23
+2. Phạm vi áp dụng ................................................................................... 23
+a) Phạm vi áp dụng trực tiếp ..................................................................23
+b) Phạm vi phối hợp và liên thông ........................................................ 23
+II. NGUYÊN TẮC .......................................................................................23
+III. BỐI CẢNH, MỤC TIÊU VÀ BÀI TOÁN ƯU TIÊN ........................... 26
+1. Bối cảnh và căn cứ................................................................................26
+2. Mục tiêu và kết quả cần đạt .................................................................. 26
+3. Bài toán ưu tiên .....................................................................................26
+IV. ĐỊNH HƯỚNG CHUYỂN ĐỔI SỐ......................................................27
+V. HIỆN TRẠNG KIẾN TRÚC SỐ............................................................27
+
+=== [TRANG 3] ===
+3
+1. Lớp Hạ tầng số và an ninh mạng dùng chung ...................................... 27
+1.1. Thành phần Hạ tầng số...................................................................27
+1.2. Thành phần An ninh mạng ............................................................. 27
+2. Lớp Dữ liệu và nền tảng lõi ..................................................................28
+2.1. Thành phần dữ liệu .........................................................................28
+2.2. Thành phần nền tảng lõi ................................................................. 28
+3. Lớp Ứng dụng và nghiệp vụ dùng chung ............................................. 29
+3.1. Thành phần ứng dụng và nghiệp vụ dùng chung giữa các cơ 
+quan trong hệ thống chính trị.................................................................29
+3.2. Các thành phần do cơ quan, tổ chức triển khai ...............................29
+4. Lớp Kênh tương tác và đo lường hiệu quả........................................... 29
+4.1. Thành phần kênh tương tác ............................................................ 29
+4.2. Thành phần đo lường hiệu quả.......................................................29
+5. Các thành phần xuyên suốt và yêu cầu xuyên suốt ...............................30
+6. Nội dung hiện trạng riêng theo loại Khung .......................................... 30
+7. Đánh giá, kết luận về ưu điểm và hạn chế............................................30
+VI. KIẾN TRÚC SỐ MỤC TIÊU ................................................................31
+1. Cách xác định kiến trúc số mục tiêu .....................................................31
+2. Sơ đồ bắt buộc theo loại Khung ............................................................32
+3. Các lớp và thành phần của kiến trúc số mục tiêu ................................. 32
+3.1. Lớp Hạ tầng số và an ninh mạng dùng chung ................................ 32
+3.1.1. Thành phần Hạ tầng số.............................................................32
+3.1.2. Thành phần An ninh mạng .......................................................33
+3.2. Lớp Dữ liệu và nền tảng lõi ............................................................33
+3.2.1. Thành phần dữ liệu ...................................................................33
+3.2.2. Thành phần nền tảng lõi ...........................................................34
+3.3. Lớp Ứng dụng và nghiệp vụ dùng chung .......................................34
+3.3.1. Thành phần ứng dụng và nghiệp vụ dùng chung giữa các cơ
+quan trong hệ thống chính trị............................................................. 34
+3.3.2. Các thành phần do cơ quan, tổ chức triển khai ........................ 35
+3.4. Lớp Kênh tương tác và đo lường hiệu quả.....................................36
+3.4.1. Thành phần kênh tương tác ......................................................36
+3.4.2. Thành phần đo lường hiệu quả.................................................36
+3.5. Các thành phần xuyên suốt và yêu cầu xuyên suốt ........................ 36
+4. Nội dung riêng theo loại Khung ........................................................... 37
+4.1. Đối với Khung kiến trúc Chính phủ số cấp bộ...............................37
+4.2. Đối với Khung kiến trúc Chính quyền số cấp tỉnh .........................37
+4.3. Đối với Khung kiến trúc số của cơ quan, tổ chức khác ..................39
+5. Dẫn chiếu và ánh xạ với các Khung, kiến trúc chuyên ngành ..............40
+VII. ĐỐI CHIẾU HIỆN TRẠNG KIẾN TRÚC SỐ VỚI KIẾN TRÚC 
+SỐ MỤC TIÊU VÀ XÁC ĐỊNH NỘI DUNG CẦN HOÀN THIỆN ......... 41
+1. Yêu cầu thực hiện ................................................................................. 41
+2. Xác định thành phần dùng chung, dùng riêng, tách hoặc hợp nhất ......42
+a) Thành phần dùng chung .................................................................... 42
+b) Thành phần dùng riêng ......................................................................42
+
+=== [TRANG 4] ===
+4
+c) Trường hợp nên tách hoặc hợp nhất hệ thống ...................................43
+3. Kết quả đối chiếu ..................................................................................45
+VIII. TỔ CHỨC TRIỂN KHAI ................................................................... 45
+1. Danh mục nhiệm vụ chuyển đổi kiến trúc ............................................45
+2. Lộ trình triển khai nhiệm vụ................................................................. 46
+3. Giải pháp quản lý, đánh giá và thẩm định sự tuân thủ..........................46
+4. Giải pháp duy trì, cập nhật Khung ........................................................47
+5. Giải pháp về nguồn nhân lực ................................................................ 47
+6. Giải pháp về cơ chế, chính sách ........................................................... 48
+7. Giải pháp về tài chính ...........................................................................48
+8. Giải pháp bảo đảm chuyển tiếp, kế thừa và quản lý rủi ro ................... 48
+9. Cơ chế phối hợp liên thông ...................................................................49
+IX. PHỤ LỤC .............................................................................................. 49
+MẪU SỐ 02 BỘ SƠ ĐỒ KIẾN TRÚC VÀ TỆP NGUỒN CHỈNH 
+SỬA ĐƯỢC ................................................................................................... 51
+1. Danh mục sơ đồ tối thiểu ......................................................................... 51
+2. Yêu cầu chung đối với sơ đồ....................................................................53
+3. Thông tin quản lý đối với mỗi sơ đồ........................................................53
+4. Các hình tham chiếu tại Quyết định số 1425/QĐ-TTg ............................54
+5. Bàn giao và quản lý tệp nguồn .................................................................64
+MẪU SỐ 03 BỘ DỮ LIỆU KIẾN TRÚC ....................................................65
+1. Nguyên tắc chung .................................................................................... 65
+2. Cách đánh mã tham chiếu cục bộ.............................................................66
+3. Đối tượng phải lập danh mục ...................................................................66
+4. Các nhóm thông tin cần quản lý .............................................................. 67
+5. Cấu trúc tệp dữ liệu tối thiểu ....................................................................68
+5.1. Bảng 1 - Danh mục đối tượng kiến trúc chủ yếu ...............................69
+5.2. Bảng 2 - Danh mục quan hệ, kết nối và chia sẻ dữ liệu hoặc dịch 
+vụ.............................................................................................................. 72
+5.3. Bảng 3 - Ánh xạ đối tượng ................................................................ 74
+5.4. Bảng 4 - Nội dung cần hoàn thiện, nhiệm vụ chuyển đổi kiến trúc
+và lộ trình ..................................................................................................75
+6. Ví dụ minh họa .........................................................................................78
+6.1. Ví dụ về Danh mục đối tượng kiến trúc ............................................ 79
+6.2. Ví dụ về kết nối chính ........................................................................79
+6.3. Ví dụ liên kết nội dung cần hoàn thiện với nhiệm vụ........................80
+6.4. Ví dụ về hệ thống chuyên ngành do bộ, ngành chủ trì, địa phương
+khai thác ....................................................................................................81
+6.5. Ví dụ liên kết mục tiêu, ba mẫu, nhiệm vụ và kiểm chứng ............... 81
+7. Bổ sung định danh khi Hệ thống quản lý kiến trúc số quốc gia (NAS)
+được triển khai ............................................................................................. 82
+8. Kiểm tra chất lượng bộ dữ liệu ................................................................ 83
+
+=== [TRANG 5] ===
+5
+PHẦN A. HƯỚNG DẪN CHUNG
+I. MỤC ĐÍCH, PHẠM VI VÀ ĐỐI TƯỢNG SỬ DỤNG
+1. Mục đích
+Hướng dẫn này thống nhất phương pháp, trình tự, cấu trúc hồ sơ, yêu cầu tối
+thiểu về nội dung, sơ đồ, dữ liệu kiến trúc và quản lý phiên bản để các bộ, cơ quan
+ngang bộ; các cơ quan của Đảng, Quốc hội, Văn phòng Chủ tịch nước; Mặt trận
+Tổ quốc Việt Nam và các tổ chức chính trị - xã hội; Tòa án nhân dân, Viện kiểm
+sát nhân dân; Ủy ban nhân dân các tỉnh, thành phố trực thuộc Trung ương và các
+cơ quan, tổ chức khác trong hệ thống chính trị xây dựng mới, rà soát, cập nhật,
+ban hành và duy trì Khung kiến trúc số phù hợp với Quyết định số 1425/QĐ-TTg
+ngày 29/7/2026 của Thủ tướng Chính phủ ban hành Khung kiến trúc tổng thể quốc
+gia số (phiên bản 1.0).
+Hướng dẫn đồng thời tạo cơ sở để quản lý, đối chiếu và cập nhật dữ liệu kiến
+trúc; phục vụ xem xét sự phù hợp, đánh giá tuân thủ, theo dõi nhiệm vụ và chuẩn
+hóa dữ liệu để cập nhật lên Hệ thống quản lý kiến trúc số quốc gia khi Hệ thống
+được triển khai.
+CÁCH HIỂU NGẮN GỌN
+Khung kiến trúc số không chỉ là một hoặc một số sơ đồ. Khung là hồ sơ
+quản trị liên kết xuyên suốt từ mục tiêu phát triển, hiện trạng kiến trúc số, kiến
+trúc số mục tiêu, nội dung cần hoàn thiện, nhiệm vụ và lộ trình, cơ chế quản trị,
+đánh giá tuân thủ và cập nhật.
+2. Phạm vi
+Hướng dẫn áp dụng đối với việc xây dựng, cập nhật, ban hành, tổ chức triển
+khai, quản trị và duy trì Khung kiến trúc Chính phủ số cấp bộ, Khung kiến trúc
+Chính quyền số cấp tỉnh và Khung kiến trúc số của cơ quan, tổ chức khác trong
+hệ thống chính trị; việc lập và bàn giao tài liệu, sơ đồ và bộ dữ liệu kiến trúc thuộc
+hồ sơ Khung.
+Hướng dẫn không thay thế Khung kiến trúc dữ liệu, Khung quản trị, quản
+lý dữ liệu, Từ điển dữ liệu dùng chung, Khung kiến trúc an ninh mạng, kiến
+trúc chuyên ngành và các tiêu chuẩn, quy chuẩn, hướng dẫn kỹ thuật do cơ
+quan có thẩm quyền ban hành. Các Khung, tài liệu chuyên ngành được dẫn
+chiếu, ánh xạ và áp dụng đồng bộ trong Khung kiến trúc số theo quy định tại
+mục 4 Mục II Phần này.
+3. Đối tượng sử dụng
+Đối tượng sử dụng gồm người đứng đầu cơ quan có thẩm quyền ban hành
+Khung; đơn vị chuyên trách về chuyển đổi số, công nghệ thông tin hoặc đơn vị
+được giao làm đầu mối kiến trúc; các đơn vị phụ trách nghiệp vụ, dữ liệu, an ninh
+mạng, cơ yếu, kế hoạch - tài chính, đầu tư, pháp chế; chủ quản dữ liệu; đơn vị vận
+hành; đơn vị trực thuộc, đơn vị ngành dọc, UBND cấp xã đối với Khung cấp tỉnh;
+đơn vị tư vấn và các cơ quan, tổ chức phối hợp có liên quan.
+
+=== [TRANG 6] ===
+6
+4. Xác định loại Khung và hình tham chiếu
+Nhóm cơ quan,
+tổ chức
+Tên Khung
+Hình tham
+chiếu bắt buộc
+Lưu ý về phạm vi
+Bộ, cơ quan ngang
+bộ
+Khung kiến trúc
+Chính phủ số
+cấp bộ
+Hình 5 và Hình
+6
+Bao quát phạm vi bộ,
+ngành; làm rõ hệ thống
+ngành dọc, cơ sở dữ
+liệu/nền tảng quốc gia
+do bộ chủ trì và quan hệ
+với địa phương.
+Ủy ban nhân dân
+tỉnh, thành phố
+trực thuộc Trung
+ương
+Khung kiến trúc
+Chính quyền số
+cấp tỉnh
+Hình 7, Hình 8
+và Hình 9
+Hình 7 thể hiện mô hình
+tổng thể số trên địa bàn;
+Hình 8 thể hiện các
+thành phần do chính
+quyền cấp tỉnh triển
+khai; Hình 9 là một
+thành phần của Khung,
+không phải Khung cấp
+xã độc lập.
+Cơ quan Đảng,
+Quốc hội, Mặt trận
+Tổ 
+quốc 
+Việt
+Nam, Văn phòng
+Chủ tịch nước,
+Tòa án nhân dân,
+Viện 
+kiểm 
+sát
+nhân dân và các cơ
+quan, tổ chức khác
+trong 
+hệ 
+thống
+chính trị
+Khung kiến trúc
+số của cơ quan,
+tổ chức
+Hình 3 và Hình
+4
+Phạm vi bao phủ do cơ
+quan có thẩm quyền xác
+định theo mô hình tổ
+chức; không mặc nhiên
+yêu cầu mỗi đơn vị trực
+thuộc ban hành một
+Khung riêng.
+Mô hình khái quát và mô hình các thành phần do cơ quan, tổ chức triển khai
+là các góc nhìn của cùng một Khung. Hình tham chiếu chỉ minh họa cấu trúc và
+các thành phần điển hình; cơ quan, tổ chức phải cụ thể hóa bằng tên đối tượng,
+chủ quản, trạng thái, ranh giới, quan hệ kết nối và lộ trình của mình, không chỉ
+sao chép nguyên hình.
+Đối với lĩnh vực hoặc hệ thống ngành dọc có nhiều đơn vị tham gia, nghiệp
+vụ đặc thù, yêu cầu quản trị độc lập hoặc quan hệ liên thông phức tạp, cơ quan
+chủ quản xác định nhu cầu bổ sung góc nhìn kiến trúc thành phần/chuyên ngành
+để làm rõ phạm vi, chủ thể quản lý, dịch vụ, dữ liệu và kết nối. Đây là nội dung
+cụ thể hóa, dẫn chiếu trong Khung tổng thể; không mặc nhiên làm phát sinh một
+Khung độc lập cho từng đơn vị hoặc thêm thẩm quyền ban hành.
+
+=== [TRANG 7] ===
+7
+II. CẤU TRÚC HỒ SƠ KHUNG
+1. Các mẫu cấu thành hồ sơ Khung
+Hồ sơ Khung gồm 03 mẫu cấu thành:
+Mẫu
+Tên và vai trò
+Sản phẩm/
+định dạng chủ yếu
+Mẫu số 01
+Tài liệu Khung kiến trúc số; là tài liệu
+chính trình ban hành, mô tả mục đích,
+phạm vi, hiện trạng kiến trúc số, kiến trúc
+số mục tiêu, phương án hoàn thiện, nhiệm
+vụ, lộ trình và tổ chức triển khai.
+DOCX và PDF.
+Mẫu số 02
+Bộ sơ đồ kiến trúc và tệp nguồn chỉnh sửa
+được; thể hiện mô hình, ranh giới quản trị,
+quan hệ kết nối, luồng dữ liệu và các góc
+nhìn cần thiết.
+PDF/ảnh để trình
+bày; 
+tệp 
+nguồn
+VSDX, DRAWIO,
+SVG, PPTX hoặc
+định dạng chỉnh sửa
+được tương đương.
+Mẫu số 03
+Bộ dữ liệu kiến trúc; là nguồn dữ liệu cấu
+trúc để quản lý đối tượng, quan hệ, ánh xạ,
+nội dung cần hoàn thiện, nhiệm vụ và lộ
+trình.
+XLSX theo cấu trúc
+chuẩn quy định tại
+Mẫu số 03.
+2. Mối quan hệ giữa ba mẫu
+Mẫu số 01 là tài liệu chính của Khung; Mẫu số 02 và Mẫu số 03 là các cấu
+phần kèm theo, không phải ba Khung hoặc ba sản phẩm kiến trúc độc lập. Ba
+mẫu được xây dựng, cập nhật và quản lý đồng bộ; sử dụng thống nhất tên gọi, mã
+tham chiếu, trạng thái, quan hệ và phiên bản.
+3. Phân định phạm vi quản trị
+Mỗi cơ quan, tổ chức trong hệ thống chính trị quản lý thành phần kiến trúc,
+tài sản số, dữ liệu, an ninh mạng và nguồn lực thuộc thẩm quyền của mình.
+Khung phải thể hiện đầy đủ nội dung thuộc trách nhiệm quản lý trực tiếp.
+Đối với thành phần do cơ quan khác chủ quản, chỉ thể hiện thông tin cần thiết tại
+ranh giới liên thông và phần trách nhiệm được giao, gồm chủ quản, phạm vi khai
+thác, điểm kết nối, dữ liệu hoặc dịch vụ chia sẻ, yêu cầu bảo vệ và cơ chế phối
+hợp đã được xác nhận. Không ghi cơ quan lập Khung là chủ quản hoặc đơn vị vận
+hành nếu không được giao trách nhiệm tương ứng.
+4. Quan hệ giữa Khung kiến trúc số và các khung kiến trúc chuyên ngành
+Khung kiến trúc số là Khung tổng thể, tích hợp, xác định cấu trúc, thành
+phần chính, ranh giới quản trị, quan hệ liên kết, kiến trúc số mục tiêu và lộ trình
+chuyển đổi của cơ quan, tổ chức. Khung kiến trúc dữ liệu, Khung quản trị, quản
+lý dữ liệu, Từ điển dữ liệu dùng chung, Khung kiến trúc an ninh mạng và kiến
+
+=== [TRANG 8] ===
+8
+trúc chuyên ngành khác là các Khung, tài liệu chuyên ngành, cụ thể hóa nội dung
+thuộc lĩnh vực tương ứng.
+Nội dung dữ liệu và an ninh mạng vẫn phải được thể hiện trong Khung kiến
+trúc số nhưng ở mức cần thiết để xác định thành phần chủ yếu, cơ quan chủ quản,
+phạm vi, trạng thái, quan hệ kết nối, yêu cầu cần đáp ứng, nội dung cần hoàn
+thiện và lộ trình chuyển đổi. Danh mục, mô hình, quy trình, tiêu chí, biện pháp
+kiểm soát và yêu cầu kỹ thuật chi tiết được quản lý trong Khung hoặc tài liệu
+chuyên ngành tương ứng và được dẫn chiếu, ánh xạ trong hồ sơ Khung kiến trúc
+số.
+Trong bộ dữ liệu của mỗi hồ sơ Khung, một đối tượng chỉ có một bản ghi
+gốc hoặc bản ghi tham chiếu và một mã tham chiếu cục bộ ổn định. Bản ghi gốc
+do cơ quan chủ quản duy trì; cơ quan khác lập bản ghi tham chiếu theo mục 1
+Mẫu số 03. Mã chính thức của đối tượng hoặc tài liệu nguồn được ghi riêng để
+đối soát; các góc nhìn khác nhau không làm phát sinh đối tượng mới. Tên, chủ
+quản và trạng thái của cùng đối tượng phải thống nhất. Nhiệm vụ đã có được sử
+dụng hoặc dẫn chiếu theo mã nguồn, không lập nhiệm vụ trùng lặp. Thông tin
+nguồn và ánh xạ được ghi theo mức yêu cầu tại Bảng 1, Bảng 3 và Bảng 4.
+Trường hợp Khung hoặc tài liệu chuyên ngành chưa được ban hành,
+Khung kiến trúc số vẫn phải thể hiện nội dung tối thiểu và lộ trình hoàn thiện.
+Khi tài liệu chuyên ngành được ban hành hoặc cập nhật, rà soát nội dung bị
+ảnh hưởng, cập nhật dẫn chiếu và ánh xạ; phân loại thay đổi, xử lý phiên bản
+theo Mục VI Phần A.
+III. CÁCH SỬ DỤNG HƯỚNG DẪN VÀ CÁC MẪU
+1. Cách sử dụng
+Phần A quy định phương pháp, trình tự và yêu cầu chung. Phần B quy định
+các mẫu cấu thành hồ sơ Khung. Các mẫu là nơi thể hiện kết quả của quá trình
+xây dựng Khung, không phải các bước hướng dẫn độc lập.
+Nội dung hướng dẫn, chú thích, trường thông tin và ví dụ trong các mẫu
+nhằm hỗ trợ xây dựng sản phẩm. Khi hoàn thiện hồ sơ trình ban hành, cơ quan, tổ
+chức biên tập thành nội dung chính thức, thay thế các phần đặt trong ngoặc vuông
+và loại bỏ chú thích hoặc ví dụ không thuộc nội dung của Khung.
+2. Cách hiểu một số khái niệm sử dụng trong Hướng dẫn
+Khái niệm
+Cách hiểu và cách thể hiện
+Khung kiến trúc số
+(Khung)
+Hồ sơ quản trị ở cấp tổng thể, gồm tài liệu, sơ đồ và dữ
+liệu kiến trúc; xác định cấu trúc, nguyên tắc, thành
+phần, quan hệ, lộ trình và cơ chế quản trị.
+Hiện trạng kiến trúc số
+Trạng thái thực tế của các thành phần số, quan hệ, chủ
+quản, mức sử dụng và hạn chế tại thời điểm rà soát.
+
+=== [TRANG 9] ===
+9
+Khái niệm
+Cách hiểu và cách thể hiện
+Kiến trúc số mục tiêu
+Trạng thái cần đạt trong giai đoạn áp dụng Khung;
+không đồng nhất với danh mục mua sắm hoặc danh
+mục dự án.
+Đối tượng kiến trúc
+Đối tượng được quản lý trong Khung, có thể là năng
+lực hoặc chức năng logic, tài sản số, dữ liệu hoặc dịch
+vụ. Quan hệ giữa các đối tượng được quản lý tại Bảng
+2.
+Tài sản số
+Hạ tầng số, hệ thống số, hệ thống thông tin, nền tảng
+số, cơ sở dữ liệu hoặc dịch vụ số cụ thể đang được xây
+dựng, vận hành hoặc dự kiến triển khai.
+Nội dung cần hoàn
+thiện
+Sai khác hoặc yêu cầu chuyển đổi cụ thể giữa hiện
+trạng và kiến trúc số mục tiêu; là đầu vào để hình thành
+nhiệm vụ.
+Nhiệm vụ chuyển đổi
+kiến trúc
+Đơn vị theo dõi thay đổi kiến trúc, có mục tiêu, kết quả
+cần đạt, đầu mối và lộ trình; không đồng nhất với dự
+án đầu tư. Nhiệm vụ được liên kết với chương trình, kế
+hoạch hoặc dự án triển khai khi có.
+Truy vết
+Khả năng lần theo mã và thông tin dẫn chiếu từ mục
+tiêu đến đối tượng, quan hệ, nội dung cần hoàn thiện,
+nhiệm vụ, kết quả và nguồn kiểm chứng; đồng thời xác
+định nguồn và phiên bản của thông tin.
+Hệ thống và nền tảng
+Phân loại theo chức năng, phạm vi phục vụ và mô hình
+cung cấp năng lực/dịch vụ. Nền tảng cung cấp năng lực
+dùng lại cho nhiều ứng dụng hoặc đơn vị; một hệ thống
+thông tin có thể bao gồm nền tảng. Không phân loại
+chỉ căn cứ tên gọi; tên chính thức do cơ quan có thẩm
+quyền công bố được giữ nguyên.
+Một số chữ viết tắt và thuật ngữ kỹ thuật dùng trong Hướng dẫn:
+Thuật ngữ
+Cách hiểu trong Hướng dẫn
+AI; AI First
+Trí tuệ nhân tạo; ưu tiên xem xét ứng dụng AI phù hợp,
+có kiểm soát rủi ro.
+API; API First
+Giao diện lập trình ứng dụng; ưu tiên thiết kế khả năng
+cung cấp, sử dụng dịch vụ qua giao diện chuẩn.
+NAS; KPI
+Hệ thống quản lý kiến trúc số quốc gia; chỉ số đo lường
+kết quả.
+
+=== [TRANG 10] ===
+10
+Thuật ngữ
+Cách hiểu trong Hướng dẫn
+NDXP; NDOP
+Nền tảng tích hợp, chia sẻ dữ liệu quốc gia; Nền tảng chia
+sẻ, điều phối dữ liệu. Phân biệt theo chức năng, phạm vi
+và hướng dẫn kết nối có thẩm quyền.
+LGSP; 
+LDOP;
+Agent Node
+Nền tảng tích hợp, chia sẻ dữ liệu cấp bộ, cấp tỉnh; nền
+tảng chia sẻ, điều phối dữ liệu của cơ quan; Máy chủ bảo
+mật điểm kết nối. Không coi ba khái niệm này là tương
+đương.
+SLA; TCO
+Cam kết/thỏa thuận mức dịch vụ; tổng chi phí sở hữu hoặc
+chi phí vòng đời trong phạm vi và thời gian so sánh đã
+xác định.
+Data-Centric; Cloud
+First
+Lấy dữ liệu làm trung tâm; ưu tiên xem xét sử dụng điện
+toán đám mây phù hợp yêu cầu nghiệp vụ, bảo vệ dữ liệu
+và hiệu quả.
+Security/Privacy/AI
+Governance 
+by
+Design
+Tích hợp yêu cầu bảo đảm an ninh, bảo vệ quyền riêng tư
+và quản trị AI ngay từ thiết kế.
+3. Mức độ yêu cầu
+Trong Hướng dẫn này, Bảng 1, Bảng 2, Bảng 3 và Bảng 4 là các bảng thuộc
+Mục 5 Mẫu số 03 - Bộ dữ liệu kiến trúc, gồm: Bảng 1 - Danh mục đối tượng kiến
+trúc chủ yếu; Bảng 2 - Danh mục quan hệ, kết nối và chia sẻ dữ liệu hoặc dịch vụ;
+Bảng 3 - Ánh xạ đối tượng; Bảng 4 - Nội dung cần hoàn thiện, nhiệm vụ chuyển
+đổi kiến trúc và lộ trình.
+Nội dung quy định tại mục này được lập ở mức kiến trúc tổng thể hoặc
+kiến trúc logic, nhằm xác định đối tượng, cơ quan chủ quản, phạm vi, trạng
+thái, quan hệ, định hướng chuyển đổi và yêu cầu quản trị. Hồ sơ Khung không
+thay thế hồ sơ khảo sát, thiết kế cơ sở, thiết kế chi tiết, đặc tả kỹ thuật, hồ sơ
+đầu tư hoặc tài liệu vận hành của từng hệ thống. Trường hợp cần sử dụng thông
+tin kỹ thuật chi tiết, hồ sơ Khung chỉ ghi mã hoặc liên kết tham chiếu đến tài
+liệu được quản lý riêng.
+
+=== [TRANG 11] ===
+11
+Mức
+Nội dung
+Yêu cầu tối thiểu khi
+ban hành lần đầu
+Các sơ đồ bắt buộc theo loại Khung; danh mục đối
+tượng chủ yếu tại Bảng 1, kèm chủ quản và phạm vi;
+hiện trạng, kiến trúc số mục tiêu và phương án hoàn
+thiện; các kết nối chính qua NDXP/NDOP,
+LGSP/LDOP, kết nối liên cơ quan và các quan hệ chính
+được thể hiện trên sơ đồ bắt buộc tại Bảng 2; nội dung
+cần hoàn thiện, nhiệm vụ và lộ trình tại Bảng 4 theo
+các trường bắt buộc. Bảng 3 thực hiện theo mức khuyến
+nghị, trừ yêu cầu ánh xạ khi kế thừa Khung có bố cục
+khác quy định dưới đây.
+Thực hiện khi có nhu
+cầu hoặc thay đổi lớn
+Các sơ đồ bổ sung ở mức kiến trúc nhằm làm rõ quan
+hệ giữa nghiệp vụ, dữ liệu, ứng dụng, hạ tầng, phạm vi
+quản lý và phương án chuyển đổi hệ thống; các sơ đồ
+hoặc hồ sơ chuyên đề khác khi cần thiết. Không yêu
+cầu thể hiện quy trình xử lý, cấu trúc dữ liệu, cấu hình
+triển khai hoặc thiết kế kỹ thuật chi tiết của từng hệ
+thống.
+Hoàn thiện trong quá
+trình duy trì
+Thông tin phục vụ quản trị, theo dõi và đánh giá kiến
+trúc, gồm: danh mục dịch vụ tích hợp/API ở mức tên,
+mã, cơ quan chủ quản, phạm vi và trạng thái; quan hệ
+phụ thuộc chính giữa các đối tượng kiến trúc; nguồn dữ
+liệu và liên kết minh chứng phục vụ Bộ chỉ số đo lường
+kết quả (KPI); dữ liệu phục vụ cập nhật, chia sẻ và đồng
+bộ với Hệ thống quản lý kiến trúc số quốc gia khi yêu
+cầu kỹ thuật được công bố.
+Đặc tả API, cấu trúc thông điệp, tham số kỹ thuật, cấu
+hình triển khai, mức dịch vụ chi tiết, chi phí vòng đời
+và quan hệ phụ thuộc ở cấp mô-đun được quản lý trong
+hồ sơ đầu tư, hồ sơ kỹ thuật hoặc tài liệu vận hành của
+hệ thống; không bắt buộc trình bày lại trong hồ sơ
+Khung.
+Việc thiếu thông tin từ cơ quan ngoài phạm vi quản lý không làm trì hoãn
+ban hành Khung; nội dung chưa đủ căn cứ được ghi nhận và tổ chức bổ sung theo
+quy định dưới đây.
+Mức “Bắt buộc” phải đáp ứng khi thuộc đối tượng và thời điểm áp dụng;
+“Khi có” phải ghi nhận nếu thông tin hoặc quan hệ đã phát sinh; “Khuyến nghị”
+được khuyến khích hoàn thiện; “Tùy chọn” phục vụ nhu cầu quản lý riêng. “Khi
+cần” áp dụng khi phát sinh nhu cầu quản lý nêu tại bảng tương ứng. Đối với Bảng
+3, trường bắt buộc chỉ áp dụng khi lập bản ghi ánh xạ, không làm thay đổi mức
+khuyến nghị của cả bảng khi ban hành lần đầu. Riêng Khung kế thừa có bố cục
+
+=== [TRANG 12] ===
+12
+khác phải có ánh xạ đủ để kiểm tra cấu trúc 04 lớp và 04 thành phần xuyên suốt;
+thông tin dẫn chiếu chi tiết được hoàn thiện theo lộ trình.
+Không để trống trường bắt buộc. Mã tham chiếu cục bộ, tên, loại đối tượng,
+phạm vi và trách nhiệm quản lý thuộc thẩm quyền phải được cơ quan lập Khung
+xác định. Không dùng “Chưa xác định” để thay thế nội dung mà cơ quan có đủ
+căn cứ, thẩm quyền xác nhận; cũng không tự tạo thông tin để điền đủ biểu mẫu.
+Đối với thông tin chưa có căn cứ, nhất là từ bên ngoài, ghi rõ trạng thái, lý do,
+nguồn cần bổ sung, đầu mối và thời hạn hoàn thiện. Việc ghi một kết nối dự kiến
+không thay thế thỏa thuận, sự cho phép hoặc điều kiện bảo vệ cần thiết để đưa kết
+nối vào vận hành.
+4. Năm câu hỏi cần trả lời
+HƯỚNG DẪN NHANH: 05 BƯỚC XÂY DỰNG NỘI DUNG KHUNG
+- 03 MẪU - 01 HỒ SƠ
+Khung phải trả lời được: (1) Cơ quan, tổ chức cần đạt kết quả gì? (2) Hiện
+đang có những thành phần số nào, ai quản lý và kết nối ra sao? (3) Kiến trúc số
+mục tiêu cần có những thành phần nào, những thành phần nào sẽ sử dụng chung?
+(4) Nội dung nào phải tiếp tục, chuẩn hóa, nâng cấp, hợp nhất, thay thế hoặc bổ
+sung? (5) Đơn vị nào thực hiện thành phần nào, khi nào hoàn thành, đo lường và
+cập nhật bằng dữ liệu nào?
+IV. QUY TRÌNH XÂY DỰNG, CẬP NHẬT VÀ BAN HÀNH KHUNG
+Quy trình xây dựng, cập nhật và ban hành Khung gồm 03 giai đoạn: (1)
+Chuẩn bị; (2) Xây dựng nội dung Khung; (3) Tham vấn, hoàn thiện, ban hành và
+bàn giao. Trong đó, giai đoạn xây dựng nội dung Khung được thực hiện theo 05
+bước tại bảng dưới đây.
+Giai đoạn 1 xác định phạm vi, đầu mối, kế hoạch, nguồn thông tin và cơ chế
+phối hợp; giai đoạn 3 tổ chức tham vấn, kiểm tra, hoàn thiện, trình ban hành và
+bàn giao hồ sơ. Hai giai đoạn này không thuộc 05 bước xây dựng nội dung Khung.
+Kế hoạch phải bao quát 03 giai đoạn, xác định công việc, trách nhiệm, sản
+phẩm và tiến độ phù hợp khối lượng, bảo đảm thời hạn ban hành; không ấn định
+cùng số ngày thực hiện 05 bước cho mọi cơ quan. Có thể tham vấn trong quá
+trình xây dựng; kết quả được tổng hợp, tiếp thu, giải trình khi hoàn thiện hồ sơ.
+Khi cập nhật Khung, cơ quan, tổ chức thực hiện lại các nội dung có thay đổi
+và kiểm tra tác động tới toàn bộ hồ sơ.
+Giai đoạn, 
+bước thực hiện
+Nội dung chủ yếu
+Kết quả
+Giai 
+đoạn 
+1.
+Chuẩn bị
+Xác định loại Khung, phạm vi, giai
+đoạn áp dụng, đầu mối, kế hoạch,
+nguồn thông tin và cơ chế phối hợp
+cung cấp, xác nhận dữ liệu.
+Kế hoạch; danh sách
+đầu mối; danh mục
+nguồn thông tin.
+
+=== [TRANG 13] ===
+13
+Giai đoạn, 
+bước thực hiện
+Nội dung chủ yếu
+Kết quả
+Giai đoạn 2. Xây dựng nội dung Khung theo 05 bước
+Bước 1. Xác định
+yêu cầu và mục
+tiêu
+Rà soát chức năng, nhiệm vụ, chiến
+lược, quy hoạch, kế hoạch, mục tiêu
+chuyển đổi số; lựa chọn mục tiêu, chỉ
+tiêu và bài toán ưu tiên có liên quan
+trực tiếp đến kiến trúc.
+Danh mục mục tiêu,
+chỉ tiêu, bài toán ưu
+tiên và phạm vi kiến
+trúc.
+Bước 2. Đánh giá
+hiện trạng
+Xác định các thành phần số đang có,
+chủ thể quản lý, phạm vi sử dụng,
+tình trạng vận hành, kết nối, chia sẻ
+dữ liệu và hạn chế cần hoàn thiện.
+Danh mục hiện trạng;
+sơ đồ hiện trạng.
+Bước 3. Xác định
+kiến trúc số mục
+tiêu
+Xác định trạng thái cần đạt, các
+thành phần cần có, quan hệ kết nối,
+thành phần dùng chung hoặc dùng
+riêng, chủ quản, trách nhiệm dữ liệu
+và yêu cầu xuyên suốt; xây dựng các
+sơ đồ bắt buộc theo loại Khung.
+Kiến trúc số mục tiêu;
+bộ sơ đồ; danh mục
+đối tượng mục tiêu.
+Bước 
+4. 
+Đối
+chiếu và xác định
+nội 
+dung 
+cần
+hoàn 
+thiện,
+phương án xử lý
+Đối chiếu hiện trạng với kiến trúc số
+mục tiêu; đối với từng đối tượng kiến
+trúc, xác định nội dung cần hoàn
+thiện và lựa chọn phương án tiếp tục
+sử dụng; chuẩn hóa, kết nối hoặc tích
+hợp; nâng cấp, mở rộng; hợp nhất,
+tổ chức lại; thay thế, kết thúc sử dụng
+hoặc bổ sung mới.
+Phương án xử lý tại bước này được
+xác định ở mức định hướng kiến
+trúc, không bao gồm giải pháp kỹ
+thuật chi tiết, hình thức đầu tư, dự
+toán kinh phí, phương án lựa chọn
+nhà thầu, danh mục hoạt động hoặc
+tiến độ quản lý dự án.
+Danh mục nội dung
+cần hoàn thiện và
+phương án xử lý ở
+mức kiến trúc.
+
+=== [TRANG 14] ===
+14
+Giai đoạn, 
+bước thực hiện
+Nội dung chủ yếu
+Kết quả
+Bước 5. Xác định
+nhiệm vụ chuyển
+đổi kiến trúc và
+lộ trình
+Tổ chức nội dung cần hoàn thiện
+thành nhiệm vụ chuyển đổi kiến trúc;
+xác định mã, tên/mục tiêu, đối tượng
+và nội dung liên quan, kết quả kiến
+trúc cần đạt, đơn vị chủ trì, mức ưu
+tiên, thời hạn hoặc giai đoạn dự kiến,
+nguồn lực dự kiến và tiêu chí kiểm
+chứng. Cơ quan phối hợp, quan hệ
+phụ thuộc ghi khi có; xác định nguồn
+kiểm chứng dự kiến và hoàn thiện dữ
+liệu, trạng thái thực hiện trong quá
+trình duy trì theo Bảng 4.
+Mỗi nội dung cần hoàn thiện liên kết
+với ít nhất một nhiệm vụ. Nhiệm vụ
+đã có được sử dụng hoặc dẫn chiếu
+theo mã nguồn; không lập nhiệm vụ
+trùng lặp.
+Nhiệm vụ là đơn vị theo dõi chuyển
+đổi kiến trúc, không đồng nhất với
+dự án đầu tư; quan hệ với chương
+trình, kế hoạch, đề án, nhiệm vụ, dự
+án hoặc hoạt động thường xuyên
+được quản lý tại Bảng 4 và cập nhật
+lên NAS khi triển khai.
+Khi có nội dung triển khai được giao
+hoặc phê duyệt, cập nhật mã, tên và
+văn bản nguồn để truy vết. Khung
+không trình bày lại hoạt động chi
+tiết, giải pháp kỹ thuật, dự toán, lựa
+chọn nhà thầu, hợp đồng, tiêu chí
+nghiệm thu hoặc tiến độ quản lý dự
+án.
+Danh mục nhiệm vụ
+chuyển đổi kiến trúc
+và lộ trình; quan hệ
+liên kết với chương
+trình, kế hoạch, đề án,
+nhiệm vụ hoặc dự án
+triển khai.
+Giai 
+đoạn 
+3.
+Tham vấn, hoàn
+thiện, ban hành
+và bàn giao
+Phối hợp xác nhận ranh giới và điểm
+kết nối với hệ thống của các cơ quan
+khác trong hệ thống chính trị; tham
+vấn; kiểm tra tính nhất quán giữa tài
+liệu, sơ đồ và dữ liệu; hoàn thiện hồ
+sơ; trình ban hành; bàn giao và tổ
+chức duy trì.
+Hồ sơ hoàn chỉnh;
+bảng xử lý ý kiến;
+Khung ban hành; lịch
+sử phiên bản.
+
+=== [TRANG 15] ===
+15
+Không chuyển thẳng từ danh mục hệ thống hiện có sang danh mục dự án.
+Mỗi nhiệm vụ phải truy vết được tới mục tiêu, đối tượng kiến trúc, nội dung cần
+hoàn thiện và kết quả kiểm chứng.
+Liên hệ kết quả 05 bước với hồ sơ: Bước 1 được thể hiện tại Mục I-IV Mẫu
+số 01; Bước 2 tại Mục V Mẫu số 01 và Bảng 1, Bảng 2; Bước 3 tại Mục VI Mẫu
+số 01, Mẫu số 02 và phần mục tiêu của Bảng 1, Bảng 2; Bước 4 tại Mục VII và
+phần nội dung cần hoàn thiện của Bảng 4; Bước 5 tại Mục VIII và phần nhiệm
+vụ, lộ trình của Bảng 4. Bảng 3 dùng để ánh xạ các kết quả, theo mức yêu cầu tại
+Mục III.3 Phần A.
+V. TRÁCH NHIỆM CUNG CẤP VÀ XÁC NHẬN THÔNG TIN PHỤC
+VỤ XÂY DỰNG, CẬP NHẬT VÀ DUY TRÌ KHUNG
+Ma trận dưới đây phân định trách nhiệm theo chức năng, không phải là yêu
+cầu về cơ cấu tổ chức hoặc yêu cầu mỗi vai trò phải do một đơn vị riêng biệt thực
+hiện. Căn cứ chức năng, nhiệm vụ, cơ cấu tổ chức và nguồn lực thực tế, một đơn
+vị có thể được giao thực hiện nhiều vai trò; một cá nhân có thể được phân công
+làm đầu mối cho nhiều vai trò. Việc phân công phải xác định rõ trách nhiệm, phạm
+vi thông tin và thẩm quyền cung cấp, xác nhận dữ liệu; không đặt ra yêu cầu thành
+lập thêm đơn vị chuyên trách chỉ để thực hiện Hướng dẫn này.
+Thông tin được cung cấp, xác nhận theo Mục này là thông tin mô tả ở cấp
+kiến trúc, tương ứng với nội dung và mức độ yêu cầu của Mẫu số 01, Mẫu số 02
+và Mẫu số 03, phục vụ xác định đối tượng kiến trúc, chủ thể quản lý, hiện trạng,
+phạm vi sử dụng, quan hệ kết nối, chia sẻ dữ liệu hoặc dịch vụ và nội dung cần
+hoàn thiện. Không yêu cầu lập mới hoặc cung cấp thiết kế kỹ thuật chi tiết, cấu
+hình hệ thống, cấu trúc cơ sở dữ liệu, lược đồ dữ liệu, địa chỉ kết nối, đặc tả API,
+nhật ký vận hành, hồ sơ sự cố hoặc thông tin kỹ thuật nhạy cảm, trừ trường hợp
+nội dung đó đã có, cần thiết làm nguồn minh chứng và được phép cung cấp theo
+quy định.
+Chủ thể
+Trách nhiệm chính
+Người đứng đầu cơ quan
+có thẩm quyền
+Chỉ đạo, quyết định phạm vi; tổ chức xây dựng, phê
+duyệt, ban hành và sử dụng Khung trong quản lý đầu
+tư, vận hành và đánh giá tuân thủ.
+Đơn vị đầu mối kiến trúc
+(Đơn vị chuyên trách
+CĐS, CNTT)
+Chủ trì xây dựng; quản lý danh mục, bộ dữ liệu và
+phiên bản; kiểm tra tính nhất quán; tổng hợp ý kiến;
+duy trì hồ sơ kiến trúc.
+Đơn vị nghiệp vụ và đơn
+vị trực thuộc
+Cung cấp, xác nhận thông tin ở mức kiến trúc về chức
+năng, quy trình nghiệp vụ chính, hệ thống, nhóm dữ
+liệu chủ yếu, nhu cầu dùng chung, hiện trạng, hạn chế
+và nội dung cần hoàn thiện thuộc phạm vi chuyên
+môn.
+
+=== [TRANG 16] ===
+16
+Chủ thể
+Trách nhiệm chính
+Chủ quản dữ liệu
+Cung cấp, xác nhận thông tin cần thiết cho hồ sơ
+Khung về các thành phần dữ liệu chủ yếu, cơ quan
+chủ quản, nguồn dữ liệu, phạm vi khai thác, trạng
+thái, quan hệ chia sẻ và yêu cầu bảo vệ; cung cấp
+Khung kiến trúc dữ liệu, Khung quản trị, quản lý dữ
+liệu, Từ điển dữ liệu dùng chung, danh mục dữ liệu
+và tài liệu chuyên ngành có liên quan làm nguồn dẫn
+chiếu. Việc xác định mô hình, cấu trúc, tiêu chí chất
+lượng, quy trình quản trị và yêu cầu dữ liệu chi tiết
+thực hiện theo Khung hoặc tài liệu chuyên ngành
+tương ứng.
+Đơn vị vận hành
+Cung cấp, xác nhận trạng thái vòng đời, tình trạng
+vận hành, các kết nối chính, phạm vi hoặc mức độ sử
+dụng và các vấn đề vận hành có ảnh hưởng đến
+phương án kiến trúc; không yêu cầu cung cấp cấu
+hình, nhật ký sự cố hoặc số liệu vận hành chi tiết.
+Đơn vị an ninh mạng/cơ
+yếu
+Cung cấp, xác nhận thông tin cần thiết cho hồ sơ
+Khung về các thành phần và năng lực an ninh mạng
+chủ yếu, phạm vi bảo vệ, đơn vị vận hành, trạng thái
+triển khai, cấp độ, tình trạng thực hiện phương án bảo
+vệ và kết quả đánh giá, kiểm tra từ hồ sơ có thẩm
+quyền; cung cấp Khung kiến trúc an ninh mạng và tài
+liệu chuyên ngành có liên quan làm nguồn dẫn chiếu.
+Việc xác định mô hình vùng, lớp bảo vệ, biện pháp
+kiểm soát và yêu cầu kỹ thuật chi tiết thực hiện theo
+Khung hoặc hồ sơ chuyên ngành tương ứng.
+Đơn vị kế hoạch - tài
+chính, đầu tư, pháp chế
+Xác nhận nguồn lực, kinh phí, căn cứ pháp lý, thẩm
+quyền và sự phù hợp của nhiệm vụ, lộ trình.
+Đầu mối cơ quan liên
+quan/đơn 
+vị 
+ngành
+dọc/UBND cấp xã
+Xác nhận ranh giới, thành phần dùng chung, điểm kết
+nối, nhu cầu sử dụng, dữ liệu tạo lập và nội dung phối
+hợp theo thẩm quyền.
+Thông tin chủ yếu phải có nguồn hoặc minh chứng; ưu tiên văn bản đã ban
+hành, công bố và hồ sơ dự án, thiết kế, vận hành còn phù hợp. Trường hợp thông
+tin chưa có, chưa đầy đủ hoặc không còn phản ánh đúng hiện trạng, đơn vị có
+thẩm quyền cung cấp, xác nhận bổ sung và làm rõ sai khác với nguồn cũ. Một văn
+bản xác nhận có thể áp dụng cho toàn bộ bản ghi thuộc phạm vi của đơn vị; xác
+nhận bổ sung không thay thế việc sửa đổi văn bản thuộc thẩm quyền khác.
+Đơn vị đầu mối kiến trúc không tự xác nhận thông tin thuộc chức năng
+chuyên môn mà mình không được giao; không tự suy luận thông tin về chủ quản,
+
+=== [TRANG 17] ===
+17
+an ninh mạng, dữ liệu hoặc kiến trúc nội bộ của hệ thống khác. Trường hợp đơn
+vị đầu mối kiến trúc đồng thời được giao thực hiện chức năng chuyên môn có liên
+quan, việc cung cấp, xác nhận thông tin được thực hiện theo chức năng, nhiệm vụ
+và thẩm quyền được giao, trên cơ sở nguồn hoặc minh chứng quy định tại Hướng
+dẫn này.
+Đơn vị đầu mối kiến trúc có thể lập ma trận liên kết năng lực/nghiệp vụ -
+chủ thể chịu trách nhiệm - nhóm dữ liệu - hệ thống hỗ trợ trên cơ sở danh mục
+hiện có. Các quan hệ được quản lý tại Bảng 1, Bảng 2, nguồn/ánh xạ tại Bảng 3
+khi lập; không bắt buộc tạo thêm một biểu mẫu độc lập nếu đã truy vết được.
+Thông tin công bố, thông tin chia sẻ hạn chế và thông tin nghiệp vụ chi tiết phải
+được phân định theo Mục VII.3 Phần A.
+VI. QUẢN TRỊ, DUY TRÌ VÀ CẬP NHẬT KHUNG
+- Sau khi ban hành, Khung được sử dụng làm căn cứ quản lý đầu tư, thuê
+dịch vụ, xây dựng, nâng cấp, vận hành, kết nối, chia sẻ và sử dụng chung các
+thành phần số thuộc trách nhiệm của cơ quan, tổ chức; theo dõi nhiệm vụ, lộ trình
+và đánh giá sự phù hợp, tuân thủ kiến trúc trong toàn bộ vòng đời.
+- Khung được rà soát ít nhất hằng năm và khi có thay đổi có khả năng ảnh
+hưởng đến kiến trúc. Rà soát định kỳ không đồng nghĩa với việc phải ban hành lại
+Khung khi không có nội dung thay đổi. Kết quả rà soát, kể cả trường hợp không
+phải điều chỉnh, được ghi nhận và lưu cùng hồ sơ quản trị Khung.
+- Mỗi lần cập nhật ghi số phiên bản, ngày cập nhật, nội dung thay đổi, căn
+cứ và đơn vị thực hiện; ngày hiệu lực được ghi đối với phiên bản được ban hành.
+Đối chiếu đồng bộ ba mẫu, lưu lịch sử và không ghi đè hồ sơ chính thức; cách xử
+lý từng loại thay đổi thực hiện theo bảng dưới đây.
+- Mẫu số 03 là nguồn dữ liệu cấu trúc phục vụ quản lý, đối chiếu và cập nhật.
+Tên, mã tham chiếu, trạng thái và quan hệ hiển thị trong tài liệu, sơ đồ phải thống
+nhất với Mẫu số 03.
+- Việc Hệ thống quản lý kiến trúc số quốc gia (NAS) chưa vận hành hoặc
+chưa công bố mô hình dữ liệu, cơ chế định danh và yêu cầu kỹ thuật không làm
+trì hoãn việc xây dựng, cập nhật và ban hành Khung. Trong thời gian này, cơ quan,
+tổ chức sử dụng mã tham chiếu cục bộ theo Mẫu số 03. Khi Bộ Khoa học và Công
+nghệ công bố mô hình dữ liệu, cơ chế định danh và yêu cầu kỹ thuật của Hệ thống,
+cơ quan, tổ chức thực hiện chuẩn hóa, ánh xạ, cập nhật và bổ sung định danh theo
+hướng dẫn; mã cục bộ được giữ làm mã nguồn đối soát.
+- Các cơ quan, tổ chức hoàn thành việc xây dựng mới hoặc rà soát, cập nhật
+và ban hành Khung chậm nhất ngày 29 tháng 01 năm 2027, theo thời hạn 06 tháng
+quy định tại khoản 4 Điều 3 Quyết định số 1425/QĐ-TTg. Trong thời gian Khung
+mới chưa được ban hành, Khung hiện hành tiếp tục được áp dụng đến khi được
+thay thế, với điều kiện bảo đảm phù hợp và không trái với Khung kiến trúc tổng
+thể quốc gia số (phiên bản 1.0). Không dùng lộ trình trong Khung để gia hạn nghĩa
+vụ hoặc thời hạn đã được quy định tại văn bản có hiệu lực.
+
+=== [TRANG 18] ===
+18
+- Đối với thành phần số đã được đầu tư, xây dựng và vận hành, ưu tiên kế
+thừa tối đa nếu phù hợp; việc nâng cấp, tích hợp, hợp nhất hoặc thay thế chỉ thực
+hiện khi cần thiết và phải bảo đảm kết nối, chia sẻ dữ liệu, an ninh mạng và duy
+trì hoạt động liên tục.
+- Khi Khung hoặc tài liệu chuyên ngành được ban hành, sửa đổi, đơn vị đầu
+mối kiến trúc phối hợp rà soát phạm vi ảnh hưởng, cập nhật thông tin nguồn và
+ánh xạ; xử lý thay đổi theo bảng dưới đây.
+Phân loại thay đổi và xử lý phiên bản:
+Nhóm thay đổi
+Cách xử lý
+Thông tin quản trị,
+cập nhật kỹ thuật
+không làm thay đổi
+nội dung kiến trúc đã
+được phê duyệt
+Ví dụ: đầu mối liên hệ, nguồn minh chứng, tình trạng thực
+hiện; bản vá hoặc thay đổi thông số kỹ thuật không ảnh
+hưởng đến ranh giới, chức năng, dữ liệu chia sẻ, yêu cầu
+bảo vệ và kiến trúc số mục tiêu. Đầu mối được giao cập
+nhật phiên bản dữ liệu làm việc, đối chiếu ba mẫu và lưu
+lịch sử theo quy chế; không ghi đè bộ hồ sơ chính thức đã
+ban hành.
+Thay đổi nội dung
+kiến trúc đã được
+phê duyệt hoặc ảnh
+hưởng lớn
+Bao gồm thay đổi phạm vi, chức năng, thẩm quyền quản
+trị; thay đổi thành phần dùng chung, kiến trúc số mục tiêu,
+quan hệ liên thông, yêu cầu bảo vệ hoặc lộ trình chuyển
+đổi chủ yếu. Đơn vị đầu mối đánh giá tác động, phối hợp
+xác nhận và trình cấp có thẩm quyền xem xét cập nhật,
+ban hành phiên bản Khung theo quy định.
+Chưa đủ căn cứ xác
+định mức độ ảnh
+hưởng
+Ghi nhận nội dung thay đổi, đối tượng bị tác động, nguồn
+cần kiểm tra và đơn vị chịu trách nhiệm; báo cáo người
+có thẩm quyền xác định cách xử lý. Không mặc nhiên coi
+mọi thay đổi API, công nghệ hoặc chủ quản là thay đổi
+nhỏ.
+Lịch sử thay đổi phải có phiên bản, ngày cập nhật, nội dung, căn cứ, đối
+tượng bị ảnh hưởng và đơn vị thực hiện; được quản lý tại LS_PHIENBAN hoặc
+sổ, tệp hay hệ thống tương đương. Có thể sử dụng số phiên bản chính/phụ (ví dụ
+2.0/2.1) nhưng cách đánh số không thay thế việc xác định thẩm quyền xử lý thay
+đổi. Phiên bản bộ hồ sơ và phiên bản cấu trúc dữ liệu, khi được công bố, được ghi
+riêng; các tệp của cùng một bộ hồ sơ phải thống nhất phiên bản.
+Đối với Khung đã ban hành, cơ quan, tổ chức rà soát nội dung, không chỉ
+đối chiếu tên gọi hoặc số lớp. Có thể kế thừa bố cục, tài liệu, sơ đồ, kết quả khảo
+sát và dữ liệu còn giá trị; lập ánh xạ hiện trạng và mục tiêu sang cấu trúc tại Quyết
+định số 1425/QĐ-TTg; bổ sung nội dung còn thiếu, cập nhật nội dung bị ảnh
+hưởng và kiểm tra sự nhất quán toàn bộ hồ sơ. Không yêu cầu lập lại phần đã đáp
+ứng; việc xác nhận tiếp tục áp dụng hoặc ban hành phiên bản cập nhật do cấp có
+thẩm quyền quyết định.
+
+=== [TRANG 19] ===
+19
+VII. YÊU CẦU KỸ THUẬT, BÀN GIAO VÀ KIỂM TRA CHẤT LƯỢNG
+1. Sản phẩm bàn giao tối thiểu
+- Mẫu số 01 ở định dạng DOCX và PDF.
+- Mẫu số 02 gồm bộ sơ đồ và tệp nguồn chỉnh sửa được của các sơ đồ bắt
+buộc theo loại Khung, cùng các sơ đồ bổ sung khi cần.
+- Mẫu số 03 được lập theo tệp XLSX chuẩn do Bộ Khoa học và Công nghệ
+công bố kèm theo Hướng dẫn, chứa danh mục đối tượng; quan hệ, kết nối và chia
+sẻ dữ liệu hoặc dịch vụ; ánh xạ đối tượng; nội dung cần hoàn thiện, nhiệm vụ, lộ
+trình, kết quả cần đạt và mức sẵn sàng dữ liệu.
+- Các phụ lục và hồ sơ được dẫn chiếu. Thông tin có yêu cầu bảo vệ được
+tách thành hồ sơ có phạm vi lưu hành phù hợp.
+2. Định dạng, xác lập bản chính thức và quản lý phiên bản
+Không bắt buộc sử dụng một phần mềm lập sơ đồ cụ thể. Sơ đồ phải có tệp
+nguồn chỉnh sửa được; tài liệu, sơ đồ và bộ dữ liệu phải dùng cùng phiên bản.
+Không đưa thông tin thuộc bí mật nhà nước, cấu hình nhạy cảm, mật khẩu, khóa
+mã hoặc dữ liệu hạn chế tiếp cận vào bản công khai.
+Hồ sơ Khung gồm Mẫu số 01, Mẫu số 02 và Mẫu số 03 là một bộ hồ sơ
+thống nhất. Tại thời điểm ban hành, ba mẫu phải được chốt cùng một phiên bản,
+ngày hiệu lực và ngày chốt dữ liệu; được xác định đầy đủ trong danh mục thành
+phần hồ sơ kèm theo quyết định ban hành Khung.
+Bản chính thức được ban hành bao gồm:
+- Mẫu số 01 ở định dạng PDF;
+- Mẫu số 02 gồm bộ sơ đồ ở định dạng PDF hoặc định dạng bảo đảm khả
+năng đọc, hiển thị ổn định;
+- Mẫu số 03 ở định dạng XLSX theo cấu trúc dữ liệu chuẩn.
+Các tệp thuộc bộ hồ sơ chính thức phải được ký số, xác thực hoặc gắn với
+văn bản điện tử đã được ký số theo quy định; được lưu trữ, quản lý thống nhất và
+không được sửa đổi, ghi đè sau khi ban hành.
+Tệp DOCX của Mẫu số 01, tệp nguồn chỉnh sửa được của Mẫu số 02 và tệp
+XLSX của Mẫu số 03 được bàn giao để phục vụ khai thác, cập nhật và duy trì
+Khung. Tại thời điểm ban hành, nội dung của các tệp này phải thống nhất với bộ
+hồ sơ chính thức, sử dụng cùng mã hồ sơ, phiên bản và ngày chốt dữ liệu.
+Mọi thay đổi sau thời điểm ban hành phải được thực hiện trên một phiên bản
+mới; ghi nhận nội dung thay đổi, căn cứ thay đổi, thời điểm và đơn vị thực hiện;
+đồng thời lưu giữ phiên bản đã ban hành để kiểm tra, đối soát. Trường hợp thay
+đổi thuộc nội dung phải ban hành lại Khung thì thực hiện theo thẩm quyền và
+trình tự quy định.
+
+=== [TRANG 20] ===
+20
+3. Phân loại, truyền nhận, lưu trữ và khai thác hồ sơ Khung
+a) Trước khi ban hành, chia sẻ hoặc gửi hồ sơ Khung, cơ quan, tổ chức chủ
+quản có trách nhiệm rà soát, phân loại thông tin; xác định mức độ nhạy cảm, phạm
+vi lưu hành và quyền truy cập đối với từng tài liệu, sơ đồ và tệp dữ liệu thuộc hồ
+sơ Khung.
+Hồ sơ Khung có thể được tách thành:
+- Bản công khai, gồm các thông tin được phép phổ biến rộng rãi;
+- Bản sử dụng trong phạm vi cơ quan hoặc chia sẻ cho các cơ quan, tổ chức
+có liên quan;
+- Phụ lục chứa thông tin thuộc bí mật nhà nước, nếu có.
+Không mặc nhiên xác định toàn bộ hồ sơ Khung là bí mật nhà nước. Việc
+xác định thông tin thuộc bí mật nhà nước, độ mật, phạm vi phổ biến, truyền nhận,
+sao chụp, lưu giữ và tiêu hủy được thực hiện theo pháp luật về bảo vệ bí mật nhà
+nước.
+b) Bản công khai không được chứa thông tin thuộc bí mật nhà nước; dữ liệu
+cá nhân không cần thiết; dữ liệu hạn chế tiếp cận; tài khoản, mật khẩu, khóa mã;
+địa chỉ quản trị; cấu hình kỹ thuật chi tiết; điểm yếu, lỗ hổng hoặc thông tin khác
+có thể làm gia tăng nguy cơ mất an toàn, an ninh mạng.
+c) Hồ sơ không thuộc phạm vi công khai phải được truyền nhận và lưu trữ
+qua hệ thống quản lý văn bản, Hệ thống quản lý kiến trúc số quốc gia hoặc kênh
+điện tử chính thức có cơ chế xác thực, phân quyền, bảo vệ đường truyền và lưu
+vết phù hợp với tính chất của thông tin. Không gửi hồ sơ hạn chế tiếp cận hoặc hồ
+sơ chứa thông tin nhạy cảm qua kênh chia sẻ công khai.
+d) Chỉ cập nhật lên Hệ thống quản lý kiến trúc số quốc gia các nội dung phù
+hợp với phạm vi khai thác và điều kiện bảo vệ của Hệ thống. Tài liệu chứa bí mật
+nhà nước chỉ được cập nhật, truyền nhận hoặc lưu trữ trên Hệ thống khi Hệ thống,
+đường truyền, người sử dụng và quy trình vận hành đáp ứng đầy đủ quy định của
+pháp luật về bảo vệ bí mật nhà nước và được cấp có thẩm quyền cho phép.
+đ) Hệ thống quản lý kiến trúc số quốc gia phải có cơ chế xác thực người sử
+dụng; phân quyền theo cơ quan, vai trò, nhiệm vụ và mức độ nhạy cảm của dữ
+liệu; kiểm soát việc xem, tải xuống, thêm, sửa, xóa, phê duyệt và chia sẻ hồ sơ;
+ghi và bảo vệ nhật ký truy cập; hỗ trợ truy vết, giám sát, cảnh báo, sao lưu và
+phục hồi dữ liệu.
+Yêu cầu cụ thể về cấp độ an toàn hệ thống thông tin, kiểm soát truy cập, thời
+hạn lưu giữ nhật ký, mã hóa, sao lưu và xử lý sự cố được quy định trong hồ sơ cấp
+độ, tài liệu thiết kế kỹ thuật và quy chế quản lý, vận hành Hệ thống quản lý kiến
+trúc số quốc gia.
+
+=== [TRANG 21] ===
+21
+4. Danh mục kiểm tra trước khi ban hành
+STT
+Nội dung kiểm tra
+Kết quả/
+Ghi chú
+1
+Tên sản phẩm và loại Khung được xác định đúng theo
+thẩm quyền.
+ 
+2
+Có đủ các sơ đồ bắt buộc theo loại Khung: Hình 3-4, Hình
+5-6 hoặc Hình 7-8-9.
+ 
+3
+Hiện trạng kiến trúc số, kiến trúc số mục tiêu và bộ dữ liệu
+kiến trúc được tổ chức theo 04 lớp, các thành phần trong
+từng lớp và 04 thành phần xuyên suốt theo Quyết định số
+1425/QĐ-TTg. Đối với Khung đã ban hành có cấu trúc
+trình bày khác, cần lập bảng ánh xạ đầy đủ sang cấu trúc
+này.
+ 
+4
+Đã xác định rõ cơ quan chủ quản, phạm vi quản trị và trách
+nhiệm của cơ quan, tổ chức đối với các thành phần dùng
+chung, thành phần do cơ quan triển khai và thành phần
+tham chiếu bên ngoài.
+ 
+5
+Mỗi đối tượng kiến trúc chủ yếu trên sơ đồ bắt buộc có
+một bản ghi duy nhất tại Bảng 1. Cùng đối tượng xuất hiện
+trên nhiều sơ đồ không lập thêm bản ghi; không gộp các
+đối tượng độc lập thành một bản ghi đại diện.
+ 
+6
+Mỗi quan hệ chính trong các sơ đồ bắt buộc xác định rõ
+nguồn, đích, loại quan hệ và dữ liệu hoặc dịch vụ trao đổi
+khi có; quan hệ khác phải được giải thích.
+ 
+7
+Hiện trạng, kiến trúc số mục tiêu, nội dung cần hoàn thiện
+và phương án xử lý được phân biệt rõ. Nội dung cần hoàn
+thiện liên kết với nhiệm vụ có kết quả cần đạt, đơn vị chủ
+trì, ưu tiên, thời hạn, nguồn lực dự kiến và tiêu chí kiểm
+chứng theo Bảng 4.
+ 
+8
+Theo từng lớp, đã xác định phạm vi dùng chung hoặc dùng
+riêng, chủ quản và vai trò quản lý, khai thác của cơ quan
+lập Khung; không tách thành nhiều đối tượng chỉ vì một
+thành phần đồng thời có nhiều thuộc tính.
+ 
+9
+Tài liệu, sơ đồ, phụ lục và bộ dữ liệu dùng cùng phiên bản;
+không có viện dẫn sai hoặc thiếu.
+ 
+
+=== [TRANG 22] ===
+22
+STT
+Nội dung kiểm tra
+Kết quả/
+Ghi chú
+10
+Nội dung dữ liệu, an ninh mạng và nội dung chuyên ngành
+được thể hiện ở mức cần thiết đối với kiến trúc tổng thể;
+có dẫn chiếu Khung, tài liệu nguồn và không sao chép các
+mô hình, danh mục, quy trình, tiêu chí, biện pháp kiểm soát
+hoặc yêu cầu kỹ thuật chi tiết đã được quản lý tại tài liệu
+chuyên ngành.
+ 
+11
+Đối tượng hoặc nhiệm vụ được sử dụng trong nhiều
+Khung, tài liệu hoặc góc nhìn có nguồn quản lý và quan
+hệ tham chiếu rõ ràng; mã cục bộ được giữ ổn định, mã
+nguồn hoặc mã NAS được ghi riêng. Không tạo bản ghi
+gốc hoặc nhiệm vụ trùng lặp.
+ 
+12
+Hồ sơ đã được phân loại thông tin, xác định phạm vi chia
+sẻ và điều kiện bảo vệ; có đủ tệp nguồn chỉnh sửa được,
+tệp dữ liệu và bản chính thức thống nhất theo Mục
+VII.1–VII.3 Phần A.
+ 
+
+=== [TRANG 23] ===
+23
+PHẦN B. CÁC MẪU CẤU THÀNH HỒ SƠ KHUNG
+Các mẫu dưới đây quy định cấu trúc và nội dung tối thiểu. Cơ quan, tổ chức
+được bổ sung nội dung phù hợp với chức năng, phạm vi, hiện trạng, mục tiêu và
+đặc thù nhưng không lược bỏ yêu cầu bắt buộc. Các phần đặt trong ngoặc vuông
+là thông tin cần thay thế hoặc hoàn thiện.
+MẪU SỐ 01
+TÀI LIỆU [TÊN KHUNG]
+CỦA [TÊN CƠ QUAN, TỔ CHỨC]
+Cách sử dụng Mẫu số 01:
+Điền [Tên Khung] bằng tên đầy đủ tương ứng tại Mục I.4 Phần A; thay thế
+các phần trong ngoặc vuông, lựa chọn nội dung riêng theo loại Khung và biên tập
+thành nội dung chính thức. Dữ liệu được quản lý tại Mẫu số 03, có thể trích xuất
+thành phụ lục, không kê khai lại.
+I. MỤC ĐÍCH, PHẠM VI ÁP DỤNG
+1. Mục đích
+[Tên Khung] được xây dựng, cập nhật để cụ thể hóa Khung kiến trúc tổng
+thể quốc gia số; làm căn cứ quản lý việc đầu tư, xây dựng, nâng cấp, vận hành,
+kết nối và sử dụng chung hạ tầng số, hệ thống số, hệ thống thông tin, nền tảng số,
+cơ sở dữ liệu và dịch vụ số thuộc trách nhiệm của [Tên cơ quan, tổ chức].
+Khung hướng tới sử dụng hiệu quả các thành phần hiện có; tăng kết nối, chia
+sẻ dữ liệu; hạn chế đầu tư phân tán, trùng lặp; nâng cao hiệu quả quản trị, chỉ đạo,
+điều hành và chất lượng phục vụ người dùng. Khung đồng thời xác định mô hình
+tổng thể, các thành phần do cơ quan, tổ chức triển khai và quan hệ với các thành
+phần dùng chung hoặc hệ thống bên ngoài.
+2. Phạm vi áp dụng
+a) Phạm vi áp dụng trực tiếp
+Khung áp dụng đối với các cơ quan, đơn vị, tổ chức, cá nhân thuộc phạm vi
+quản lý của [Tên cơ quan, tổ chức]; chủ đầu tư, đơn vị quản lý vận hành, đơn vị
+sử dụng, đơn vị tư vấn và các bên tham gia đầu tư, thuê dịch vụ, xây dựng, nâng
+cấp, vận hành hoặc khai thác các thành phần số thuộc phạm vi của Khung.
+b) Phạm vi phối hợp và liên thông
+Đối với cơ quan, tổ chức và hệ thống bên ngoài, Khung chỉ thể hiện phạm
+vi, ranh giới quản trị, thành phần dùng chung, điểm kết nối, dữ liệu hoặc dịch vụ
+được chia sẻ và cơ chế phối hợp theo thẩm quyền; không mô tả hoặc quyết định
+kiến trúc nội bộ của hệ thống khác.
+II. NGUYÊN TẮC
+Khung tuân thủ các nguyên tắc tại Quyết định số 1425/QĐ-TTg và các
+nguyên tắc sau:
+
+=== [TRANG 24] ===
+24
+- Mỗi cơ quan, tổ chức quản lý các thành phần kiến trúc, tài sản số, dữ liệu,
+an ninh mạng và nguồn lực thuộc thẩm quyền. Đối với hệ thống do cơ quan khác
+quản lý, Khung chỉ thể hiện thông tin tại ranh giới kết nối, dùng chung, trao đổi
+dữ liệu và phần trách nhiệm được giao.
+- Thành phần dùng chung, dùng riêng phải xác định rõ cơ quan chủ quản,
+đơn vị vận hành, quyền khai thác, trách nhiệm dữ liệu và cơ chế phối hợp.
+- Ưu tiên sử dụng chung, chuẩn hóa, kế thừa, tích hợp và nâng cấp hạ tầng
+số, hệ thống số, hệ thống thông tin, nền tảng số, cơ sở dữ liệu và dịch vụ số hiện
+có; chỉ đầu tư, xây dựng mới khi chưa có thành phần dùng chung hoặc việc kế
+thừa, nâng cấp không đáp ứng yêu cầu quản lý, kỹ thuật, an ninh mạng hoặc yêu
+cầu đặc thù theo quy định của pháp luật.
+- Thông tin và kết luận trong Khung phải có nguồn hoặc đầu mối xác nhận;
+nội dung chưa đủ dữ liệu ghi “Chưa xác định”, không suy luận thay cơ quan có
+thẩm quyền.
+- Việc rà soát, đánh giá mức độ tuân thủ các khung kiến trúc, khung quản trị,
+từ điển dữ liệu và hướng dẫn chuyên ngành được thực hiện trên cơ sở các yêu
+cầu, tiêu chí và tài liệu đã được cơ quan có thẩm quyền ban hành, công bố tại thời
+điểm rà soát. Nội dung chưa đủ căn cứ để đánh giá được ghi nhận là “Chưa đủ cơ
+sở đánh giá”, nêu rõ căn cứ còn thiếu và dự kiến cập nhật khi có hướng dẫn của
+cơ quan có thẩm quyền; không kết luận là “đã tuân thủ” hoặc “chưa tuân thủ”.
+Trạng thái chưa đủ cơ sở đánh giá không làm thay đổi trách nhiệm thực hiện các
+yêu cầu đã có hiệu lực; phải nêu đầu mối theo dõi và điều kiện cập nhật đối với
+phần căn cứ còn thiếu.
+- Các hợp phần được tổ chức theo cùng một cấu trúc thống nhất gồm 04 lớp:
+Hạ tầng số và an ninh mạng dùng chung; Dữ liệu và nền tảng lõi; Ứng dụng và
+nghiệp vụ dùng chung; Kênh tương tác và đo lường hiệu quả. Khi mô tả hiện trạng
+và kiến trúc số mục tiêu, phải tiếp tục phân định các thành phần trong từng lớp
+theo Khung kiến trúc tham chiếu tương ứng.
+- Bốn thành phần xuyên suốt gồm: Quản trị, điều phối và giám sát; Tiêu
+chuẩn, quy chuẩn và yêu cầu kỹ thuật chung; Ưu tiên ứng dụng trí tuệ nhân tạo
+(AI First); Lấy dữ liệu làm trung tâm (Data-Centric). An ninh mạng, bảo vệ dữ
+liệu, bảo vệ dữ liệu cá nhân và quyền riêng tư là yêu cầu tiên quyết, xuyên suốt
+trong toàn bộ vòng đời, không phải một lớp hoặc thành phần xuyên suốt bổ sung.
+- Thiết kế theo hướng lấy người dùng làm trung tâm; API First; Security by
+Design; Privacy by Design; AI Governance by Design; thiết kế mô-đun, hướng
+dịch vụ; Cloud First; tiêu chuẩn mở; tái cấu trúc quy trình trước khi số hóa.
+- Hệ thống AI phải xác định rõ phạm vi sử dụng, trách nhiệm con người, dữ
+liệu, cơ chế giám sát, truy vết, giải trình và kiểm soát rủi ro. Đối với quyết định
+ảnh hưởng đến quyền, lợi ích hợp pháp của tổ chức, cá nhân, AI chỉ có tính chất
+hỗ trợ và người có thẩm quyền chịu trách nhiệm quyết định cuối cùng.
+
+=== [TRANG 25] ===
+25
+- Thành phần được triển khai theo cơ chế thử nghiệm có kiểm soát phải ghi
+rõ trạng thái thử nghiệm, phạm vi, thời hạn, cơ chế giám sát và phương án kết
+thúc/chuyển đổi; đồng thời bảo đảm yêu cầu kết nối, chia sẻ, bảo vệ dữ liệu và an
+ninh mạng.
+- Đối với Khung cấp tỉnh, Kiến trúc của Mô hình chuyển đổi số cấp xã là
+một thành phần của Khung; không xây dựng Khung kiến trúc số cấp xã độc lập
+và không đầu tư hệ thống trùng lặp.
+Tóm tắt nguyên tắc cốt lõi 
+tại Quyết định số 1425/QĐ-TTg
+Ý nghĩa khi xây dựng Khung
+1. Quản trị dựa trên kết quả
+Mục tiêu, nhiệm vụ và thành phần phải gắn với
+kết quả có thể định lượng, đo lường và kiểm
+chứng.
+2. Chỉ đạo, điều hành dựa trên
+dữ liệu
+Thiết kế nguồn dữ liệu, trách nhiệm cập nhật
+và khả năng cung cấp dữ liệu kịp thời cho ra
+quyết định.
+3. AI First
+Ưu tiên xem xét AI và tự động hóa đối với bài
+toán phù hợp, có kiểm soát rủi ro và trách
+nhiệm con người.
+4. Phân cấp, phân quyền trên
+nền tảng số
+Xác định đúng cấp quản lý đối tượng, trách
+nhiệm tạo lập dữ liệu và cơ chế giám sát dựa
+trên dữ liệu.
+5. Lấy người dùng làm trung
+tâm
+Thiết kế trải nghiệm thống nhất, giảm yêu cầu
+cung cấp lại thông tin và hỗ trợ nhóm yếu thế.
+6. An ninh mạng, dữ liệu và
+quyền riêng tư
+Tích hợp yêu cầu bảo vệ ngay từ thiết kế và
+trong toàn bộ vòng đời.
+7. Dữ liệu mở, minh bạch và
+đổi mới sáng tạo
+Xác định dữ liệu đủ điều kiện mở, cơ chế công
+bố và khai thác theo quy định.
+Đối với thành phần có sử dụng AI, hồ sơ Khung ghi ở mức cần thiết: bài
+toán và phạm vi sử dụng; chủ thể chịu trách nhiệm; nhóm dữ liệu, nguồn tri thức
+liên quan; kết quả phân loại rủi ro và căn cứ; yêu cầu về giám sát, kiểm chứng,
+lưu vết và sự can thiệp của con người. Dẫn chiếu hồ sơ phân loại, đánh giá sự phù
+hợp và báo cáo đánh giá tác động theo pháp luật về trí tuệ nhân tạo khi thuộc diện
+phải thực hiện; không tự phân loại thay chủ thể có trách nhiệm hoặc yêu cầu lập
+lại báo cáo chuyên ngành trong Khung.
+Việc tái cấu trúc quy trình phải trong phạm vi pháp luật và thẩm quyền cho
+phép; không thay đổi trình tự tố tụng hoặc quy trình bắt buộc chỉ nhằm phù hợp
+công nghệ. Có thể dẫn chiếu mô hình nghiệp vụ đang có để xác định năng lực,
+quy trình chính, chủ thể chịu trách nhiệm và các hệ thống hỗ trợ; không bắt buộc
+
+=== [TRANG 26] ===
+26
+xây dựng lại toàn bộ hồ sơ nghiệp vụ chi tiết. Thiết kế mô-đun, hướng dịch vụ, vi
+dịch vụ hoặc công nghệ khác được lựa chọn theo quy mô, điều kiện vận hành, khả
+năng kế thừa và hiệu quả, không áp dụng máy móc một kiểu triển khai.
+III. BỐI CẢNH, MỤC TIÊU VÀ BÀI TOÁN ƯU TIÊN
+1. Bối cảnh và căn cứ
+Dẫn chiếu các nội dung chính về chức năng, nhiệm vụ, cơ cấu tổ chức; chiến
+lược, quy hoạch, kế hoạch phát triển; chương trình, kế hoạch chuyển đổi số; các
+yêu cầu chuyên ngành và thay đổi về tổ chức, địa bàn hoặc mô hình quản lý có
+ảnh hưởng trực tiếp đến Khung. Không sao chép toàn văn các tài liệu nguồn.
+2. Mục tiêu và kết quả cần đạt
+Lựa chọn mục tiêu, chỉ tiêu và kết quả cụ thể, rõ ràng, có khả năng định
+lượng, đo lường và kiểm chứng, có liên quan trực tiếp đến kiến trúc, như giảm
+thời gian xử lý; nâng mức độ hài lòng của người sử dụng và tỷ lệ yêu cầu, hồ sơ
+hoặc giao dịch được hoàn thành đúng hạn; tăng tỷ lệ tái sử dụng dữ liệu; giảm số
+lượng hệ thống trùng lặp; tăng mức độ sử dụng chung; tăng tỷ lệ chỉ số được thu
+thập, đo lường tự động; nâng cao mức độ đáp ứng yêu cầu về an ninh mạng và
+hiệu quả sử dụng nguồn lực.
+Cơ quan, tổ chức lựa chọn chỉ tiêu chung có liên quan và chỉ tiêu đặc thù
+phù hợp chức năng; phân biệt: (i) chất lượng hồ sơ và khả năng quản trị kiến trúc;
+(ii) kết quả chuyển đổi kiến trúc; (iii) đóng góp đối với kết quả nghiệp vụ, phục
+vụ người dùng. Không coi kiến trúc là nguyên nhân duy nhất của mọi kết quả
+kinh tế - xã hội; không thay thế Bộ chỉ số có thẩm quyền bằng một bảng điểm tự
+đặt.
+Mỗi chỉ tiêu sử dụng để theo dõi phải xác định phạm vi, cách tính hoặc tiêu
+chí xác nhận, số liệu ban đầu nếu có, mức cần đạt, nguồn kiểm chứng, thời điểm
+cập nhật và đơn vị chịu trách nhiệm. Ưu tiên số liệu, hồ sơ sẵn có. Chỉ tiêu chất
+lượng có thể xem xét mức đầy đủ của đối tượng/quan hệ bắt buộc, khả năng truy
+vết, cập nhật và xử lý trùng lặp; chỉ tiêu kết quả có thể xem xét dùng chung, tái sử
+dụng dữ liệu, đáp ứng dịch vụ, giảm khối lượng sửa đổi hoặc thời gian đối chiếu.
+Số lượng kết nối giảm không tự chứng minh kiến trúc tốt hơn; phải xem xét nhu
+cầu liên thông và chất lượng phục vụ.
+Ngưỡng, tỷ lệ và thời gian mục tiêu phải phù hợp đối tượng và căn cứ áp
+dụng, không sao chép máy móc giá trị minh họa. Yêu cầu hồ sơ có đầy đủ đối
+tượng, quan hệ chính bắt buộc không được hạ thành một tỷ lệ bao phủ thấp hơn;
+trường hợp chưa đủ dữ liệu thực hiện theo Mục III.3 Phần A.
+3. Bài toán ưu tiên
+Mỗi mục tiêu hoặc bài toán ưu tiên phải liên kết với thành phần của kiến trúc
+số mục tiêu; khi cần chuyển đổi, liên kết với nội dung cần hoàn thiện và nhiệm vụ
+tại Mục VII, Mục VIII. Không lập nhiệm vụ mới chỉ để duy trì một thành phần đã
+đáp ứng yêu cầu. Đối với mục tiêu thuộc cơ quan hoặc hệ thống khác, chỉ dẫn
+
+=== [TRANG 27] ===
+27
+chiếu nội dung đã công bố hoặc được xác nhận, không giao nhiệm vụ nội bộ thay
+cơ quan đó.
+IV. ĐỊNH HƯỚNG CHUYỂN ĐỔI SỐ
+Xác định các định hướng chính về quản trị, chỉ đạo, điều hành; nghiệp vụ
+chuyên ngành; dịch vụ công và dịch vụ số; dữ liệu, nền tảng số, trí tuệ nhân tạo;
+kinh tế số, xã hội số hoặc đô thị thông minh khi thuộc phạm vi; an ninh mạng; trải
+nghiệm người dùng; đo lường hiệu quả và phát triển nguồn lực.
+Phân định rõ: (i) nội dung do cơ quan, tổ chức trực tiếp triển khai; (ii) nội
+dung khai thác, sử dụng các thành phần dùng chung cấp quốc gia, cấp bộ, cấp tỉnh
+hoặc nội bộ; và (iii) nội dung cần phối hợp kết nối, liên thông, sử dụng chung
+hoặc chia sẻ dữ liệu với cơ quan, tổ chức khác.
+V. HIỆN TRẠNG KIẾN TRÚC SỐ
+Mục này trả lời ba câu hỏi: cơ quan, tổ chức đang có những thành phần hạ
+tầng số và an ninh mạng, dữ liệu và nền tảng lõi, ứng dụng và nghiệp vụ dùng
+chung, kênh tương tác và đo lường hiệu quả nào; các thành phần này đang được
+quản lý, vận hành và kết nối ra sao; còn hạn chế gì cần hoàn thiện.
+Mỗi đối tượng chủ yếu được ghi một lần trong Mẫu số 03, có nguồn và đầu
+mối xác nhận. Rà soát theo 04 lớp và các thành phần của Khung tham chiếu tương
+ứng tại Phụ lục I Quyết định số 1425/QĐ-TTg. Đối với từng đối tượng, xác định
+riêng: phạm vi dùng chung hoặc dùng riêng; cơ quan chủ quản; vai trò quản lý,
+khai thác của cơ quan lập Khung; phạm vi phục vụ đơn vị trực thuộc hoặc cấp xã
+khi áp dụng. Các thuộc tính này có thể đồng thời áp dụng, không làm phát sinh
+bản ghi trùng lặp.
+1. Lớp Hạ tầng số và an ninh mạng dùng chung
+1.1. Thành phần Hạ tầng số
+- Rà soát các thành phần hạ tầng số dùng chung giữa các cơ quan trong hệ thống
+chính trị nêu tại điểm a mục 3 Phần II của Khung kiến trúc tổng thể quốc gia số có
+liên quan đến phạm vi của Khung; xác định cơ quan chủ quản, trạng thái khai thác,
+phạm vi sử dụng, phương thức kết nối, mức độ đáp ứng và trách nhiệm phối hợp.
+- Rà soát trung tâm dữ liệu hiện có; mô hình sử dụng hạ tầng điện toán đám
+mây; mạng nội bộ (LAN/Intranet), kết nối Internet băng rộng, kết nối Mạng truyền
+số liệu chuyên dùng; thiết bị đầu cuối, thiết bị số hóa hồ sơ, thiết bị phục vụ hội
+nghị trực tuyến và thành phần hạ tầng số đặc thù khác theo Khung kiến trúc tham
+chiếu tương ứng.
+- Mô tả ở mức quản trị, không liệt kê chi tiết từng thiết bị hoặc cấu hình; làm
+rõ cơ quan chủ quản, đơn vị vận hành, phạm vi phục vụ, quy mô chính, mức sử
+dụng, năng lực và hạn chế cần hoàn thiện.
+1.2. Thành phần An ninh mạng
+- Rà soát các thành phần an ninh mạng dùng chung giữa các cơ quan trong
+hệ thống chính trị nêu tại điểm a mục 3 Phần II của Khung kiến trúc tổng thể quốc
+
+=== [TRANG 28] ===
+28
+gia số có liên quan; xác định cơ quan chủ quản, trạng thái khai thác, phạm vi bảo
+vệ, phương thức kết nối, trách nhiệm tại mỗi đầu kết nối và cơ chế phối hợp.
+- Rà soát các hệ thống, giải pháp phục vụ bảo đảm an ninh mạng của cơ quan,
+tổ chức và thành phần an ninh mạng đặc thù khác theo Khung kiến trúc tham chiếu
+tương ứng; làm rõ phạm vi bao phủ, đơn vị vận hành, tình trạng giám sát, phòng
+vệ, phát hiện, cảnh báo, ứng phó sự cố và các hạn chế cần hoàn thiện.
+Chỉ tổng hợp thông tin về cấp độ, tình trạng thực hiện phương án bảo đảm
+an ninh mạng và kết quả đánh giá, kiểm tra từ hồ sơ chuyên ngành có thẩm quyền.
+2. Lớp Dữ liệu và nền tảng lõi
+2.1. Thành phần dữ liệu
+- Rà soát các thành phần dữ liệu dùng chung giữa các cơ quan trong hệ thống
+chính trị nêu tại điểm b mục 3 Phần II của Khung kiến trúc tổng thể quốc gia số
+có liên quan; xác định cơ quan chủ quản, nguồn dữ liệu, phạm vi được khai thác,
+trạng thái kết nối, chia sẻ và trách nhiệm phối hợp.
+- Rà soát các miền dữ liệu, dữ liệu chủ, dữ liệu dùng chung, kho dữ liệu, cơ sở
+dữ liệu dùng chung, cơ sở dữ liệu chuyên ngành và tài sản dữ liệu chủ yếu của cơ
+quan, tổ chức; mức độ số hóa, chuẩn hóa, chất lượng, trùng lặp và khả năng khai
+thác.
+- Rà soát Khung kiến trúc dữ liệu, Khung quản trị, quản lý dữ liệu, Từ điển
+dữ liệu dùng chung; chủ quản dữ liệu, đầu mối chất lượng, nguồn dữ liệu, quy
+trình cập nhật, phạm vi chia sẻ và yêu cầu bảo vệ.
+- Đối với dữ liệu do cơ quan khác quản lý, chỉ ghi nhận nguồn, cơ quan chủ
+quản, phạm vi được chia sẻ, trạng thái khai thác, điểm kết nối và yêu cầu bảo vệ
+đã được xác nhận.
+2.2. Thành phần nền tảng lõi
+- Rà soát các thành phần nền tảng lõi dùng chung giữa các cơ quan trong hệ
+thống chính trị nêu tại điểm b mục 3 Phần II của Khung kiến trúc tổng thể quốc
+gia số có liên quan, bao gồm khi áp dụng: NDXP, NDOP, Nền tảng định danh và
+xác thực điện tử, Bản đồ số quốc gia và hệ thống mã bưu chính, Nền tảng chuỗi
+khối quốc gia, Nền tảng phân tích dữ liệu lớn và trí tuệ nhân tạo dùng chung và
+các nền tảng lõi khác do cấp có thẩm quyền quyết định.
+- Rà soát hạ tầng kết nối, chia sẻ dữ liệu của cơ quan, tổ chức (LGSP/LDOP);
+nền tảng tổng hợp, phân tích dữ liệu; kho tri thức; nền tảng kết nối thiết bị IoT,
+nền tảng quản lý video khi áp dụng; và thành phần nền tảng lõi đặc thù khác theo
+Khung kiến trúc tham chiếu tương ứng.
+- Đối với từng nền tảng, làm rõ cơ quan chủ quản, đơn vị vận hành, phạm vi
+sử dụng, dịch vụ hoặc API cung cấp, trạng thái kết nối, mức độ khai thác, quan hệ
+với nền tảng dùng chung và hạn chế cần hoàn thiện.
+Việc ghi LGSP/LDOP nhằm bao quát các mô hình hạ tầng kết nối hiện có,
+không khẳng định hai nền tảng có chức năng, cấu trúc hoặc lộ trình thay thế giống
+
+=== [TRANG 29] ===
+29
+nhau. Phải ghi đúng tên, chức năng, trạng thái và phạm vi thực tế; nhận diện chức
+năng tích hợp còn cần kế thừa, chức năng điều phối, kết nối với NDOP và thành
+phần bảo mật điểm kết nối theo mô hình được cơ quan có thẩm quyền hướng dẫn.
+3. Lớp Ứng dụng và nghiệp vụ dùng chung
+3.1. Thành phần ứng dụng và nghiệp vụ dùng chung giữa các cơ quan
+trong hệ thống chính trị
+- Rà soát các thành phần ứng dụng và nghiệp vụ dùng chung giữa các cơ
+quan trong hệ thống chính trị nêu tại điểm c mục 3 Phần II và Phụ lục II của Khung
+kiến trúc tổng thể quốc gia số có liên quan; xác định cơ quan chủ quản, phạm vi
+cung cấp, đối tượng sử dụng, trạng thái khai thác, phương thức tích hợp, dữ liệu
+hoặc dịch vụ được sử dụng và trách nhiệm phối hợp.
+- Làm rõ chức năng hoặc dữ liệu còn trùng lặp với thành phần dùng chung;
+nội dung đã được khai thác, nội dung chưa được kết nối hoặc chưa đáp ứng yêu
+cầu và nguyên nhân theo nguồn được xác nhận.
+3.2. Các thành phần do cơ quan, tổ chức triển khai
+- Rà soát hệ thống thông tin phục vụ chỉ đạo, điều hành; hệ thống thông tin
+giải quyết thủ tục hành chính khi áp dụng; các hệ thống thông tin, ứng dụng phục
+vụ hoạt động nghiệp vụ theo chức năng, nhiệm vụ; các ứng dụng hỗ trợ hoạt động
+nội bộ dùng chung; Nền tảng AI của cơ quan, tổ chức và thành phần ứng dụng,
+nghiệp vụ đặc thù khác theo Khung kiến trúc tham chiếu tương ứng.
+- Đối với từng thành phần, làm rõ phạm vi sử dụng, cơ quan chủ quản, đơn
+vị vận hành, người dùng, trạng thái vòng đời, mức độ khai thác, dữ liệu sử dụng,
+quan hệ với thành phần dùng chung và chức năng còn phân tán hoặc trùng lặp.
+- Rà soát quan hệ liên thông nghiệp vụ giữa các hệ thống và với hệ thống
+bên ngoài; chỉ thể hiện điểm giao tiếp, dữ liệu hoặc dịch vụ trao đổi cần thiết,
+không mô tả nghiệp vụ nội bộ của cơ quan khác.
+4. Lớp Kênh tương tác và đo lường hiệu quả
+4.1. Thành phần kênh tương tác
+- Rà soát các thành phần kênh tương tác dùng chung giữa các cơ quan trong
+hệ thống chính trị nêu tại điểm d mục 3 Phần II của Khung kiến trúc tổng thể
+quốc gia số có liên quan; xác định trạng thái khai thác, nhóm người dùng, phạm
+vi dịch vụ, cơ chế định danh, xác thực, kết nối và trách nhiệm phối hợp.
+- Rà soát cổng thông tin điện tử của cơ quan, tổ chức; tổng đài, ứng dụng di
+động, phản ánh hiện trường, mạng xã hội, điểm hỗ trợ trực tiếp và các kênh tương
+tác đặc thù khác; nhận diện kênh trùng lặp hoặc chưa thống nhất.
+4.2. Thành phần đo lường hiệu quả
+- Rà soát các thành phần đo lường hiệu quả dùng chung giữa các cơ quan
+trong hệ thống chính trị nêu tại điểm d mục 3 Phần II của Khung kiến trúc tổng
+thể quốc gia số có liên quan, gồm công cụ chỉ đạo, điều hành; Nền tảng thống kê,
+đo lường, giám sát, đánh giá triển khai chuyển đổi số; Hệ thống quản lý kiến trúc
+
+=== [TRANG 30] ===
+30
+số quốc gia (NAS); Bộ chỉ số đo lường kết quả (KPI) và thành phần khác do cấp
+có thẩm quyền quyết định; ghi đúng trạng thái sẵn sàng và khả năng khai thác tại
+thời điểm rà soát.
+- Rà soát các Bảng thông tin điều hành (Dashboard), chỉ số và bộ chỉ số của
+cơ quan, tổ chức; phạm vi dữ liệu, nguồn dữ liệu, tần suất cập nhật, đơn vị chịu
+trách nhiệm, mức độ sử dụng và khả năng thu thập tự động.
+5. Các thành phần xuyên suốt và yêu cầu xuyên suốt
+- Quản trị, điều phối và giám sát kiến trúc: đầu mối, quy chế phối hợp, công
+cụ quản lý, tình trạng cập nhật dữ liệu kiến trúc và điểm kiểm soát tuân thủ.
+- Tiêu chuẩn, quy chuẩn và yêu cầu kỹ thuật chung: danh mục áp dụng, mức
+độ thực hiện, ngoại lệ và cơ chế kiểm tra.
+- AI First và quản trị AI: danh mục bài toán, trách nhiệm con người, dữ liệu,
+khả năng giải trình, giám sát và kiểm soát rủi ro.
+- Data-Centric và quản trị dữ liệu: vai trò, trách nhiệm về dữ liệu, dữ liệu
+chủ, chất lượng, chia sẻ, dữ liệu mở và sử dụng dữ liệu trong chỉ đạo, điều hành.
+- An ninh mạng, bảo vệ dữ liệu, bảo vệ dữ liệu cá nhân, quyền riêng tư, bí
+mật nhà nước và cơ yếu trong toàn bộ vòng đời.
+6. Nội dung hiện trạng riêng theo loại Khung
+a) Khung cấp bộ: ngoài yêu cầu chung theo từng lớp và thành phần, làm rõ
+phạm vi ngành dọc; các thành phần dùng chung giữa các cơ quan trong hệ thống
+chính trị mà bộ, ngành khai thác; cơ sở dữ liệu, nền tảng số dùng chung quốc gia
+hoặc chuyên ngành do bộ được giao chủ trì; thành phần do cấp bộ triển khai; điểm
+kết nối, dữ liệu hoặc dịch vụ trao đổi và trách nhiệm phối hợp với địa phương.
+b) Khung cấp tỉnh: ngoài yêu cầu chung theo từng lớp và thành phần, làm
+rõ các thành phần dùng chung giữa các cơ quan trong hệ thống chính trị và thành
+phần dùng chung cấp tỉnh được khai thác trên địa bàn; thành phần do chính
+quyền cấp tỉnh triển khai; hệ thống của bộ, ngành triển khai tại địa phương; trong
+Lớp Ứng dụng và nghiệp vụ dùng chung, phân biệt nội dung về Chính quyền số
+và nội dung về Kinh tế số và Xã hội số theo Khung kiến trúc tham chiếu; hiện
+trạng Kiến trúc của Mô hình chuyển đổi số cấp xã; việc kế thừa, hợp nhất sau
+sắp xếp đơn vị hành chính.
+c) Khung của cơ quan, tổ chức khác: ngoài yêu cầu chung theo từng lớp và
+thành phần, làm rõ phạm vi hệ thống tổ chức; các thành phần dùng chung giữa
+các cơ quan trong hệ thống chính trị mà cơ quan, tổ chức khai thác; các thành
+phần do cơ quan, tổ chức triển khai; đơn vị trực thuộc; điểm kết nối, dữ liệu hoặc
+dịch vụ trao đổi với Chính phủ số, địa phương và cơ quan khác.
+7. Đánh giá, kết luận về ưu điểm và hạn chế
+Tổng hợp ngắn gọn theo từng lớp, từng thành phần trong lớp và các thành
+phần xuyên suốt: ưu điểm; hạn chế; nguyên nhân; thành phần chưa phù hợp, phân
+tán hoặc trùng lặp; mức độ khai thác, sử dụng, kết nối hoặc tích hợp các thành
+
+=== [TRANG 31] ===
+31
+phần dùng chung có liên quan. Kết luận phải dựa trên dữ liệu, hồ sơ hoặc nguồn
+đã được xác định; nội dung chưa có dữ liệu ghi “Chưa xác định”.
+VI. KIẾN TRÚC SỐ MỤC TIÊU
+Mục này xác định mô hình cần đạt trong giai đoạn áp dụng Khung. Kiến trúc
+số mục tiêu được xây dựng từ mục tiêu phát triển, định hướng chuyển đổi số,
+Khung kiến trúc tham chiếu tương ứng và kết quả đánh giá hiện trạng; được tổ
+chức theo 04 lớp và các thành phần trong từng lớp. Đối với mỗi thành phần, phải
+xác định rõ các thành phần dùng chung giữa các cơ quan trong hệ thống chính trị
+cần khai thác, sử dụng, kết nối hoặc tích hợp và các thành phần do cơ quan, tổ
+chức triển khai; ưu tiên kế thừa, nâng cấp, kết nối, tích hợp và hợp nhất thành
+phần hiện có trước khi đầu tư mới.
+1. Cách xác định kiến trúc số mục tiêu
+- Xác định người dùng, dịch vụ và quy trình nghiệp vụ cần hỗ trợ; kết quả
+cần đo lường.
+- Xác định ở mức nhóm dữ liệu hoặc thành phần dữ liệu chủ yếu cần tạo lập,
+cập nhật, khai thác, chia sẻ để hỗ trợ nghiệp vụ, cung cấp dịch vụ và liên thông;
+làm rõ cơ quan chủ quản, nguồn dữ liệu, phạm vi khai thác và yêu cầu bảo vệ
+chính. Mô hình, cấu trúc, tiêu chuẩn và yêu cầu quản trị dữ liệu chi tiết được dẫn
+chiếu từ Khung hoặc tài liệu chuyên ngành tương ứng.
+- Đối với từng lớp và thành phần, xác định các thành phần dùng chung giữa
+các cơ quan trong hệ thống chính trị, thành phần dùng chung cấp bộ, cấp tỉnh
+hoặc nội bộ cần khai thác, sử dụng, kết nối hoặc tích hợp trước khi đề xuất thành
+phần dùng riêng; chỉ xác định thành phần dùng riêng khi chưa có thành phần dùng
+chung hoặc việc kế thừa, nâng cấp không đáp ứng yêu cầu theo Quyết định số
+1425/QĐ-TTg.
+- Xác định các năng lực, hệ thống, nền tảng, cơ sở dữ liệu và dịch vụ cần có;
+xác định mối quan hệ giữa các thành phần này và với các thành phần dùng chung,
+hệ thống liên quan, như kết nối kỹ thuật, trao đổi dữ liệu, sử dụng dịch vụ, phụ
+thuộc và dùng chung; phân biệt rõ thành phần kiến trúc logic với tài sản số triển
+khai cụ thể.
+- Xác định trạng thái vòng đời, chủ quản, đơn vị vận hành, yêu cầu kỹ thuật
+và nguồn dữ liệu đo lường.
+- Không dùng kiến trúc số mục tiêu như danh mục mua sắm; không chỉ định
+nhãn hiệu, nhà cung cấp hoặc cấu hình thương mại cụ thể. Tên chính thức, mã và
+vai trò của hệ thống, nền tảng đã có hoặc được cấp có thẩm quyền giao phải được
+ghi đúng để bảo đảm nhận diện và truy vết.
+
+=== [TRANG 32] ===
+32
+2. Sơ đồ bắt buộc theo loại Khung
+Loại Khung
+Sơ đồ mô hình
+ khái quát
+Sơ đồ thành phần do
+cơ quan triển khai
+Sơ đồ bổ sung
+ bắt buộc
+Khung của cơ
+quan, tổ chức
+Cụ thể hóa Hình 3 Cụ thể hóa Hình 4
+Không; bổ sung sơ
+đồ chuyên đề khi
+cần.
+Khung 
+Chính
+phủ số cấp bộ
+Cụ thể hóa Hình 5 Cụ thể hóa Hình 6
+Không; bổ sung sơ
+đồ 
+ngành
+dọc/chuyên ngành
+khi cần.
+Khung 
+Chính
+quyền số cấp
+tỉnh
+Cụ thể hóa Hình 7 Cụ thể hóa Hình 8
+Kiến trúc của Mô
+hình chuyển đổi số
+cấp xã theo Hình
+9.
+3. Các lớp và thành phần của kiến trúc số mục tiêu
+3.1. Lớp Hạ tầng số và an ninh mạng dùng chung
+3.1.1. Thành phần Hạ tầng số
+- Xác định các thành phần hạ tầng số dùng chung giữa các cơ quan trong hệ
+thống chính trị có liên quan cần khai thác, sử dụng hoặc kết nối; làm rõ cơ quan
+chủ quản, phạm vi sử dụng, mô hình cung cấp, trách nhiệm phối hợp và yêu cầu
+tại mỗi đầu kết nối.
+- Xác định trung tâm dữ liệu hiện có, mô hình sử dụng hạ tầng điện toán đám
+mây, mạng nội bộ, kết nối Internet băng rộng, kết nối Mạng truyền số liệu chuyên
+dùng, thiết bị đầu cuối, thiết bị số hóa hồ sơ, thiết bị phục vụ hội nghị trực tuyến
+và thành phần hạ tầng số đặc thù cần duy trì hoặc phát triển theo Khung kiến trúc
+tham chiếu tương ứng.
+- Việc xây dựng, triển khai mới trung tâm dữ liệu của cơ quan quản lý nhà
+nước và cơ quan, tổ chức trong hệ thống chính trị chỉ thực hiện khi thật sự cần
+thiết; phải làm rõ nhu cầu, phương án dùng chung, chi phí vòng đời, khả năng mở
+rộng, dự phòng và phục hồi.
+Làm rõ phần hạ tầng, lưu trữ hoặc dịch vụ dự kiến sử dụng từ Trung tâm dữ
+liệu quốc gia và các hạ tầng dùng chung có liên quan; phần trung tâm dữ liệu hiện
+có cần kế thừa; nhu cầu kết nối, chuyển dịch và trách nhiệm vận hành theo phương
+án được cấp có thẩm quyền xác định. Không đồng nhất đơn vị cung cấp hạ tầng
+với chủ quản dữ liệu; không suy ra mọi cơ sở dữ liệu phải di chuyển chỉ từ việc
+được thể hiện trong cùng lớp kiến trúc.
+Đối với hạ tầng đám mây và dịch vụ thuê ngoài, xác định ở mức kiến trúc
+yêu cầu liên thông, khả năng chuyển đổi nhà cung cấp và tiếp nhận lại dữ liệu.
+Nội dung kỹ thuật, quyền xuất dữ liệu/cấu hình/nhật ký được phép bàn giao, định
+
+=== [TRANG 33] ===
+33
+dạng có thể sử dụng lại, hỗ trợ chuyển giao, thời hạn lưu giữ, xóa dữ liệu và minh
+chứng thực hiện được cụ thể hóa tại hồ sơ, hợp đồng theo quy định; không mặc
+nhiên yêu cầu bàn giao thông tin ngoài quyền của cơ quan thuê dịch vụ.
+3.1.2. Thành phần An ninh mạng
+- Xác định các thành phần an ninh mạng dùng chung giữa các cơ quan trong
+hệ thống chính trị có liên quan cần khai thác, sử dụng hoặc kết nối; làm rõ cơ
+quan chủ quản, phạm vi bảo vệ, trách nhiệm tại mỗi đầu kết nối và cơ chế phối
+hợp.
+-  Xác định ở mức năng lực, hệ thống hoặc giải pháp chủ yếu các thành phần
+an ninh mạng của cơ quan, tổ chức cần duy trì, hoàn thiện hoặc phát triển; làm rõ
+phạm vi bảo vệ, đơn vị vận hành, trạng thái mục tiêu và quan hệ với các thành
+phần an ninh mạng dùng chung. Nội dung chi tiết được dẫn chiếu từ Khung kiến
+trúc an ninh mạng và hồ sơ chuyên ngành tương ứng.
+- Xác định các yêu cầu chính về giám sát, phòng vệ, phát hiện, cảnh báo,
+ứng phó sự cố, duy trì hoạt động liên tục và không đầu tư trùng lặp năng lực an
+ninh mạng dùng chung đã được triển khai và đáp ứng yêu cầu. Không mô tả lại
+mô hình vùng, lớp bảo vệ, biện pháp kiểm soát, cấu hình hoặc yêu cầu kỹ thuật
+chi tiết thuộc phạm vi của Khung kiến trúc an ninh mạng.
+3.2. Lớp Dữ liệu và nền tảng lõi
+3.2.1. Thành phần dữ liệu
+- Xác định các thành phần dữ liệu dùng chung giữa các cơ quan trong hệ thống
+chính trị có liên quan cần khai thác, sử dụng hoặc chia sẻ; làm rõ cơ quan chủ quản,
+nguồn dữ liệu, phạm vi khai thác, phương thức kết nối và yêu cầu bảo vệ.
+- Xác định ở mức tổng thể các thành phần dữ liệu chủ yếu cần duy trì, hoàn
+thiện hoặc bổ sung, bao gồm, khi áp dụng: các miền dữ liệu, dữ liệu chủ, kho dữ
+liệu, cơ sở dữ liệu dùng chung, cơ sở dữ liệu chuyên ngành, Kho quản lý dữ liệu
+điện tử của tổ chức, cá nhân và các tài sản dữ liệu chủ yếu khác; làm rõ cơ quan
+chủ quản, nguồn dữ liệu, phạm vi khai thác, quan hệ chia sẻ và trạng thái mục
+tiêu. Nội dung chi tiết về mô hình, cấu trúc, danh mục, tiêu chuẩn, chất lượng và
+cơ chế quản trị dữ liệu được dẫn chiếu và cụ thể hóa tại Khung kiến trúc dữ liệu,
+Khung quản trị, quản lý dữ liệu, Từ điển dữ liệu dùng chung và tài liệu chuyên
+ngành tương ứng.
+- Dẫn chiếu Khung kiến trúc dữ liệu, Khung quản trị, quản lý dữ liệu và Từ
+điển dữ liệu dùng chung hiện hành của cơ quan, tổ chức; bảo đảm đồng bộ với
+các cấu phần tương ứng cấp quốc gia. Trường hợp chưa được ban hành hoặc chưa
+đầy đủ, xác định nội dung cần xây dựng, hoàn thiện và lộ trình thực hiện; không
+lặp lại trong Khung kiến trúc số các mô hình, danh mục và yêu cầu quản trị chi
+tiết thuộc phạm vi của các tài liệu này.
+- Đối với dữ liệu do cơ quan khác quản lý, chỉ ghi nhận nguồn, cơ quan chủ
+quản, phạm vi được chia sẻ, trạng thái khai thác, điểm kết nối và yêu cầu bảo vệ
+đã được xác nhận.
+
+=== [TRANG 34] ===
+34
+3.2.2. Thành phần nền tảng lõi
+- Xác định các thành phần nền tảng lõi dùng chung giữa các cơ quan trong
+hệ thống chính trị có liên quan cần khai thác, sử dụng, kết nối hoặc tích hợp, bao
+gồm khi áp dụng: NDXP, NDOP, Nền tảng định danh và xác thực điện tử, Bản đồ
+số quốc gia và hệ thống mã bưu chính, Nền tảng chuỗi khối quốc gia, Nền tảng
+phân tích dữ liệu lớn và trí tuệ nhân tạo dùng chung và các nền tảng lõi khác do
+cấp có thẩm quyền quyết định.
+- Xác định hạ tầng kết nối, chia sẻ dữ liệu của cơ quan, tổ chức (LGSP/LDOP);
+nền tảng tổng hợp, phân tích dữ liệu; kho tri thức; nền tảng kết nối thiết bị IoT, nền
+tảng quản lý video khi áp dụng; và thành phần nền tảng lõi đặc thù khác cần duy trì
+hoặc phát triển theo Khung kiến trúc tham chiếu tương ứng.
+- Làm rõ dữ liệu, dịch vụ, API, điểm kết nối, cơ quan chủ quản, đơn vị vận
+hành, phạm vi dùng chung và quan hệ với các nền tảng dùng chung; không đưa
+dữ liệu nội bộ ngoài phạm vi chia sẻ vào bản công khai.
+Khi xác định phương án kết nối với NDOP, phải thể hiện vai trò của Máy
+chủ bảo mật điểm kết nối (Agent Node) theo quy định về kết nối, chia sẻ dữ liệu;
+không coi Agent Node là nền tảng thay thế toàn bộ chức năng của LGSP/LDOP.
+Mô hình logic thể hiện hệ thống nguồn, nền tảng tích hợp/điều phối của cơ quan
+khi có, điểm kết nối bảo mật, NDOP và hệ thống hoặc dịch vụ đích; thứ tự triển
+khai và thành phần cụ thể được dẫn chiếu từ tài liệu kỹ thuật có thẩm quyền, không
+tự suy luận từ một sơ đồ khái quát.
+Đối chiếu chức năng hiện có để xác định phần tiếp tục sử dụng, nâng cấp,
+tích hợp, thay thế và dữ liệu cần chuyển; lập nhiệm vụ, đầu mối, mốc kiểm thử và
+chuyển tiếp trong Bảng 4. Kế thừa các kết nối hợp lệ, bảo đảm an ninh mạng và
+hoạt động liên tục; không mặc nhiên đầu tư lại toàn bộ hạ tầng hoặc chờ hết thời
+hạn ban hành Khung mới thực hiện nghĩa vụ kết nối, chia sẻ dữ liệu theo quy định
+hiện hành.
+3.3. Lớp Ứng dụng và nghiệp vụ dùng chung
+3.3.1. Thành phần ứng dụng và nghiệp vụ dùng chung giữa các cơ quan
+trong hệ thống chính trị
+- Xác định các thành phần ứng dụng và nghiệp vụ dùng chung giữa các cơ
+quan trong hệ thống chính trị nêu tại điểm c mục 3 Phần II và Phụ lục II của Khung
+kiến trúc tổng thể quốc gia số có liên quan cần khai thác, sử dụng hoặc tích hợp;
+làm rõ phạm vi chức năng, dữ liệu hoặc dịch vụ sử dụng, đối tượng sử dụng, trách
+nhiệm phối hợp và lộ trình áp dụng.
+- Không xây dựng mới chức năng hoặc hệ thống trùng lặp với thành phần
+dùng chung đã được triển khai và đáp ứng yêu cầu; trường hợp phải duy trì hoặc
+phát triển thành phần dùng riêng, nêu rõ yêu cầu chưa được đáp ứng và phương
+án kết nối, tích hợp.
+
+=== [TRANG 35] ===
+35
+3.3.2. Các thành phần do cơ quan, tổ chức triển khai
+- Xác định hệ thống thông tin phục vụ chỉ đạo, điều hành; hệ thống thông tin
+giải quyết thủ tục hành chính khi áp dụng; các hệ thống thông tin, ứng dụng phục
+vụ hoạt động nghiệp vụ theo chức năng, nhiệm vụ; các ứng dụng hỗ trợ hoạt động
+nội bộ dùng chung; Nền tảng AI của cơ quan, tổ chức và thành phần ứng dụng,
+nghiệp vụ đặc thù khác cần duy trì, nâng cấp, hợp nhất, thay thế, kết thúc sử dụng
+hoặc bổ sung theo Khung kiến trúc tham chiếu tương ứng.
+- Nền tảng AI của cơ quan, tổ chức được xác định theo hướng tích hợp, sử
+dụng chung và mở rộng năng lực của Nền tảng phân tích dữ liệu lớn và trí tuệ nhân
+tạo dùng chung, bảo đảm kế thừa, dùng chung tài nguyên và tránh trùng lặp hạ
+tầng.
+Đối với nền tảng AI chuyên ngành, cơ quan, tổ chức phân tách rõ: (i) năng
+lực hạ tầng tính toán, lưu trữ, huấn luyện, tinh chỉnh, triển khai và quản trị mô
+hình ưu tiên kế thừa, sử dụng từ hạ tầng trí tuệ nhân tạo quốc gia, hạ tầng tính
+toán hiệu năng cao và Nền tảng phân tích dữ liệu lớn và trí tuệ nhân tạo dùng
+chung; (ii) dữ liệu, bộ tri thức, mô hình, thuật toán, dịch vụ và ứng dụng AI chuyên
+ngành do cơ quan, tổ chức xây dựng, quản lý theo chức năng, nhiệm vụ.
+Trường hợp cơ quan chủ quản nền tảng dùng chung chưa công bố tiêu chuẩn,
+đặc tả API hoặc cơ chế cung cấp tài nguyên, Khung xác định yêu cầu tích hợp ở
+mức chức năng, dữ liệu, dịch vụ và năng lực cần sử dụng; các thông số kỹ thuật
+chưa đủ căn cứ được ghi “Chưa xác định”, kèm đầu mối và nhiệm vụ phối hợp
+hoàn thiện. Không tự suy luận thông số kỹ thuật hoặc coi việc chưa có đặc tả kết
+nối là căn cứ để mặc nhiên đầu tư hạ tầng tính toán trùng lặp.
+Việc kết nối, chia sẻ tài nguyên tính toán, dữ liệu, bộ tri thức và mô hình AI
+thực hiện theo tài liệu kỹ thuật do cơ quan có thẩm quyền hoặc cơ quan được giao
+chủ quản nền tảng công bố; bảo đảm phân quyền, lưu vết, quản lý phiên bản, bảo
+vệ dữ liệu, dữ liệu cá nhân, bí mật nhà nước và quyền sở hữu trí tuệ.
+- Chỉ thể hiện điểm giao tiếp nghiệp vụ, dữ liệu hoặc dịch vụ trao đổi với
+hệ thống khác; không mô tả hoặc giao nhiệm vụ đối với nghiệp vụ nội bộ của
+hệ thống đó.
+Đối với mô hình, dịch vụ, tác tử AI hoặc quy trình có tích hợp AI cần được
+quản lý độc lập, làm rõ quan hệ với đối tượng kiến trúc, nguồn dữ liệu/tri thức
+được phép sử dụng, phiên bản được phê duyệt hoặc kiểm soát, tiêu chí kiểm chứng
+phù hợp bài toán, đầu mối giám sát và điều kiện can thiệp, dừng hoặc khôi phục.
+Chi tiết được quản lý tại hồ sơ AI và dẫn chiếu ở Bảng 1, Bảng 2, Bảng 4 hoặc hồ
+sơ chuyên đề khi cần; không đặt thêm một bộ trường bắt buộc cho mọi hệ thống
+không sử dụng AI. Kiến trúc tác tử hoặc truy xuất tri thức chỉ là lựa chọn kỹ thuật
+theo bài toán, không phải mô hình bắt buộc áp dụng chung.
+
+=== [TRANG 36] ===
+36
+3.4. Lớp Kênh tương tác và đo lường hiệu quả
+3.4.1. Thành phần kênh tương tác
+- Xác định các thành phần kênh tương tác dùng chung giữa các cơ quan trong
+hệ thống chính trị có liên quan cần khai thác, sử dụng hoặc tích hợp; làm rõ nhóm
+người dùng, phạm vi dịch vụ, cơ chế định danh, xác thực, kết nối và trách nhiệm
+phối hợp.
+- Xác định cổng thông tin điện tử của cơ quan, tổ chức; tổng đài, ứng dụng
+di động, phản ánh hiện trường, điểm hỗ trợ và kênh tương tác đặc thù cần duy trì,
+hợp nhất hoặc bổ sung; tổ chức theo hướng thống nhất, dễ sử dụng và phù hợp
+với đối tượng phục vụ.
+3.4.2. Thành phần đo lường hiệu quả
+- Xác định các thành phần đo lường hiệu quả dùng chung giữa các cơ quan
+trong hệ thống chính trị có liên quan cần khai thác hoặc kết nối, gồm công cụ chỉ
+đạo, điều hành; Nền tảng thống kê, đo lường, giám sát, đánh giá triển khai chuyển
+đổi số; Hệ thống quản lý kiến trúc số quốc gia (NAS); Bộ chỉ số đo lường kết quả
+(KPI) và thành phần khác do cấp có thẩm quyền quyết định, phù hợp với trạng
+thái triển khai thực tế.
+- Xác định các Bảng thông tin điều hành (Dashboard), chỉ số và bộ chỉ số
+của cơ quan, tổ chức; nguồn dữ liệu, tần suất cập nhật, đơn vị chịu trách nhiệm và
+phương thức cung cấp dữ liệu phục vụ giám sát, đánh giá và đo lường.
+- Ưu tiên thu thập tự động dữ liệu phục vụ Bộ chỉ số đo lường kết quả (KPI)
+từ hoạt động vận hành; chỉ sử dụng báo cáo thủ công khi chưa có nguồn dữ liệu
+số phù hợp.
+3.5. Các thành phần xuyên suốt và yêu cầu xuyên suốt
+- Quản trị, điều phối và giám sát: xác định đầu mối, quy chế, quy trình cập
+nhật, quản lý thay đổi, điểm kiểm soát tuân thủ và dữ liệu kiến trúc.
+- Tiêu chuẩn, quy chuẩn và yêu cầu kỹ thuật chung: xác định danh mục áp
+dụng, ngoại lệ, lộ trình tuân thủ và cơ chế kiểm tra.
+- AI First: xác định danh mục bài toán ưu tiên, điều kiện dữ liệu, cơ chế quản
+trị AI, khả năng giải trình và kiểm soát rủi ro.
+- Data-Centric: xác định ở mức tổng thể cơ quan chủ quản, dữ liệu chủ, yêu
+cầu về chất lượng, chia sẻ, tái sử dụng và sử dụng dữ liệu trong quản trị; nội dung
+về mô hình, tiêu chí, quy trình và biện pháp quản trị dữ liệu chi tiết thực hiện theo
+Khung kiến trúc dữ liệu, Khung quản trị, quản lý dữ liệu, Từ điển dữ liệu dùng
+chung và tài liệu chuyên ngành tương ứng.
+- An ninh mạng, bảo vệ dữ liệu, bảo vệ dữ liệu cá nhân, quyền riêng tư, bí
+mật nhà nước và cơ yếu được xác định dưới dạng yêu cầu xuyên suốt trong toàn
+bộ vòng đời; mô hình bảo vệ, biện pháp kiểm soát và yêu cầu kỹ thuật chi tiết
+thực hiện theo Khung kiến trúc an ninh mạng và hồ sơ chuyên ngành tương ứng.
+
+=== [TRANG 37] ===
+37
+4. Nội dung riêng theo loại Khung
+4.1. Đối với Khung kiến trúc Chính phủ số cấp bộ
+- Mô hình khái quát cụ thể hóa Hình 5; mô hình các thành phần do cấp bộ
+triển khai cụ thể hóa Hình 6.
+- Làm rõ phạm vi bộ, ngành và hệ thống ngành dọc; theo từng lớp và thành
+phần, phân định các thành phần dùng chung giữa các cơ quan trong hệ thống chính
+trị mà bộ, ngành khai thác; cơ sở dữ liệu, nền tảng số dùng chung quốc gia hoặc
+chuyên ngành do bộ được giao chủ trì; thành phần do cấp bộ triển khai; thành
+phần của đơn vị trực thuộc và điểm kết nối với địa phương.
+- Xác định cơ sở dữ liệu, nền tảng số dùng chung quốc gia hoặc chuyên ngành
+do bộ chủ trì; danh mục dịch vụ, dữ liệu, API, đối tượng sử dụng, mức dịch vụ,
+cơ chế vận hành và trách nhiệm chia sẻ.
+- Làm rõ Hệ thống thông tin giải quyết thủ tục hành chính của bộ, ngành;
+quan hệ với Cổng Dịch vụ công quốc gia, thành phần dùng chung phục vụ giải
+quyết thủ tục hành chính và hệ thống chuyên ngành.
+- Đối với hệ thống triển khai tại địa phương, xác định rõ bộ quản lý kiến trúc
+nghiệp vụ/chuyên ngành; địa phương quản lý hạ tầng, tài khoản, dữ liệu hoặc vận
+hành tại chỗ theo phân công; tránh đầu tư trùng lặp.
+- Đối với hệ thống, nền tảng chuyên ngành do bộ, ngành chủ trì và được các
+địa phương khai thác, sử dụng hoặc vận hành một phần, bộ, ngành chủ trì cung
+cấp, duy trì và thông báo cập nhật bộ thông tin tham chiếu phục vụ xây dựng
+Khung, gồm: tên và mã định danh chính thức của hệ thống; danh mục, mã dịch vụ
+hoặc API, nếu có; phạm vi dữ liệu, dịch vụ được trao đổi; yêu cầu và tài liệu tích
+hợp tại ranh giới kết nối; phiên bản, trạng thái khai thác; yêu cầu về an ninh mạng,
+bảo vệ dữ liệu và đầu mối phối hợp. Bản công khai không chứa cấu hình nhạy
+cảm, bí mật nhà nước hoặc thông tin hạn chế tiếp cận; việc cung cấp cho đầu mối
+có thẩm quyền thực hiện theo phạm vi được phép và điều kiện bảo vệ tại Mục
+VII.3 Phần A.
+4.2. Đối với Khung kiến trúc Chính quyền số cấp tỉnh
+- Mô hình khái quát cụ thể hóa Hình 7; mô hình các thành phần do chính
+quyền cấp tỉnh triển khai cụ thể hóa Hình 8; Kiến trúc của Mô hình chuyển đổi số
+cấp xã cụ thể hóa Hình 9.
+- Hình 7 thể hiện mô hình tổng thể số trên địa bàn và ranh giới liên thông với
+cơ quan Đảng, Quốc hội, Mặt trận Tổ quốc Việt Nam, Tòa án nhân dân, Viện
+kiểm sát nhân dân và cơ quan khác theo thẩm quyền từng hệ thống; Khung cấp
+tỉnh không thay thế kiến trúc nội bộ của các hệ thống này.
+Thẩm quyền xây dựng, ban hành và trách nhiệm phối hợp: Khung kiến
+trúc Chính quyền số cấp tỉnh do Chủ tịch Ủy ban nhân dân cấp tỉnh ban hành theo
+quy định. Cơ quan, đơn vị chủ trì xây dựng Khung do Chủ tịch Ủy ban nhân dân
+cấp tỉnh giao và có trách nhiệm phối hợp với Thường trực Hội đồng nhân dân, cơ
+quan tham mưu, phục vụ Đoàn đại biểu Quốc hội và Hội đồng nhân dân, cơ quan
+
+=== [TRANG 38] ===
+38
+Đảng, Ủy ban Mặt trận Tổ quốc Việt Nam, Tòa án nhân dân, Viện kiểm sát nhân
+dân và các cơ quan có liên quan để xác định, xác nhận các thành phần dùng chung,
+điểm kết nối, dữ liệu, dịch vụ trao đổi và trách nhiệm phối hợp trên địa bàn.
+Hội đồng nhân dân và Ủy ban nhân dân là các thiết chế của chính quyền địa
+phương. Các thành phần số phục vụ hoạt động của Hội đồng nhân dân do địa
+phương đầu tư, quản lý hoặc vận hành được thể hiện trong Khung kiến trúc Chính
+quyền số cấp tỉnh; nội dung nghiệp vụ, dữ liệu và yêu cầu chuyên môn thuộc thẩm
+quyền của Hội đồng nhân dân phải được Thường trực Hội đồng nhân dân hoặc cơ
+quan được giao quản lý xác nhận.
+Đối với các thành phần thuộc Cơ quan Đảng, Mặt trận Tổ quốc Việt Nam,
+cơ quan của Quốc hội, Tòa án nhân dân, Viện kiểm sát nhân dân và các hệ thống
+khác, việc xây dựng, phê duyệt hoặc ban hành kiến trúc nội bộ thực hiện theo
+thẩm quyền của từng hệ thống. Trong Hình 7, các thành phần này chỉ được thể
+hiện dưới dạng thành phần tham chiếu và ranh giới liên thông, trên cơ sở kiến
+trúc, tài liệu hoặc thông tin đã được cơ quan có thẩm quyền của hệ thống tương
+ứng công bố, cung cấp hoặc xác nhận. Khung kiến trúc Chính quyền số cấp tỉnh
+không thay thế và không quy định lại kiến trúc nội bộ của các hệ thống này.
+- Hình 8 là góc nhìn chính để quản lý đầu tư và đánh giá sự phù hợp trong
+phạm vi chính quyền địa phương; theo từng lớp và thành phần, làm rõ các thành
+phần dùng chung giữa các cơ quan trong hệ thống chính trị mà tỉnh khai thác;
+thành phần do tỉnh đầu tư, quản lý, vận hành hoặc được giao chủ trì; thành phần
+của bộ, ngành được triển khai tại địa phương; quan hệ với cấp xã. Trong Lớp Ứng
+dụng và nghiệp vụ dùng chung, phân biệt nội dung về Chính quyền số và nội dung
+về Kinh tế số và Xã hội số theo Khung kiến trúc tham chiếu.
+- Kiến trúc của Mô hình chuyển đổi số cấp xã là một thành phần của Khung.
+Cấp tỉnh cung cấp, tổ chức vận hành tập trung và hỗ trợ hạ tầng, nền tảng, hệ
+thống dùng chung; cấp xã khai thác, cập nhật dữ liệu và vận hành tuyến đầu theo
+phân cấp.
+- Đối với tỉnh hình thành sau sắp xếp, hợp nhất đơn vị hành chính, ưu tiên
+hợp nhất, tích hợp và kế thừa hệ thống hiện có; xác định nội dung cần hoàn thiện
+và phương án chuyển tiếp, xử lý dữ liệu, tài khoản, hợp đồng, tài sản, hạ tầng theo
+Mục VII và Mục VIII.8.
+- Các thành phần kinh tế số, xã hội số, đô thị thông minh trong Hình 7 và
+Hình 8 là thành phần tham chiếu; địa phương lựa chọn theo điều kiện, nhu cầu và
+định hướng phát triển, không bắt buộc áp dụng đầy đủ.
+- Địa phương sử dụng thông tin do bộ, ngành chủ trì công bố, cung cấp hoặc
+xác nhận để ghi nhận hệ thống chuyên ngành tại Khung cấp tỉnh dưới dạng thành
+phần tham chiếu bên ngoài; chỉ thể hiện điểm kết nối, dữ liệu hoặc dịch vụ trao
+đổi và trách nhiệm tại đầu kết nối thuộc phạm vi quản lý của địa phương. Địa
+phương không tự mô tả kiến trúc nội bộ, tự xác định thông số kỹ thuật hoặc tạo
+bản ghi gốc trùng lặp đối với hệ thống do bộ, ngành chủ trì. Trường hợp chưa
+
+=== [TRANG 39] ===
+39
+được cung cấp đủ thông tin, ghi “Chưa xác định”, nêu rõ nguồn thông tin và đầu
+mối cần phối hợp bổ sung.
+Phân định trách nhiệm đối với thành phần dùng chung và cấp xã (cụ
+thể hóa theo văn bản phân công, phân cấp):
+Chủ thể
+Nội dung quản trị và phối hợp
+Bộ, ngành hoặc cơ
+quan chủ quản nền
+tảng dùng chung
+Quản lý bản ghi gốc, nghiệp vụ/chuyên ngành, dịch vụ,
+nguồn dữ liệu thuộc thẩm quyền; công bố thông tin tham
+chiếu, điều kiện khai thác và đầu mối. Không chuyển quyền
+chủ quản cho tỉnh chỉ vì tỉnh sử dụng hệ thống.
+Cơ quan cấp tỉnh
+được giao chủ trì
+Tổ chức hạ tầng, tích hợp, phân quyền, hỗ trợ và vận hành
+phần thuộc trách nhiệm địa phương; quản lý bản ghi gốc
+của đối tượng do tỉnh chủ quản, bản ghi tham chiếu của đối
+tượng bên ngoài; xác định trách nhiệm tạo lập, cập nhật,
+chất lượng và chia sẻ dữ liệu.
+Cơ quan chuyên
+môn, đơn vị nghiệp
+vụ
+Xác nhận năng lực/quy trình chính, nhóm dữ liệu và hệ
+thống hỗ trợ; thực hiện trách nhiệm nghiệp vụ, dữ liệu và
+phối hợp khắc phục theo thẩm quyền, không tự quyết định
+kiến trúc hệ thống khác.
+UBND cấp xã, đơn
+vị sử dụng tuyến
+đầu
+Khai thác dịch vụ dùng chung, tạo lập/cập nhật và kiểm tra
+dữ liệu thuộc trách nhiệm; quản lý tài khoản, thiết bị và hỗ
+trợ người dùng theo phân cấp; phản ánh sự cố, nhu cầu
+nghiệp vụ và kết quả sử dụng.
+Không đầu tư hệ thống nghiệp vụ hoặc cơ sở dữ liệu riêng ở cấp xã trùng lặp
+với thành phần dùng chung đáp ứng yêu cầu. Nguyên tắc này không loại trừ thiết
+bị đầu cuối, mạng cục bộ, thiết bị số hóa hoặc giải pháp tại chỗ có nhu cầu chính
+đáng, được phân cấp và đáp ứng yêu cầu bảo vệ. Không quy định bắt buộc mọi
+thành phần phải sử dụng đám mây; địa phương lựa chọn cách cung cấp phù hợp
+điều kiện kết nối, nhóm người dùng và phạm vi pháp luật cho phép.
+Hệ thống tập trung của tỉnh được nhiều xã sử dụng chỉ có một bản ghi đối
+tượng; phạm vi sử dụng và quan hệ cung cấp được ghi bổ sung, không cấp một
+mã CX-x cho mỗi xã. Chỉ tạo đối tượng riêng khi có chủ quản, vòng đời hoặc
+trách nhiệm độc lập cần quản lý. Hai thành phần “Vận hành - quản trị” và “Nguồn
+lực - nhân lực” của Hình 9 được cụ thể hóa trong mô hình cấp xã; không thay thế
+04 thành phần xuyên suốt của Khung tổng thể.
+4.3. Đối với Khung kiến trúc số của cơ quan, tổ chức khác
+- Mô hình khái quát cụ thể hóa Hình 3; mô hình các thành phần do cơ quan,
+tổ chức triển khai cụ thể hóa Hình 4.
+
+=== [TRANG 40] ===
+40
+- Làm rõ phạm vi hệ thống tổ chức, đơn vị trực thuộc, người dùng, nghiệp vụ,
+dữ liệu và thành phần dùng chung; cơ quan có thẩm quyền quyết định phạm vi bao
+phủ, không mặc nhiên yêu cầu từng đơn vị trực thuộc ban hành một Khung riêng.
+- Theo từng lớp và thành phần, thể hiện các thành phần dùng chung giữa các
+cơ quan trong hệ thống chính trị mà cơ quan, tổ chức khai thác; các thành phần do
+cơ quan, tổ chức triển khai; thành phần đặc thù; điểm kết nối, dữ liệu hoặc dịch
+vụ trao đổi với Chính phủ số, địa phương và cơ quan khác.
+- Nếu cơ quan được giao chủ trì cơ sở dữ liệu hoặc nền tảng số dùng chung
+quốc gia, phải xác định rõ phạm vi cung cấp, đối tượng sử dụng, dữ liệu và dịch
+vụ chia sẻ, mức dịch vụ, cơ chế vận hành và an ninh mạng.
+- Các yêu cầu đặc thù về bí mật nhà nước, cơ yếu, nghiệp vụ tư pháp, kiểm
+tra, giám sát hoặc lĩnh vực chuyên môn được quản lý theo pháp luật và khung
+chuyên ngành tương ứng; bản dùng để chia sẻ chỉ thể hiện thông tin tại ranh giới
+cần thiết.
+Đối với các cơ quan Đảng, việc xây dựng, ban hành, cập nhật kiến trúc nội
+bộ và tổ chức đầu mối tổng hợp, cung cấp dữ liệu thực hiện theo quy định, phân
+công của cơ quan có thẩm quyền trong hệ thống Đảng. Hồ sơ hiện có được kế
+thừa, ánh xạ với 03 mẫu nếu đã đáp ứng nội dung tương ứng, không lập thêm bộ
+hồ sơ trùng lặp; kết nối, chia sẻ với NAS thực hiện qua đầu mối được phân công
+và theo phạm vi thông tin được phép cung cấp.
+Đối với Tòa án nhân dân, Viện kiểm sát nhân dân và cơ quan tổ chức theo
+ngành dọc, Hình 3, Hình 4 là hình tham chiếu theo loại Khung; có thể bổ sung sơ
+đồ toàn ngành để làm rõ quan hệ giữa cơ quan trung ương và các đơn vị trực thuộc.
+Không chuyển sang áp dụng tên Khung cấp bộ chỉ vì có mô hình tổ chức ngành
+dọc; không yêu cầu từng đơn vị trong cùng hệ thống lập Khung độc lập. Nghiệp
+vụ, kênh tương tác và chỉ tiêu chuyên ngành được xác định theo chức năng và
+pháp luật tương ứng; không áp dụng máy móc chỉ tiêu giải quyết thủ tục hành
+chính cho hoạt động tố tụng.
+5. Dẫn chiếu và ánh xạ với các Khung, kiến trúc chuyên ngành
+Xác định các Khung, tài liệu chuyên ngành có liên quan đến kiến trúc số của
+cơ quan, tổ chức, bao gồm Khung kiến trúc dữ liệu, Khung quản trị, quản lý dữ
+liệu, Từ điển dữ liệu dùng chung, Khung kiến trúc an ninh mạng, kiến trúc ICT
+phát triển đô thị thông minh và kiến trúc chuyên ngành khác khi áp dụng.
+Đối với từng Khung, tài liệu được dẫn chiếu, ghi rõ tên tài liệu, cơ quan ban
+hành, phiên bản hoặc ngày hiệu lực, phạm vi áp dụng, mã hoặc tên đối tượng
+nguồn và quan hệ ánh xạ. Nội dung chuyên ngành được thể hiện trong Khung
+kiến trúc số ở mức cần thiết để xác định quan hệ với kiến trúc tổng thể; không sao
+chép các danh mục, mô hình, quy trình, tiêu chí, biện pháp kiểm soát hoặc yêu
+cầu kỹ thuật chi tiết đã được quản lý tại Khung, tài liệu chuyên ngành.
+Trường hợp có khác biệt, chưa thống nhất hoặc chưa thể ánh xạ, ghi nhận
+nội dung cần hoàn thiện tại Mục VII và Bảng 4 Mẫu số 03. Đối tượng hoặc nhiệm
+
+=== [TRANG 41] ===
+41
+vụ đã được quản lý tại Khung, tài liệu chuyên ngành sử dụng hoặc dẫn chiếu mã
+nguồn; không lập đối tượng hoặc nhiệm vụ trùng lặp.
+Ví dụ ánh xạ cách trình bày theo miền kiến trúc sang cấu trúc 04 lớp
+(chỉ minh họa phương pháp, không phải bảng quy đổi cố định của mọi
+Khung):
+Miền/góc nhìn của
+tài liệu nguồn
+Nội dung ánh xạ chủ yếu
+Nghiệp vụ
+Năng lực, quy trình và ứng dụng hỗ trợ tại Lớp Ứng dụng
+và nghiệp vụ dùng chung; quan hệ với dữ liệu, kênh tương
+tác và mục tiêu đo lường.
+Ứng dụng
+Hệ thống nghiệp vụ tại Lớp Ứng dụng và nghiệp vụ dùng
+chung; nền tảng lõi hoặc kênh tương tác được ánh xạ theo
+chức năng thực tế, không gom toàn bộ vào một lớp.
+Dữ liệu
+Thành phần Dữ liệu tại Lớp Dữ liệu và nền tảng lõi; quan
+hệ tạo lập, chia sẻ và yêu cầu Data-Centric.
+Công nghệ/hạ tầng
+Lớp Hạ tầng số và an ninh mạng dùng chung; phần mềm
+nền tảng được ánh xạ theo chức năng tại lớp tương ứng.
+An toàn, an ninh
+thông tin
+Thành phần An ninh mạng và các yêu cầu bảo vệ xuyên
+suốt; hồ sơ chuyên ngành được dẫn chiếu, không tạo thêm
+lớp kiến trúc.
+Một nội dung nguồn có thể ánh xạ đến nhiều lớp hoặc thành phần; phải đối
+chiếu đối tượng thực tế, quan hệ và yêu cầu còn thiếu. Không kết luận một Khung
+đã phù hợp chỉ từ việc hoàn thành bảng đổi tên các miền.
+VII. ĐỐI CHIẾU HIỆN TRẠNG KIẾN TRÚC SỐ VỚI KIẾN TRÚC
+SỐ MỤC TIÊU VÀ XÁC ĐỊNH NỘI DUNG CẦN HOÀN THIỆN
+1. Yêu cầu thực hiện
+Đối chiếu từng đối tượng tại Mục V với yêu cầu tại Mục VI theo từng lớp và
+thành phần để xác định nội dung tiếp tục sử dụng; nội dung cần chuẩn hóa, kết
+nối, tích hợp, nâng cấp, mở rộng, hợp nhất, tổ chức lại, thay thế, kết thúc sử dụng
+hoặc bổ sung mới. Đối với thành phần dùng chung giữa các cơ quan trong hệ
+thống chính trị, đối chiếu trạng thái khai thác, sử dụng, kết nối hoặc tích hợp hiện
+tại với yêu cầu mục tiêu; chỉ xác định nội dung thuộc trách nhiệm trực tiếp của cơ
+quan, tổ chức hoặc nội dung cần phối hợp tại ranh giới liên thông.
+Thành phần đã đáp ứng yêu cầu và không có nội dung cần hoàn thiện được
+ghi phương án tiếp tục sử dụng tại Bảng 1; không phải tạo nội dung cần hoàn
+thiện hoặc nhiệm vụ chuyển đổi chỉ để đưa vào Bảng 4.
+Mỗi nội dung cần hoàn thiện có một mã, được ghi tại Bảng 4, gồm đối tượng
+liên quan, hiện trạng, yêu cầu cần đạt, sai khác cần xử lý và phương án kiến trúc.
+
+=== [TRANG 42] ===
+42
+Nguồn thông tin được dẫn chiếu từ Bảng 1, Bảng 2 hoặc ghi bổ sung tại Bảng 4.
+Quan hệ với nhiệm vụ, chủ trì, phối hợp, thời hạn, nguồn lực và kiểm chứng được
+hoàn thiện ở Bước 5 theo mức yêu cầu của Bảng 4.
+Phân thành hai nhóm: (i) nội dung thuộc phạm vi quản trị trực tiếp; (ii) nội
+dung cần phối hợp, thống nhất tại phạm vi dùng chung, kết nối hoặc chia sẻ với
+cơ quan khác. Đối với nhóm phối hợp, Khung chỉ xác định điểm cần thống nhất
+và trách nhiệm phối hợp; không đánh giá nội bộ hoặc giao nhiệm vụ thay đổi cho
+hệ thống khác.
+2. Xác định thành phần dùng chung, dùng riêng, tách hoặc hợp nhất
+Khi xây dựng Khung, cần rà soát để xác định rõ mô-đun dùng chung, thành
+phần dùng riêng và phương án tách/hợp nhất bảo đảm tối đa khả năng dùng chung
+nhưng vẫn cho phép linh hoạt đối với nghiệp vụ đặc thù.
+a) Thành phần dùng chung
+Cân nhắc xác định các thành phần dùng chung theo các tiêu chí sau:
+- Nhiều cơ quan, đơn vị hoặc nhiều hệ thống cùng cần sử dụng;
+- Thành phần có quy trình, dữ liệu đầu vào, kết quả đầu ra và quy tắc xử lý
+cơ bản có tính tương đồng và mức độ chuẩn hóa cao.
+- Thành phần đã có kinh nghiệm xây dựng vận hành từ trước, đã được kiểm
+chứng, có mô hình dữ liệu tương đối hoàn chỉnh, có thể xác định rõ chủ quản, đơn
+vị vận hành, trách nhiệm và yêu cầu chất lượng.
+- Việc dùng chung giúp giảm chức năng, dữ liệu và đầu tư trùng lặp; nâng
+chất lượng dịch vụ, tính nhất quán, khả năng giám sát, hiệu quả vận hành và bảo
+đảm an ninh mạng.
+- Thành phần có thể cung cấp theo mô hình nhiều bên sử dụng; có khả năng
+cấu hình linh hoạt, phân quyền phù hợp.
+- Thành phần độc lập tương đối, có chủ thể quản trị, mô hình vận hành, cơ
+chế tài chính và trách nhiệm dữ liệu rõ ràng.
+- Thành phần là dữ liệu dùng chung hoặc thuộc cùng một lĩnh vực nhưng
+đang phân tán, cát cứ cần tổ chức lại để tối ưu hơn.
+b) Thành phần dùng riêng
+Các thành phần có đặc điểm sau thì cân nhắc để dùng riêng:
+- Thành phần phục vụ nghiệp vụ đặc thù, gắn trực tiếp với chức năng, thẩm
+quyền riêng; có quy trình, thuật toán, quy tắc hoặc mô hình dữ liệu khác biệt căn
+bản và không thể đáp ứng bằng cấu hình trên thành phần dùng chung.
+- Nghiệp vụ được phân cấp, phân quyền có yêu cầu khác biệt thực chất mà
+cấu hình hoặc mở rộng thành phần dùng chung chưa đáp ứng được.
+
+=== [TRANG 43] ===
+43
+- Nhu cầu giao diện riêng được ưu tiên đáp ứng bằng cấu hình hoặc phát
+triển giao diện trên dịch vụ dùng chung; chỉ tách phần đặc thù chưa được đáp
+ứng, không xây lại nền tảng hoặc dữ liệu trùng lặp.
+- Thành phần hỗ trợ nghiệp vụ chưa ổn định, đang thay đổi nhanh hoặc chưa
+đủ điều kiện chuẩn hóa để triển khai dùng chung diện rộng.
+- Thành  phần có yêu cầu cách ly đặc biệt về an ninh mạng, bí mật nhà nước
+hoặc bảo vệ dữ liệu theo quy định của pháp luật.
+- Ứng dụng thử nghiệm, thí điểm có kiểm soát cần được cách ly để giảm ảnh
+hưởng đến hệ thống chính thức.
+c) Trường hợp nên tách hoặc hợp nhất hệ thống
+Tách hoặc hợp nhất là phương án tái cấu trúc hệ thống để nâng hiệu quả
+quản trị, duy trì và phát triển; lựa chọn trên cơ sở yêu cầu, mức độ đáp ứng và rủi
+ro chuyển tiếp.
+Cân nhắc tách hệ thống lớn, phức tạp khi việc tổ chức thành các thành phần
+độc lập giúp đáp ứng yêu cầu quản trị, thay đổi và vận hành tốt hơn; không tách
+chỉ vì hệ thống sử dụng kiến trúc nguyên khối.
+Việc hợp nhất các hệ thống thường áp dụng đối với các hệ thống hoặc thành
+phần rời rạc, trùng lặp, cát cứ để thành các thành phần dùng chung, đa chức năng,
+tối ưu cho việc quản trị, duy trì.
+Đánh giá vòng đời, khả năng duy trì, nâng cấp, kết nối, quyền sử dụng và chi
+phí của hệ thống. Chỉ đề xuất thay thế hoặc xây mới khi phương án kế thừa, nâng
+cấp không đáp ứng yêu cầu; bảo đảm kế thừa dữ liệu, tri thức và xử lý chuyển tiếp
+theo Mục VIII.8.
+Một số câu hỏi tình huống và phương hướng xử lý ưu tiên:
+Câu hỏi quyết định
+Khi đáp ứng 
+điều kiện
+Khi không đáp ứng/điểm cần
+kiểm tra tiếp
+Đã có thành phần dùng
+chung đáp ứng yêu cầu
+hoặc có thể cấu hình, mở
+rộng để đáp ứng?
+Khai 
+thác, 
+cấu
+hình hoặc mở rộng
+thành phần dùng
+chung; không xây
+mới phần trùng
+lặp.
+Đánh giá khả năng nâng cấp, bổ
+sung chức năng còn thiếu hoặc
+nhu cầu dùng riêng có căn cứ;
+chưa đủ thông tin thì phối hợp
+chủ quản xác nhận.
+Nhiều đơn vị có quy trình
+nghiệp vụ và dữ liệu tương
+đồng?
+Chuẩn hóa năng
+lực cốt lõi, dữ liệu
+và dịch vụ để tổ
+chức dùng chung.
+Xác định khác biệt pháp lý,
+nghiệp vụ và trách nhiệm;
+không hợp nhất máy móc các
+quy trình khác bản chất.
+
+=== [TRANG 44] ===
+44
+Câu hỏi quyết định
+Khi đáp ứng 
+điều kiện
+Khi không đáp ứng/điểm cần
+kiểm tra tiếp
+Khác biệt chỉ nằm ở giao
+diện hoặc một số quy tắc
+cấu hình?
+Ưu tiên cấu hình;
+sử 
+dụng 
+dịch
+vụ/API chung và
+phát 
+triển 
+giao
+diện khi cần.
+Đánh giá mô-đun nghiệp vụ đặc
+thù; giữ thống nhất dữ liệu, kết
+nối và yêu cầu bảo vệ.
+Có yêu cầu pháp lý, bí
+mật, hiệu năng hoặc trách
+nhiệm quản trị tách biệt?
+Xem 
+xét 
+dùng
+riêng hoặc tách
+mô-đun theo căn
+cứ; kết nối, chia sẻ
+trong 
+phạm 
+vi
+được phép.
+Ưu tiên dùng chung, không lấy
+khác biệt về tên gọi hoặc hình
+thức tổ chức làm lý do tách
+riêng.
+Có nhiều hệ thống tương
+tự, dữ liệu trùng lặp, chi
+phí vận hành cao?
+Lập phương án
+hợp nhất/tổ chức
+lại, kiểm tra dữ
+liệu, chức năng
+cần giữ, chi phí và
+rủi ro chuyển tiếp.
+Không bắt buộc hợp nhất chỉ để
+giảm số hệ thống; đánh giá hiệu
+quả và mức đáp ứng kiến trúc
+mục tiêu.
+Yêu cầu thống nhất và nội dung linh hoạt: các yêu cầu pháp luật, cấu trúc
+tham chiếu, nguyên tắc dùng chung, liên thông và bảo vệ phải được bảo đảm;
+danh mục, tiêu chuẩn và mã được cập nhật theo cơ quan có thẩm quyền, không
+gọi là các thành phần “bất biến”. Quy mô, mức ưu tiên, cách cung cấp dịch vụ,
+giao diện và cấu hình có thể cụ thể hóa theo nhu cầu. Nghiệp vụ đặc thù được bố
+trí bằng cấu hình hoặc mô-đun riêng có giải trình; không bổ sung các nhóm này
+thành lớp kiến trúc mới.
+Khi lựa chọn dùng chung, dùng riêng hoặc hợp nhất, có thể sử dụng số liệu
+về số đơn vị có nhu cầu, số chức năng trùng lặp, tỷ lệ dữ liệu tái sử dụng, khả
+năng đáp ứng dịch vụ, chi phí vòng đời và rủi ro. Không đặt một ngưỡng định
+lượng chung làm điều kiện áp dụng cho mọi ngành, địa bàn. Khác biệt về địa lý,
+kết nối, kinh tế - xã hội, mô hình quản lý hoặc yêu cầu bảo vệ phải được mô tả
+cùng căn cứ và phương án đáp ứng; không là căn cứ tự miễn yêu cầu bắt buộc
+hoặc kéo dài thời hạn pháp luật.
+Đối với địa phương sau sắp xếp hoặc hợp nhất hệ thống, lập đối chiếu chức
+năng và dữ liệu: trùng hoàn toàn thì lựa chọn thành phần kế thừa; tương đồng thì
+chuẩn hóa/cấu hình; chức năng đặc thù còn cần thiết thì giữ hoặc chuyển thành
+mô-đun; chức năng không còn nhu cầu hoặc căn cứ thì đề xuất kết thúc, kèm lưu
+trữ dữ liệu theo quy định. Rà soát mã đơn vị, mã địa bàn và dữ liệu chủ theo nguồn
+chính thức; ánh xạ mã cũ - mã mới, xử lý trùng lặp và kiểm chứng dữ liệu trước
+khi chuyển đổi. Không loại bỏ chức năng cần thiết chỉ để giảm số lượng hệ thống.
+
+=== [TRANG 45] ===
+45
+Việc xác định thành phần không còn phù hợp phải dựa trên căn cứ về chức
+năng pháp lý, khả năng kết nối, chất lượng dữ liệu, an ninh mạng, mức trùng lặp,
+hiệu quả chi phí, khả năng duy trì và chuyển đổi. Công nghệ nguyên khối, phần
+mềm đóng hoặc việc không có mã nguồn không tự động đồng nghĩa với không
+phù hợp; cần đối chiếu quyền sử dụng, hợp đồng, khả năng tích hợp, bảo vệ dữ
+liệu và phương án chuyển tiếp thực tế.
+3. Kết quả đối chiếu
+Kết quả của Mục này là đầu vào trực tiếp cho danh mục nhiệm vụ và lộ trình
+tại Mục VIII. Mỗi nội dung cần hoàn thiện phải liên kết với ít nhất một nhiệm vụ
+chuyển đổi kiến trúc; quan hệ giữa nội dung cần hoàn thiện, nhiệm vụ, kết quả
+kiến trúc và dữ liệu kiểm chứng phải được quản lý trong Mẫu số 03.
+VIII. TỔ CHỨC TRIỂN KHAI
+1. Danh mục nhiệm vụ chuyển đổi kiến trúc
+Mỗi nhiệm vụ chuyển đổi kiến trúc phải xác định mã, tên/mục tiêu, đối tượng
+và nội dung cần hoàn thiện, kết quả kiến trúc cần đạt, cơ quan/đơn vị chủ trì, mức
+ưu tiên, thời hạn/giai đoạn dự kiến và tiêu chí kiểm chứng. Cơ quan phối hợp,
+quan hệ phụ thuộc ghi khi có. Nguồn lực dự kiến phải được nêu ở mức loại nguồn
+lực hoặc nguồn huy động; nếu chưa xác định được thì ghi rõ đầu mối và thời hạn
+làm rõ, không yêu cầu lập dự toán chi tiết. Nguồn dữ liệu/minh chứng được xác
+định ở mức dự kiến và hoàn thiện trong quá trình duy trì. Không đưa nhiệm vụ
+nội bộ của cơ quan khác vào danh sách do cơ quan ban hành Khung giao.
+Nguyên tắc hình thành nhiệm vụ chuyển đổi kiến trúc: Một nhiệm vụ chuyển
+đổi kiến trúc xử lý một hoặc một số nội dung cần hoàn thiện nhằm tạo ra một thay
+đổi kiến trúc thống nhất, có kết quả kiến trúc cần đạt, đầu mối chịu trách nhiệm
+theo dõi và giai đoạn thực hiện dự kiến. Có thể gộp nhiều nội dung cần hoàn thiện
+khi cùng mục tiêu chuyển đổi, cùng nhóm kết quả kiến trúc, cùng đầu mối theo
+dõi và có quan hệ phụ thuộc chặt chẽ; tách thành các nhiệm vụ khác nhau khi
+khác mục tiêu, kết quả kiến trúc, đầu mối chịu trách nhiệm, thời hạn hoặc rủi ro
+cần quản lý.
+Một nhiệm vụ chuyển đổi kiến trúc có thể được thực hiện thông qua một
+hoặc nhiều chương trình, kế hoạch, đề án, nhiệm vụ, dự án hoặc hoạt động
+thường xuyên; một nội dung triển khai cụ thể cũng có thể đóng góp cho nhiều
+nhiệm vụ chuyển đổi kiến trúc. Các quan hệ này phải được liên kết và truy vết
+trong Mẫu số 03.
+Trường hợp đã có nhiệm vụ trong Khung, chương trình, kế hoạch hoặc tài
+liệu chuyên ngành, sử dụng hoặc dẫn chiếu mã nguồn và liên kết với mục tiêu,
+đối tượng, nội dung cần hoàn thiện; không lập nhiệm vụ mới trùng về mục tiêu,
+phạm vi, chủ trì, kết quả cần đạt và thời hạn.
+2. Lộ trình triển khai nhiệm vụ
+Sắp xếp nhiệm vụ chuyển đổi kiến trúc theo mức ưu tiên và quan hệ phụ
+thuộc; xác định giai đoạn ngắn hạn, trung hạn, dài hạn hoặc thời hạn cụ thể khi đã
+
+=== [TRANG 46] ===
+46
+được cấp có thẩm quyền xác định. Lộ trình được cập nhật khi nhiệm vụ được cụ
+thể hóa trong chương trình, kế hoạch, đề án, nhiệm vụ, dự án hoặc hoạt động
+thường xuyên.
+Lộ trình trong Khung thể hiện tiến trình chuyển đổi kiến trúc, không thay thế
+kế hoạch công tác, kế hoạch đầu tư hoặc tiến độ quản lý chi tiết của từng dự án.
+Các giai đoạn ngắn hạn, trung hạn, dài hạn phải gắn với khoảng thời gian
+hoặc mốc cụ thể trong giai đoạn áp dụng Khung; nêu nhiệm vụ tiền đề và căn cứ
+ưu tiên. Khi duy trì, phân biệt kết quả đã hoàn thành nhưng chờ kiểm chứng với
+kết quả đã có minh chứng xác nhận.
+3. Giải pháp quản lý, đánh giá và thẩm định sự tuân thủ
+Quy định đầu mối và các điểm kiểm soát sự phù hợp, tuân thủ kiến trúc khi đề
+xuất, lập, thẩm định, phê duyệt, thiết kế, nghiệm thu, vận hành, nâng cấp, hợp nhất
+hoặc kết thúc sử dụng dự án, nhiệm vụ và thành phần số. Phương pháp tính điểm, Bộ
+chỉ số đo lường kết quả (KPI), danh mục kiểm tra và biểu mẫu chi tiết thực hiện theo
+hướng dẫn của Bộ Khoa học và Công nghệ và quy định có liên quan.
+Việc xem xét sự phù hợp kiến trúc được lồng ghép trong quy trình đề xuất,
+thẩm định, phê duyệt, nghiệm thu và quản lý vận hành thuộc thẩm quyền hiện
+hành; Hướng dẫn không đặt thêm thủ tục đầu tư hoặc chuyển thẩm quyền quyết
+định dự án cho đơn vị đầu mối kiến trúc. Hồ sơ đối chiếu ghi mã đối tượng/nhiệm
+vụ, phiên bản Khung áp dụng, yêu cầu liên quan, kết quả đối chiếu, nguồn chứng
+minh và nội dung cần xử lý.
+Đối với dự án đang triển khai hoặc thành phần chưa phù hợp, chủ quản phối
+hợp với đầu mối kiến trúc rà soát phạm vi tác động; xác định khả năng kế thừa,
+kết nối, điều chỉnh hoặc chuyển tiếp. Không mặc nhiên đình chỉ dự án đã được
+phê duyệt, cũng không mặc nhiên coi quyết định phê duyệt cũ là căn cứ miễn tuân
+thủ yêu cầu đang có hiệu lực. Việc điều chỉnh dự án, tài sản và hợp đồng do cấp
+có thẩm quyền quyết định theo quy định.
+Trường hợp đề xuất phương án đặc thù hoặc chuyển tiếp do chưa đáp ứng
+một yêu cầu kiến trúc, hồ sơ phải nêu: yêu cầu chưa đáp ứng; nguyên nhân;
+phương án thay thế đã xem xét; tác động đến nghiệp vụ, dữ liệu, kết nối, an ninh
+mạng và nguồn lực; biện pháp kiểm soát; cơ quan chịu trách nhiệm; thời hạn,
+mốc rà soát và lộ trình khắc phục; văn bản quyết định theo thẩm quyền. Ghi nhận
+tại Bảng 4, không lập một cơ chế “miễn tuân thủ” độc lập. Không được sử dụng
+phương án này để miễn hoặc kéo dài nghĩa vụ pháp luật bắt buộc.
+Trong thời gian chưa có hướng dẫn tính điểm chi tiết, sử dụng danh mục
+kiểm tra tại Mục VII.4 Phần A và các yêu cầu đã được ban hành để đối chiếu. Ghi
+một trong các trạng thái “Đáp ứng”, “Chưa đáp ứng”, “Chưa đủ cơ sở đánh giá”,
+“Không áp dụng”, kèm căn cứ và nội dung khắc phục. Kết quả này không phải
+điểm xếp hạng hay chứng nhận tuân thủ do NAS cấp.
+
+=== [TRANG 47] ===
+47
+4. Giải pháp duy trì, cập nhật Khung
+Xác định đầu mối, lịch rà soát ít nhất hằng năm và cơ chế rà soát khi có thay
+đổi có khả năng ảnh hưởng đến kiến trúc. Khi tài liệu chuyên ngành thay đổi,
+phối hợp kiểm tra tác động, cập nhật nguồn và ánh xạ. Phân loại thay đổi, thẩm
+quyền xử lý và quản lý phiên bản thực hiện thống nhất theo Mục VI Phần A; không
+đặt thêm quy trình phê duyệt cho cùng nội dung.
+5. Giải pháp về nguồn nhân lực
+Xác định đầu mối quản trị kiến trúc và cơ chế phối hợp với các đơn vị phụ
+trách dữ liệu, an ninh mạng, vận hành hệ thống, nghiệp vụ, kế hoạch, tài chính và
+đầu tư; xác định nhu cầu đào tạo, bồi dưỡng về quản trị kiến trúc. Kế hoạch phát
+triển nhân lực chuyên sâu về dữ liệu, an ninh mạng và lĩnh vực chuyên ngành
+được dẫn chiếu từ chương trình, kế hoạch hoặc tài liệu chuyên ngành tương ứng.
+Việc lập kế hoạch nhân lực sử dụng các vai trò theo Mục V Phần A, cho
+phép kiêm nhiệm; không bắt buộc thành lập Hội đồng kiến trúc, đơn vị mới
+hoặc chức danh mới chỉ để thực hiện Hướng dẫn. Có thể sử dụng bảng sau để
+xác định nhu cầu:
+Vai trò
+Năng lực cần có và cách kiểm chứng
+Đầu mối kiến trúc
+Xác định đối tượng, quan hệ, phạm vi; lập và kiểm tra 03
+mẫu; quản lý thay đổi. Kiểm chứng qua hồ sơ, bài thực
+hành và kết quả đối chiếu.
+Nghiệp vụ, dữ liệu,
+an ninh mạng và
+vận hành
+Xác nhận đúng phần việc, nguồn dữ liệu và yêu cầu bảo
+vệ; cập nhật trạng thái; phối hợp xử lý sai khác. Phân công
+theo chức năng hiện có, không bắt buộc mỗi vai trò một
+đơn vị.
+Quản trị AI khi có
+sử dụng AI
+Hiểu phạm vi sử dụng, trách nhiệm con người, dữ liệu,
+kiểm chứng và kiểm soát rủi ro; dẫn chiếu hồ sơ chuyên
+ngành và tổ chức giám sát theo phân công.
+Người sử dụng, đầu
+mối cấp xã khi áp
+dụng
+Khai thác dịch vụ, cập nhật/kiểm tra dữ liệu, bảo vệ tài
+khoản và phản ánh sự cố; xác định nội dung bồi dưỡng thiết
+thực, không đặt chuẩn chức danh mới.
+Đối với từng vai trò, ghi đơn vị/cá nhân được phân công, năng lực hiện có,
+khoảng thiếu, hình thức bồi dưỡng hoặc hỗ trợ, thời hạn và kết quả cần đạt. Đơn
+vị tư vấn, nhà cung cấp hoặc bên thuê ngoài cung cấp thông tin, tệp nguồn, tài
+liệu bàn giao và hỗ trợ cập nhật trong phạm vi hợp đồng, quyền sử dụng và yêu
+cầu bảo vệ; cơ quan chủ quản chịu trách nhiệm xác nhận, không chuyển trách
+nhiệm này cho bên tư vấn.
+6. Giải pháp về cơ chế, chính sách
+Dẫn chiếu các quy chế hiện hành về quản trị kiến trúc, quản trị dữ liệu, an
+ninh mạng, kết nối, chia sẻ, sử dụng chung, quản lý thay đổi, đánh giá tuân thủ và
+
+=== [TRANG 48] ===
+48
+phối hợp liên cơ quan. Trường hợp cơ chế, chính sách còn thiếu hoặc chưa phù
+hợp và có ảnh hưởng đến việc triển khai kiến trúc số, xác định nội dung cần hoàn
+thiện, cơ quan chủ trì và lộ trình thực hiện; không sao chép nội dung quy định chi
+tiết của văn bản hoặc tài liệu chuyên ngành vào Khung kiến trúc số.
+7. Giải pháp về tài chính
+Xác định định hướng nguồn lực, nguyên tắc ưu tiên, hiệu quả và chi phí vòng
+đời ở mức phục vụ lựa chọn phương án kiến trúc; ưu tiên dùng chung, kế thừa và
+bố trí nguồn lực duy trì, vận hành. Chi phí chi tiết được dẫn chiếu từ hồ sơ có
+thẩm quyền, không lập lại trong Khung. Việc lựa chọn nguồn vốn, loại nhiệm vụ,
+hình thức đầu tư hoặc thuê dịch vụ, lập dự toán, thanh toán và quyết toán thực
+hiện theo quy định tương ứng; không căn cứ riêng vào Hướng dẫn để xác lập
+khoản chi, định mức hoặc cơ chế khoán mới.
+Khi so sánh phương án, sử dụng cùng phạm vi, thời gian và giả định; xem
+xét các khoản cần thiết như xây dựng hoặc thuê dịch vụ, kết nối và chuyển dữ
+liệu, vận hành, bảo vệ, hỗ trợ, đào tạo, duy trì và kết thúc/chuyển đổi. Lập mới
+Khung, duy trì Khung, sử dụng công cụ, thuê chuyên gia hay xử lý hệ thống cũ
+không mặc nhiên được xếp vào một loại chi hoặc một loại dự án chung; cơ quan
+kế hoạch - tài chính, đầu tư, pháp chế xác định căn cứ và thẩm quyền theo tính
+chất công việc.
+8. Giải pháp bảo đảm chuyển tiếp, kế thừa và quản lý rủi ro
+Đối với hệ thống cần hợp nhất, thay thế hoặc kết thúc sử dụng, xác định
+phương án chuyển dữ liệu, tài khoản, kết nối, quy trình, hợp đồng, tài sản, sao
+lưu, dự phòng, hỗ trợ người dùng và thời điểm ngừng hệ thống cũ; bảo đảm an
+ninh mạng và không làm gián đoạn hoạt động, dịch vụ.
+Trước khi đề xuất hợp nhất, thay thế hoặc kết thúc sử dụng, rà soát hiện trạng
+tài sản, quyền sở hữu/quyền sử dụng, hồ sơ đầu tư, hợp đồng và nghĩa vụ còn tồn
+tại; xác định cơ quan có thẩm quyền xử lý, phương án kế thừa/điều chuyển hoặc
+xử lý theo quy định, nhu cầu kinh phí và rủi ro. Làm rõ quyền truy cập, bàn giao,
+lưu trữ dữ liệu; quyền sử dụng phần mềm; thời hạn dịch vụ, bảo hành, bảo trì;
+nghĩa vụ thanh toán và điều kiện điều chỉnh, chấm dứt hợp đồng.
+Phương án trong Khung chỉ là định hướng chuyển đổi, không thay thế quyết
+định xử lý tài sản công hoặc thỏa thuận, quyết định điều chỉnh/chấm dứt hợp đồng
+theo thẩm quyền. Chỉ ngừng hệ thống sau khi có điều kiện chuyển tiếp, kiểm tra
+dữ liệu và dịch vụ, sao lưu, phương án khôi phục, hỗ trợ người dùng và xử lý
+nghĩa vụ liên quan phù hợp quy định; duy trì hồ sơ chứng minh và thời điểm
+chuyển đổi.
+9. Cơ chế phối hợp liên thông
+Thiết lập đầu mối trao đổi và cập nhật thông tin với cơ quan, tổ chức liên
+quan. Nội dung phối hợp tập trung vào thành phần dùng chung, điểm kết nối, dữ
+liệu hoặc dịch vụ chia sẻ, tiêu chuẩn và thay đổi có ảnh hưởng liên thông; không
+làm thay đổi thẩm quyền quản trị nội bộ của mỗi hệ thống.
+
+=== [TRANG 49] ===
+49
+IX. PHỤ LỤC
+- Phụ lục 01. Danh mục đối tượng kiến trúc chủ yếu và ánh xạ với các hình
+tham chiếu tương ứng tại Quyết định số 1425/QĐ-TTg.
+- Phụ lục 02. Danh mục hạ tầng số, hệ thống số, hệ thống thông tin, nền tảng số,
+cơ sở dữ liệu và dịch vụ số do cơ quan, tổ chức quản lý hoặc được giao chủ trì.
+- Phụ lục 03. Danh mục thành phần dùng chung cấp quốc gia, cấp bộ, cấp
+tỉnh và thành phần tham chiếu bên ngoài.
+- Phụ lục 04. Danh mục quan hệ kết nối, chia sẻ dữ liệu, API và sử dụng
+chung chủ yếu.
+- Phụ lục 05. Danh mục tiêu chuẩn, quy chuẩn, yêu cầu kỹ thuật, an ninh
+mạng và bảo vệ dữ liệu có ảnh hưởng trực tiếp đến kiến trúc tổng thể; tài liệu
+chuyên ngành chứa nội dung chi tiết được dẫn chiếu bằng tên, cơ quan ban hành,
+phiên bản hoặc ngày hiệu lực.
+- Phụ lục 06. Danh mục nội dung cần hoàn thiện, nhiệm vụ và lộ trình; mục
+tiêu hoặc kết quả cần đạt; nguồn dữ liệu; đơn vị chủ trì và mức sẵn sàng dữ liệu.
+- Phụ lục 07. Danh mục kiểm tra trước khi ban hành theo Mục VII.4 Phần A.
+- Phụ lục 08. Nội dung đặc thù theo loại Khung: ngành dọc và nền tảng
+chuyên ngành cấp bộ; Kiến trúc của Mô hình chuyển đổi số cấp xã đối với cấp
+tỉnh; phạm vi hệ thống tổ chức đối với cơ quan, tổ chức khác.
+- Phụ lục 09. Bảng ánh xạ với Khung kiến trúc dữ liệu, Khung quản trị, quản
+lý dữ liệu, Từ điển dữ liệu dùng chung, Khung kiến trúc an ninh mạng, kiến trúc
+ICT phát triển đô thị thông minh và kiến trúc chuyên ngành khác khi áp dụng; thể
+hiện tối thiểu tên tài liệu nguồn, phiên bản hoặc ngày hiệu lực, mã hoặc tên đối
+tượng nguồn, mã đối tượng trong Mẫu số 03, quan hệ ánh xạ và nội dung khác
+biệt cần xử lý.
+- Phụ lục 10. Lịch sử phiên bản và thay đổi.
+Các phụ lục dữ liệu được trích xuất từ Mẫu số 03; mỗi đối tượng hoặc quan
+hệ chỉ có một bản ghi gốc và được tham chiếu bằng mã, không lập bảng trùng lặp.
+Nguồn lập các phụ lục (không tạo bộ dữ liệu gốc trùng lặp):
+Phụ lục
+Nguồn và cách lập
+01
+Bảng 1 và Bảng 3: đối tượng, vị trí, nguồn và ánh xạ; thực hiện
+theo mức yêu cầu tương ứng.
+02, 03
+Lọc Bảng 1 theo chủ quản, loại bản ghi, phạm vi và hình thức
+dùng chung.
+04
+Trích Bảng 2; danh mục API chi tiết chỉ dẫn chiếu hồ sơ nguồn
+khi cần.
+
+=== [TRANG 50] ===
+50
+Phụ lục
+Nguồn và cách lập
+05
+Danh mục tài liệu, tiêu chuẩn, yêu cầu áp dụng được dẫn chiếu
+tại Mẫu số 01, Bảng 1, Bảng 2 và Bảng 3; không chép lại yêu cầu
+kỹ thuật chuyên ngành.
+06
+Bảng 4: nội dung cần hoàn thiện, nhiệm vụ chuyển đổi kiến trúc,
+lộ trình và kiểm chứng.
+07
+Kết quả kiểm tra theo Mục VII.4 Phần A, kèm nguồn hoặc ghi
+chú xử lý.
+08
+Trích nội dung đặc thù tại Mục VI.4 Mẫu số 01, sơ đồ tương ứng
+của Mẫu số 02 và các bản ghi liên quan của Mẫu số 03.
+09
+Bảng 3; dẫn chiếu tài liệu nguồn và Bảng 4 đối với khác biệt cần
+xử lý.
+10
+Lịch sử phiên bản tại LS_PHIENBAN hoặc sổ, tệp/hệ thống quản
+lý thay đổi tương đương.
+Có thể tích hợp các phần trích xuất trong phụ lục điện tử hoặc dẫn chiếu có
+kiểm soát; không yêu cầu kê khai lại dữ liệu. Nội dung không áp dụng phải nêu
+rõ lý do, không dùng việc rút gọn phụ lục để bỏ trường thông tin bắt buộc.
+
+=== [TRANG 51] ===
+51
+MẪU SỐ 02
+BỘ SƠ ĐỒ KIẾN TRÚC VÀ TỆP NGUỒN CHỈNH SỬA ĐƯỢC
+1. Danh mục sơ đồ tối thiểu
+Mã sơ đồ
+Tên sơ đồ
+Nội dung cần thể hiện
+Mức độ
+SĐ-CT-01
+Mô hình khái quát
+của Khung kiến trúc
+số của cơ quan, tổ
+chức
+Cụ thể hóa Hình 3; áp dụng
+đối với cơ quan Đảng, Quốc
+hội, MTTQ Việt Nam, Văn
+phòng 
+Chủ 
+tịch 
+nước,
+TAND, VKSND và cơ quan,
+tổ chức khác.
+Bắt buộc đối
+với Khung cơ
+quan, tổ chức
+SĐ-CT-02
+Các thành phần do cơ
+quan, tổ chức triển
+khai
+Cụ thể hóa Hình 4; thể hiện
+các thành phần do cơ quan
+quản lý hoặc được giao chủ
+trì. Thành phần bên ngoài chỉ
+được dẫn chiếu để làm rõ
+ranh giới liên thông khi cần.
+Bắt buộc đối
+với Khung cơ
+quan, tổ chức
+SĐ-B-01
+Mô hình khái quát
+của Khung kiến trúc
+Chính phủ số cấp bộ
+Cụ thể hóa Hình 5; thể hiện
+thành phần dùng chung,
+ngành dọc, quan hệ với địa
+phương và hệ thống khác.
+Bắt buộc đối
+với 
+Khung
+cấp bộ
+SĐ-B-02
+Các thành phần do
+cấp bộ triển khai
+Cụ thể hóa Hình 6; thể hiện
+thành phần do bộ, ngành
+quản lý/chủ trì.
+Bắt buộc đối
+với 
+Khung
+cấp bộ
+SĐ-T-01
+Mô hình tổng thể số
+trên địa bàn thuộc
+Khung 
+kiến 
+trúc
+Chính quyền số cấp
+tỉnh
+Cụ thể hóa Hình 7; thể hiện
+mô hình tổng thể trên địa
+bàn, thành phần dùng chung,
+các hệ thống trong hệ thống
+chính trị và ranh giới quản
+trị.
+Bắt buộc đối
+với 
+Khung
+cấp tỉnh
+SĐ-T-02
+Khung 
+kiến 
+trúc
+Chính quyền số cấp
+tỉnh - các thành phần
+do chính quyền cấp
+tỉnh triển khai
+Cụ thể hóa Hình 8; thể hiện
+thành phần do tỉnh quản lý
+hoặc được giao chủ trì.
+Thành phần quốc gia, bộ,
+ngành được dẫn chiếu tại
+ranh giới liên thông khi cần.
+Bắt buộc đối
+với 
+Khung
+cấp tỉnh
+
+=== [TRANG 52] ===
+52
+Mã sơ đồ
+Tên sơ đồ
+Nội dung cần thể hiện
+Mức độ
+SĐ-T-03
+Kiến trúc của Mô
+hình chuyển đổi số
+cấp xã
+Cụ thể hóa Hình 9; thể hiện
+người dùng, 04 lớp, ứng
+dụng/nghiệp vụ, kênh, đo
+lường, vận hành - quản trị và
+nguồn lực - nhân lực.
+Bắt buộc đối
+với 
+Khung
+cấp tỉnh
+SĐ-04
+Sơ đồ nghiệp vụ và
+hệ thống hỗ trợ
+Quy trình chính, hệ thống hỗ
+trợ và điểm phối hợp giữa
+các cơ quan.
+Khi cần
+SĐ-05
+Sơ đồ dữ liệu và kết
+nối chủ yếu
+Nguồn, 
+nhóm 
+dữ 
+liệu,
+kho/CSDL, nền tảng, luồng
+chia sẻ và điểm kết nối
+chính; thể hiện quan hệ ở
+mức logic và dẫn chiếu mã
+tại Bảng 1, Bảng 2. Không
+mô tả lược đồ dữ liệu hoặc
+cấu trúc thông điệp chi tiết.
+Khi cần
+SĐ-06
+Sơ đồ triển khai và
+phạm vi quản lý
+Hạ tầng triển khai, cơ quan
+chủ quản, đơn vị vận hành,
+hệ thống bên ngoài và ranh
+giới quản lý, bảo vệ chủ yếu;
+không đưa cấu hình hoặc mô
+hình vùng bảo vệ chi tiết
+thuộc hồ sơ chuyên ngành.
+Khi cần
+SĐ-07
+Sơ đồ chuyển đổi hệ
+thống
+Hiện trạng, các bước chuyển
+đổi và mô hình sau khi hợp
+nhất, thay thế hoặc thay đổi
+lớn.
+Khi 
+có
+chuyển 
+đổi
+lớn
+Mỗi sơ đồ có mục đích, phạm vi rõ ràng và dùng thống nhất tên, mã với Mẫu
+số 03. Cơ quan lập các sơ đồ bắt buộc theo loại Khung và bổ sung góc nhìn khi cần
+theo các điều kiện dưới đây; không dồn mọi nội dung vào một sơ đồ.
+Có thể sử dụng công cụ quản lý kiến trúc, ngôn ngữ mô hình hóa hoặc cơ
+chế trích xuất tự động phù hợp để tạo tài liệu, sơ đồ, bảng dữ liệu từ nguồn quản
+lý thống nhất; không bắt buộc dùng ArchiMate, một bộ phần mềm thương mại
+hoặc thiết lập mới hệ thống quản lý cấu hình. Tên, mã, ý nghĩa ký hiệu và quan
+hệ phải đọc được, có chú giải và đáp ứng yêu cầu bàn giao. Khả năng nhập
+CSV/JSON hoặc đồng bộ tự động lên NAS thực hiện theo đặc tả được công bố,
+không mặc nhiên thay thế tệp bàn giao chuẩn.
+Khi có kết nối, chia sẻ liên cơ quan hoặc triển khai trên nhiều hạ tầng, miền
+quản trị mà sơ đồ bắt buộc chưa thể hiện đủ, phải bổ sung góc nhìn tương ứng của
+
+=== [TRANG 53] ===
+53
+SĐ-05 hoặc SĐ-06. Có thể tích hợp góc nhìn này vào sơ đồ đã có nếu vẫn rõ
+nguồn, đích, dữ liệu/dịch vụ và ranh giới; không bắt buộc tạo thêm tệp sơ đồ chỉ
+vì tên gọi khác.
+2. Yêu cầu chung đối với sơ đồ
+- Ghi rõ tên sơ đồ, mã sơ đồ, trạng thái thể hiện (hiện trạng, mục tiêu hoặc
+chuyển đổi), phiên bản, ngày cập nhật và đơn vị thực hiện/xác nhận.
+- Chú giải phải phân biệt chủ quản, phạm vi dùng chung và vai trò khai thác,
+tham chiếu của cơ quan lập Khung; thể hiện phạm vi phục vụ đơn vị trực thuộc
+hoặc cấp xã khi áp dụng. Một thành phần có thể đồng thời có nhiều thuộc tính,
+không vẽ thành nhiều đối tượng khác nhau.
+- Thể hiện rõ ranh giới quản trị, cơ quan chủ quản, đơn vị vận hành hoặc
+trách nhiệm phối hợp ở mức cần thiết; không thể hiện sai quyền sở hữu hoặc
+quyền quản trị.
+- Mỗi quan hệ chính phải xác định nguồn, đích, loại quan hệ và dữ liệu
+hoặc dịch vụ trao đổi khi có; không vẽ mũi tên không có ý nghĩa hoặc không
+được giải thích.
+- Không đưa cấu hình kỹ thuật nhạy cảm, thông tin thuộc bí mật nhà nước
+hoặc dữ liệu hạn chế tiếp cận vào sơ đồ công khai.
+- Bảo đảm khả năng đọc khi in, không dùng cỡ chữ quá nhỏ hoặc làm biến
+dạng hình. Tệp nguồn phải chỉnh sửa được bởi đơn vị tiếp nhận có thẩm quyền;
+việc bảo vệ và bàn giao quyền truy cập thực hiện theo Mục VII.3 Phần A.
+3. Thông tin quản lý đối với mỗi sơ đồ
+Trường thông tin
+Yêu cầu
+Mã và tên sơ đồ
+Mã duy nhất trong hồ sơ; tên phản ánh đúng góc nhìn
+và phạm vi.
+Mục đích/góc nhìn
+Nêu câu hỏi mà sơ đồ cần trả lời và đối tượng sử
+dụng.
+Trạng thái
+Hiện trạng, mục tiêu hoặc chuyển đổi.
+Phạm vi
+Cấp bộ, cấp tỉnh, cơ quan/tổ chức, cấp xã, ngành/lĩnh
+vực hoặc hệ thống cụ thể.
+Phiên bản và ngày hiệu
+lực
+Thống nhất với Mẫu số 01 và Mẫu số 03.
+Nguồn và đầu mối xác
+nhận
+Nêu tài liệu, Khung hoặc hồ sơ nguồn; cơ quan ban
+hành, phiên bản hoặc ngày hiệu lực; đơn vị hoặc đầu
+mối cung cấp, xác nhận thông tin. Trường hợp sơ đồ
+kế thừa hoặc cụ thể hóa sơ đồ chuyên ngành, ghi rõ
+mã và tên sơ đồ nguồn.
+
+=== [TRANG 54] ===
+54
+Trường thông tin
+Yêu cầu
+Tệp nguồn
+Tên tệp, định dạng, công cụ và vị trí lưu trữ.
+4. Các hình tham chiếu tại Quyết định số 1425/QĐ-TTg
+Các hình dưới đây là mô hình tham chiếu. Hình 1 và Hình 2 dùng để thống
+nhất bối cảnh quốc gia và thành phần dùng chung; các hình từ Hình 3 đến Hình
+9 được lựa chọn theo loại Khung.
+
+=== [TRANG 55] ===
+55
+Hình 1. Mô hình khái quát của Khung kiến trúc tổng thể quốc gia số
+(Nguồn: Quyết định số 1425/QĐ-TTg)
+ 
+
+=== [TRANG 56] ===
+56
+Hình 2. Các thành phần dùng chung giữa các cơ quan trong hệ thống chính trị
+(Nguồn: Quyết định số 1425/QĐ-TTg)
+ 
+
+=== [TRANG 57] ===
+57
+Hình 3. Mô hình khái quát Khung kiến trúc số tham chiếu của cơ quan, tổ chức
+(Nguồn: Quyết định số 1425/QĐ-TTg)
+ 
+
+=== [TRANG 58] ===
+58
+Hình 4. Các thành phần do cơ quan, tổ chức triển khai
+(Nguồn: Quyết định số 1425/QĐ-TTg)
+ 
+
+=== [TRANG 59] ===
+59
+Hình 5. Mô hình khái quát Khung kiến trúc tham chiếu Chính phủ số cấp bộ
+(Nguồn: Quyết định số 1425/QĐ-TTg)
+ 
+
+=== [TRANG 60] ===
+60
+Hình 6. Các thành phần do cấp bộ triển khai
+(Nguồn: Quyết định số 1425/QĐ-TTg)
+ 
+
+=== [TRANG 61] ===
+61
+Hình 7. Mô hình khái quát Khung kiến trúc tham chiếu tổng thể số cấp tỉnh
+(Nguồn: Quyết định số 1425/QĐ-TTg)
+ 
+
+=== [TRANG 62] ===
+62
+Hình 8. Khung kiến trúc tham chiếu Chính quyền số cấp tỉnh - các thành phần do chính quyền cấp tỉnh triển khai
+(Nguồn: Quyết định số 1425/QĐ-TTg)
+ 
+
+=== [TRANG 63] ===
+63
+Hình 9. Kiến trúc của Mô hình chuyển đổi số cấp xã
+(Nguồn: Quyết định số 1425/QĐ-TTg)
+ 
+
+=== [TRANG 64] ===
+64
+5. Bàn giao và quản lý tệp nguồn
+- Tên tệp nguồn phải thể hiện mã sơ đồ và phiên bản; ví dụ phần tên tệp:
+SĐ-B-01_Mo-hinh-khai-quat_v1.0; phần mở rộng tương ứng với định dạng tệp
+nguồn được sử dụng.
+Tệp nguồn có thể sử dụng định dạng VSDX, DRAWIO, SVG, PPTX hoặc
+định dạng chỉnh sửa được tương đương; không yêu cầu sử dụng một phần mềm
+lập sơ đồ cụ thể. Bản PDF hoặc ảnh phục vụ trình bày không thay thế tệp nguồn
+chỉnh sửa được.
+- Tệp trình bày và tệp nguồn phải cùng nội dung, cùng phiên bản. Trường
+hợp xuất PDF/ảnh từ tệp nguồn, kiểm tra không mất chữ, đường nối, chú giải
+hoặc ký hiệu.
+- Khi thay đổi đối tượng, tên, mã, trạng thái hoặc quan hệ trên sơ đồ, phải
+cập nhật đồng thời Mẫu số 03 và nội dung liên quan trong Mẫu số 01.
+- Lưu giữ phiên bản trước để đối soát; không ghi đè làm mất lịch sử thay đổi.
+
+=== [TRANG 65] ===
+65
+MẪU SỐ 03
+BỘ DỮ LIỆU KIẾN TRÚC
+1. Nguyên tắc chung
+Khi Hệ thống quản lý kiến trúc số quốc gia (NAS) chưa vận hành hoặc Bộ
+Khoa học và Công nghệ chưa công bố cơ chế định danh, cơ quan, tổ chức chưa
+phải sử dụng mã định danh thống nhất trên phạm vi toàn quốc. Mỗi đối tượng
+kiến trúc chủ yếu sử dụng một mã tham chiếu cục bộ, duy nhất trong hồ sơ Khung,
+để liên kết tài liệu, sơ đồ, danh mục, quan hệ, nội dung cần hoàn thiện, nhiệm vụ
+và lộ trình.
+Mã tham chiếu cục bộ không thay thế mã chính thức của hệ thống hoặc tài
+liệu nguồn, không thể hiện quyền sở hữu và không bắt buộc ghi trên mọi sơ đồ
+nếu vẫn truy vết được. Trong cùng hồ sơ, một đối tượng giữ một mã qua các lần
+cập nhật, không tạo thêm bản ghi theo số sơ đồ hoặc góc nhìn. Mã chính thức
+hoặc mã nguồn được ghi tại Bảng 1; ánh xạ chi tiết tại Bảng 3 theo mức yêu cầu.
+Khi có mã NAS, bổ sung vào trường riêng và giữ nguyên mã cục bộ.
+Phân loại theo các thuộc tính riêng: loại đối tượng; phạm vi hoặc hình thức
+dùng chung; chủ quản; đơn vị vận hành; vai trò của cơ quan lập Khung. Thành
+phần thuộc Danh mục nền tảng số dùng chung quốc gia đồng thời do cơ quan lập
+Khung chủ quản hoặc được giao chủ trì chỉ có một bản ghi gốc; ghi đúng nhóm
+dùng chung theo danh mục có thẩm quyền và trường tương ứng tại Bảng 1. Không
+lập thêm bản ghi chỉ để thể hiện vai trò “do cơ quan, tổ chức triển khai”.
+Cơ quan khác khai thác, sử dụng hoặc kết nối chỉ lập bản ghi tham chiếu, có
+mã cục bộ trong hồ sơ của mình và mã nguồn do chủ quản cung cấp khi có. Chưa
+có mã nguồn thì ghi “Chưa xác định”, kèm nguồn, đầu mối và thời hạn bổ sung;
+không tự tạo mã nguồn. Bản ghi tham chiếu chỉ bổ sung phạm vi khai thác, tình
+trạng sử dụng, điểm kết nối, dữ liệu hoặc dịch vụ chia sẻ và trách nhiệm của cơ
+quan tham chiếu; không tạo bản ghi gốc mới hoặc thay đổi thông tin thuộc thẩm
+quyền chủ quản.
+Đối tượng đồng thời xuất hiện trong Khung kiến trúc số và tài liệu chuyên
+ngành được ghi một lần trong hồ sơ Khung, kèm nguồn và ánh xạ theo Bảng 1,
+Bảng 3. Mô hình, danh mục, quy trình, tiêu chí và yêu cầu kỹ thuật chi tiết được
+quản lý ở tài liệu chuyên ngành; không lập thành đối tượng riêng nếu không có
+yêu cầu quản lý độc lập.
+Nhiệm vụ đã có trong Khung, chương trình, kế hoạch hoặc tài liệu chuyên
+ngành được sử dụng hoặc dẫn chiếu tại Bảng 4 theo Mục VIII.1 Mẫu số 01. Chỉ
+xác lập nhiệm vụ mới cho nội dung chưa có nhiệm vụ tương ứng và thuộc phạm vi
+trách nhiệm; việc cấp mã cục bộ không làm phát sinh nhiệm vụ mới về bản chất.
+Bộ dữ liệu kiến trúc là nguồn dữ liệu cấu trúc phục vụ quản lý, đối chiếu,
+cập nhật và theo dõi triển khai Khung. Trường không áp dụng ghi “Không áp
+dụng”; trường chưa có dữ liệu ghi “Chưa xác định”, đồng thời xác định đơn vị
+chịu trách nhiệm và thời hạn hoàn thiện.
+
+=== [TRANG 66] ===
+66
+2. Cách đánh mã tham chiếu cục bộ
+Loại
+Mã minh họa
+Cách dùng
+Đối tượng do cơ quan, tổ
+chức quản lý
+KT-1, KT-2
+Hạ tầng, hệ thống, nền tảng, dữ
+liệu, dịch vụ hoặc thành phần logic
+chủ yếu.
+Thành phần dùng chung
+cấp quốc gia
+QG-1, QG-2
+Mã cục bộ của thành phần dùng
+chung quốc gia; mã chính thức và
+mã NAS khi có ghi riêng, không
+thay mã cục bộ đã sử dụng.
+Thành phần tham chiếu
+bên ngoài
+LQ-1, LQ-2
+Thành phần do cơ quan khác quản
+lý; không thể hiện quyền sở hữu
+của cơ quan ban hành Khung.
+Thành phần phục vụ cấp
+xã
+CX-1, CX-2
+Chỉ dùng trong Khung cấp tỉnh khi
+cần quản lý riêng thành phần có chủ
+quản, vòng đời hoặc trách nhiệm
+độc lập.
+Quan hệ, kết nối chính
+QH-1, QH-2
+Dùng khi cần quản lý quan hệ như
+một bản ghi độc lập.
+Nội dung cần hoàn thiện
+ND-1, ND-2
+Sai khác hoặc yêu cầu chuyển đổi
+cần xử lý.
+Nhiệm vụ
+NV-1, NV-2
+Nhiệm vụ trong lộ trình triển khai.
+Chỉ số nội bộ tạm thời
+KPI-1, KPI-2
+Chỉ dùng khi chưa có mã KPI chính
+thức.
+Khi cấp mã lần đầu cho thành phần dùng chung quốc gia do cơ quan lập
+Khung chủ quản hoặc được giao chủ trì, có thể dùng QG-x; không đồng thời cấp
+KT-x cho cùng đối tượng. Mã đã sử dụng được giữ ổn định, kể cả khi phạm vi
+dùng chung thay đổi; mã chính thức và mã NAS được ghi riêng để đối soát.
+Đơn vị đầu mối kiến trúc quản lý danh mục mã, quy tắc cấp mã và việc cấp
+mã trong hồ sơ; phối hợp các đơn vị cùng cập nhật để tránh trùng. Có thể phân
+công đầu mối hoặc sử dụng công cụ hỗ trợ, nhưng phải kiểm tra duy nhất và giữ
+ổn định mã. Các tiền tố KT-, QG-, LQ-, CX- là minh họa phạm vi cục bộ, không
+phải quy tắc định danh quốc gia và không mã hóa quyền sở hữu hay cấu trúc tổ
+chức bất biến.
+3. Đối tượng phải lập danh mục
+- Thành phần kiến trúc logic: năng lực hoặc chức năng mà mô hình cần có.
+
+=== [TRANG 67] ===
+67
+- Tài sản số triển khai: hạ tầng số, hệ thống số, hệ thống thông tin, nền tảng
+số, cơ sở dữ liệu và dịch vụ số cụ thể do cơ quan, tổ chức quản lý hoặc được giao
+chủ trì.
+- Tài sản dữ liệu chủ yếu; thành phần mục tiêu dự kiến xây mới, hợp nhất,
+thay thế hoặc tổ chức lại.
+- Thành phần dùng chung cấp quốc gia, cấp bộ, cấp tỉnh và thành phần của
+cơ quan khác ở mức cần thiết để thể hiện kết nối, dùng chung và chia sẻ.
+- Thành phần phục vụ đơn vị trực thuộc hoặc cấp xã có chủ quản, vòng đời
+hoặc trách nhiệm độc lập.
+- Dịch vụ hoặc API có chủ quản, vòng đời hay yêu cầu quản lý độc lập được
+lập tại Bảng 1; quan hệ, kết nối giữa các đối tượng được lập tại Bảng 2, không tạo
+thêm đối tượng chỉ để ghi một kết nối.
+Không lập mã riêng cho từng máy chủ ảo, máy trạm, camera đơn lẻ, bảng
+hoặc trường dữ liệu, thuật ngữ trong Từ điển dữ liệu, tiêu chí chất lượng dữ liệu,
+biện pháp kiểm soát an ninh mạng, cấu hình kỹ thuật, màn hình, chức năng nhỏ,
+môi trường DEV/UAT/PRD hoặc API nội bộ, trừ trường hợp đối tượng có chủ
+quản, vòng đời, trách nhiệm, yêu cầu quản lý hoặc phương án đầu tư độc lập.
+Nguyên tắc xác định mức chi tiết: ưu tiên quản lý hệ thống, nền tảng, tài sản
+dữ liệu hoặc dịch vụ chủ yếu. Chỉ tách mô-đun/thành phần thành đối tượng khi cần
+quản lý độc lập về chủ quản, vòng đời, trách nhiệm, kết nối, bảo vệ hoặc phương
+án chuyển đổi; ghi quan hệ với hệ thống chứa nó, không nhân bản cùng một tài sản.
+Ví dụ: một ứng dụng nội bộ có nhiều màn hình không cần nhiều mã; một dịch vụ
+dùng chung có chủ quản, giao diện và vòng đời độc lập có thể có mã riêng.
+4. Các nhóm thông tin cần quản lý
+Bảng dưới đây khái quát các nhóm thông tin; mức bắt buộc, điều kiện và
+thời điểm kê khai của từng trường thực hiện theo mục 5 Mẫu này.
+Nhóm thông tin
+Đối tượng do cơ quan, 
+tổ chức quản lý
+Đối tượng tham chiếu
+ bên ngoài
+Nhận diện
+Mã cục bộ; tên; loại; mã hiện
+có hoặc mã nguồn.
+Mã cục bộ; tên; loại; mã
+nguồn khi được cung cấp; cơ
+quan chủ quản và nguồn xác
+nhận.
+Vị trí và phạm vi
+Lớp; thành phần trong lớp;
+hiện trạng hoặc mục tiêu;
+phạm vi cơ quan/ngành/địa
+bàn/cấp xã; dùng chung hoặc
+đặc thù.
+Lớp; thành phần trong lớp;
+phạm vi triển khai hoặc sử
+dụng; mức thông tin được
+phép sử dụng.
+
+=== [TRANG 68] ===
+68
+Nhóm thông tin
+Đối tượng do cơ quan, 
+tổ chức quản lý
+Đối tượng tham chiếu
+ bên ngoài
+Quản lý
+Chủ quản; đơn vị vận hành;
+chủ quản dữ liệu; đầu mối xác
+nhận.
+Cơ quan chủ quản và đầu
+mối phối hợp; không ghi cơ
+quan ban hành Khung là chủ
+quản.
+Vòng 
+đời 
+và
+phương án
+Trạng thái; phương án tiếp
+tục, nâng cấp, hợp nhất, thay
+thế hoặc bổ sung.
+Tình trạng khai thác, kết nối
+và thay đổi có ảnh hưởng liên
+thông nếu được xác nhận.
+Kết nối và căn cứKết nối chính; dữ liệu hoặc
+dịch vụ; nguồn, minh chứng.
+Điểm kết nối; dữ liệu hoặc
+dịch vụ được chia sẻ; căn cứ
+và mức bảo vệ.
+5. Cấu trúc tệp dữ liệu tối thiểu
+Mẫu số 03 được lập theo tệp XLSX chuẩn do Bộ Khoa học và Công nghệ
+công bố kèm theo Hướng dẫn, gồm 04 trang tính dữ liệu chính: DM_DOITUONG,
+QH_KETNOI, ANHXA, HOANTHIEN_NV và 03 trang tính hỗ trợ:
+HUONG_DAN, DM_GIATRI, TU_DIEN_TRUONG.
+Cơ quan, tổ chức sử dụng đúng cấu trúc tệp mẫu; không tự ý đổi tên, xóa
+hoặc thay đổi cấu trúc các trang tính, tên trường dữ liệu, danh mục giá trị chuẩn
+và công thức kiểm tra được thiết lập trong tệp mẫu. Có thể bổ sung trang tính
+phục vụ yêu cầu quản lý riêng, trong đó có trang tính LS_PHIENBAN để quản lý
+lịch sử thay đổi, nhưng không được làm ảnh hưởng đến cấu trúc, công thức kiểm
+tra và khả năng tổng hợp dữ liệu theo tệp mẫu chuẩn.
+Trang tính dữ liệu chính
+Nội dung
+DM_DOITUONG
+Bảng 1 - Danh mục đối tượng kiến trúc chủ yếu.
+QH_KETNOI
+Bảng 2 - Danh mục quan hệ, kết nối và chia sẻ dữ
+liệu hoặc dịch vụ; một quan hệ một dòng.
+ANHXA
+Bảng 3 - Ánh xạ đối tượng với hình tham chiếu
+tương ứng, Mẫu số 01, Mẫu số 02 và khung/kiến
+trúc nguồn.
+HOANTHIEN_NV
+Bảng 4 - Nội dung cần hoàn thiện, nhiệm vụ chuyển
+đổi kiến trúc và lộ trình.
+5.1. Bảng 1 - Danh mục đối tượng kiến trúc chủ yếu
+Trường dữ liệu
+Mức yêu cầu
+Mô tả
+Mã đối tượng
+Bắt buộc
+Mã cục bộ dùng để liên kết trong hồ sơ; duy
+nhất trong bộ dữ liệu của cơ quan, tổ chức.
+
+=== [TRANG 69] ===
+69
+Trường dữ liệu
+Mức yêu cầu
+Mô tả
+Loại bản ghi
+Bắt buộc
+Chọn một trong hai giá trị: Bản ghi gốc; Bản
+ghi tham chiếu. Bản ghi gốc do cơ quan chủ
+quản lập và duy trì; bản ghi tham chiếu được
+lập bởi cơ quan có khai thác, sử dụng hoặc
+kết nối với đối tượng.
+Mã định danh
+gốc/mã nguồn
+Bắt buộc đối
+với bản ghi
+tham 
+chiếu;
+khi có đối với
+bản ghi gốc
+Mã chính thức do cơ quan chủ quản hoặc hệ
+thống nguồn công bố; mã tạm đã được xác
+nhận khi chưa có mã chính thức. Bản ghi
+tham chiếu ghi đúng mã nguồn để đối soát;
+chưa được cung cấp thì ghi “Chưa xác định”
+kèm nguồn/đầu mối và thời hạn bổ sung,
+không tự tạo mã nguồn. Mã NAS khi có
+được quản lý ở trường riêng hoặc trường mở
+rộng theo đặc tả, không thay thế và làm mất
+mã cục bộ.
+Tên đối tượng
+Bắt buộc
+Tên chính thức, thống nhất trong tài liệu, sơ
+đồ và bộ dữ liệu. Đối với đối tượng tham
+chiếu, sử dụng tên do cơ quan chủ quản công
+bố.
+Loại đối tượng
+Bắt buộc
+Thành phần logic; hạ tầng số; hệ thống số/hệ
+thống thông tin; nền tảng số; CSDL/tài sản
+dữ liệu; dịch vụ số; loại khác. Không sử
+dụng “thành phần tham chiếu bên ngoài”
+làm loại đối tượng vì đây là vai trò của bản
+ghi, không phải bản chất của đối tượng.
+Lớp 
+kiến
+trúc/thành phần
+xuyên suốt
+Bắt buộc
+Vị trí chính thuộc một trong 04 lớp hoặc 04
+thành phần xuyên suốt theo chức năng. Quan
+hệ với lớp hoặc góc nhìn khác được dẫn
+chiếu, ánh xạ; không nhân bản đối tượng chỉ
+vì xuất hiện ở nhiều vị trí.
+Thành 
+phần
+trong lớp
+Bắt buộc đối
+với đối tượng
+thuộc 04 lớp
+Hạ tầng số; An ninh mạng; Dữ liệu; Nền
+tảng lõi; Ứng dụng và nghiệp vụ dùng
+chung; Kênh tương tác; Đo lường hiệu quả.
+Đối với thành phần xuyên suốt ghi “Không
+áp dụng”.
+
+=== [TRANG 70] ===
+70
+Trường dữ liệu
+Mức yêu cầu
+Mô tả
+Trạng thái mô
+hình
+Bắt buộc
+Hiện trạng; Mục tiêu; hoặc Đồng thời hiện
+trạng và mục tiêu. Đối tượng được kế thừa
+giữ cùng mã; trạng thái thực tế ghi tại Trạng
+thái vòng đời, thay đổi cần đạt ghi tại
+Phương án hoàn thiện và Bảng 4 khi có.
+Phạm 
+vi 
+sử
+dụng
+Bắt buộc
+Quốc gia; ngành, lĩnh vực; liên tỉnh; cấp bộ;
+cấp tỉnh; cơ quan/tổ chức; đơn vị; cấp xã;
+nhóm người dùng. Có thể ghi nhiều phạm vi
+nếu cần.
+Phạm 
+vi/hình
+thức 
+dùng
+chung
+Bắt buộc
+Dùng chung quốc gia cho các ngành, lĩnh
+vực - Nhóm A; dùng chung quốc gia cho
+ngành, lĩnh vực - Nhóm B; dùng chung cấp
+bộ; dùng chung cấp tỉnh; dùng chung nội bộ;
+dùng riêng/đặc thù; không áp dụng. Không
+đưa “thành phần do cơ quan, tổ chức triển
+khai” vào trường này vì đây là thông tin về
+chủ quản, không phải hình thức dùng chung.
+Cơ quan chủ
+quản
+Bắt buộc
+Cơ quan có thẩm quyền quản lý đối tượng.
+Bản ghi tham chiếu vẫn phải ghi đúng cơ
+quan chủ quản; không ghi cơ quan lập
+Khung là chủ quản nếu không được giao.
+Đơn vị vận hành
+Bắt buộc đối
+với nền tảng,
+cơ sở dữ liệu
+dùng 
+chung
+đang cung cấp
+dữ liệu hoặc
+dịch 
+vụ 
+ra
+ngoài phạm vi
+cơ quan, tổ
+chức
+Đơn vị trực tiếp vận hành, cung cấp dịch vụ
+hoặc hỗ trợ khai thác.
+
+=== [TRANG 71] ===
+71
+Trường dữ liệu
+Mức yêu cầu
+Mô tả
+Đầu 
+mối 
+kỹ
+thuật/vận hành
+Bắt buộc đối
+với nền tảng,
+cơ sở dữ liệu
+dùng 
+chung
+đang cung cấp
+dữ liệu hoặc
+dịch 
+vụ 
+ra
+ngoài phạm vi
+cơ quan, tổ
+chức
+Ghi đơn vị, bộ phận hoặc kênh hỗ trợ kỹ
+thuật dùng chung; hạn chế ghi thông tin cá
+nhân có khả năng thay đổi thường xuyên.
+Chủ quản dữ
+liệu
+Khi có
+Cơ quan, đơn vị chịu trách nhiệm đối với dữ
+liệu chủ yếu được quản lý trong đối tượng.
+Trạng thái vòng
+đời
+Bắt buộc đối
+với bản ghi
+gốc; khi có đối
+với bản ghi
+tham chiếu
+Dự kiến; đang xây dựng; thử nghiệm; đang
+vận hành; nâng cấp; hợp nhất; thay thế; kết
+thúc sử dụng; trạng thái khác. Đối với bản
+ghi tham chiếu, không tự xác định trạng thái
+vòng đời nếu chưa được cơ quan chủ quản
+xác nhận.
+Tình trạng khai
+thác tại cơ quan
+Bắt buộc đối
+với bản ghi
+tham chiếu
+Chưa khai thác; đang kết nối; đang khai
+thác; khai thác một phần; tạm dừng; không
+còn sử dụng. Trường này phản ánh tình trạng
+tại cơ quan tham chiếu, không thay thế trạng
+thái vòng đời của đối tượng.
+Phương án hoàn
+thiện
+Khi có
+Tiếp tục sử dụng; chuẩn hóa/kết nối/tích
+hợp; nâng cấp/mở rộng; hợp nhất/tổ chức
+lại; thay thế/kết thúc; bổ sung mới. Đối với
+bản ghi tham chiếu, chỉ ghi phương án thuộc
+phạm vi đầu kết nối của cơ quan.
+Nguồn/minh
+chứng
+Bắt buộc
+Văn bản, hồ sơ, danh mục hoặc xác nhận có
+thẩm quyền; ghi số/tên nguồn, cơ quan ban
+hành hoặc xác nhận, phiên bản/ngày và vị
+trí dẫn chiếu khi cần.
+Đầu 
+mối 
+xác
+nhận
+Bắt buộc
+Đơn vị/cá nhân cung cấp hoặc xác nhận
+thông tin. Đối với bản ghi tham chiếu, có thể
+ghi đầu mối của cơ quan tham chiếu và đầu
+mối phối hợp của cơ quan chủ quản.
+Ghi chú
+Tùy chọn
+Thông tin bổ sung, hạn chế tiếp cận, mã cũ,
+mã tạm hoặc nội dung cần đối soát.
+
+=== [TRANG 72] ===
+72
+5.2. Bảng 2 - Danh mục quan hệ, kết nối và chia sẻ dữ liệu hoặc dịch vụ
+Trường dữ liệu
+Mức yêu cầu
+Mô tả
+Mã quan hệ
+Khi cần
+Mã QH-x nếu quan hệ được quản lý độc
+lập.
+Đối tượng nguồn
+Bắt buộc
+Mã đối tượng tại Bảng 1: bên gửi đối với
+trao đổi dữ liệu; bên sử dụng đối với dịch
+vụ; bên phụ thuộc đối với quan hệ phụ
+thuộc. Quan hệ khác ghi rõ chiều và ý
+nghĩa tại Ghi chú.
+Loại quan hệ
+Bắt buộc
+Kết nối kỹ thuật; trao đổi dữ liệu; sử
+dụng dịch vụ; phụ thuộc; dùng chung; kế
+thừa; quan hệ khác.
+Đối tượng đích
+Bắt buộc
+Mã đối tượng tại Bảng 1: bên nhận đối
+với trao đổi dữ liệu; bên cung cấp đối với
+dịch vụ; đối tượng được phụ thuộc đối
+với quan hệ phụ thuộc.
+Dữ 
+liệu/dịch 
+vụ
+trao đổi
+Bắt buộc khi có
+trao đổi dữ liệu
+hoặc sử dụng
+dịch vụ
+Tên nhóm dữ liệu, API, dịch vụ hoặc kết
+quả nghiệp vụ chủ yếu. Quan hệ không
+có trao đổi dữ liệu hoặc sử dụng dịch vụ
+ghi “Không áp dụng”, giải thích tại Ghi
+chú. Đặc tả chi tiết chỉ dẫn chiếu từ tài
+liệu nguồn.
+Cơ chế/kênh kết nối Khi có
+Ghi nền tảng, phương thức hoặc kênh
+thực tế: NDXP, NDOP, LGSP, LDOP,
+API, trục liên thông, kết nối chuyên
+dùng hoặc cơ chế khác; phân biệt vai trò
+từng thành phần. Khi thuộc phạm vi áp
+dụng, thể hiện Trục liên thông văn bản
+mật của Chính phủ và thành phần bảo
+mật điểm kết nối theo phân công, tài liệu
+được phép sử dụng. Chỉ dẫn chiếu tiêu
+chuẩn cấu trúc thông điệp, danh mục
+dịch vụ hoặc hồ sơ tích hợp; không ghi
+cấu hình nhạy cảm.
+
+=== [TRANG 73] ===
+73
+Trường dữ liệu
+Mức yêu cầu
+Mô tả
+Trạng thái
+Bắt buộc
+Đang khai thác; chưa kết nối; đang nâng
+cấp; dự kiến; thử nghiệm; kết thúc; trạng
+thái khác. Ghi trạng thái thực tế tại ngày
+chốt dữ liệu; trạng thái mục tiêu và thay
+đổi dự kiến ghi tại Ghi chú, liên kết Bảng
+4 khi cần xử lý.
+Tần suất/mức dịch
+vụ
+Bắt buộc đối với
+quan hệ cung
+cấp, khai thác
+dữ 
+liệu 
+hoặc
+dịch vụ từ nền
+tảng, cơ sở dữ
+liệu dùng chung
+ra ngoài phạm vi
+cơ quan, tổ chức
+Ghi tần suất cung cấp, thời gian đáp ứng,
+mức độ sẵn sàng, SLA hoặc yêu cầu hiệu
+năng theo văn bản, thỏa thuận hoặc hồ
+sơ dịch vụ. Trường hợp SLA được quản
+lý trong tài liệu riêng, ghi thông tin chính
+và dẫn chiếu tài liệu tương ứng.
+Căn cứ/nguồn xác
+nhận
+Bắt buộc
+Văn bản, thỏa thuận, hồ sơ kỹ thuật hoặc
+đầu mối xác nhận.
+Phân loại và yêu
+cầu bảo vệ dữ liệu
+Bắt buộc đối với
+quan hệ có trao
+đổi, chia sẻ dữ
+liệu
+Ghi kết quả phân loại, yêu cầu bảo vệ và
+phạm vi được chia sẻ của nhóm dữ liệu
+tại trường “Dữ liệu/dịch vụ trao đổi”,
+theo hồ sơ hoặc xác nhận có thẩm quyền;
+dẫn chiếu tại “Căn cứ/nguồn xác nhận”.
+Không trao đổi dữ liệu thì ghi “Không
+áp dụng”; chưa đủ thông tin thì ghi
+“Chưa xác định”, kèm đầu mối và thời
+hạn bổ sung. Đơn vị đầu mối kiến trúc
+không tự xác định hoặc thay đổi nội
+dung ngoài chức năng, thẩm quyền được
+giao.
+Cơ quan/đầu mối
+phối hợp
+Bắt buộc đối với
+đầu 
+quan 
+hệ
+thuộc phạm vi
+quản lý
+Đơn vị chịu trách nhiệm tại đầu quan hệ
+thuộc phạm vi quản lý của cơ quan lập
+Khung. Đối với đầu quan hệ thuộc cơ
+quan khác: ghi theo văn bản, thỏa thuận
+kết nối hoặc tài liệu tích hợp đã công bố;
+chưa có thì ghi “Chưa xác định” kèm
+nhiệm vụ phối hợp theo Mục III.3 Phần
+A.
+Ghi chú
+Tùy chọn
+Thông tin bổ sung.
+
+=== [TRANG 74] ===
+74
+Lưu ý: Thông tin về phân loại và yêu cầu bảo vệ dữ liệu chỉ được ghi ở mức
+cần thiết để quản lý kiến trúc; không ghi cấu hình bảo vệ chi tiết, tài khoản, mật
+khẩu, khóa mã, địa chỉ quản trị hoặc thông tin nhạy cảm khác vào bản dùng để
+công khai, chia sẻ.
+Đối với quan hệ chia sẻ dữ liệu, ghi tại trường “Phân loại và yêu cầu bảo vệ
+dữ liệu” hoặc dẫn chiếu tài liệu nguồn về mục đích, phạm vi, đối tượng được khai
+thác, điều kiện cho phép, thời hạn sử dụng/lưu giữ và yêu cầu lưu vết khi áp dụng.
+Mã hoặc nguồn hồ sơ cấp độ, phương án bảo vệ và đầu mối chuyên trách có thể
+được dẫn chiếu tại Bảng 1, Bảng 2; không tạo lại hồ sơ an ninh mạng trong bộ dữ
+liệu kiến trúc. Không công khai vị trí kỹ thuật, dữ liệu nghiệp vụ nhạy cảm hoặc
+thông tin ngoài phạm vi được phép.
+5.3. Bảng 3 - Ánh xạ đối tượng
+Trường dữ liệu
+Mức yêu cầu
+Mô tả
+Mã đối tượng
+Bắt buộc
+Tham chiếu đến mã đối tượng tại Bảng
+1 - Danh mục đối tượng kiến trúc chủ
+yếu.
+Mô hình khái quát
+Bắt buộc
+Vị trí hoặc khối tương ứng trong Hình
+3, Hình 5 hoặc Hình 7 tùy loại Khung;
+thành phần đặc thù không có khối
+tương ứng ghi “Không áp dụng”.
+Mô hình thành phần do
+cơ quan triển khai
+Bắt buộc đối
+với đối tượng
+thuộc phạm vi
+quản lý
+Vị trí hoặc khối tương ứng trong Hình
+4, Hình 6 hoặc Hình 8 tùy loại Khung.
+Kiến trúc cấp xã
+Bắt buộc khi
+liên quan
+Nhóm, lớp hoặc thành phần tương ứng
+tại Hình 9; chỉ áp dụng đối với Khung
+cấp tỉnh.
+Khung/tài liệu nguồn
+Bắt buộc đối
+với đối tượng
+kế thừa, cụ thể
+hóa hoặc tham
+chiếu
+Tên đầy đủ của Khung, kiến trúc, danh
+mục, Từ điển dữ liệu, chương trình, kế
+hoạch hoặc tài liệu nguồn.
+Cơ quan ban hành/chủ
+quản tài liệu nguồn
+Bắt buộc khi
+có 
+tài 
+liệu
+nguồn
+Cơ quan có thẩm quyền ban hành hoặc
+quản lý tài liệu nguồn.
+Phiên bản/ngày hiệu
+lực của tài liệu nguồn
+Bắt buộc khi
+có 
+tài 
+liệu
+nguồn
+Phiên bản, số văn bản, ngày hiệu lực
+hoặc mốc cập nhật của tài liệu được sử
+dụng để ánh xạ.
+
+=== [TRANG 75] ===
+75
+Trường dữ liệu
+Mức yêu cầu
+Mô tả
+Mã/tên 
+đối 
+tượng
+nguồn
+Bắt buộc khi
+tài liệu nguồn
+đã quy định
+Mã chính thức hoặc tên đối tượng tại
+tài liệu nguồn.
+Quan hệ ánh xạ
+Bắt buộc khi
+có 
+tài 
+liệu
+nguồn
+Ghi một trong các giá trị: “Kế thừa
+nguyên trạng”, “Cụ thể hóa”, “Mở
+rộng”, 
+“Tham 
+chiếu”, 
+“Tương
+đương”, “Chưa ánh xạ” hoặc quan hệ
+khác có giải thích.
+Vị trí trong Mẫu số 01
+Khuyến nghị
+Mục lớn có mô tả hoặc dẫn chiếu đối
+tượng; hoàn thiện dần trong quá trình
+duy trì.
+Vị trí trong Mẫu số 02
+Khuyến nghị
+Mã sơ đồ thể hiện đối tượng; không
+bắt buộc ghi đến vị trí hoặc khối cụ
+thể.
+Kết quả đối chiếu/ghi
+chú
+Khi có
+Ghi ngắn gọn khác biệt, nội dung chưa
+thống nhất hoặc chưa thể ánh xạ;
+trường hợp cần xử lý, dẫn chiếu mã nội
+dung cần hoàn thiện tại Bảng 4 - Nội
+dung cần hoàn thiện, nhiệm vụ
+chuyển đổi kiến trúc và lộ trình.
+Mức yêu cầu tại Bảng 3 áp dụng khi lập bản ghi ánh xạ, phù hợp với Mục
+III.3 Phần A. Thông tin nguồn đã có phải được sử dụng; thông tin chưa đủ được
+ghi rõ và hoàn thiện theo lộ trình. Không coi việc Bảng 3 chưa được điền đầy đủ
+ở lần đầu là căn cứ bỏ qua yêu cầu thống nhất tên, mã, chủ quản và phiên bản
+giữa ba mẫu.
+5.4. Bảng 4 - Nội dung cần hoàn thiện, nhiệm vụ chuyển đổi kiến trúc và
+lộ trình
+Mỗi dòng thể hiện một cặp “Mã nội dung – Mã nhiệm vụ chuyển đổi kiến
+trúc”. Một nội dung gắn với nhiều nhiệm vụ hoặc một nhiệm vụ xử lý nhiều nội
+dung thì lặp mã tương ứng trên các dòng liên kết, không tạo đối tượng mới. Thông
+tin mô tả cùng mã phải thống nhất; không lặp cùng cặp mã. Khi tổng hợp, đếm
+nội dung và nhiệm vụ theo mã duy nhất, không đếm theo số dòng.
+Trường dữ liệu
+Mức yêu cầu
+Mô tả
+Mã nội dung
+Bắt buộc
+Mã ND-x; mỗi nội dung cần hoàn
+thiện có một mã duy nhất, được giữ
+nguyên khi liên kết với các nhiệm vụ
+khác nhau.
+
+=== [TRANG 76] ===
+76
+Trường dữ liệu
+Mức yêu cầu
+Mô tả
+Đối tượng liên quan Bắt buộc
+Một hoặc nhiều mã đối tượng tại Bảng
+1.
+Hiện trạng
+Bắt buộc
+Vấn đề hoặc trạng thái hiện có, có
+nguồn xác nhận.
+Yêu cầu cần đạt
+Bắt buộc
+Trạng thái mục tiêu hoặc yêu cầu kiến
+trúc.
+Nội dung cần hoàn
+thiện
+Bắt buộc
+Sai khác cụ thể cần xử lý.
+Phương án xử lý ở
+mức kiến trúc
+Bắt buộc
+Tiếp tục sử dụng; chuẩn hóa, kết nối
+hoặc tích hợp; nâng cấp, mở rộng; hợp
+nhất, tổ chức lại; thay thế, kết thúc sử
+dụng hoặc bổ sung mới. Không yêu
+cầu mô tả giải pháp kỹ thuật hoặc
+phương án đầu tư chi tiết.
+Phạm vi quản trị
+Khi có
+Thuộc phạm vi quản lý trực tiếp hoặc
+phối hợp tại ranh giới liên thông.
+Mã 
+nhiệm 
+vụ
+chuyển đổi kiến
+trúc
+Bắt buộc
+Mã ổn định của nhiệm vụ trong hồ sơ.
+Có thể sử dụng mã nhiệm vụ nguồn
+nếu không trùng; nếu chưa có mã hoặc
+trùng với mã khác, cấp NV-x và dẫn
+chiếu mã nguồn tại trường nội dung
+triển khai liên quan. Mỗi nội dung gắn
+với ít nhất một nhiệm vụ; một nhiệm
+vụ có thể xử lý nhiều nội dung.
+Tên/mục 
+tiêu
+nhiệm vụ chuyển
+đổi kiến trúc
+Bắt buộc
+Mô tả ngắn gọn thay đổi kiến trúc mà
+nhiệm vụ phải tạo ra; không trình bày
+các hoạt động triển khai chi tiết.
+Kết quả kiến trúc
+cần đạt
+Bắt buộc
+Trạng thái, năng lực, quan hệ, mức độ
+kết nối, dùng chung hoặc thay đổi của
+đối tượng kiến trúc sau khi hoàn thành
+nhiệm vụ.
+Cơ quan/đơn vị chủ
+trì nhiệm vụ chuyển
+đổi kiến trúc
+Bắt buộc
+Đầu mối chịu trách nhiệm tổ chức,
+theo dõi, phối hợp và cập nhật trạng
+thái nhiệm vụ trên Mẫu số 03 và NAS;
+không mặc nhiên đồng nhất với chủ
+đầu tư hoặc đơn vị thực hiện dự án.
+
+=== [TRANG 77] ===
+77
+Trường dữ liệu
+Mức yêu cầu
+Mô tả
+Cơ quan phối hợp
+Khi có
+Đơn vị phối hợp theo chức năng,
+nhiệm vụ và thẩm quyền.
+Mức ưu tiên/phụ
+thuộc
+Bắt buộc xác định
+mức ưu tiên; quan
+hệ phụ thuộc ghi
+khi có
+Mức ưu tiên của nhiệm vụ; nhiệm vụ
+tiền đề; quan hệ phụ thuộc về kiến
+trúc, dữ liệu, kỹ thuật hoặc pháp lý.
+Thời hạn/giai đoạn
+chuyển đổi dự kiến
+Bắt buộc
+Mốc hoàn thành hoặc khoảng thời
+gian cụ thể trong giai đoạn áp dụng
+Khung; không chỉ ghi “ngắn hạn”,
+“trung hạn”, “dài hạn”. Sử dụng thời
+hạn có thẩm quyền đã xác định; chưa
+có thì nêu mốc dự kiến.
+Nguồn lực dự kiến
+Bắt buộc ghi ở
+mức dự kiến
+Nêu loại hoặc nguồn lực dự kiến:
+nhân lực hiện có, ngân sách theo kế
+hoạch, thuê dịch vụ hoặc nguồn hợp
+pháp khác. Chưa xác định thì ghi rõ
+đầu mối và thời hạn làm rõ. Không
+yêu cầu dự toán chi tiết; việc ghi trong
+Khung không phải quyết định phân bổ
+vốn hoặc phê duyệt chi.
+Tình trạng cụ thể
+hóa nhiệm vụ
+Bắt buộc khi duy
+trì
+Mới xác định tại Khung; đã đưa vào
+chương trình/kế hoạch; đã được giao
+nhiệm vụ hoặc phê duyệt đề án, dự án;
+thực hiện trong hoạt động thường
+xuyên.
+Chương 
+trình/kế
+hoạch/đề án/nhiệm
+vụ/dự án liên quan
+Khi có
+Ghi mã, tên, văn bản giao hoặc phê
+duyệt và cơ quan ban hành của nhiệm
+vụ nguồn hoặc nội dung triển khai có
+liên quan. Một nhiệm vụ kiến trúc có
+thể liên kết nhiều nội dung triển khai;
+bổ sung mã nguồn không thay đổi mã
+nhiệm vụ đã dùng trong hồ sơ.
+Tiến độ thực hiện
+Bắt buộc khi duy
+trì
+Ghi mốc hoặc kết quả kiến trúc trung
+gian đã đạt, tỷ lệ hoàn thành nếu xác
+định được và ngày cập nhật; trạng thái
+tổng hợp ghi tại trường “Trạng thái
+thực hiện”. Không sao chép tiến độ
+quản lý chi tiết của chương trình, kế
+hoạch hoặc dự án.
+
+=== [TRANG 78] ===
+78
+Trường dữ liệu
+Mức yêu cầu
+Mô tả
+Tiêu chí và nguồn
+dữ liệu kiểm chứng
+kết quả kiến trúc
+Bắt buộc xác định
+tiêu chí và nguồn
+kiểm chứng dự
+kiến; minh chứng
+hoàn thiện khi duy
+trì
+Nêu tiêu chí, cách xác nhận kết quả
+và nguồn kiểm chứng dự kiến: trạng
+thái đối tượng, dữ liệu vận hành, kết
+quả kiểm tra hoặc hồ sơ. Nguồn chưa
+xác định ghi theo Mục III.3 Phần A;
+bổ sung minh chứng khi có kết quả.
+Không thay thế tiêu chí nghiệm thu dự
+án.
+Mức sẵn sàng dữ
+liệu
+Khi có; bắt buộc
+khi duy trì
+Đánh giá mức sẵn có của dữ liệu/minh
+chứng để kiểm chứng kết quả nhiệm
+vụ, không thay thế đánh giá chất
+lượng toàn bộ dữ liệu nghiệp vụ: Đầy
+đủ - có đủ nguồn để đối chiếu tiêu chí;
+Chưa đầy đủ - mới có một phần; Chưa
+có - chưa có nguồn sử dụng được;
+Không áp dụng - tiêu chí không cần
+loại dữ liệu đó và có giải thích. Ghi
+đầu mối, nội dung còn thiếu và thời
+hạn hoàn thiện.
+Trạng 
+thái 
+thực
+hiện
+Bắt buộc khi duy
+trì
+Chưa thực hiện; đang thực hiện;
+chậm; điều chỉnh; hoàn thành - chờ
+kiểm chứng; hoàn thành - đã kiểm
+chứng; tạm dừng; dừng.
+Ghi chú
+Tùy chọn
+Thông tin bổ sung.
+Nguyên tắc hình thành, gộp, tách và theo dõi nhiệm vụ thực hiện theo Mục
+VIII.1 Mẫu số 01; nhiệm vụ chuyển đổi kiến trúc không thay thế chương trình, kế
+hoạch hoặc dự án triển khai.
+Khi cập nhật Bảng 4, giữ nguyên mã nội dung, mã nhiệm vụ đã sử dụng; bổ
+sung thông tin triển khai, tiến độ và kiểm chứng vào các dòng liên kết tương ứng.
+6. Ví dụ minh họa
+Các ví dụ chỉ minh họa cách ghi và liên kết, không phải bản ghi đầy đủ mọi
+trường bắt buộc. Mục 6.2 sử dụng danh mục tại mục 6.1; các tình huống còn lại
+độc lập, mã và số liệu không phải dữ liệu thực tế hoặc mã dùng chung toàn quốc.
+Khi áp dụng, điền theo Bảng 1-4 và nguồn của cơ quan.
+
+=== [TRANG 79] ===
+79
+6.1. Ví dụ về Danh mục đối tượng kiến trúc
+Mã
+Tên đối tượng
+Loại bản ghi;
+loại đối tượng;
+vị trí
+Chủ quản
+Tình trạng/
+quan hệ chính
+KT-1
+Hệ thống thông tin
+phục vụ chỉ đạo,
+điều hành
+Bản ghi gốc; hệ
+thống 
+số/hệ
+thống thông tin;
+Lớp 3.
+[Cơ quan được
+giao]
+Đang vận hành;
+khai thác dữ liệu
+từ KT-2.
+KT-2 Kho dữ liệu dùng
+chung
+Bản ghi gốc;
+CSDL/tài 
+sản
+dữ liệu; Lớp 2,
+thành phần Dữ
+liệu.
+[Cơ quan được
+giao]
+Nâng cấp; kết nối
+KT-3.
+KT-3 Hạ tầng kết nối,
+chia sẻ dữ liệu
+Bản ghi gốc;
+nền tảng số;
+Lớp 2, thành
+phần Nền tảng
+lõi.
+[Cơ quan được
+giao]
+Kết 
+nối
+NDXP/NDOP và
+hệ 
+thống 
+liên
+quan.
+QG-1
+Nền 
+tảng 
+dùng
+chung cấp quốc gia
+[tên theo nguồn]
+Bản ghi tham
+chiếu; nền tảng
+số; 
+Lớp 
+2,
+thành phần Nền
+tảng lõi.
+[Cơ 
+quan
+Trung ương]
+KT-1/KT-3 khai
+thác theo phạm vi
+được phép.
+LQ-1 Hệ thống của cơ
+quan liên quan
+Bản ghi tham
+chiếu; hệ thống
+số/hệ 
+thống
+thông tin; Lớp
+3.
+[Cơ quan chủ
+quản]
+Chỉ ghi điểm kết
+nối, dữ liệu/dịch
+vụ được chia sẻ
+đã xác nhận.
+KT-4
+Ứng dụng dùng
+chung phục vụ cấp
+xã
+Bản ghi gốc; hệ
+thống 
+số/hệ
+thống thông tin;
+Lớp 3.
+[UBND
+tỉnh/cơ 
+quan
+được giao]
+Tỉnh quản lý tập
+trung, các xã khai
+thác theo phân
+cấp; không lập
+một bản ghi cho
+mỗi xã.
+Các mã trong bảng là mã cục bộ minh họa và được giữ ổn định; mã nguồn
+hoặc mã NAS khi có được ghi riêng. Phạm vi dùng chung, phạm vi sử dụng và
+các trường khác được kê khai theo Bảng 1.
+6.2. Ví dụ về kết nối chính
+- KT-1 khai thác dữ liệu tổng hợp từ KT-2 để phục vụ chỉ đạo, điều hành.
+
+=== [TRANG 80] ===
+80
+- KT-3 kết nối, chia sẻ dữ liệu với QG-1 theo tiêu chuẩn và phạm vi được phép.
+- KT-3 trao đổi dữ liệu hoặc siêu dữ liệu với LQ-1 theo thỏa thuận/đầu mối
+đã xác nhận.
+- Ứng dụng dùng chung KT-4 của tỉnh cung cấp năng lực và phân quyền sử
+dụng cho UBND cấp xã (đối với Khung cấp tỉnh).
+Mỗi quan hệ chính có nguồn, đích, loại, căn cứ và trạng thái; dữ liệu/dịch vụ
+trao đổi, yêu cầu bảo vệ được ghi khi áp dụng. Quan hệ có mã khi cần theo dõi
+độc lập. Ví dụ, KT-1 sử dụng dịch vụ từ KT-2: nguồn KT-1, đích KT-2; nếu mô
+tả chiều cung cấp dữ liệu thì nguồn KT-2, đích KT-1.
+6.3. Ví dụ liên kết nội dung cần hoàn thiện với nhiệm vụ
+Mã
+Nội dung cần
+ hoàn thiện
+Phương án
+Nhiệm vụ và
+ trách nhiệm
+Thời hạn/
+kết quả
+ND-1
+09 cơ sở dữ liệu
+chuyên ngành chưa
+được chuẩn hóa, kết
+nối đầy đủ với Kho
+dữ liệu dùng chung
+theo Khung kiến
+trúc dữ liệu của cơ
+quan.
+Chuẩn 
+hóa;
+kết nối, đồng
+bộ.
+Sử dụng mã NV-
+DL-01 đã được xác
+lập trong kế hoạch
+triển khai Khung
+kiến trúc dữ liệu;
+chủ quản dữ liệu chủ
+trì, 
+các 
+đơn 
+vị
+chuyên ngành phối
+hợp. Mẫu số 03 dẫn
+chiếu 
+cùng 
+mã
+nhiệm vụ, không lập
+nhiệm vụ mới.
+Mốc: 
+[theo
+NV-DL-01].
+Kết quả: 09
+CSDL được
+chuẩn 
+hóa,
+kết nối; kiểm
+chứng 
+theo
+hồ sơ kiểm
+tra và dữ liệu
+vận hành.
+ND-2
+Ba hệ thống thông
+tin chưa kết nối với
+năng lực giám sát
+an ninh mạng tập
+trung theo Khung
+kiến trúc an ninh
+mạng của cơ quan.
+Kết nối, tích
+hợp.
+Sử dụng mã NV-
+ANM-02 đã được
+xác lập trong kế
+hoạch 
+triển 
+khai
+Khung kiến trúc an
+ninh mạng; đơn vị
+an ninh mạng chủ
+trì, đơn vị vận hành
+hệ thống phối hợp.
+Mẫu số 03 dẫn chiếu
+cùng mã nhiệm vụ,
+không lập nhiệm vụ
+mới.
+Mốc: 
+[theo
+NV-ANM-
+02]. Kết quả:
+03 hệ thống
+được kết nối,
+giám 
+sát;
+kiểm chứng
+theo hồ sơ
+chuyên
+ngành.
+Trong ví dụ ND-1 và ND-2, nội dung cần hoàn thiện được ghi nhận trong
+Khung kiến trúc số vì có ảnh hưởng đến kiến trúc tổng thể; nhiệm vụ thực hiện
+được quản lý tại Khung hoặc kế hoạch chuyên ngành và được dẫn chiếu bằng
+cùng mã nhiệm vụ để theo dõi thống nhất.
+
+=== [TRANG 81] ===
+81
+Trường hợp chưa có mã nhiệm vụ nguồn, sử dụng NV-x ổn định cho nhiệm
+vụ; xác định đầy đủ thông tin bắt buộc theo Bảng 4. Khi có nội dung triển khai
+được giao, phê duyệt, bổ sung mã và văn bản nguồn vào trường nội dung triển
+khai liên quan, không thay mã NV-x hoặc tạo nhiệm vụ trùng.
+6.4. Ví dụ về hệ thống chuyên ngành do bộ, ngành chủ trì, địa phương
+khai thác
+Giả định Hệ thống chuyên ngành X do Bộ A chủ trì và được tỉnh B khai
+thác. Trong Mẫu số 03 của tỉnh B, hệ thống được thể hiện như sau:
+- Tại Bảng 1 - Danh mục đối tượng kiến trúc chủ yếu: ghi mã cục bộ LQ-1;
+tên “Hệ thống chuyên ngành X”; loại bản ghi “Bản ghi tham chiếu”; loại đối tượng
+“Hệ thống số/hệ thống thông tin”; cơ quan chủ quản “Bộ A”; mã nguồn, phạm vi
+sử dụng, tình trạng khai thác và nguồn/minh chứng theo hồ sơ đã được xác nhận.
+Không sử dụng “Thành phần tham chiếu bên ngoài” làm loại đối tượng.
+- Tại Bảng 2: nếu tỉnh sử dụng dịch vụ của Hệ thống chuyên ngành X, ghi
+nguồn là KT-3 hoặc hệ thống của tỉnh, đích LQ-1, loại “Sử dụng dịch vụ”. Nếu ghi
+quan hệ trao đổi dữ liệu, nguồn là bên gửi, đích là bên nhận. Các trường dữ liệu/dịch
+vụ, kênh, trạng thái, căn cứ, bảo vệ và đầu mối ghi theo điều kiện áp dụng.
+Địa phương chỉ thể hiện điểm kết nối, dữ liệu và dịch vụ trao đổi; không mô
+tả kiến trúc nội bộ hoặc tạo bản ghi gốc trùng lặp đối với hệ thống này.
+Tại trường “Nguồn/minh chứng” và “Căn cứ/nguồn xác nhận”, địa phương
+dẫn chiếu danh mục dịch vụ, tài liệu tích hợp, đặc tả API hoặc văn bản xác nhận
+do bộ, ngành chủ trì cung cấp; trường hợp chưa có thì ghi “Chưa xác định” và xác
+lập nội dung phối hợp bổ sung, không tự suy luận thông tin kỹ thuật.
+6.5. Ví dụ liên kết mục tiêu, ba mẫu, nhiệm vụ và kiểm chứng
+Tình huống giả định tại tỉnh B: 03 cơ sở dữ liệu chuyên ngành cùng cần cung
+cấp dữ liệu tổng hợp cho Kho dữ liệu dùng chung. Mới 01/03 cơ sở dữ liệu kết
+nối theo phạm vi được phép; mục tiêu trong giai đoạn áp dụng Khung là kết nối
+đủ 03/03 cơ sở dữ liệu sau khi được xác nhận điều kiện chia sẻ. Các mã, số liệu
+và mốc dưới đây chỉ minh họa, không phải chỉ tiêu hoặc thời hạn áp dụng chung.
+Mắt xích
+Cách ghi và truy vết
+Mục tiêu - Mẫu số
+01
+Mục tiêu MT-1: chuẩn hóa, kết nối nhóm 03 CSDL với
+kho dùng chung; không lập lại dữ liệu đã có. Hiện trạng
+tại Mục V; mục tiêu tại Mục VI; nội dung chuyển đổi tại
+Mục VII và nhiệm vụ tại Mục VIII. Mã MT-1 là mã minh
+họa để tra cứu.
+Đối tượng - Bảng 1
+KT-2: Kho dữ liệu dùng chung; KT-3: Hạ tầng kết nối của
+tỉnh; KT-4, KT-5, KT-6: 03 CSDL chuyên ngành. Mỗi đối
+tượng có một bản ghi, ghi đúng chủ quản, phạm vi, trạng
+thái và nguồn xác nhận; không coi cả 03 CSDL là một đối
+tượng chỉ vì được gộp chung nhiệm vụ.
+
+=== [TRANG 82] ===
+82
+Mắt xích
+Cách ghi và truy vết
+Quan hệ - Bảng 2
+QH-1, QH-2, QH-3: lần lượt KT-4, KT-5, KT-6 cung cấp
+dữ liệu cho KT-2 qua cơ chế kết nối được xác nhận, có
+thể sử dụng KT-3. Ghi từng quan hệ, nhóm dữ liệu, trạng
+thái, nguồn xác nhận và điều kiện bảo vệ. Hiện trạng:
+QH-1 đang khai thác, QH-2/QH-3 dự kiến.
+Sơ đồ - Mẫu số 02
+và ánh xạ - Bảng 3
+Trên sơ đồ cấp tỉnh, đặt Kho dữ liệu/CSDL vào thành phần
+Dữ liệu và hạ tầng tích hợp vào Nền tảng lõi; thể hiện các
+quan hệ chính. Bảng 3 dẫn mã sơ đồ, vị trí tương ứng và
+tài liệu nguồn; các tên, mã thống nhất với Bảng 1/Bảng 2.
+Nội dung và nhiệm
+vụ - Bảng 4
+ND-1 liên quan KT-2 đến KT-6: còn thiếu 02 quan hệ kết
+nối và yêu cầu chuẩn hóa. NV-1: chuẩn hóa, hoàn thiện
+kết nối 03 CSDL, liên kết mục tiêu MT-1 tại Mục III Mẫu
+số 01; đầu mối dữ liệu của tỉnh chủ trì, các chủ quản CSDL
+và đơn vị vận hành phối hợp. Ghi nguồn lực dự kiến: nhân
+lực hiện có và kinh phí theo kế hoạch được phê duyệt khi
+có.
+Lộ trình, liên kết
+triển khai
+Giai đoạn 1 [từ… đến…]: xác nhận nguồn, điều kiện chia
+sẻ và kế thừa kết nối hiện có. Giai đoạn 2 [từ… đến…]:
+hoàn thiện, kiểm thử, đưa 02 kết nối còn lại vào khai thác.
+Điền mốc dự kiến cụ thể ngay tại Bảng 4; khi có nội dung
+triển khai, bổ sung mã, tên và văn bản, giữ mã NV-1.
+Tiêu chí và kiểm
+chứng
+Tỷ lệ kết nối = số CSDL trong nhóm đã kết nối, trao đổi
+được dữ liệu theo yêu cầu được xác nhận / 03 × 100%. Số
+liệu ban đầu: 1/3; mục tiêu minh họa: 3/3. Căn cứ: kết quả
+kiểm tra và dữ liệu vận hành được phép dùng. Nếu hoàn
+thành kết nối nhưng chưa có minh chứng thì ghi “Hoàn
+thành - chờ kiểm chứng”, không tự ghi đã kiểm chứng.
+7. Bổ sung định danh khi Hệ thống quản lý kiến trúc số quốc gia (NAS)
+được triển khai
+Trước khi Hệ thống quản lý kiến trúc số quốc gia chính thức tiếp nhận, kết
+nối hoặc đồng bộ dữ liệu, Bộ Khoa học và Công nghệ công bố tài liệu kỹ thuật
+của Hệ thống, tối thiểu gồm: mô hình dữ liệu đích và từ điển dữ liệu; cấu trúc,
+quy tắc cấp và quản lý định danh kỹ thuật; quy tắc ánh xạ mã tham chiếu cục bộ;
+danh mục giá trị chuẩn và quy tắc kiểm tra dữ liệu; định dạng trao đổi dữ liệu, đặc
+tả API, cơ chế xác thực, phân quyền, quản lý phiên bản và yêu cầu bảo vệ dữ liệu.
+Cơ quan, tổ chức thực hiện chuẩn hóa, ánh xạ và cập nhật dữ liệu theo tài
+liệu kỹ thuật được công bố. Mã tham chiếu cục bộ được giữ làm mã nguồn đối
+soát; định danh kỹ thuật của NAS được bổ sung tại trường dữ liệu riêng. Cơ quan,
+tổ chức không tự cấp định danh NAS khi chưa có hướng dẫn chính thức.
+
+=== [TRANG 83] ===
+83
+Đối tượng do cơ quan khác chủ quản được liên kết qua mã nguồn hoặc mã
+NAS, đồng thời giữ mã cục bộ trong hồ sơ tham chiếu; không tạo bản ghi gốc
+mới. Bổ sung mã NAS không thay đổi thẩm quyền, chủ quản hoặc mặc nhiên yêu
+cầu ban hành lại Khung.
+8. Kiểm tra chất lượng bộ dữ liệu
+- Trong cùng bộ dữ liệu, một đối tượng có một mã tham chiếu cục bộ duy
+nhất; không dùng cùng mã cho hai đối tượng và không cấp hai mã cục bộ cho
+cùng một đối tượng. Mã nguồn, mã NAS và mã cũ có thể cùng được lưu để ánh
+xạ, đối soát, không được hiểu là tạo thêm đối tượng.
+- Đối tượng kiến trúc chủ yếu trên sơ đồ bắt buộc phải có bản ghi tại
+DM_DOITUONG; quan hệ chính truy vết được tại QH_KETNOI. Ký hiệu trang
+trí, nhãn lớp hoặc nhóm trình bày không tự trở thành đối tượng phải lập danh
+mục.
+- Mỗi nội dung cần hoàn thiện liên kết với ít nhất một nhiệm vụ chuyển đổi
+kiến trúc; nhiệm vụ có kết quả cần đạt, tiêu chí kiểm chứng và thông tin nguồn
+lực dự kiến theo Bảng 4. Theo dõi rõ trạng thái chờ kiểm chứng hoặc đã kiểm
+chứng khi duy trì.
+- Tên, chủ quản, trạng thái, phiên bản và phạm vi thống nhất giữa ba mẫu.
+- Không đưa mật khẩu, khóa mã, địa chỉ quản trị hoặc cấu hình nhạy cảm
+không cần thiết vào bộ dữ liệu kiến trúc. Thông tin có yêu cầu bảo vệ được phân
+loại, giới hạn quyền truy cập theo Mục VII.3 Phần A; bản công khai không chứa
+bí mật nhà nước, thông tin hạn chế tiếp cận hoặc dữ liệu cá nhân không cần thiết.
+- Tệp XLSX chuẩn hỗ trợ kiểm tra trường bắt buộc, giá trị và quan hệ tham
+chiếu; phát hiện mã đối tượng trùng tại Bảng 1, cặp mã nội dung–nhiệm vụ trùng
+hoặc thông tin cùng mã không thống nhất tại Bảng 4. Trước khi gửi, lọc các cột
+“KIỂM TRA”, xử lý cảnh báo và đối chiếu kết quả tại HUONG_DAN.
+- Không tạo bản ghi gốc hoặc nhiệm vụ trùng lặp giữa các Khung; bản ghi
+tham chiếu hợp lệ phải nhận diện được nguồn, giữ mã cục bộ và ánh xạ với mã
+nguồn hoặc mã NAS khi có.
+- Đối tượng kế thừa, cụ thể hóa hoặc tham chiếu từ Khung, tài liệu chuyên
+ngành phải có tên tài liệu nguồn, cơ quan ban hành, phiên bản hoặc ngày hiệu lực,
+mã hoặc tên đối tượng nguồn và quan hệ ánh xạ.
+- Nhiệm vụ đã được quản lý trong Khung, chương trình, kế hoạch hoặc tài
+liệu chuyên ngành phải có thông tin về nguồn nhiệm vụ và sử dụng hoặc dẫn chiếu
+mã nhiệm vụ nguồn; không tạo nhiệm vụ mới chỉ để đưa vào Khung kiến trúc số.
+Kiểm tra tự động chỉ phản ánh tính đầy đủ, hợp lệ về cấu trúc; không thay
+thế kiểm tra nội dung, nguồn và sự nhất quán giữa ba mẫu. Đối chiếu sơ đồ qua
+tên, mã và nguồn quản lý thống nhất; Bảng 3 hỗ trợ ánh xạ theo mức yêu cầu tại
+Mục III.3 Phần A.
