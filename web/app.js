@@ -1595,18 +1595,18 @@ function exportExcelMau03() {
   }, 800);
 }
 
-// Function to handle the 05 Core Questions interaction
+// Function to handle the 05 Strategic Pillars interaction
 function focusCoreQuestion(qNum) {
   if (qNum === 1) {
     switchTab("dashboard");
-    showToast("🎯 CÂU HỎI 1: CẦN ĐẠT KẾT QUẢ GÌ? -> Xem 04 Thẻ KPI định lượng & Phạm vi Mô hình 04 Lớp mục tiêu.", "info");
+    showToast("🎯 TRỤ CỘT 1: MỤC TIÊU & CHỈ TIÊU ĐỊNH LƯỢNG -> Đang mở 04 Chỉ số KPI và Mô hình 04 Lớp mục tiêu.", "info");
     const kpiEl = document.getElementById("kpiTotalAssets");
     if (kpiEl) {
       kpiEl.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   } else if (qNum === 2) {
     switchTab("connections");
-    showToast("🗺️ CÂU HỎI 2: CÓ GÌ, AI QUẢN LÝ, KẾT NỐI RA SAO? -> Xem Bản đồ tích hợp (B2) & Chủ quản vận hành.", "info");
+    showToast("🗺️ TRỤ CỘT 2: KHẢO SÁT HIỆN TRẠNG (AS-IS) -> Đang mở Bản đồ tích hợp & Luồng kết nối (Bảng 2).", "info");
   } else if (qNum === 3) {
     switchTab("objects");
     document.getElementById("filterType").value = "all";
@@ -1616,17 +1616,17 @@ function focusCoreQuestion(qNum) {
     appState.searchTerm = "qg";
     document.getElementById("tableSearchInput").value = "QG";
     applyFilters();
-    showToast("🧩 CÂU HỎI 3: THÀNH PHẦN MỤC TIÊU & DÙNG CHUNG -> Xem danh sách Thành phần Dùng chung Quốc gia (QG-x).", "info");
+    showToast("🧩 TRỤ CỘT 3: KIẾN TRÚC MỤC TIÊU (TO-BE) -> Đang lọc Danh mục Thành phần Dùng chung Cấp Quốc gia (QG-x).", "info");
   } else if (qNum === 4) {
     switchTab("dashboard");
-    showToast("⚙️ CÂU HỎI 4: 06 PHƯƠNG ÁN XỬ LÝ KIẾN TRÚC -> Tiếp tục dùng (45%), Chuẩn hóa (30%), Nâng cấp (15%), Bổ sung (10%).", "warning");
-    const chartEl = document.getElementById("solutionPieChart");
-    if (chartEl) {
-      chartEl.scrollIntoView({ behavior: "smooth", block: "center" });
+    showToast("⚙️ TRỤ CỘT 4: MA TRẬN KHOẢNG TRỐNG -> Đang mở Ma trận 04 Nhóm màu & 06 Phương án Xử lý kiến trúc.", "warning");
+    const matrixEl = document.getElementById("gapMatrixContainer");
+    if (matrixEl) {
+      matrixEl.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   } else if (qNum === 5) {
     switchTab("tasks");
-    showToast("🚀 CÂU HỎI 5: AI LÀM, KHI NÀO XONG, ĐO BẰNG DỮ LIỆU GÌ? -> Ma trận Nhiệm vụ (B4), Lộ trình & Tiêu chí kiểm chứng.", "success");
+    showToast("🚀 TRỤ CỘT 5: LỘ TRÌNH & NGUỒN KIỂM CHỨNG -> Đang mở Ma trận Nhiệm vụ Chuyển đổi & Tiêu chí nghiệm thu (Bảng 4).", "success");
   }
 }
 

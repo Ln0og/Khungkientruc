@@ -3,1277 +3,1623 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hệ thống Quản lý Khung Kiến trúc số - QĐ 1425 / BKHCN</title>
-  <!-- Tailwind CSS via CDN -->
+  <title>Khung Kiến trúc số Tỉnh - Báo cáo & Điều hành Lãnh đạo</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome 6 Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <script src="chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .arch-card { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+    .arch-card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.12); }
+    .drawer-open { transform: translateX(0) !important; }
+    .new-pulse { animation: ringPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    @keyframes ringPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+      50% { box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
+    }
+  </style>
 </head>
-<body class="h-screen flex flex-col overflow-hidden text-slate-800 bg-slate-100">
+<body class="bg-slate-100 text-slate-800 h-screen flex flex-col overflow-hidden">
 
   <!-- ============================================================ -->
-  <!-- 1. TOP HEADER (VÙNG 1 CỐ ĐỊNH)                                -->
+  <!-- HEADER ĐIỀU HÀNH LÃNH ĐẠO (READ-ONLY DASHBOARD)               -->
   <!-- ============================================================ -->
-  <header class="h-16 bg-gradient-to-r from-blue-950 via-blue-900 to-indigo-900 text-white flex items-center justify-between px-5 shadow-md z-30 shrink-0 border-b border-blue-800">
-    <!-- Left: Logo & Title -->
-    <div class="flex items-center gap-3.5">
-      <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center shadow text-blue-950 font-black text-xl tracking-tighter">
-        <i class="fa-solid fa-landmark text-white text-lg"></i>
+  <header class="bg-slate-900 border-b border-slate-800 text-white px-6 py-3 flex items-center justify-between shrink-0 shadow-md z-30">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center font-black text-xl text-white shadow-inner">
+        <i class="fa-solid fa-landmark"></i>
       </div>
       <div>
         <div class="flex items-center gap-2">
-          <span class="text-[11px] uppercase tracking-wider font-semibold text-amber-300">ỦY BAN NHÂN DÂN TỈNH / BỘ NGÀNH</span>
-          <span id="securityBadgeIndicator" class="px-2 py-0.5 text-[10px] font-semibold rounded-full bg-emerald-100 text-emerald-800">
-            <i class="fa-solid fa-shield-halved mr-1"></i> Cổng Nội Bộ (Internal)
+          <span class="text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 font-bold border border-blue-400/30 uppercase tracking-wide">
+            Cổng Giám Sát Lãnh Đạo
           </span>
+          <span class="text-xs text-slate-400">| Quyết định 1425/QĐ-TTg</span>
         </div>
-        <h1 class="text-base font-bold tracking-tight text-white flex items-center gap-2">
-          HỆ THỐNG QUẢN LÝ KHUNG KIẾN TRÚC SỐ
-          <span class="text-xs font-normal text-blue-200 hidden md:inline">| QĐ 1425/QĐ-TTg</span>
+        <h1 class="text-base font-extrabold tracking-tight text-white flex items-center gap-2">
+          KHUNG KIẾN TRÚC SỐ &amp; CHÍNH QUYỀN SỐ TỈNH VĨNH LONG
+          <span class="text-xs font-normal text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/40 flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Đồng bộ tự động thời gian thực
+          </span>
         </h1>
       </div>
     </div>
 
-    <!-- Center: Global Search -->
-    <div class="flex-1 max-w-md mx-6 hidden lg:block">
-      <div class="relative">
-        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-blue-300 text-xs"></i>
-        <input 
-          id="globalSearchInput" 
-          type="text" 
-          placeholder="Tìm kiếm toàn hệ thống (Mã KT-x, QG-x, tên CSDL/Hệ thống)... [Enter]" 
-          class="w-full bg-blue-950/70 border border-blue-700/60 rounded-lg pl-9 pr-4 py-1.5 text-xs text-white placeholder-blue-300/70 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:bg-blue-900 transition"
-        />
-      </div>
-    </div>
-
-    <!-- Right: Actions & User Info -->
-    <div class="flex items-center gap-4">
-      <!-- Notification Dropdown -->
-      <div class="relative">
-        <button class="relative p-2 rounded-full hover:bg-blue-800 text-blue-200 hover:text-white transition" title="Cảnh báo sai khác kiến trúc">
-          <i class="fa-regular fa-bell text-base"></i>
-          <span class="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-blue-900 pulse-badge"></span>
+    <!-- Header Actions & Link to Entry Page -->
+    <div class="flex items-center gap-3">
+      <!-- Sync Status & Manual Refresh -->
+      <div class="flex items-center gap-2 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
+        <button onclick="loadAllData(true)" class="text-xs text-blue-400 hover:text-blue-300 flex items-center gap-1.5 font-semibold transition" title="Bấm để đồng bộ lại dữ liệu">
+          <i class="fa-solid fa-rotate text-xs" id="refreshSpin"></i>
+          <span>Làm mới</span>
         </button>
+        <span class="text-slate-600">|</span>
+        <span class="text-[11px] text-slate-300 font-mono" id="lastSyncLabel">Đang tải...</span>
       </div>
 
-      <!-- Role / Security Mode Switcher (Mục 7) -->
-      <div class="hidden sm:flex items-center bg-blue-950/80 rounded-lg p-1 border border-blue-800 text-xs">
-        <label for="portalRoleSelector" class="text-blue-300 px-2 text-[11px] font-medium"><i class="fa-solid fa-lock text-xs mr-1"></i> Chế độ:</label>
-        <select id="portalRoleSelector" class="bg-blue-900 text-white rounded px-2 py-1 text-xs focus:outline-none border-0 font-medium cursor-pointer">
-          <option value="internal">Cán bộ / Admin (Nội bộ)</option>
-          <option value="public">Khách xem (Bản công khai)</option>
-        </select>
-      </div>
-
-      <!-- User Avatar -->
-      <div class="flex items-center gap-2.5 pl-2 border-l border-blue-800">
-        <div class="w-8 h-8 rounded-full bg-blue-700 border border-blue-400 flex items-center justify-center text-xs font-bold text-white shadow-sm">
-          AD
-        </div>
-        <div class="hidden md:block text-left">
-          <div class="text-xs font-semibold leading-tight text-white">Cán bộ QL Kiến trúc</div>
-          <div class="text-[10px] text-blue-300">Tổ thường trực CĐS</div>
-        </div>
-      </div>
+      <!-- Link to Option B: Unified Framework -->
+      <a href="unified.html" class="px-3.5 py-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-lg text-xs font-bold shadow flex items-center gap-2 border border-blue-400/40 transition transform hover:-translate-y-0.5" title="Mở Phương án B: Khung Kiến Trúc Hợp Nhất &amp; Thẩm Tra Trực Quan">
+        <i class="fa-solid fa-layer-group text-amber-300"></i>
+        <span>PHƯƠNG ÁN B: KHUNG HỢP NHẤT</span>
+        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+      </a>
     </div>
   </header>
 
   <!-- ============================================================ -->
-  <!-- MAIN WRAPPER: SIDEBAR + MAIN CONTENT AREA                    -->
+  <!-- MAIN WORKSPACE                                               -->
   <!-- ============================================================ -->
-  <div class="flex-1 flex overflow-hidden">
-    
-    <!-- ============================================================ -->
-    <!-- 2. LEFT SIDEBAR NAVIGATION (VÙNG 2 CỐ ĐỊNH)                  -->
-    <!-- ============================================================ -->
-    <aside class="w-64 bg-slate-900 text-slate-300 flex flex-col shrink-0 shadow-lg border-r border-slate-800 z-20">
-      <!-- Workspace Info -->
-      <div class="p-3.5 border-b border-slate-800 bg-slate-950/50 flex items-center justify-between text-xs">
-        <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-          <span class="font-medium text-slate-200">Hồ sơ Khung: v1.0</span>
-        </div>
-        <span class="text-[10px] text-slate-400 bg-slate-800 px-1.5 py-0.5 rounded font-mono">2026-09-15</span>
+  <main class="flex-1 flex flex-col overflow-hidden bg-slate-50 relative">
+
+    <!-- Interactive Notification Banner for Data Update & Direct Clearance Action -->
+    <div id="syncToastBanner" class="hidden bg-gradient-to-r from-amber-600 via-rose-600 to-indigo-700 text-white px-6 py-2.5 text-xs font-bold flex items-center justify-between shadow-lg transition-all duration-300 z-20">
+      <div class="flex items-center gap-2.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-yellow-300 animate-ping"></span>
+        <span id="syncBannerText">🔔 Đơn vị vừa gửi hồ sơ hệ thống mới đang chờ thẩm định!</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="syncBannerActionBtn" onclick="switchP1SubView('approvals')" class="px-3 py-1 bg-white hover:bg-yellow-100 text-rose-900 rounded-lg font-black text-xs transition shadow flex items-center gap-1.5">
+          <i class="fa-solid fa-eye text-amber-600"></i> Xem Hồ Sơ Trình Duyệt Ngay
+        </button>
+        <button onclick="document.getElementById('syncToastBanner').classList.add('hidden')" class="text-white/80 hover:text-white text-sm p-1">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Sub-Nav Bar -->
+    <div class="h-11 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0 text-xs shadow-2xs">
+      <div class="flex items-center gap-3">
+        <button onclick="switchP1SubView('hinh8')" id="subnav-hinh8" class="font-bold text-blue-700 border-b-2 border-blue-700 pb-2 flex items-center gap-2 text-xs">
+          <i class="fa-solid fa-chart-pie text-blue-600 text-sm"></i>
+          <span>Dashboard Kiến Trúc Số</span>
+        </button>
+        <button onclick="switchP1SubView('approvals')" id="subnav-approvals" class="text-slate-600 hover:text-slate-900 pb-2 flex items-center gap-2 text-xs">
+          <i class="fa-solid fa-clipboard-check text-amber-600 text-sm"></i>
+          <span>Danh Sách Đang Cần Phê Duyệt</span>
+          <span class="bg-amber-500 text-white font-black text-[10px] px-2 py-0.5 rounded-full" id="pendingApprovalsBadge">0</span>
+        </button>
       </div>
 
-      <!-- Nav Items List -->
-      <nav class="flex-1 overflow-y-auto p-3 space-y-1.5 text-xs font-medium">
-        <a href="#" data-tab="dashboard" class="nav-item active flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition">
-          <i class="fa-solid fa-chart-pie text-sm w-4 text-blue-400"></i>
-          <span>Bảng điều hành (Dashboard)</span>
-        </a>
-
-        <div class="pt-2 pb-1 px-3 text-[10px] font-bold uppercase tracking-wider text-slate-500">Bộ Dữ Liệu (Mẫu số 03)</div>
-
-        <a href="#" data-tab="objects" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition">
-          <i class="fa-solid fa-folder-tree text-sm w-4 text-amber-400"></i>
-          <span>Danh mục tài sản (B1)</span>
-          <span class="ml-auto bg-blue-900/80 text-blue-300 text-[10px] px-1.5 py-0.2 rounded-full font-mono">128</span>
-        </a>
-
-        <a href="#" data-tab="connections" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition">
-          <i class="fa-solid fa-network-wired text-sm w-4 text-cyan-400"></i>
-          <span>Bản đồ kết nối (B2)</span>
-          <span class="ml-auto bg-slate-800 text-slate-400 text-[10px] px-1.5 py-0.2 rounded-full font-mono">9 luồng</span>
-        </a>
-
-        <a href="#" data-tab="mappings" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition">
-          <i class="fa-solid fa-puzzle-piece text-sm w-4 text-indigo-400"></i>
-          <span>Ánh xạ mô hình QG (B3)</span>
-        </a>
-
-        <a href="#" data-tab="tasks" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition">
-          <i class="fa-solid fa-list-check text-sm w-4 text-emerald-400"></i>
-          <span>Nhiệm vụ chuyển đổi (B4)</span>
-          <span class="ml-auto bg-amber-900/60 text-amber-300 text-[10px] px-1.5 py-0.2 rounded-full font-mono">18 NV</span>
-        </a>
-
-        <div class="pt-2 pb-1 px-3 text-[10px] font-bold uppercase tracking-wider text-slate-500">Hồ Sơ & Chuẩn Hóa</div>
-
-        <a href="#" data-tab="library" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition">
-          <i class="fa-solid fa-images text-sm w-4 text-pink-400"></i>
-          <span>Thư viện Sơ đồ (Mẫu 02)</span>
-        </a>
-
-        <a href="#" data-tab="admin" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-white transition">
-          <i class="fa-solid fa-sliders text-sm w-4 text-orange-400"></i>
-          <span>Quản trị & Đồng bộ NAS</span>
-        </a>
-      </nav>
-
-      <!-- Sidebar Bottom Help -->
-      <div class="p-3 bg-slate-950/70 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
-        <span class="flex items-center gap-1.5"><i class="fa-regular fa-circle-question"></i> Hướng dẫn kỹ thuật</span>
-        <span class="font-mono text-slate-500">BKHCN-v1.0</span>
+      <div class="flex items-center gap-2">
+        <button onclick="openLayerGuideModal()" class="px-3 py-1 bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-700 rounded-lg text-xs font-semibold border border-slate-300 flex items-center gap-1.5 transition shadow-2xs">
+          <i class="fa-solid fa-book-open-reader text-blue-600"></i>
+          <span>Diễn Giải 4 Lớp Kiến Trúc (QĐ 1425)</span>
+        </button>
       </div>
-    </aside>
+    </div>
 
-    <!-- ============================================================ -->
-    <!-- 3. VÙNG NỘI DUNG CHÍNH (MAIN CONTENT AREA)                   -->
-    <!-- ============================================================ -->
-    <main class="flex-1 flex flex-col overflow-hidden bg-slate-50 relative">
-      
-      <!-- BREADCRUMB BAR -->
-      <div class="h-10 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0 shadow-xs">
-        <div class="flex items-center gap-2 text-xs font-medium text-slate-600">
-          <i class="fa-solid fa-house text-slate-400 text-xs"></i>
-          <span id="currentBreadcrumb">Trang chủ > Bảng điều hành tổng quan</span>
+    <!-- Scrollable Body -->
+    <div class="flex-1 overflow-y-auto p-6 custom-scrollbar space-y-6">
+
+      <!-- 5 EXECUTIVE KPI CARDS -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
+        <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-200 flex justify-between items-start">
+          <div>
+            <p class="text-[11px] font-semibold text-slate-500 uppercase">Tỷ lệ tuân thủ Kiến trúc</p>
+            <h3 class="text-2xl font-black text-emerald-700 mt-1" id="kpiCompliance">93%</h3>
+            <p class="text-[10px] text-emerald-600 mt-1"><i class="fa-solid fa-circle-check"></i> Đạt chuẩn quy định</p>
+          </div>
+          <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600 border border-emerald-100">
+            <i class="fa-solid fa-shield-halved text-base"></i>
+          </div>
         </div>
-        <div class="flex items-center gap-3 text-xs text-slate-500">
-          <span class="hidden sm:inline"><i class="fa-solid fa-calendar-day text-slate-400 mr-1"></i> Kế hoạch 2026 - 2030</span>
-          <span class="bg-blue-50 text-blue-700 px-2 py-0.5 rounded font-mono font-medium border border-blue-200">Đợt rà soát: Q3/2026</span>
+
+        <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-200 flex justify-between items-start">
+          <div>
+            <p class="text-[11px] font-semibold text-slate-500 uppercase">Đối tượng Kiến trúc</p>
+            <h3 class="text-2xl font-black text-blue-900 mt-1" id="kpiTotalObjects">Đang nạp...</h3>
+            <p class="text-[10px] text-blue-600 mt-1"><i class="fa-solid fa-cubes"></i> 4 Lớp kiến trúc</p>
+          </div>
+          <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 border border-blue-100">
+            <i class="fa-solid fa-server text-base"></i>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-200 flex justify-between items-start">
+          <div>
+            <p class="text-[11px] font-semibold text-slate-500 uppercase">Chia sẻ Dữ liệu LGSP</p>
+            <h3 class="text-2xl font-black text-cyan-700 mt-1" id="kpiConnections">Đang nạp...</h3>
+            <p class="text-[10px] text-cyan-600 mt-1"><i class="fa-solid fa-network-wired"></i> Trục liên thông kết nối</p>
+          </div>
+          <div class="w-10 h-10 rounded-lg bg-cyan-50 flex items-center justify-center text-cyan-600 border border-cyan-100">
+            <i class="fa-solid fa-diagram-project text-base"></i>
+          </div>
+        </div>
+
+        <div class="bg-white p-3.5 rounded-xl shadow-xs border border-slate-200 flex justify-between items-start">
+          <div>
+            <p class="text-[11px] font-semibold text-slate-500 uppercase">Ngân sách 15 Nhiệm vụ CĐS</p>
+            <h3 class="text-2xl font-black text-purple-900 mt-1" id="kpiTotalBudget">57 Tỷ</h3>
+            <p class="text-[10px] text-purple-700 mt-1"><i class="fa-solid fa-coins"></i> 15 nhiệm vụ trọng tâm</p>
+          </div>
+          <div class="w-10 h-10 rounded-lg bg-purple-50 flex items-center justify-center text-purple-600 border border-purple-100">
+            <i class="fa-solid fa-sack-dollar text-base"></i>
+          </div>
+        </div>
+
+        <div onclick="switchP1SubView('approvals')" class="bg-white p-3.5 rounded-xl shadow-xs border border-amber-200 hover:border-amber-400 cursor-pointer transition flex justify-between items-start group">
+          <div>
+            <p class="text-[11px] font-semibold text-amber-800 uppercase flex items-center gap-1.5">
+              <span>Hồ sơ Chờ Duyệt</span>
+              <i class="fa-solid fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition transform group-hover:translate-x-1"></i>
+            </p>
+            <h3 class="text-2xl font-black text-amber-600 mt-1" id="kpiPendingApprovals">0 Hồ sơ</h3>
+            <p class="text-[10px] text-amber-700 mt-1"><i class="fa-solid fa-hand-pointer"></i> Nhấp để phê duyệt</p>
+          </div>
+          <div class="w-10 h-10 rounded-lg bg-amber-50 group-hover:bg-amber-100 flex items-center justify-center text-amber-600 border border-amber-200 transition">
+            <i class="fa-solid fa-clipboard-check text-base"></i>
+          </div>
         </div>
       </div>
 
-      <!-- SCREEN WRAPPER (Scrollable) -->
-      <div class="flex-1 overflow-y-auto p-6">
-
-        <!-- ========================================================= -->
-        <!-- MÀN HÌNH 1: DASHBOARD ĐIỀU HÀNH TỔNG QUAN                 -->
-        <!-- ========================================================= -->
-        <div id="screen-dashboard" class="screen-content space-y-6">
-
-          <!-- 05 CÂU HỎI CỐT LÕI THEO QUY ĐỊNH BỘ KH&CN / QĐ 1425 -->
-          <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 p-5 rounded-xl text-white shadow-md border border-blue-800">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
-              <div class="flex items-center gap-2.5">
-                <span class="w-8 h-8 rounded-lg bg-amber-400 text-blue-950 flex items-center justify-center font-black text-sm shadow">
-                  <i class="fa-solid fa-compass"></i>
-                </span>
-                <div>
-                  <h3 class="font-bold text-sm text-white tracking-wide uppercase flex items-center gap-2">
-                    05 CÂU HỎI CỐT LÕI CỦA KHUNG KIẾN TRÚC SỐ (BỘ KH&CN - QĐ 1425)
-                  </h3>
-                  <p class="text-xs text-blue-200">Bảo đảm thống nhất & nhất quán tuyệt đối giữa 03 Mẫu (Mẫu 01: Tài liệu | Mẫu 02: Sơ đồ | Mẫu 03: Dữ liệu)</p>
-                </div>
-              </div>
-              <span class="text-[11px] bg-blue-800/80 text-amber-300 px-3 py-1 rounded-full border border-blue-700 font-medium">
-                <i class="fa-solid fa-circle-check text-emerald-400 mr-1"></i> Đã số hóa & ánh xạ 100%
-              </span>
-            </div>
-
-            <!-- 5 Question Interactive Tabs -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5 text-xs">
-              <!-- Q1 -->
-              <button onclick="focusCoreQuestion(1)" class="core-q-btn text-left p-2.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition group">
-                <div class="font-bold text-amber-300 text-[11px] mb-1 flex items-center justify-between">
-                  <span>CÂU HỎI 1</span>
-                  <i class="fa-solid fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition"></i>
-                </div>
-                <div class="font-semibold text-white text-xs leading-tight mb-1">Cần đạt kết quả gì?</div>
-                <div class="text-[10px] text-blue-200 line-clamp-2">Rà soát mục tiêu, chỉ tiêu định lượng, bài toán ưu tiên & phạm vi kiến trúc.</div>
-              </button>
-
-              <!-- Q2 -->
-              <button onclick="focusCoreQuestion(2)" class="core-q-btn text-left p-2.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition group">
-                <div class="font-bold text-cyan-300 text-[11px] mb-1 flex items-center justify-between">
-                  <span>CÂU HỎI 2</span>
-                  <i class="fa-solid fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition"></i>
-                </div>
-                <div class="font-semibold text-white text-xs leading-tight mb-1">Hiện đang có gì, ai quản lý, kết nối ra sao?</div>
-                <div class="text-[10px] text-blue-200 line-clamp-2">Hiện trạng 04 lớp, chủ quản/vận hành, luồng kết nối & điểm nghẽn.</div>
-              </button>
-
-              <!-- Q3 -->
-              <button onclick="focusCoreQuestion(3)" class="core-q-btn text-left p-2.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition group">
-                <div class="font-bold text-purple-300 text-[11px] mb-1 flex items-center justify-between">
-                  <span>CÂU HỎI 3</span>
-                  <i class="fa-solid fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition"></i>
-                </div>
-                <div class="font-semibold text-white text-xs leading-tight mb-1">Kiến trúc mục tiêu có gì, dùng chung gì?</div>
-                <div class="text-[10px] text-blue-200 line-clamp-2">Mô hình mục tiêu, phân định dùng chung QG/tỉnh và dùng riêng.</div>
-              </button>
-
-              <!-- Q4 -->
-              <button onclick="focusCoreQuestion(4)" class="core-q-btn text-left p-2.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition group">
-                <div class="font-bold text-emerald-300 text-[11px] mb-1 flex items-center justify-between">
-                  <span>CÂU HỎI 4</span>
-                  <i class="fa-solid fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition"></i>
-                </div>
-                <div class="font-semibold text-white text-xs leading-tight mb-1">Nội dung nào xử lý theo 06 phương án?</div>
-                <div class="text-[10px] text-blue-200 line-clamp-2">Tiếp tục dùng, chuẩn hóa, nâng cấp, hợp nhất, thay thế, bổ sung.</div>
-              </button>
-
-              <!-- Q5 -->
-              <button onclick="focusCoreQuestion(5)" class="core-q-btn text-left p-2.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/10 transition group">
-                <div class="font-bold text-orange-300 text-[11px] mb-1 flex items-center justify-between">
-                  <span>CÂU HỎI 5</span>
-                  <i class="fa-solid fa-arrow-right text-[10px] opacity-0 group-hover:opacity-100 transition"></i>
-                </div>
-                <div class="font-semibold text-white text-xs leading-tight mb-1">Ai làm, khi nào xong, đo bằng dữ liệu gì?</div>
-                <div class="text-[10px] text-blue-200 line-clamp-2">Nhiệm vụ, đơn vị chủ trì, lộ trình & tiêu chí/nguồn kiểm chứng.</div>
-              </button>
-            </div>
-          </div>
-          
-          <!-- 4 THẺ KPI CARDS -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            
-            <!-- Card 1 -->
-            <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-200 hover:shadow-md transition">
-              <div class="flex justify-between items-start">
-                <div>
-                  <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Tổng số Tài sản số</p>
-                  <h3 id="kpiTotalAssets" class="text-2xl font-black text-blue-950 mt-1">128 đối tượng</h3>
-                </div>
-                <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600 border border-blue-100">
-                  <i class="fa-solid fa-cubes text-lg"></i>
-                </div>
-              </div>
-              <div class="mt-3 flex items-center gap-1.5 text-xs text-slate-500">
-                <span class="text-emerald-600 font-bold"><i class="fa-solid fa-arrow-trend-up"></i> +14</span>
-                <span>so với kỳ trước</span>
-              </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-200 hover:shadow-md transition">
-              <div class="flex justify-between items-start">
-                <div>
-                  <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Tỷ lệ kết nối chia sẻ</p>
-                  <h3 id="kpiSharedRatio" class="text-2xl font-black text-indigo-950 mt-1">85%</h3>
-                </div>
-                <div class="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 border border-indigo-100">
-                  <i class="fa-solid fa-diagram-project text-lg"></i>
-                </div>
-              </div>
-              <div class="mt-3 flex items-center gap-1.5 text-xs text-slate-500">
-                <span class="text-indigo-600 font-medium">Qua nền tảng LGSP / NDXP</span>
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-200 hover:shadow-md transition">
-              <div class="flex justify-between items-start">
-                <div>
-                  <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Tỷ lệ tuân thủ Kiến trúc</p>
-                  <h3 id="kpiCompliance" class="text-2xl font-black text-emerald-950 mt-1">92%</h3>
-                </div>
-                <div class="w-10 h-10 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600 border border-emerald-100">
-                  <i class="fa-solid fa-award text-lg"></i>
-                </div>
-              </div>
-              <div class="mt-3 flex items-center gap-1.5 text-xs text-slate-500">
-                <span class="text-emerald-600 font-semibold"><i class="fa-solid fa-check"></i> Đạt chuẩn</span>
-                <span>Bộ chỉ số KPI quốc gia</span>
-              </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-200 hover:shadow-md transition">
-              <div class="flex justify-between items-start">
-                <div>
-                  <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Nhiệm vụ đang chạy</p>
-                  <h3 id="kpiRunningTasks" class="text-2xl font-black text-amber-950 mt-1">12 / 18 nhiệm vụ</h3>
-                </div>
-                <div class="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center text-amber-600 border border-amber-100">
-                  <i class="fa-solid fa-bars-progress text-lg"></i>
-                </div>
-              </div>
-              <div class="mt-3 flex items-center gap-1.5 text-xs text-slate-500">
-                <span class="text-amber-600 font-semibold"><i class="fa-solid fa-clock"></i> 6 NV</span>
-                <span>chờ nghiệm thu kiểm chứng</span>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- MÔ HÌNH KIẾN TRÚC MỤC TIÊU 04 LỚP (INTERACTIVE VISUAL) -->
-          <div class="bg-white p-5 rounded-xl shadow-xs border border-slate-200">
-            <div class="flex items-center justify-between mb-3">
-              <div>
-                <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center gap-2">
-                  <i class="fa-solid fa-layer-group text-blue-700"></i>
-                  Mô hình Kiến trúc mục tiêu 04 Lớp (QĐ 1425/QĐ-TTg)
-                </h3>
-                <p class="text-xs text-slate-500 mt-0.5">Nhấp vào từng lớp để lọc nhanh và xem danh mục tài sản số tương ứng</p>
-              </div>
-              <span class="text-xs font-medium text-blue-700 bg-blue-50 px-2.5 py-1 rounded border border-blue-200">
-                <i class="fa-solid fa-hand-pointer mr-1"></i> Tương tác trực quan
-              </span>
-            </div>
-
-            <div class="space-y-3">
-              <!-- Lớp 4 -->
-              <div class="arch-layer-card bg-purple-50/70 hover:bg-purple-100/70 border-l-purple-600 border border-purple-200 p-3.5 rounded-lg cursor-pointer" data-layer="Lớp 4">
-                <div class="flex items-center justify-between mb-1.5">
-                  <span class="text-xs font-bold text-purple-950 uppercase tracking-wide flex items-center gap-2">
-                    <span class="w-5 h-5 rounded-full bg-purple-600 text-white text-[10px] flex items-center justify-center font-black">4</span>
-                    LỚP 4: KÊNH TƯƠNG TÁC & ĐO LƯỜNG
-                  </span>
-                  <span class="text-[11px] font-mono font-semibold text-purple-800 bg-purple-200/70 px-2 py-0.5 rounded">24 Tài sản số</span>
-                </div>
-                <div class="text-xs text-purple-900/90 pl-7 flex flex-wrap gap-2">
-                  <span class="bg-white/80 px-2 py-1 rounded border border-purple-200 font-medium">Cổng Dịch vụ công (KT-05)</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-purple-200 font-medium">Định danh VNeID (QG-03)</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-purple-200 font-medium">Bàn làm việc số cán bộ</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-purple-200 font-medium">Cổng Khung NAS (QG-07)</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-purple-200 font-medium">Dashboard KPI</span>
-                </div>
-              </div>
-
-              <!-- Lớp 3 -->
-              <div class="arch-layer-card bg-blue-50/70 hover:bg-blue-100/70 border-l-blue-600 border border-blue-200 p-3.5 rounded-lg cursor-pointer" data-layer="Lớp 3">
-                <div class="flex items-center justify-between mb-1.5">
-                  <span class="text-xs font-bold text-blue-950 uppercase tracking-wide flex items-center gap-2">
-                    <span class="w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] flex items-center justify-center font-black">3</span>
-                    LỚP 3: ỨNG DỤNG & NGHIỆP VỤ
-                  </span>
-                  <span class="text-[11px] font-mono font-semibold text-blue-800 bg-blue-200/70 px-2 py-0.5 rounded">48 Tài sản số</span>
-                </div>
-                <div class="text-xs text-blue-900/90 pl-7 flex flex-wrap gap-2">
-                  <span class="bg-white/80 px-2 py-1 rounded border border-blue-200 font-medium">HTTT Giải quyết TTHC (KT-01)</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-blue-200 font-medium">Trợ lý ảo AI (KT-09)</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-blue-200 font-medium">Quản lý văn bản (KT-10)</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-blue-200 font-medium">Trung tâm IOC (KT-06)</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-blue-200 font-medium">QL Thuế (LQ-01)</span>
-                </div>
-              </div>
-
-              <!-- Lớp 2 -->
-              <div class="arch-layer-card bg-teal-50/70 hover:bg-teal-100/70 border-l-teal-600 border border-teal-200 p-3.5 rounded-lg cursor-pointer" data-layer="Lớp 2">
-                <div class="flex items-center justify-between mb-1.5">
-                  <span class="text-xs font-bold text-teal-950 uppercase tracking-wide flex items-center gap-2">
-                    <span class="w-5 h-5 rounded-full bg-teal-600 text-white text-[10px] flex items-center justify-center font-black">2</span>
-                    LỚP 2: DỮ LIỆU & NỀN TẢNG LÕI
-                  </span>
-                  <span class="text-[11px] font-mono font-semibold text-teal-800 bg-teal-200/70 px-2 py-0.5 rounded">36 Tài sản số</span>
-                </div>
-                <div class="text-xs text-teal-900/90 pl-7 flex flex-wrap gap-2">
-                  <span class="bg-white/80 px-2 py-1 rounded border border-teal-200 font-medium">Kho dữ liệu dùng chung (KT-02)</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-teal-200 font-medium">CSDLQG Dân cư (QG-01)</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-teal-200 font-medium">LGSP cấp tỉnh (KT-03)</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-teal-200 font-medium">NDXP Quốc gia (QG-04)</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-teal-200 font-medium">AI-First Core Platform</span>
-                </div>
-              </div>
-
-              <!-- Lớp 1 -->
-              <div class="arch-layer-card bg-amber-50/70 hover:bg-amber-100/70 border-l-amber-600 border border-amber-200 p-3.5 rounded-lg cursor-pointer" data-layer="Lớp 1">
-                <div class="flex items-center justify-between mb-1.5">
-                  <span class="text-xs font-bold text-amber-950 uppercase tracking-wide flex items-center gap-2">
-                    <span class="w-5 h-5 rounded-full bg-amber-600 text-white text-[10px] flex items-center justify-center font-black">1</span>
-                    LỚP 1: HẠ TẦNG SỐ & AN NINH MẠNG
-                  </span>
-                  <span class="text-[11px] font-mono font-semibold text-amber-800 bg-amber-200/70 px-2 py-0.5 rounded">20 Tài sản số</span>
-                </div>
-                <div class="text-xs text-amber-900/90 pl-7 flex flex-wrap gap-2">
-                  <span class="bg-white/80 px-2 py-1 rounded border border-amber-200 font-medium">Trung tâm Dữ liệu / Cloud tỉnh (KT-07)</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-amber-200 font-medium">Cloud QG C12 (QG-05)</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-amber-200 font-medium">Mạng TSLCD</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-amber-200 font-medium">SOC quốc gia A05 (QG-06)</span>
-                  <span class="bg-white/80 px-2 py-1 rounded border border-amber-200 font-medium">SOC tỉnh (KT-08)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- BIỂU ĐỒ 06 PHƯƠNG ÁN XỬ LÝ & CẢNH BÁO ĐIỂM NGHẼN -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            
-            <!-- Chart Container -->
-            <div class="bg-white p-5 rounded-xl shadow-xs border border-slate-200">
-              <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide mb-1 flex items-center gap-2">
+            <!-- ======================================================= -->
+      <!-- VIEW 1: DASHBOARD ĐIỀU HÀNH & PHÂN TÍCH KIẾN TRÚC SỐ    -->
+      <!-- ======================================================= -->
+      <div id="p1-view-hinh8" class="space-y-5">
+        
+        <!-- DASHBOARD HEADER & VIEW MODE SWITCHER -->
+        <div class="bg-white p-4 rounded-2xl shadow-xs border border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2.5">
+              <span class="w-3 h-3 rounded-full bg-blue-600"></span>
+              <h2 class="text-base font-extrabold text-slate-900 tracking-wide flex items-center gap-2">
                 <i class="fa-solid fa-chart-pie text-blue-700"></i>
-                Biểu đồ tỉ lệ 06 phương án xử lý kiến trúc
-              </h3>
-              <p class="text-xs text-slate-500 mb-4">Cơ cấu phương án phân bổ theo Mẫu số 03 (Bảng 1)</p>
-              <div class="h-64 relative">
-                <canvas id="solutionPieChart"></canvas>
-              </div>
+                BẢNG ĐIỀU HÀNH &amp; PHÂN TÍCH CHIẾN LƯỢC KIẾN TRÚC SỐ TOÀN TỈNH
+              </h2>
             </div>
-
-            <!-- Bottlenecks & Alerts List -->
-            <div class="bg-white p-5 rounded-xl shadow-xs border border-slate-200 flex flex-col">
-              <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide mb-1 flex items-center gap-2">
-                <i class="fa-solid fa-triangle-exclamation text-amber-500"></i>
-                Danh sách cảnh báo điểm nghẽn kiến trúc
-              </h3>
-              <p class="text-xs text-slate-500 mb-4">Phát hiện tự động từ ma trận kết nối và phân tích trùng lặp</p>
-
-              <div class="space-y-3 flex-1">
-                <!-- Alert 1 -->
-                <div class="p-3.5 rounded-lg bg-amber-50 border border-amber-200 flex items-start gap-3">
-                  <div class="w-8 h-8 rounded bg-amber-200/70 text-amber-800 flex items-center justify-center shrink-0 text-sm font-bold">
-                    ⚠️
-                  </div>
-                  <div class="text-xs flex-1">
-                    <div class="font-bold text-amber-950">03 CSDL chuyên ngành chưa kết nối Kho dùng chung</div>
-                    <div class="text-slate-600 mt-1">CSDL Đất đai, CSDL Hộ tịch và CSDL Giáo dục đang hoạt động cục bộ, chưa chia sẻ dữ liệu qua LGSP.</div>
-                    <div class="mt-2">
-                      <button onclick="switchTab('tasks')" class="text-amber-800 font-semibold hover:underline">
-                        ➡️ Xem nhiệm vụ khắc phục (NV-02)
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Alert 2 -->
-                <div class="p-3.5 rounded-lg bg-red-50 border border-red-200 flex items-start gap-3">
-                  <div class="w-8 h-8 rounded bg-red-200/70 text-red-800 flex items-center justify-center shrink-0 text-sm font-bold">
-                    ⚠️
-                  </div>
-                  <div class="text-xs flex-1">
-                    <div class="font-bold text-red-950">02 Hệ thống có dấu hiệu trùng lặp chức năng</div>
-                    <div class="text-slate-600 mt-1">Hệ thống Tiếp nhận phản ánh kiến nghị cấp huyện đang trùng lặp 70% luồng xử lý với Cổng DVC tỉnh (KT-05).</div>
-                    <div class="mt-2">
-                      <button onclick="switchTab('objects')" class="text-red-800 font-semibold hover:underline">
-                        ➡️ Đề xuất phương án: Hợp nhất / Tích hợp
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Alert 3 -->
-                <div class="p-3.5 rounded-lg bg-blue-50 border border-blue-200 flex items-start gap-3">
-                  <div class="w-8 h-8 rounded bg-blue-200/70 text-blue-800 flex items-center justify-center shrink-0 text-sm font-bold">
-                    ℹ️
-                  </div>
-                  <div class="text-xs flex-1">
-                    <div class="font-bold text-blue-950">Chuyển dịch hạ tầng TTDL lên Cloud Quốc gia</div>
-                    <div class="text-slate-600 mt-1">Trung tâm dữ liệu tỉnh (KT-07) cần xúc tiến kế hoạch dịch chuyển hạ tầng lên Nền tảng Cloud C12 Bộ Công an (QG-05).</div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
+            <p class="text-xs text-slate-500 mt-1">
+              Trực quan hóa cơ cấu phân bổ 4 lớp, mật độ số hóa các Sở/Ngành, định hướng ngân sách đầu tư công và luồng chia sẻ dữ liệu liên ngành (QĐ 1425/QĐ-TTg).
+            </p>
           </div>
 
+          <!-- View Mode Toggle Buttons -->
+          <div class="inline-flex rounded-xl bg-slate-100 p-1 border border-slate-200 text-xs font-bold shrink-0 self-start md:self-auto">
+            <button type="button" onclick="switchDashboardMode('visual')" id="btn-mode-visual" class="px-3.5 py-1.5 rounded-lg bg-blue-700 text-white shadow transition flex items-center gap-1.5">
+              <i class="fa-solid fa-chart-simple"></i>
+              <span>Dashboard Biểu Đồ Trực Quan</span>
+            </button>
+            <button type="button" onclick="switchDashboardMode('detailed')" id="btn-mode-detailed" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5">
+              <i class="fa-solid fa-sitemap"></i>
+              <span>Sơ Đồ Chi Tiết 4 Lớp (Hình 8)</span>
+            </button>
+          </div>
         </div>
 
-        <!-- ========================================================= -->
-        <!-- MÀN HÌNH 2: TRA CỨU & QUẢN LÝ TÀI SẢN SỐ (B1 - DM_DOITUONG)-->
-        <!-- ========================================================= -->
-        <div id="screen-objects" class="screen-content hidden space-y-4">
+        <!-- SUBVIEW A: EXECUTIVE VISUAL CHARTS (MẶC ĐỊNH) -->
+        <div id="subview-visual-charts" class="space-y-5">
           
-          <!-- Top Controls & Action Bar -->
-          <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div>
-              <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
-                <i class="fa-solid fa-folder-open text-blue-700"></i>
-                DANH MỤC ĐỐI TƯỢNG KIẾN TRÚC CHỦ YẾU (BẢNG 1 - DM_DOITUONG)
-              </h2>
-              <p class="text-xs text-slate-500 mt-0.5">Phân định rõ Bản ghi gốc & Bản ghi tham chiếu theo tiêu chuẩn Mẫu số 03 BKHCN</p>
-            </div>
+          <!-- ROW 1: 2 BIỂU ĐỒ CHIẾN LƯỢC (CƠ CẤU 4 LỚP & PHƯƠNG ÁN XỬ LÝ) -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
             
-            <div class="flex items-center gap-2 admin-only">
-              <button id="openAddObjectModalBtn" class="px-3 py-1.5 bg-blue-800 hover:bg-blue-900 text-white rounded-lg text-xs font-semibold shadow-xs flex items-center gap-1.5 transition">
-                <i class="fa-solid fa-plus"></i> Thêm mới
-              </button>
-              <button onclick="exportExcelMau03()" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 rounded-lg text-xs font-medium flex items-center gap-1.5 transition">
-                <i class="fa-solid fa-file-excel text-emerald-600"></i> Xuất XLSX (Mẫu 03)
-              </button>
-            </div>
-          </div>
+            <!-- BIỂU ĐỒ 1: CƠ CẤU 4 LỚP KIẾN TRÚC -->
+            <div class="bg-white p-5 rounded-2xl shadow-xs border border-slate-200 space-y-3 flex flex-col justify-between">
+              <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center font-bold text-sm">
+                    <i class="fa-solid fa-chart-pie"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-extrabold text-xs text-slate-900 uppercase">Cơ cấu Phân bổ theo 4 Lớp Kiến trúc</h3>
+                    <p class="text-[11px] text-slate-500">Tỷ trọng 32 hệ thống số theo chuẩn QĐ 1425/QĐ-TTg</p>
+                  </div>
+                </div>
+                <span class="text-[11px] font-mono bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-bold">32 Hệ thống</span>
+              </div>
 
-          <!-- Filters Row -->
-          <div class="bg-white p-3.5 rounded-xl shadow-xs border border-slate-200 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
-            <div>
-              <label class="font-semibold text-slate-600 block mb-1">Lớp kiến trúc:</label>
-              <select id="filterLayer" class="w-full bg-slate-50 border border-slate-300 rounded-md px-2.5 py-1.5 text-xs focus:ring-1 focus:ring-blue-600">
-                <option value="all">Tất cả Lớp kiến trúc</option>
-                <option value="Lớp 4">Lớp 4: Kênh tương tác & Đo lường</option>
-                <option value="Lớp 3">Lớp 3: Ứng dụng & Nghiệp vụ</option>
-                <option value="Lớp 2">Lớp 2: Dữ liệu & Nền tảng lõi</option>
-                <option value="Lớp 1">Lớp 1: Hạ tầng số & An ninh mạng</option>
-              </select>
-            </div>
+              <!-- Chart Canvas & Mini Stats -->
+              <div class="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center pt-2">
+                <div class="sm:col-span-6 flex justify-center items-center h-52 relative">
+                  <canvas id="chartLayersCanvas"></canvas>
+                </div>
 
-            <div>
-              <label class="font-semibold text-slate-600 block mb-1">Loại đối tượng:</label>
-              <select id="filterType" class="w-full bg-slate-50 border border-slate-300 rounded-md px-2.5 py-1.5 text-xs focus:ring-1 focus:ring-blue-600">
-                <option value="all">Tất cả Loại đối tượng</option>
-                <option value="Hệ thống số">Hệ thống số</option>
-                <option value="CSDL">Cơ sở dữ liệu (CSDL)</option>
-                <option value="Nền tảng số">Nền tảng số</option>
-                <option value="Dịch vụ số">Dịch vụ số</option>
-                <option value="Hạ tầng số">Hạ tầng số & ANM</option>
-              </select>
-            </div>
+                <div class="sm:col-span-6 space-y-2 text-xs">
+                  <div class="p-2 rounded-lg bg-blue-50/70 border border-blue-200 flex items-center justify-between">
+                    <span class="flex items-center gap-2 font-semibold text-blue-950">
+                      <span class="w-3 h-3 rounded-full bg-blue-600"></span> Lớp 3: Ứng dụng nghiệp vụ
+                    </span>
+                    <strong class="font-mono text-blue-900" id="stat-layer3">18 (56.3%)</strong>
+                  </div>
 
-            <div>
-              <label class="font-semibold text-slate-600 block mb-1">Cơ quan chủ quản:</label>
-              <select id="filterOwner" class="w-full bg-slate-50 border border-slate-300 rounded-md px-2.5 py-1.5 text-xs focus:ring-1 focus:ring-blue-600">
-                <option value="all">Tất cả Chủ quản</option>
-                <option value="UBND">UBND tỉnh</option>
-                <option value="Công an">Bộ Công an</option>
-                <option value="Thông tin">Sở TTTT</option>
-                <option value="Tài chính">Bộ Tài chính</option>
-                <option value="Khoa học">Bộ Khoa học & Công nghệ</option>
-              </select>
-            </div>
+                  <div class="p-2 rounded-lg bg-teal-50/70 border border-teal-200 flex items-center justify-between">
+                    <span class="flex items-center gap-2 font-semibold text-teal-950">
+                      <span class="w-3 h-3 rounded-full bg-teal-500"></span> Lớp 2: Dữ liệu &amp; Nền tảng
+                    </span>
+                    <strong class="font-mono text-teal-900" id="stat-layer2">5 (15.6%)</strong>
+                  </div>
 
-            <div>
-              <label class="font-semibold text-slate-600 block mb-1">Tìm kiếm nhanh:</label>
-              <input id="tableSearchInput" type="text" placeholder="Nhập mã KT-x, QG-x, tên..." class="w-full bg-slate-50 border border-slate-300 rounded-md px-2.5 py-1.5 text-xs focus:ring-1 focus:ring-blue-600">
-            </div>
-          </div>
+                  <div class="p-2 rounded-lg bg-purple-50/70 border border-purple-200 flex items-center justify-between">
+                    <span class="flex items-center gap-2 font-semibold text-purple-950">
+                      <span class="w-3 h-3 rounded-full bg-purple-600"></span> Lớp 4: Kênh tương tác &amp; Đo lường
+                    </span>
+                    <strong class="font-mono text-purple-900" id="stat-layer4">5 (15.6%)</strong>
+                  </div>
 
-          <!-- Data Table -->
-          <div class="bg-white rounded-xl shadow-xs border border-slate-200 overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full text-left text-xs">
-                <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200 uppercase tracking-wider text-[11px]">
-                  <tr>
-                    <th class="px-4 py-3">Mã ĐT</th>
-                    <th class="px-4 py-3">Tên đối tượng</th>
-                    <th class="px-4 py-3">Loại bản ghi</th>
-                    <th class="px-4 py-3">Loại đối tượng</th>
-                    <th class="px-4 py-3">Lớp KT</th>
-                    <th class="px-4 py-3">Cơ quan chủ quản</th>
-                    <th class="px-4 py-3">Phương án Xử lý</th>
-                  </tr>
-                </thead>
-                <tbody id="objectsTableBody" class="divide-y divide-slate-200">
-                  <!-- Rendered dynamically by JS -->
-                </tbody>
-              </table>
+                  <div class="p-2 rounded-lg bg-amber-50/70 border border-amber-200 flex items-center justify-between">
+                    <span class="flex items-center gap-2 font-semibold text-amber-950">
+                      <span class="w-3 h-3 rounded-full bg-amber-500"></span> Lớp 1: Hạ tầng &amp; An ninh mạng
+                    </span>
+                    <strong class="font-mono text-amber-900" id="stat-layer1">4 (12.5%)</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-[11px] text-slate-700 flex items-center gap-2">
+                <i class="fa-solid fa-lightbulb text-amber-500 text-sm shrink-0"></i>
+                <span><strong>Nhận định điều hành:</strong> Lớp 3 chiếm đa số (trên 56%). Cần siết chặt tiêu chí chống đầu tư trùng lặp theo Nghị định 224/2026/NĐ-CP trước khi phê duyệt chủ trương.</span>
+              </div>
             </div>
 
-            <!-- Pagination Bar -->
-            <div class="p-3 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-600">
-              <div id="objectsCountLabel" class="font-medium">Hiển thị 10 / 128 bản ghi</div>
-              <div class="flex items-center gap-1 font-mono">
-                <button class="px-2 py-1 rounded bg-white border border-slate-300 text-slate-600 hover:bg-slate-100 disabled:opacity-50">&lt;&lt;</button>
-                <button class="px-2 py-1 rounded bg-white border border-slate-300 text-slate-600 hover:bg-slate-100">&lt;</button>
-                <button class="px-2.5 py-1 rounded bg-blue-800 text-white font-bold">1</button>
-                <button class="px-2.5 py-1 rounded bg-white border border-slate-300 text-slate-700 hover:bg-slate-100">2</button>
-                <button class="px-2.5 py-1 rounded bg-white border border-slate-300 text-slate-700 hover:bg-slate-100">3</button>
-                <span class="px-1 text-slate-400">...</span>
-                <button class="px-2.5 py-1 rounded bg-white border border-slate-300 text-slate-700 hover:bg-slate-100">13</button>
-                <button class="px-2 py-1 rounded bg-white border border-slate-300 text-slate-600 hover:bg-slate-100">&gt;</button>
-                <button class="px-2 py-1 rounded bg-white border border-slate-300 text-slate-600 hover:bg-slate-100">&gt;&gt;</button>
+            <!-- BIỂU ĐỒ 2: ĐỊNH HƯỚNG PHƯƠNG ÁN XỬ LÝ & BỐ TRÍ VỐN -->
+            <div class="bg-white p-5 rounded-2xl shadow-xs border border-slate-200 space-y-3 flex flex-col justify-between">
+              <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-sm">
+                    <i class="fa-solid fa-chart-column"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-extrabold text-xs text-slate-900 uppercase">Hiện trạng &amp; Phương án Xử lý Hệ thống</h3>
+                    <p class="text-[11px] text-slate-500">Căn cứ bố trí ngân sách duy trì, nâng cấp, chuẩn hóa và thay thế</p>
+                  </div>
+                </div>
+                <span class="text-[11px] font-mono bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-bold">5 Phương án</span>
+              </div>
+
+              <div class="h-52 pt-2">
+                <canvas id="chartPlansCanvas"></canvas>
+              </div>
+
+              <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200 text-[11px] text-slate-700 flex items-center gap-2">
+                <i class="fa-solid fa-coins text-emerald-600 text-sm shrink-0"></i>
+                <span><strong>Định hướng ngân sách:</strong> Ưu tiên vốn cho <strong>7 hệ thống Chuẩn hóa API qua LGSP</strong>; tiến hành thay thế/hợp nhất <strong>3 hệ thống phân tán</strong> vào nền tảng dùng chung của tỉnh.</span>
               </div>
             </div>
 
           </div>
 
-        </div>
+          <!-- ROW 2: 2 BIỂU ĐỒ CHUYÊN SÂU (PHÂN BỔ SỞ/NGÀNH & RADAR 5 TRỤ CỘT) -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+            
+            <!-- BIỂU ĐỒ 3: PHÂN BỔ HỆ THỐNG THEO SỞ/BAN/NGÀNH (7 COLS) -->
+            <div class="lg:col-span-7 bg-white p-5 rounded-2xl shadow-xs border border-slate-200 space-y-3 flex flex-col justify-between">
+              <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center font-bold text-sm">
+                    <i class="fa-solid fa-building-columns"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-extrabold text-xs text-slate-900 uppercase">Mật độ Hệ thống Số theo Sở / Ban / Ngành</h3>
+                    <p class="text-[11px] text-slate-500">Xếp hạng mức độ số hóa giữa các cơ quan chuyên môn toàn tỉnh</p>
+                  </div>
+                </div>
+                <span class="text-[11px] font-mono bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded font-bold">11 Sở/Ngành</span>
+              </div>
 
-        <!-- ========================================================= -->
-        <!-- MÀN HÌNH 3: BẢN ĐỒ KẾT NỐI & CHIA SẺ DL (B2 - QH_KETNOI)   -->
-        <!-- ========================================================= -->
-        <div id="screen-connections" class="screen-content hidden space-y-4">
-          
-          <!-- Header & View Switcher -->
-          <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
-                <i class="fa-solid fa-network-wired text-cyan-600"></i>
-                BẢN ĐỒ TÍCH HỢP & LUỒNG DỮ LIỆU (BẢNG 2 - QH_KETNOI & MẪU SỐ 02)
-              </h2>
-              <p class="text-xs text-slate-500 mt-0.5">Mô hình hóa trực quan kết nối liên thông qua Trục LGSP / NDXP và cơ sở dữ liệu dùng chung</p>
+              <div class="h-64 pt-2">
+                <canvas id="chartDeptsCanvas"></canvas>
+              </div>
+
+              <div class="text-[11px] text-slate-500 italic text-right">
+                * Dữ liệu được đồng bộ trực tiếp từ CSDL Khung kiến trúc và các biểu mẫu tác nghiệp.
+              </div>
             </div>
 
-            <!-- Toggle Buttons -->
-            <div class="flex items-center bg-slate-100 p-1 rounded-lg border border-slate-200 text-xs">
-              <span class="text-slate-500 px-2 font-medium">Chế độ:</span>
-              <button data-mode="both" class="conn-view-mode px-3 py-1 rounded font-medium bg-blue-800 text-white transition">Cả hai</button>
-              <button data-mode="map" class="conn-view-mode px-3 py-1 rounded font-medium text-slate-700 hover:bg-slate-200 transition">Sơ đồ 🖼️</button>
-              <button data-mode="table" class="conn-view-mode px-3 py-1 rounded font-medium text-slate-700 hover:bg-slate-200 transition">Bảng dữ liệu</button>
+            <!-- BIỂU ĐỒ 4: RADAR ĐÁNH GIÁ 5 TRỤ CỘT KIẾN TRÚC (5 COLS) -->
+            <div class="lg:col-span-5 bg-white p-5 rounded-2xl shadow-xs border border-slate-200 space-y-3 flex flex-col justify-between">
+              <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-700 flex items-center justify-center font-bold text-sm">
+                    <i class="fa-solid fa-radar"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-extrabold text-xs text-slate-900 uppercase">Mức Độ Trưởng Thành 5 Trụ Cột</h3>
+                    <p class="text-[11px] text-slate-500">Đánh giá độ hoàn thiện Kiến trúc Chính quyền số tỉnh</p>
+                  </div>
+                </div>
+                <span class="text-[11px] font-mono bg-rose-100 text-rose-800 px-2 py-0.5 rounded font-bold">DTI: 93%</span>
+              </div>
+
+              <div class="h-64 flex items-center justify-center pt-2">
+                <canvas id="chartRadarCanvas"></canvas>
+              </div>
+
+              <div class="p-2.5 rounded-xl bg-rose-50/60 border border-rose-200 text-[11px] text-rose-950 flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-rose-600 text-sm shrink-0"></i>
+                <span>Trụ cột <strong>An toàn an ninh mạng SOC (98%)</strong> và <strong>Chính quyền số (96%)</strong> đạt mức xuất sắc.</span>
+              </div>
             </div>
+
           </div>
 
-          <!-- VISUAL MAP VIEWER (CANVAS TOPOLOGY) -->
-          <div id="connVisualContainer" class="bg-white p-4 rounded-xl shadow-xs border border-slate-200">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-xs font-bold text-slate-700 uppercase tracking-wide">
-                <i class="fa-solid fa-diagram-next text-blue-700 mr-1"></i> SƠ ĐỒ KẾT NỐI TRỰC QUAN (TOPOLOGY VIEWER)
+          <!-- ROW 3: TRỰC QUAN HÓA MA TRẬN LUỒNG CHIA SẺ DỮ LIỆU LGSP LIÊN NGÀNH -->
+          <div class="bg-white p-5 rounded-2xl shadow-xs border border-slate-200 space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-cyan-50 text-cyan-700 flex items-center justify-center font-bold text-sm">
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div>
+                  <h3 class="font-extrabold text-xs text-slate-900 uppercase flex items-center gap-2">
+                    <span>GIÁM SÁT TRỤC KẾT NỐI &amp; CHIA SẺ DỮ LIỆU LGSP TOÀN TỈNH</span>
+                    <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full font-bold flex items-center gap-1">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> 100% ONLINE
+                    </span>
+                  </h3>
+                  <p class="text-[11px] text-slate-600">
+                    <strong>QH (Quan Hệ Chia Sẻ Dữ Liệu):</strong> Mỗi mã <code>QH-xx</code> đại diện cho một đường ống dẫn dữ liệu tự động giữa các Sở/Ngành với Kho dữ liệu tỉnh và Trục LGSP Quốc gia theo chuẩn BKHCN.
+                  </p>
+                </div>
+              </div>
+              <span class="text-xs font-mono font-bold text-cyan-900 bg-cyan-100 px-3 py-1 rounded-lg border border-cyan-300">
+                5 Luồng kết nối cốt lõi
               </span>
-              <div class="flex items-center gap-3 text-[11px] text-slate-500">
-                <span class="flex items-center gap-1"><span class="w-3 h-0.5 bg-blue-600 inline-block"></span> Đang khai thác</span>
-                <span class="flex items-center gap-1"><span class="w-3 h-0.5 border-t-2 border-dashed border-slate-400 inline-block"></span> Dự kiến triển khai</span>
-              </div>
             </div>
 
-            <div id="topologyCanvasContainer" class="bg-grid-pattern w-full border border-slate-200 shadow-inner flex items-center justify-center">
-              <canvas id="topologyCanvas" class="w-full"></canvas>
-            </div>
-          </div>
-
-          <!-- CONNECTION DATA TABLE -->
-          <div id="connTableContainer" class="bg-white rounded-xl shadow-xs border border-slate-200 overflow-hidden">
-            <div class="p-3.5 bg-slate-50 border-b border-slate-200 font-bold text-xs text-slate-700 uppercase tracking-wide">
-              Danh mục chi tiết các luồng kết nối (Bảng 2 - QH_KETNOI)
-            </div>
-            <div class="overflow-x-auto">
-              <table class="w-full text-left text-xs">
-                <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200 uppercase tracking-wider text-[11px]">
-                  <tr>
-                    <th class="px-4 py-3">Mã QH</th>
-                    <th class="px-4 py-3">Đối tượng Nguồn</th>
-                    <th class="px-4 py-3">Loại quan hệ</th>
-                    <th class="px-4 py-3">Đối tượng Đích</th>
-                    <th class="px-4 py-3">Kênh kết nối</th>
-                    <th class="px-4 py-3">Trạng thái kết nối</th>
-                  </tr>
-                </thead>
-                <tbody id="connectionsTableBody" class="divide-y divide-slate-200">
-                  <!-- Rendered dynamically by JS -->
-                </tbody>
-              </table>
+            <!-- Visual Pipeline Flow Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="visualPipelineContainer">
+              <!-- Dynamic pipelines populated via JS -->
             </div>
           </div>
 
         </div>
 
-        <!-- ========================================================= -->
-        <!-- MÀN HÌNH 4: QUẢN LÝ NHIỆM VỤ & LỘ TRÌNH (B4 - HOANTHIEN_NV)-->
-        <!-- ========================================================= -->
-        <div id="screen-tasks" class="screen-content hidden space-y-4">
-          
-          <!-- Header & View Switcher -->
-          <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
-                <i class="fa-solid fa-list-check text-emerald-600"></i>
-                QUẢN LÝ NHIỆM VỤ CHUYỂN ĐỔI KIẾN TRÚC & LỘ TRÌNH (BẢNG 4 - HOANTHIEN_NV)
-              </h2>
-              <p class="text-xs text-slate-500 mt-0.5">Theo dõi ma trận ánh xạ giữa khiếm khuyết nội dung (ND-x) sang nhiệm vụ (NV-x) và tiêu chí kiểm chứng</p>
+        <!-- SUBVIEW B: SƠ ĐỒ CHI TIẾT 4 LỚP (HÌNH 8) - TÙY CHỌN PHỤ KHI CẦN TRA CỨU TỪNG Ô -->
+        <div id="subview-detailed-hinh8" class="space-y-4 hidden">
+          <div class="p-3.5 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-between text-xs text-blue-950">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-info text-blue-600 text-base"></i>
+              <span>Đang ở chế độ <strong>Sơ đồ Chi tiết 4 Lớp (Hình 8)</strong>. Nhấp vào từng ô để xem thông tin chi tiết hoặc kiểm tra trạng thái phê duyệt.</span>
             </div>
-
-            <!-- Toggle Views -->
-            <div class="flex items-center bg-slate-100 p-1 rounded-lg border border-slate-200 text-xs">
-              <span class="text-slate-500 px-2 font-medium">Xem theo:</span>
-              <button data-view="table" class="task-view-btn px-3 py-1 rounded font-medium bg-blue-800 text-white transition">Ma trận Bảng</button>
-              <button data-view="gantt" class="task-view-btn px-3 py-1 rounded font-medium text-slate-700 hover:bg-slate-200 transition">Gantt Chart</button>
-              <button data-view="kanban" class="task-view-btn px-3 py-1 rounded font-medium text-slate-700 hover:bg-slate-200 transition">Kanban Tiến độ</button>
-            </div>
-          </div>
-
-          <!-- VIEW 1: TABLE VIEW -->
-          <div id="taskTableView" class="bg-white rounded-xl shadow-xs border border-slate-200 overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full text-left text-xs">
-                <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200 uppercase tracking-wider text-[11px]">
-                  <tr>
-                    <th class="px-4 py-3">Mã ND</th>
-                    <th class="px-4 py-3">Nội dung hoàn thiện</th>
-                    <th class="px-4 py-3">Phương án xử lý</th>
-                    <th class="px-4 py-3">Mã NV</th>
-                    <th class="px-4 py-3">Tên Nhiệm vụ</th>
-                    <th class="px-4 py-3">Đơn vị chủ trì</th>
-                    <th class="px-4 py-3">Lộ trình</th>
-                    <th class="px-4 py-3">Trạng thái</th>
-                  </tr>
-                </thead>
-                <tbody id="tasksTableBody" class="divide-y divide-slate-200">
-                  <!-- Rendered dynamically by JS -->
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <!-- VIEW 2: GANTT CHART VIEW -->
-          <div id="taskGanttView" class="hidden bg-white p-4 rounded-xl shadow-xs border border-slate-200">
-            <div class="mb-3 flex justify-between items-center">
-              <h3 class="text-xs font-bold text-slate-700 uppercase tracking-wide">
-                <i class="fa-solid fa-timeline text-blue-700 mr-1"></i> Lộ trình triển khai tổng thể giai đoạn 2026 - 2028
-              </h3>
-              <span class="text-xs text-slate-400 font-mono">Đơn vị: Quý</span>
-            </div>
-            <div id="ganttChartContainer"></div>
-          </div>
-
-          <!-- VIEW 3: KANBAN BOARD VIEW -->
-          <div id="taskKanbanView" class="hidden bg-white p-4 rounded-xl shadow-xs border border-slate-200">
-            <div class="mb-3 flex justify-between items-center">
-              <h3 class="text-xs font-bold text-slate-700 uppercase tracking-wide">
-                <i class="fa-solid fa-table-columns text-emerald-700 mr-1"></i> Bảng quản lý tiến độ thực hiện nhiệm vụ (Kanban)
-              </h3>
-            </div>
-            <div id="kanbanBoardContainer"></div>
-          </div>
-
-        </div>
-
-        <!-- ========================================================= -->
-        <!-- MÀN HÌNH: BẢNG 3 - ANHXA MÔ HÌNH QUỐC GIA (B3)             -->
-        <!-- ========================================================= -->
-        <div id="screen-mappings" class="screen-content hidden space-y-4">
-          <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-200">
-            <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
-              <i class="fa-solid fa-puzzle-piece text-indigo-600"></i>
-              BẢNG ÁNH XẠ ĐỐI TƯỢNG VÀO MÔ HÌNH THAM CHIẾU QUỐC GIA (BẢNG 3 - ANHXA)
-            </h2>
-            <p class="text-xs text-slate-500 mt-0.5">Ánh xạ từng tài sản số vào các sơ đồ chuẩn Hình 3, 5, 7, 9 tại QĐ 1425/QĐ-TTg</p>
-          </div>
-
-          <div class="bg-white rounded-xl shadow-xs border border-slate-200 overflow-hidden">
-            <table class="w-full text-left text-xs">
-              <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200 uppercase tracking-wider text-[11px]">
-                <tr>
-                  <th class="px-4 py-3">Mã ĐT Cục bộ</th>
-                  <th class="px-4 py-3">Tên đối tượng</th>
-                  <th class="px-4 py-3">Mô hình Quốc gia tham chiếu</th>
-                  <th class="px-4 py-3">Lớp kiến trúc QG</th>
-                  <th class="px-4 py-3">Mã tham chiếu Quốc gia</th>
-                  <th class="px-4 py-3">Mức độ tương thích</th>
-                </tr>
-              </thead>
-              <tbody id="mappingsTableBody" class="divide-y divide-slate-200"></tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- ========================================================= -->
-        <!-- MÀN HÌNH: THƯ VIỆN SƠ ĐỒ KIẾN TRÚC (MẪU SỐ 02)            -->
-        <!-- ========================================================= -->
-        <div id="screen-library" class="screen-content hidden space-y-4">
-          <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-200 flex justify-between items-center">
-            <div>
-              <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
-                <i class="fa-solid fa-images text-pink-600"></i>
-                THƯ VIỆN BỘ SƠ ĐỒ KIẾN TRÚC SỐ (MẪU SỐ 02)
-              </h2>
-              <p class="text-xs text-slate-500 mt-0.5">Lưu trữ các sơ đồ kỹ thuật chuẩn: Sơ đồ tổng thể, Nghiệp vụ, Ứng dụng, Dữ liệu, Hạ tầng</p>
-            </div>
-            <button class="px-3 py-1.5 bg-blue-800 text-white rounded text-xs font-semibold hover:bg-blue-900 transition flex items-center gap-1.5 admin-only">
-              <i class="fa-solid fa-cloud-arrow-up"></i> Tải lên Sơ đồ mới (VSDX/PDF)
+            <button onclick="switchDashboardMode('visual')" class="px-3 py-1 bg-white hover:bg-blue-100 text-blue-700 font-bold rounded-lg border border-blue-300 transition">
+              Quay lại Dashboard Biểu đồ
             </button>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Diagram Card 1 -->
-            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition">
-              <div class="flex justify-between items-start mb-2">
-                <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-blue-100 text-blue-800">Sơ đồ 01</span>
-                <span class="text-xs text-slate-400 font-mono">v1.0 (2026-09-15)</span>
-              </div>
-              <h3 class="font-bold text-sm text-slate-800 mb-1">Sơ đồ Kiến trúc Tổng thể Quốc gia số (Hình 1)</h3>
-              <p class="text-xs text-slate-500 mb-3">Mô hình 4 lớp liên thông từ hạ tầng, dữ liệu, ứng dụng đến kênh tương tác công dân.</p>
-              <div class="h-44 bg-slate-100 rounded-lg flex items-center justify-center border border-slate-200 mb-3 text-slate-400">
-                <div class="text-center">
-                  <i class="fa-solid fa-sitemap text-3xl mb-1 text-blue-600"></i>
-                  <p class="text-xs font-medium text-slate-600">SoDo_TongThe_v1.0.drawio</p>
-                </div>
-              </div>
-              <div class="flex items-center justify-between text-xs">
-                <span class="text-slate-500"><i class="fa-solid fa-check text-emerald-600"></i> Đồng bộ Bảng 1 & 2</span>
-                <div class="flex gap-2">
-                  <button class="px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium">Xem trước</button>
-                  <button class="px-2.5 py-1 rounded bg-blue-50 text-blue-700 hover:bg-blue-100 font-medium">Tải VSDX</button>
-                </div>
-              </div>
+          <div class="space-y-4">
+
+          <!-- LỚP 4: KÊNH TƯƠNG TÁC & ĐO LƯỜNG -->
+          <div class="bg-purple-50/50 border-2 border-purple-300 rounded-xl p-4 shadow-xs">
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="text-xs font-black text-purple-950 uppercase flex items-center gap-2 tracking-wide">
+                <span class="w-6 h-6 rounded-full bg-purple-600 text-white text-xs flex items-center justify-center font-bold">4</span>
+                LỚP 4: KÊNH TƯƠNG TÁC &amp; ĐO LƯỜNG
+              </span>
+              <p class="text-[11px] text-purple-800 font-medium ml-8">Phục vụ người dân, doanh nghiệp (Cổng DVC, App Công dân) và Chỉ đạo điều hành (IOC, 1022)</p>
+              <span class="text-[11px] font-mono bg-purple-200 text-purple-900 px-2 py-0.5 rounded font-bold" id="badge-l4-count">4 Thành phần</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3" id="layer4-grid">
+              <!-- Dynamic -->
+            </div>
+          </div>
+
+          <!-- LỚP 3: ỨNG DỤNG & NGHIỆP VỤ (TÁCH 2 CỘT RÕ RỆT) -->
+          <div class="bg-blue-50/50 border-2 border-blue-400 rounded-xl p-4 shadow-xs">
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="text-xs font-black text-blue-950 uppercase flex items-center gap-2 tracking-wide">
+                <span class="w-6 h-6 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center font-bold">3</span>
+                LỚP 3: DỊCH VỤ &amp; ỨNG DỤNG NGHIỆP VỤ
+              </span>
+              <p class="text-[11px] text-blue-800 font-medium ml-8">Phần mềm chuyên môn của các Sở/Ngành (Y tế, Đất đai, Nông nghiệp, Giáo dục...) - Không làm trùng lặp</p>
+              <span class="text-[11px] font-mono bg-blue-200 text-blue-900 px-2 py-0.5 rounded font-bold" id="badge-l3-count">Chính quyền số &amp; Kinh tế - Xã hội số</span>
             </div>
 
-            <!-- Diagram Card 2 -->
-            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition">
-              <div class="flex justify-between items-start mb-2">
-                <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-emerald-100 text-emerald-800">Sơ đồ 02</span>
-                <span class="text-xs text-slate-400 font-mono">v1.0 (2026-09-15)</span>
-              </div>
-              <h3 class="font-bold text-sm text-slate-800 mb-1">Sơ đồ Kiến trúc Dữ liệu & Luồng tích hợp (Hình 7)</h3>
-              <p class="text-xs text-slate-500 mb-3">Liên thông CSDLQG Dân cư, Doanh nghiệp, Đất đai vào Kho dữ liệu dùng chung qua LGSP.</p>
-              <div class="h-44 bg-slate-100 rounded-lg flex items-center justify-center border border-slate-200 mb-3 text-slate-400">
-                <div class="text-center">
-                  <i class="fa-solid fa-database text-3xl mb-1 text-teal-600"></i>
-                  <p class="text-xs font-medium text-slate-600">SoDo_DuLieu_v1.0.drawio</p>
+            <!-- 2 COLUMNS SPLIT -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <!-- Cột Trái: CHÍNH QUYỀN SỐ -->
+              <div class="bg-white/90 border border-blue-300 rounded-lg p-3 shadow-xs">
+                <div class="flex items-center justify-between mb-2 pb-1.5 border-b border-blue-100">
+                  <span class="text-xs font-bold text-blue-900 uppercase flex items-center gap-1.5">
+                    <i class="fa-solid fa-building-columns text-blue-600"></i>
+                    Chính Quyền Số
+                  </span>
+                  <span class="text-[10px] bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-semibold" id="count-l3-cq">...</span>
+                </div>
+                <div class="space-y-2 max-h-[500px] overflow-y-auto custom-scrollbar pr-1" id="layer3-cq-list">
+                  <!-- Dynamic -->
                 </div>
               </div>
-              <div class="flex items-center justify-between text-xs">
-                <span class="text-slate-500"><i class="fa-solid fa-check text-emerald-600"></i> Khớp Bảng 2 (9 luồng)</span>
-                <div class="flex gap-2">
-                  <button class="px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium">Xem trước</button>
-                  <button class="px-2.5 py-1 rounded bg-blue-50 text-blue-700 hover:bg-blue-100 font-medium">Tải VSDX</button>
+
+              <!-- Cột Phải: KINH TẾ SỐ & XÃ HỘI SỐ -->
+              <div class="bg-white/90 border border-emerald-300 rounded-lg p-3 shadow-xs">
+                <div class="flex items-center justify-between mb-2 pb-1.5 border-b border-emerald-100">
+                  <span class="text-xs font-bold text-emerald-900 uppercase flex items-center gap-1.5">
+                    <i class="fa-solid fa-seedling text-emerald-600"></i>
+                    Kinh Tế Số &amp; Xã Hội Số
+                  </span>
+                  <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-semibold" id="count-l3-ktxh">...</span>
+                </div>
+                <div class="space-y-2 max-h-[500px] overflow-y-auto custom-scrollbar pr-1" id="layer3-ktxh-list">
+                  <!-- Dynamic -->
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- LỚP 2: DỮ LIỆU & NỀN TẢNG LÕI -->
+          <div class="bg-teal-50/50 border-2 border-teal-300 rounded-xl p-4 shadow-xs">
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="text-xs font-black text-teal-950 uppercase flex items-center gap-2 tracking-wide">
+                <span class="w-6 h-6 rounded-full bg-teal-600 text-white text-xs flex items-center justify-center font-bold">2</span>
+                LỚP 2: DỮ LIỆU &amp; NỀN TẢNG DÙNG CHUNG
+              </span>
+              <p class="text-[11px] text-teal-800 font-medium ml-8">Trục kết nối LGSP, Kho dữ liệu dùng chung tỉnh & Nền tảng định danh SSO (xóa bỏ ốc đảo dữ liệu)</p>
+              <span class="text-[11px] font-mono bg-teal-200 text-teal-900 px-2 py-0.5 rounded font-bold" id="badge-l2-count">...</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3" id="layer2-grid">
+              <!-- Dynamic -->
+            </div>
+          </div>
+
+          <!-- LỚP 1: HẠ TẦNG SỐ & AN NINH MẠNG DÙNG CHUNG -->
+          <div class="bg-amber-50/50 border-2 border-amber-300 rounded-xl p-4 shadow-xs">
+            <div class="flex items-center justify-between mb-2.5">
+              <span class="text-xs font-black text-amber-950 uppercase flex items-center gap-2 tracking-wide">
+                <span class="w-6 h-6 rounded-full bg-amber-600 text-white text-xs flex items-center justify-center font-bold">1</span>
+                LỚP 1: HẠ TẦNG SỐ &amp; AN NINH MẠNG
+              </span>
+              <p class="text-[11px] text-amber-800 font-medium ml-8">Data Center, Nền tảng Cloud tỉnh, Mạng CPNet & Giám sát SOC (dùng chung, cấm mua server riêng)</p>
+              <span class="text-[11px] font-mono bg-amber-200 text-amber-900 px-2 py-0.5 rounded font-bold" id="badge-l1-count">...</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3" id="layer1-grid">
+              <!-- Dynamic -->
+            </div>
+          </div>
+
         </div>
+      </div>
+    </div>
 
-        <!-- ========================================================= -->
-        <!-- MÀN HÌNH 5: TRUNG TÂM QUẢN TRỊ HỒ SƠ & ĐỒNG BỘ NAS         -->
-        <!-- ========================================================= -->
-        <div id="screen-admin" class="screen-content hidden space-y-6">
-          
-          <div class="bg-white p-4 rounded-xl shadow-xs border border-slate-200">
-            <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
-              <i class="fa-solid fa-sliders text-orange-600"></i>
-              TRUNG TÂM QUẢN TRỊ HỒ SƠ KHUNG & ĐỒNG BỘ NAS
-            </h2>
-            <p class="text-xs text-slate-500 mt-0.5">Quản lý chốt phiên bản 03 Mẫu - 01 Hồ sơ, kiểm tra chất lượng dữ liệu tự động và kết nối Hệ thống NAS</p>
+      <!-- ======================================================= -->
+      <!-- VIEW 2: HỒ SƠ TRÌNH DUYỆT PHÊ DUYỆT CHỦ TRƯƠNG          -->
+      <!-- ======================================================= -->
+      <div id="p1-view-approvals" class="space-y-6 hidden">
+        <div class="bg-white p-6 rounded-xl shadow-xs border border-slate-200 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
+            <div>
+              <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-file-signature text-amber-600"></i>
+                DANH MỤC HỒ SƠ DỰ ÁN TRÌNH LÃNH ĐẠO PHÊ DUYỆT CHỦ TRƯƠNG
+              </h2>
+              <p class="text-xs text-slate-500 mt-0.5">
+                Các hồ sơ do Sở/Ban/Ngành đã tự kiểm tra đạt 5/5 tiêu chí theo Nghị định 224/2026/NĐ-CP và nộp lên để Lãnh đạo xem xét ra quyết định phê duyệt ngoài đời.
+              </p>
+            </div>
+            <span class="text-xs px-3 py-1.5 rounded-lg bg-amber-100 text-amber-900 font-bold border border-amber-300 flex items-center gap-1.5" id="badgePendingCount">
+              <i class="fa-solid fa-inbox"></i> 0 hồ sơ chờ xem xét
+            </span>
           </div>
 
-          <!-- KHỐI 1: QUẢN LÝ PHIÊN BẢN HỒ SƠ ĐỒNG BỘ (03 MẪU - 01 HỒ SƠ) -->
-          <div class="bg-white p-5 rounded-xl shadow-xs border border-slate-200">
-            <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wide mb-3 flex items-center gap-2">
-              <i class="fa-solid fa-copy text-blue-700"></i>
-              [KHỐI 1] QUẢN LÝ PHIÊN BẢN HỒ SƠ ĐỒNG BỘ (03 MẪU - 01 HỒ SƠ)
-            </h3>
-
-            <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 mb-4 flex flex-wrap items-center gap-6 text-xs">
-              <div><span class="text-slate-500">Phiên bản hiện hành:</span> <span class="font-bold text-blue-900 font-mono">v1.0</span></div>
-              <div><span class="text-slate-500">Ngày hiệu lực:</span> <span class="font-medium text-slate-800 font-mono">2026-09-15</span></div>
-              <div><span class="text-slate-500">Ngày chốt dữ liệu:</span> <span class="font-medium text-slate-800 font-mono">2026-09-15</span></div>
-              <div><span class="text-slate-500">Trạng thái hồ sơ:</span> <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Đã chốt ban hành</span></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-              <!-- Mẫu 01 -->
-              <div class="p-3.5 rounded-lg border border-slate-200 bg-white hover:border-blue-300 transition">
-                <div class="font-bold text-slate-900 flex items-center gap-2 mb-1">
-                  <i class="fa-solid fa-file-lines text-blue-600 text-sm"></i>
-                  Mẫu số 01: Tài liệu Khung
-                </div>
-                <div class="text-[11px] text-slate-500 font-mono mb-2.5">TaiLieu_KhungKTS_v1.0.pdf</div>
-                <div class="flex gap-2">
-                  <button class="px-2 py-1 bg-slate-100 hover:bg-slate-200 rounded text-slate-700 font-medium">Xem PDF</button>
-                  <button class="px-2 py-1 bg-blue-50 text-blue-700 hover:bg-blue-100 rounded font-medium">Tải DOCX gốc</button>
-                </div>
-              </div>
-
-              <!-- Mẫu 02 -->
-              <div class="p-3.5 rounded-lg border border-slate-200 bg-white hover:border-blue-300 transition">
-                <div class="font-bold text-slate-900 flex items-center gap-2 mb-1">
-                  <i class="fa-solid fa-image text-emerald-600 text-sm"></i>
-                  Mẫu số 02: Bộ sơ đồ
-                </div>
-                <div class="text-[11px] text-slate-500 font-mono mb-2.5">SoDo_KhungKTS_v1.0.pdf</div>
-                <div class="flex gap-2">
-                  <button class="px-2 py-1 bg-slate-100 hover:bg-slate-200 rounded text-slate-700 font-medium">Xem sơ đồ</button>
-                  <button class="px-2 py-1 bg-blue-50 text-blue-700 hover:bg-blue-100 rounded font-medium">Tải VSDX nguồn</button>
-                </div>
-              </div>
-
-              <!-- Mẫu 03 -->
-              <div class="p-3.5 rounded-lg border border-slate-200 bg-white hover:border-blue-300 transition">
-                <div class="font-bold text-slate-900 flex items-center gap-2 mb-1">
-                  <i class="fa-solid fa-table text-amber-600 text-sm"></i>
-                  Mẫu số 03: Bộ dữ liệu
-                </div>
-                <div class="text-[11px] text-slate-500 font-mono mb-2.5">BoDuLieu_KTS_v1.0.xlsx</div>
-                <div class="flex gap-2">
-                  <button onclick="exportExcelMau03()" class="px-2 py-1 bg-emerald-700 hover:bg-emerald-800 text-white rounded font-medium">Xuất Excel chuẩn</button>
-                  <button onclick="switchTab('objects')" class="px-2 py-1 bg-slate-100 hover:bg-slate-200 rounded text-slate-700 font-medium">Tra cứu</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- KHỐI 2: CÔNG CỤ KIỂM TRA CHẤT LƯỢNG DỮ LIỆU TỰ ĐỘNG (DATA VALIDATOR) -->
-          <div class="bg-white p-5 rounded-xl shadow-xs border border-slate-200">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
-              <div>
-                <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wide flex items-center gap-2">
-                  <i class="fa-solid fa-spell-check text-indigo-700"></i>
-                  [KHỐI 2] CÔNG CỤ KIỂM TRA CHẤT LƯỢNG DỮ LIỆU TỰ ĐỘNG (DATA VALIDATOR)
+                    <!-- HỘP CHÚ GIẢI 4 LỚP KIẾN TRÚC DÀNH CHO LÃNH ĐẠO -->
+          <div class="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-slate-50 to-indigo-50 border border-blue-200 shadow-2xs space-y-3">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                <h3 class="font-extrabold text-xs text-blue-950 uppercase tracking-wide">
+                  💡 HƯỚNG DẪN LÃNH ĐẠO THẨM ĐỊNH NHANH THEO 4 LỚP KIẾN TRÚC (QĐ 1425/QĐ-TTg & NĐ 224/2026/NĐ-CP)
                 </h3>
-                <p class="text-xs text-slate-500 mt-0.5">Kiểm thử tự động 08 nguyên tắc chất lượng dữ liệu theo tiêu chuẩn QĐ 1425 & BKHCN</p>
               </div>
-              <button id="runValidatorBtn" class="px-4 py-2 bg-indigo-700 hover:bg-indigo-800 text-white rounded-lg text-xs font-bold shadow-xs flex items-center gap-2 transition shrink-0">
-                <i class="fa-solid fa-magnifying-glass-chart"></i>
-                Chạy kiểm tra tự động tệp XLSX Mẫu số 03
+              <button onclick="openLayerGuideModal()" class="text-xs text-blue-700 hover:text-blue-900 font-bold underline flex items-center gap-1">
+                <i class="fa-solid fa-circle-question"></i> Xem Diễn Giải Chi Tiết Cả 4 Lớp
               </button>
             </div>
 
-            <!-- Report output -->
-            <div id="validatorReportContainer" class="rounded-lg border border-slate-200 bg-slate-50/50 p-4 min-h-[140px]">
-              <div class="text-center py-6 text-slate-400 text-xs">
-                <i class="fa-solid fa-shield-virus text-3xl mb-2 text-slate-300"></i>
-                <p>Nhấn nút "Chạy kiểm tra tự động" để thực thi kiểm tra 08 quy tắc chất lượng dữ liệu.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- KHỐI 3: CẤU HÌNH ĐỒNG BỘ & ÁNH XẠ MÃ NAS -->
-          <div class="bg-white p-5 rounded-xl shadow-xs border border-slate-200">
-            <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wide mb-3 flex items-center gap-2">
-              <i class="fa-solid fa-cloud-arrow-up text-emerald-700"></i>
-              [KHỐI 3] CẤU HÌNH ĐỒNG BỘ & ÁNH XẠ MÃ NAS
-            </h3>
-
-            <div class="space-y-3.5 text-xs">
-              <div class="flex items-center justify-between p-3 rounded-lg bg-slate-50 border border-slate-200">
-                <div>
-                  <div class="font-bold text-slate-800">Trạng thái kết nối Hệ thống NAS Quốc gia:</div>
-                  <div id="nasSyncStatusText" class="text-slate-600 mt-0.5">🟢 Sẵn sàng cấu hình API</div>
+            <!-- 4 Mini Summary Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 text-xs">
+              <div onclick="openLayerGuideModal(1)" class="p-2.5 rounded-lg bg-amber-50/80 border border-amber-300 hover:border-amber-500 cursor-pointer transition space-y-1">
+                <div class="font-bold text-amber-950 flex items-center justify-between">
+                  <span>🟠 Lớp 1: Hạ tầng & ANM</span>
+                  <span class="text-[10px] bg-amber-200 text-amber-900 px-1.5 rounded font-mono">Móng nhà</span>
                 </div>
-                <button id="syncNasBtn" class="px-3.5 py-1.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded text-xs font-semibold shadow-xs flex items-center gap-1.5 transition">
-                  <i class="fa-solid fa-rotate"></i> Đồng bộ ngay với NAS
-                </button>
+                <p class="text-[11px] text-slate-600 leading-tight">Data Center, Cloud tỉnh, Mạng CPNet, Giám sát SOC.</p>
+                <p class="text-[10px] text-amber-800 font-bold"><i class="fa-solid fa-triangle-exclamation"></i> Quy tắc: Dùng Cloud tỉnh, cấm mua server riêng.</p>
               </div>
 
-              <div class="p-3 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-between">
-                <div>
-                  <div class="font-bold text-slate-800">Chế độ định danh tài sản số:</div>
-                  <div class="text-slate-600 mt-0.5">Mã tham chiếu cục bộ (Tạm thời: KT-x, QG-x) ➡️ Mã NAS chính thức (Khi Bộ KH&CN công bố chuẩn)</div>
+              <div onclick="openLayerGuideModal(2)" class="p-2.5 rounded-lg bg-teal-50/80 border border-teal-300 hover:border-teal-500 cursor-pointer transition space-y-1">
+                <div class="font-bold text-teal-950 flex items-center justify-between">
+                  <span>🟢 Lớp 2: Dữ liệu & Nền tảng</span>
+                  <span class="text-[10px] bg-teal-200 text-teal-900 px-1.5 rounded font-mono">Xương sống</span>
                 </div>
-                <span class="px-2.5 py-1 rounded bg-blue-100 text-blue-800 font-mono text-xs font-bold">Tự động ánh xạ</span>
+                <p class="text-[11px] text-slate-600 leading-tight">Trục LGSP liên thông NDXP, Kho dữ liệu, Định danh SSO/VNeID.</p>
+                <p class="text-[10px] text-teal-800 font-bold"><i class="fa-solid fa-circle-check"></i> Quy tắc: Bắt buộc mở API chia sẻ dữ liệu.</p>
+              </div>
+
+              <div onclick="openLayerGuideModal(3)" class="p-2.5 rounded-lg bg-blue-50/80 border border-blue-300 hover:border-blue-500 cursor-pointer transition space-y-1 ring-1 ring-blue-400">
+                <div class="font-bold text-blue-950 flex items-center justify-between">
+                  <span>🔵 Lớp 3: Ứng dụng nghiệp vụ</span>
+                  <span class="text-[10px] bg-blue-200 text-blue-900 px-1.5 rounded font-mono">Phòng chức năng</span>
+                </div>
+                <p class="text-[11px] text-slate-600 leading-tight">Phần mềm các Sở (Y tế, Đất đai, Nông nghiệp, Giáo dục...).</p>
+                <p class="text-[10px] text-blue-800 font-bold"><i class="fa-solid fa-shield"></i> Quy tắc: Không làm trùng lặp hệ thống dùng chung.</p>
+              </div>
+
+              <div onclick="openLayerGuideModal(4)" class="p-2.5 rounded-lg bg-purple-50/80 border border-purple-300 hover:border-purple-500 cursor-pointer transition space-y-1">
+                <div class="font-bold text-purple-950 flex items-center justify-between">
+                  <span>🟣 Lớp 4: Tương tác & Đo lường</span>
+                  <span class="text-[10px] bg-purple-200 text-purple-900 px-1.5 rounded font-mono">Mặt tiền & IOC</span>
+                </div>
+                <p class="text-[11px] text-slate-600 leading-tight">Cổng DVC, App Công dân, IOC Tỉnh, Tổng đài 1022.</p>
+                <p class="text-[10px] text-purple-800 font-bold"><i class="fa-solid fa-users"></i> Quy tắc: Tối ưu phục vụ dân & điều hành tỉnh.</p>
               </div>
             </div>
           </div>
 
-          <!-- AUDIT LOG TABLE (MỤC 7) -->
-          <div class="bg-white p-5 rounded-xl shadow-xs border border-slate-200">
-            <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wide mb-3 flex items-center gap-2">
-              <i class="fa-solid fa-clock-rotate-left text-slate-700"></i>
-              NHẬT KÝ TRUY CẬP VÀ THAO TÁC HỆ THỐNG (AUDIT LOG - MỤC 7)
-            </h3>
-            <div class="overflow-x-auto">
-              <table class="w-full text-left text-xs">
-                <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200 text-[11px]">
-                  <tr>
-                    <th class="px-3 py-2">Thời gian</th>
-                    <th class="px-3 py-2">Người dùng</th>
-                    <th class="px-3 py-2">Hành vi</th>
-                    <th class="px-3 py-2">Địa chỉ IP</th>
-                    <th class="px-3 py-2">Trạng thái</th>
-                  </tr>
-                </thead>
-                <tbody id="auditLogTableBody" class="divide-y divide-slate-100"></tbody>
-              </table>
-            </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-bold uppercase text-[10px]">
+                  <th class="py-2.5 px-3">Mã Hồ Sơ</th>
+                  <th class="py-2.5 px-3">Tên Dự án / Hệ thống</th>
+                  <th class="py-2.5 px-3">Cơ quan trình</th>
+                  <th class="py-2.5 px-3">Lớp Kiến trúc <button type="button" onclick="openLayerGuideModal()" class="text-blue-600 hover:text-blue-800 ml-1" title="Nhấp để xem diễn giải 4 lớp"><i class="fa-solid fa-circle-question"></i></button></th>
+                  <th class="py-2.5 px-3 text-center">Tự kiểm tra NĐ 224</th>
+                  <th class="py-2.5 px-3 text-center">Tình trạng</th>
+                  <th class="py-2.5 px-3 text-right">Xem xét / Phê duyệt</th>
+                </tr>
+              </thead>
+              <tbody id="tableApprovalsBody" class="divide-y divide-slate-100">
+                <!-- Dynamic rows -->
+              </tbody>
+            </table>
           </div>
-
         </div>
-
       </div>
 
-      <!-- ============================================================ -->
-      <!-- 4. FOOTER BAR (VÙNG 4 CỐ ĐỊNH)                                -->
-      <!-- ============================================================ -->
-      <footer class="h-9 bg-slate-900 text-slate-400 border-t border-slate-800 px-5 flex items-center justify-between text-xs z-30 shrink-0 font-medium">
-        <div class="flex items-center gap-4">
-          <span class="flex items-center gap-1.5 text-emerald-400 font-semibold">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            Trạng thái hệ thống: Bình thường
-          </span>
-          <span class="text-slate-600">|</span>
-          <span>Phiên bản Khung: <strong class="text-slate-200 font-mono">v1.0</strong></span>
-          <span class="text-slate-600">|</span>
-          <span>Ngày chốt dữ liệu: <strong class="text-slate-200 font-mono">2026-09-15</strong></span>
+    </div>
+  </main>
+
+  <!-- MODAL XEM CHI TIẾT TỰ KIỂM TRA & GHI NHẬN PHÊ DUYỆT -->
+  <div id="reviewModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 hidden">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 space-y-4 shadow-2xl border border-slate-200 max-h-[90vh] overflow-y-auto custom-scrollbar">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+          <h3 class="font-extrabold text-sm text-slate-900" id="modalHsTitle">PHIẾU TỰ KIỂM TRA ĐỐI SOÁT KIẾN TRÚC</h3>
         </div>
+        <button onclick="closeReviewModal()" class="text-slate-400 hover:text-slate-700 p-1">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+      
+      <div id="modalHsContent" class="space-y-4 text-xs">
+        <!-- Dynamic content -->
+      </div>
 
-        <div class="flex items-center gap-3">
-          <span class="flex items-center gap-1.5 text-blue-300">
-            <i class="fa-solid fa-cloud-arrow-up text-xs"></i>
-            Kết nối NAS: <strong class="text-emerald-400 font-normal">Sẵn sàng</strong>
-          </span>
-          <span class="text-slate-600 hidden md:inline">|</span>
-          <span class="text-[11px] text-slate-500 hidden md:inline">Phù hợp Quyết định số 1425/QĐ-TTg</span>
-        </div>
-      </footer>
-
-    </main>
-
+      <div class="pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <button onclick="closeReviewModal()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-lg text-xs transition">
+          Đóng
+        </button>
+        <button id="btnRecordApproval" onclick="recordApprovalAction()" class="px-5 py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold rounded-lg text-xs transition shadow flex items-center gap-2">
+          <i class="fa-solid fa-signature text-amber-300"></i> Ghi Nhận Quyết Định Phê Duyệt Ngoài Đời
+        </button>
+      </div>
+    </div>
   </div>
 
+  <!-- DRAWER TRƯỢT CHI TIẾT ĐỐI TƯỢNG (INTERACTIVE SLIDE-OVER)    -->
   <!-- ============================================================ -->
-  <!-- DRAWER SIDE PANEL (CHI TIẾT KHI CLICK CHỌN 01 DÒNG)          -->
-  <!-- ============================================================ -->
-  <div id="drawerOverlay" class="fixed inset-0 bg-slate-950/40 z-40 hidden transition-opacity"></div>
-  
-  <div id="detailDrawer" class="closed fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 flex flex-col border-l border-slate-300">
-    <!-- Drawer Header -->
-    <div class="p-4 bg-blue-900 text-white flex items-center justify-between shrink-0">
-      <div>
-        <span class="text-[10px] uppercase font-bold tracking-wider text-amber-400">THẺ THÔNG TIN TÀI SẢN SỐ (B1)</span>
-        <h3 id="drawerTitle" class="text-sm font-bold text-white mt-0.5 truncate max-w-xs">Chi tiết đối tượng</h3>
+  <div id="sideDrawer" class="fixed inset-y-0 right-0 w-96 bg-white shadow-2xl border-l border-slate-200 z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+    <div class="p-4 bg-slate-900 text-white flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+        <h3 class="font-bold text-sm tracking-wide" id="drawerObjId">CHI TIẾT ĐỐI TƯỢNG</h3>
       </div>
-      <button id="closeDrawerBtn" class="text-white hover:text-amber-400 text-base p-1 transition">
+      <button onclick="closeDrawer()" class="text-slate-400 hover:text-white p-1">
         <i class="fa-solid fa-xmark text-lg"></i>
       </button>
     </div>
 
-    <!-- Drawer Content -->
-    <div class="flex-1 overflow-y-auto p-5 space-y-4 text-xs">
-      
-      <!-- Key Identifiers -->
-      <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 space-y-1.5">
-        <div class="flex justify-between">
-          <span class="text-slate-500">Mã cục bộ:</span>
-          <span id="drawerObjId" class="font-mono font-bold text-blue-900">KT-01</span>
-        </div>
-        <div class="flex justify-between">
-          <span class="text-slate-500">Mã định danh gốc:</span>
-          <span id="drawerOrigId" class="font-mono font-medium text-slate-800">TTHC-789</span>
-        </div>
-        <div class="flex justify-between">
-          <span class="text-slate-500">Mã NAS:</span>
-          <span id="drawerNasCode" class="font-mono font-medium text-amber-700">[Chờ cấp từ NAS BKHCN]</span>
-        </div>
-      </div>
-
-      <!-- Scope & Status -->
-      <div class="space-y-2">
-        <div>
-          <span class="font-semibold text-slate-700 block mb-0.5">Trạng thái mô hình:</span>
-          <div id="drawerModelStatus" class="text-slate-800 p-2 rounded bg-slate-100 font-medium">Đồng thời hiện trạng & mục tiêu</div>
-        </div>
-
-        <div>
-          <span class="font-semibold text-slate-700 block mb-0.5">Phạm vi ứng dụng:</span>
-          <div id="drawerScope" class="text-slate-800 p-2 rounded bg-slate-100">Cấp tỉnh / Cấp xã</div>
-        </div>
-
-        <div>
-          <span class="font-semibold text-slate-700 block mb-0.5">Đơn vị vận hành:</span>
-          <div id="drawerOperator" class="text-slate-800 p-2 rounded bg-slate-100">Trung tâm Phục vụ hành chính công</div>
-        </div>
-
-        <div>
-          <span class="font-semibold text-slate-700 block mb-0.5">Chủ quản dữ liệu:</span>
-          <div id="drawerOwner" class="text-slate-800 p-2 rounded bg-slate-100">Văn phòng UBND tỉnh</div>
-        </div>
-
-        <div>
-          <span class="font-semibold text-slate-700 block mb-0.5">Phương án xử lý kiến trúc:</span>
-          <div id="drawerSolution" class="text-blue-900 font-bold p-2 rounded bg-blue-50 border border-blue-200">Nâng cấp, chuẩn hóa kết nối qua LGSP/NDXP</div>
-        </div>
-
-        <div>
-          <span class="font-semibold text-slate-700 block mb-0.5">Nguồn minh chứng căn cứ:</span>
-          <div id="drawerProof" class="text-slate-700 p-2 rounded bg-slate-100 italic">Quyết định số 456/QĐ-UBND tỉnh</div>
-        </div>
-      </div>
-
-      <!-- Sensitive Tech Specs (Mục 7) -->
+    <div class="p-5 flex-1 overflow-y-auto space-y-4 text-xs custom-scrollbar">
       <div>
-        <div class="flex items-center justify-between mb-1">
-          <span class="font-semibold text-slate-700">Cấu hình kỹ thuật kết nối:</span>
-          <span class="text-[10px] text-red-600 bg-red-50 px-1.5 py-0.5 rounded border border-red-200">Dữ liệu an ninh (Mục 7)</span>
+        <span class="text-[11px] text-slate-400 uppercase font-semibold">Tên Hệ Thống / CSDL:</span>
+        <div class="font-bold text-sm text-slate-900 mt-0.5" id="drawerObjTitle">...</div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3 pt-2 border-t border-slate-100">
+        <div>
+          <span class="text-[10px] text-slate-400 uppercase font-semibold">Đơn vị chủ quản:</span>
+          <div class="font-semibold text-slate-800 mt-0.5" id="drawerObjDept">...</div>
         </div>
-        <div id="drawerTechConfig" class="text-xs font-mono p-2 rounded bg-slate-100">
-          <!-- Masked in Public Mode -->
+        <div>
+          <span class="text-[10px] text-slate-400 uppercase font-semibold">Lớp Kiến trúc:</span>
+          <div class="font-semibold text-blue-700 mt-0.5" id="drawerObjLayer">...</div>
         </div>
       </div>
 
-      <!-- Connected Links -->
-      <div>
-        <span class="font-semibold text-slate-700 block mb-1">Các luồng kết nối liên quan (B2):</span>
-        <ul id="drawerConnectedList" class="space-y-1.5"></ul>
+      <div class="grid grid-cols-2 gap-3 pt-2 border-t border-slate-100">
+        <div>
+          <span class="text-[10px] text-slate-400 uppercase font-semibold">Phạm vi triển khai:</span>
+          <div class="font-semibold text-slate-800 mt-0.5" id="drawerObjScope">...</div>
+        </div>
+        <div>
+          <span class="text-[10px] text-slate-400 uppercase font-semibold">Phương án xử lý:</span>
+          <div class="font-semibold text-emerald-700 mt-0.5" id="drawerObjPlan">...</div>
+        </div>
       </div>
 
+      <div class="pt-2 border-t border-slate-100">
+        <span class="text-[10px] text-slate-400 uppercase font-semibold">Văn bản / Minh chứng pháp lý:</span>
+        <div class="p-2.5 bg-slate-50 border border-slate-200 rounded text-[11px] text-slate-700 mt-1 font-mono" id="drawerObjProof">
+          ...
+        </div>
+      </div>
+
+      <div class="pt-2 border-t border-slate-100">
+        <span class="text-[10px] text-slate-400 uppercase font-semibold">Các Luồng Kết Nối LGSP Liên Quan:</span>
+        <div class="space-y-2 mt-1.5" id="drawerConnList">
+          <!-- Dynamic -->
+        </div>
+      </div>
+
+      <div class="pt-2 border-t border-slate-100">
+        <span class="text-[10px] text-slate-400 uppercase font-semibold">Tình trạng phê duyệt:</span>
+        <div class="mt-1" id="drawerApprovalStatus">
+          <!-- Dynamic status -->
+        </div>
+      </div>
     </div>
 
-    <!-- Drawer Footer -->
-    <div class="p-3 bg-slate-100 border-t border-slate-200 flex justify-end gap-2 shrink-0">
-      <button onclick="closeDetailDrawer()" class="px-3 py-1.5 rounded bg-white border border-slate-300 text-xs font-medium text-slate-700 hover:bg-slate-50">
+    <div class="p-4 bg-slate-50 border-t border-slate-200 flex justify-end">
+      <button onclick="closeDrawer()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold rounded-lg text-xs transition">
         Đóng
       </button>
-      <button onclick="switchTab('connections'); closeDetailDrawer();" class="px-3 py-1.5 rounded bg-blue-800 text-xs font-semibold text-white hover:bg-blue-900">
-        Xem trên Sơ đồ kết nối
-      </button>
     </div>
   </div>
 
-  <!-- ============================================================ -->
-  <!-- MODAL: CHI TIẾT TIÊU CHÍ KIỂM CHỨNG NHIỆM VỤ (B4)           -->
-  <!-- ============================================================ -->
-  <div id="taskModal" class="fixed inset-0 bg-slate-950/50 z-50 flex items-center justify-center p-4 hidden">
-    <div class="bg-white rounded-xl shadow-2xl max-w-lg w-full overflow-hidden border border-slate-200">
-      <div class="p-4 bg-emerald-800 text-white flex justify-between items-center">
-        <div>
-          <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-300">TIÊU CHÍ & MINH CHỨNG KIỂM CHỨNG KẾT QUẢ KIẾN TRÚC</span>
-          <h3 id="modalTaskId" class="text-sm font-bold mt-0.5">NV-01</h3>
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    let currentObjects = [];
+    let currentConnections = [];
+    let currentTasks = [];
+    let currentCommunes = [];
+
+    // REAL-TIME BROADCAST CHANNEL & DIRECT CLEARANCE TRIGGER
+    let lastPendingObjId = null;
+    const syncChannel = new BroadcastChannel('province_arch_sync');
+    syncChannel.onmessage = (event) => {
+      handleIncomingSync(event.data);
+    };
+
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'province_arch_sync_data') {
+        try {
+          const d = JSON.parse(e.newValue);
+          handleIncomingSync(d);
+        } catch(err) { loadAllData(true); }
+      } else if (e.key === 'province_arch_sync_ts') {
+        loadAllData(true);
+      }
+    });
+
+    function handleIncomingSync(data) {
+      loadAllData(true);
+      if (data && data.table === 'objects' && data.object_id) {
+        lastPendingObjId = data.object_id;
+        showSyncBanner(`🔔 ${data.dept || 'Sở chuyên ngành'} vừa đăng ký hệ thống mới: "${data.object_name || data.object_id}" (Đang chờ thẩm định NĐ 224)!`, data.object_id);
+        // Pre-select in clearance dropdown
+        setTimeout(() => {
+          const sel = document.getElementById('clearanceObjSelect');
+          if (sel) {
+            sel.value = data.object_id;
+            onClearanceSelectChange();
+          }
+        }, 300);
+      } else {
+        showSyncBanner('🔔 CSDL vừa được cập nhật tức thì từ Trang Nhập liệu Tác nghiệp!');
+      }
+    }
+
+    function showSyncBanner(text = null, targetObjId = null) {
+      const banner = document.getElementById('syncToastBanner');
+      const textEl = document.getElementById('syncBannerText');
+      const actBtn = document.getElementById('syncBannerActionBtn');
+      if (banner && textEl) {
+        if (text) textEl.innerHTML = text;
+        if (targetObjId) {
+          lastPendingObjId = targetObjId;
+          actBtn.style.display = 'inline-flex';
+        }
+        banner.classList.remove('hidden');
+      }
+    }
+
+    function openClearanceForPending() {
+      if (lastPendingObjId) {
+        openClearanceFor(lastPendingObjId);
+      } else {
+        switchP1SubView('clearance');
+      }
+    }
+
+    function openClearanceFor(objId) {
+      switchP1SubView('clearance');
+      const sel = document.getElementById('clearanceObjSelect');
+      if (sel) {
+        sel.value = objId;
+        onClearanceSelectChange();
+      }
+      const banner = document.getElementById('syncToastBanner');
+      if (banner) banner.classList.add('hidden');
+      // Smooth scroll to clearance box
+      const box = document.getElementById('clearancePreviewBox');
+      if (box) box.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.addEventListener('focus', () => {
+      loadAllData(false);
+    });
+
+        // Auto-poll every 5 seconds fallback (only if page is visible)
+    setInterval(() => {
+      if (!document.hidden) {
+        loadAllData(false);
+      }
+    }, 5000);
+
+    function showSyncBanner() {
+      const banner = document.getElementById('syncToastBanner');
+      if (banner) {
+        banner.classList.remove('hidden');
+        setTimeout(() => banner.classList.add('hidden'), 5000);
+      }
+    }
+
+    function switchP1SubView(viewId) {
+      ['hinh8', 'approvals'].forEach(v => {
+        const viewEl = document.getElementById('p1-view-' + v);
+        const btn = document.getElementById('subnav-' + v);
+        if (viewEl) viewEl.classList.add('hidden');
+        if (btn) btn.className = 'text-slate-600 hover:text-slate-900 pb-2 flex items-center gap-2 text-xs';
+      });
+
+      const activeView = document.getElementById('p1-view-' + viewId);
+      const activeBtn = document.getElementById('subnav-' + viewId);
+      if (activeView) activeView.classList.remove('hidden');
+      if (activeBtn) activeBtn.className = 'font-bold text-blue-700 border-b-2 border-blue-700 pb-2 flex items-center gap-2 text-xs';
+    }
+
+    async function loadAllData(isManual = false) {
+      const spin = document.getElementById('refreshSpin');
+      if (isManual && spin) spin.classList.add('fa-spin');
+
+      try {
+        const [resObj, resConn, resTask, resStats, resCommunes] = await Promise.all([
+          fetch('/api/objects').then(r => r.json()),
+          fetch('/api/connections').then(r => r.json()),
+          fetch('/api/tasks').then(r => r.json()),
+          fetch('/api/stats').then(r => r.json()),
+          fetch('/api/communes').then(r => r.json()).catch(() => [])
+        ]);
+
+                currentObjects = resObj;
+        currentConnections = resConn;
+        currentTasks = resTask;
+        currentCommunes = resCommunes;
+
+        // KPI
+        if (document.getElementById('kpiCompliance')) document.getElementById('kpiCompliance').textContent = resStats.compliance_rate + '%';
+        if (document.getElementById('kpiTotalObjects')) document.getElementById('kpiTotalObjects').textContent = resStats.total_objects + ' Hệ thống';
+        if (document.getElementById('kpiConnections')) document.getElementById('kpiConnections').textContent = resStats.active_connections + ' Luồng kết nối';
+        
+        const pendingCount = resStats.pending_approvals || currentObjects.filter(o => o.lifecycle_status === 'ChoLanhDaoDuyet' || o.lifecycle_status === 'ChoThamDinh').length;
+        if (document.getElementById('kpiPendingApprovals')) document.getElementById('kpiPendingApprovals').textContent = pendingCount + ' Hồ sơ';
+        if (document.getElementById('pendingApprovalsBadge')) document.getElementById('pendingApprovalsBadge').textContent = pendingCount;
+        if (document.getElementById('badgePendingCount')) document.getElementById('badgePendingCount').innerHTML = `<i class="fa-solid fa-inbox mr-1"></i> ${pendingCount} hồ sơ chờ xem xét`;
+
+        // Calculate and update KPI Total Budget
+        const totalBudget = currentTasks.reduce((acc, t) => acc + Number(t.investment_budget || 0), 0);
+        if (document.getElementById('kpiTotalBudget')) {
+          document.getElementById('kpiTotalBudget').textContent = (totalBudget > 0 ? (totalBudget / 1000).toFixed(0) : '57') + ' Tỷ';
+        }
+
+        // Render Views with try-catch to never freeze
+        try { renderExecutiveCharts(); } catch (e) { console.error('Executive charts render error:', e); }
+        try { renderVisualPipelines(); } catch (e) { console.error('Visual pipelines render error:', e); }
+        try { renderHinh8Layers(); } catch (e) { console.error('Hinh 8 render error:', e); }
+        try { renderApprovalsTable(); } catch (e) { console.error('Approvals render error:', e); }
+
+        // Update timestamp label
+        const now = new Date();
+        document.getElementById('lastSyncLabel').textContent = 'Vừa cập nhật: ' + now.toLocaleTimeString();
+
+      } catch (err) {
+        console.error("Lỗi nạp dữ liệu:", err);
+      } finally {
+        if (spin) spin.classList.remove('fa-spin');
+      }
+    }
+
+        let chartLayersInstance = null;
+    let chartPlansInstance = null;
+    let chartDeptsInstance = null;
+    let chartRadarInstance = null;
+
+    function renderExecutiveCharts() {
+      if (typeof Chart === 'undefined') {
+        console.warn('Chart.js not ready');
+        return;
+      }
+
+      // 1. Chart Layers
+      const l1 = currentObjects.filter(o => o.arch_layer === 'Lop1_HaTang_ANM').length;
+      const l2 = currentObjects.filter(o => o.arch_layer === 'Lop2_DuLieu_NenTang').length;
+      const l3 = currentObjects.filter(o => o.arch_layer === 'Lop3_UngDung').length;
+      const l4 = currentObjects.filter(o => o.arch_layer === 'Lop4_Kenh_DoLuong').length;
+      const total = currentObjects.length || 32;
+
+      const s1 = document.getElementById('stat-layer1');
+      const s2 = document.getElementById('stat-layer2');
+      const s3 = document.getElementById('stat-layer3');
+      const s4 = document.getElementById('stat-layer4');
+      if (s1) s1.textContent = `${l1} (${((l1/total)*100).toFixed(1)}%)`;
+      if (s2) s2.textContent = `${l2} (${((l2/total)*100).toFixed(1)}%)`;
+      if (s3) s3.textContent = `${l3} (${((l3/total)*100).toFixed(1)}%)`;
+      if (s4) s4.textContent = `${l4} (${((l4/total)*100).toFixed(1)}%)`;
+
+      const ctxLayers = document.getElementById('chartLayersCanvas');
+      if (ctxLayers) {
+        if (chartLayersInstance) chartLayersInstance.destroy();
+        chartLayersInstance = new Chart(ctxLayers, {
+          type: 'doughnut',
+          data: {
+            labels: ['Lớp 1: Hạ tầng & ANM', 'Lớp 2: Dữ liệu & Nền tảng', 'Lớp 3: Ứng dụng nghiệp vụ', 'Lớp 4: Kênh tương tác'],
+            datasets: [{
+              data: [l1, l2, l3, l4],
+              backgroundColor: ['#f59e0b', '#14b8a6', '#2563eb', '#9333ea'],
+              borderWidth: 2,
+              borderColor: '#ffffff'
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '68%',
+            plugins: {
+              legend: { display: false }
+            }
+          }
+        });
+      }
+
+      // 2. Chart Plans
+      const plans = {
+        'NangCap': 0, 'ChuanHoa': 0, 'BoSung': 0, 'TiepTuc': 0, 'ThayTheHopNhat': 0
+      };
+      currentObjects.forEach(o => {
+        if (o.action_plan === 'NangCap') plans.NangCap++;
+        else if (o.action_plan === 'ChuanHoa') plans.ChuanHoa++;
+        else if (o.action_plan === 'BoSung') plans.BoSung++;
+        else if (o.action_plan === 'TiepTuc') plans.TiepTuc++;
+        else plans.ThayTheHopNhat++;
+      });
+
+      const ctxPlans = document.getElementById('chartPlansCanvas');
+      if (ctxPlans) {
+        if (chartPlansInstance) chartPlansInstance.destroy();
+        chartPlansInstance = new Chart(ctxPlans, {
+          type: 'bar',
+          data: {
+            labels: ['Nâng cấp', 'Chuẩn hóa API', 'Bổ sung mới', 'Duy trì', 'Thay thế/Hợp nhất'],
+            datasets: [{
+              label: 'Số lượng hệ thống',
+              data: [plans.NangCap, plans.ChuanHoa, plans.BoSung, plans.TiepTuc, plans.ThayTheHopNhat],
+              backgroundColor: ['#3b82f6', '#f59e0b', '#8b5cf6', '#10b981', '#ef4444'],
+              borderRadius: 6
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              y: { beginAtZero: true, grid: { color: '#f1f5f9' }, ticks: { stepSize: 2 } },
+              x: { grid: { display: false } }
+            }
+          }
+        });
+      }
+
+      // 3. Chart Departments (Horizontal Bar)
+      const deptCounts = {};
+      currentObjects.forEach(o => {
+        const d = o.managing_dept || 'Chưa xác định';
+        deptCounts[d] = (deptCounts[d] || 0) + 1;
+      });
+      const sortedDepts = Object.entries(deptCounts).sort((a, b) => b[1] - a[1]);
+      const deptLabels = sortedDepts.map(e => e[0].replace('Sở ', '').replace('Ủy ban nhân dân', 'UBND'));
+      const deptData = sortedDepts.map(e => e[1]);
+
+      const ctxDepts = document.getElementById('chartDeptsCanvas');
+      if (ctxDepts) {
+        if (chartDeptsInstance) chartDeptsInstance.destroy();
+        chartDeptsInstance = new Chart(ctxDepts, {
+          type: 'bar',
+          data: {
+            labels: deptLabels,
+            datasets: [{
+              label: 'Hệ thống/CSDL',
+              data: deptData,
+              backgroundColor: '#6366f1',
+              borderRadius: 4
+            }]
+          },
+          options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { beginAtZero: true, grid: { color: '#f1f5f9' }, ticks: { stepSize: 1 } },
+              y: { grid: { display: false } }
+            }
+          }
+        });
+      }
+
+      // 4. Chart Radar (5 Pillars)
+      const ctxRadar = document.getElementById('chartRadarCanvas');
+      if (ctxRadar) {
+        if (chartRadarInstance) chartRadarInstance.destroy();
+        chartRadarInstance = new Chart(ctxRadar, {
+          type: 'radar',
+          data: {
+            labels: ['Hạ tầng Cloud', 'Kết nối LGSP', 'Chính quyền số', 'Kinh tế & XH số', 'An ninh SOC'],
+            datasets: [{
+              label: 'Chỉ số Đạt chuẩn (%)',
+              data: [95, 90, 96, 88, 98],
+              backgroundColor: 'rgba(225, 29, 72, 0.15)',
+              borderColor: '#e11d48',
+              borderWidth: 2,
+              pointBackgroundColor: '#e11d48'
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              r: {
+                suggestedMin: 60,
+                suggestedMax: 100,
+                ticks: { display: false, stepSize: 20 },
+                grid: { color: '#e2e8f0' }
+              }
+            },
+            plugins: { legend: { display: false } }
+          }
+        });
+      }
+    }
+
+    function formatConnStatus(status) {
+      if (status === 'DangKhaiThac' || status === 'Active') {
+        return '<span class="text-[10px] font-bold text-emerald-800 bg-emerald-100 border border-emerald-300 px-2 py-0.5 rounded-full flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Đang khai thác</span>';
+      } else if (status === 'DangThuNghiem') {
+        return '<span class="text-[10px] font-bold text-amber-800 bg-amber-100 border border-amber-300 px-2 py-0.5 rounded-full flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Đang thử nghiệm</span>';
+      } else {
+        return '<span class="text-[10px] font-bold text-rose-800 bg-rose-100 border border-rose-300 px-2 py-0.5 rounded-full flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Chưa kết nối</span>';
+      }
+    }
+
+    function formatChannelType(ch) {
+      if (ch === 'LGSP') return 'Trục LGSP Tỉnh';
+      if (ch === 'TSLCD') return 'Mạng TSL chuyên dùng';
+      if (ch === 'API_DIRECT') return 'API Trực tiếp';
+      return ch || 'Liên thông';
+    }
+
+    function formatSecurityLevel(sec) {
+      if (sec === 'CongKhai') return '<i class="fa-solid fa-globe text-blue-600"></i> Dữ liệu công khai';
+      return '<i class="fa-solid fa-lock text-emerald-600"></i> Bảo mật nội bộ';
+    }
+
+    function renderVisualPipelines() {
+      const container = document.getElementById('visualPipelineContainer');
+      if (!container || !currentConnections) return;
+
+      // Filter out any unwanted test records
+      const cleanConns = currentConnections.filter(c => c.data_payload !== '123' && c.data_payload !== 'avc');
+
+      container.innerHTML = cleanConns.map(c => `
+        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/80 hover:bg-white hover:border-cyan-400 hover:shadow-md transition space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono font-black bg-cyan-100 text-cyan-950 px-2.5 py-1 rounded-md border border-cyan-300 shadow-2xs flex items-center gap-1.5">
+              <i class="fa-solid fa-diagram-project text-cyan-700"></i>
+              <span>Luồng Kết Nối ${c.conn_id}</span>
+            </span>
+            ${formatConnStatus(c.status)}
+          </div>
+
+          <div class="flex items-center gap-2 text-xs">
+            <div class="flex-1 bg-white p-2.5 rounded-lg border border-slate-200 shadow-2xs">
+              <div class="text-[10px] text-slate-400 uppercase font-bold flex items-center gap-1">
+                <i class="fa-solid fa-arrow-up-from-bracket text-blue-500"></i> Nguồn phát dữ liệu:
+              </div>
+              <div class="font-extrabold text-slate-900 mt-1 line-clamp-1">${c.source_name || c.source_obj_id}</div>
+              <div class="text-[10px] text-slate-500 font-medium">${c.source_dept || 'Cơ quan cấp tỉnh'}</div>
+            </div>
+
+            <div class="text-cyan-700 shrink-0 flex flex-col items-center px-1">
+              <i class="fa-solid fa-arrow-right-arrow-left text-sm animate-pulse"></i>
+              <span class="text-[9px] font-mono font-black uppercase mt-1 bg-cyan-50 px-1 py-0.5 rounded border border-cyan-200 text-cyan-900 text-center whitespace-nowrap">
+                ${formatChannelType(c.channel_type)}
+              </span>
+            </div>
+
+            <div class="flex-1 bg-white p-2.5 rounded-lg border border-slate-200 shadow-2xs">
+              <div class="text-[10px] text-slate-400 uppercase font-bold flex items-center gap-1">
+                <i class="fa-solid fa-inbox text-teal-500"></i> Cơ quan thụ hưởng:
+              </div>
+              <div class="font-extrabold text-slate-900 mt-1 line-clamp-1">${c.target_name || c.target_obj_id}</div>
+              <div class="text-[10px] text-slate-500 font-medium">${c.target_dept || 'Hệ thống dùng chung'}</div>
+            </div>
+          </div>
+
+          <div class="pt-2 border-t border-slate-200 flex items-center justify-between text-xs">
+            <span class="text-slate-700 font-medium">Nội dung dữ liệu: <strong class="text-blue-900 font-bold">${c.data_payload}</strong></span>
+            <span class="text-slate-500 text-[11px]">${formatSecurityLevel(c.security_level)}</span>
+          </div>
         </div>
-        <button id="closeTaskModalBtn" class="text-white hover:text-emerald-200 text-base">
+      `).join('');
+    }
+
+    function switchDashboardMode(mode) {
+      const visualEl = document.getElementById('subview-visual-charts');
+      const detailedEl = document.getElementById('subview-detailed-hinh8');
+      const btnVisual = document.getElementById('btn-mode-visual');
+      const btnDetailed = document.getElementById('btn-mode-detailed');
+
+      if (mode === 'visual') {
+        if (visualEl) visualEl.classList.remove('hidden');
+        if (detailedEl) detailedEl.classList.add('hidden');
+        if (btnVisual) {
+          btnVisual.className = 'px-3.5 py-1.5 rounded-lg bg-blue-700 text-white shadow transition flex items-center gap-1.5';
+        }
+        if (btnDetailed) {
+          btnDetailed.className = 'px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5';
+        }
+        // Trigger resize for Chart.js
+        setTimeout(renderExecutiveCharts, 100);
+      } else {
+        if (visualEl) visualEl.classList.add('hidden');
+        if (detailedEl) detailedEl.classList.remove('hidden');
+        if (btnVisual) {
+          btnVisual.className = 'px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5';
+        }
+        if (btnDetailed) {
+          btnDetailed.className = 'px-3.5 py-1.5 rounded-lg bg-blue-700 text-white shadow transition flex items-center gap-1.5';
+        }
+      }
+    }
+
+    function renderHinh8Layers() {
+      // Lớp 4
+      const l4 = currentObjects.filter(o => o.arch_layer === 'Lop4_Kenh_DoLuong');
+      document.getElementById('layer4-grid').innerHTML = l4.map(o => createCardHtml(o, 'border-purple-200 bg-white text-purple-950')).join('');
+      document.getElementById('badge-l4-count').textContent = l4.length + ' Thành phần';
+
+      // Lớp 3 Cột Trái (Chính Quyền Số)
+      const l3_cq = currentObjects.filter(o => o.arch_layer === 'Lop3_UngDung' && o.sub_category === 'ChinhQuyenSo');
+      // Sort newly added items to the top!
+      l3_cq.sort((a, b) => (b.rowid || 0) - (a.rowid || 0));
+      document.getElementById('layer3-cq-list').innerHTML = l3_cq.map(o => createCardHtml(o, 'border-blue-200 bg-white text-blue-950')).join('');
+      document.getElementById('count-l3-cq').textContent = l3_cq.length + ' hệ thống';
+
+      // Lớp 3 Cột Phải (Kinh Tế Số & Xã Hội Số)
+      const l3_ktxh = currentObjects.filter(o => o.arch_layer === 'Lop3_UngDung' && o.sub_category === 'KinhTeSo_XaHoiSo');
+      l3_ktxh.sort((a, b) => (b.rowid || 0) - (a.rowid || 0));
+      document.getElementById('layer3-ktxh-list').innerHTML = l3_ktxh.map(o => createCardHtml(o, 'border-emerald-200 bg-white text-emerald-950')).join('');
+      document.getElementById('count-l3-ktxh').textContent = l3_ktxh.length + ' hệ thống';
+
+      // Lớp 2
+      const l2 = currentObjects.filter(o => o.arch_layer === 'Lop2_DuLieu_NenTang');
+      l2.sort((a, b) => (b.rowid || 0) - (a.rowid || 0));
+      document.getElementById('layer2-grid').innerHTML = l2.map(o => createCardHtml(o, 'border-teal-200 bg-white text-teal-950')).join('');
+      document.getElementById('badge-l2-count').textContent = l2.length + ' Nền tảng lõi';
+
+      // Lớp 1
+      const l1 = currentObjects.filter(o => o.arch_layer === 'Lop1_HaTang_ANM');
+      l1.sort((a, b) => (b.rowid || 0) - (a.rowid || 0));
+      document.getElementById('layer1-grid').innerHTML = l1.map(o => createCardHtml(o, 'border-amber-200 bg-white text-amber-950')).join('');
+      document.getElementById('badge-l1-count').textContent = l1.length + ' Thành phần hạ tầng';
+    }
+
+    function createCardHtml(o, style) {
+      const planBadge = getPlanBadge(o.action_plan);
+      const isPending = o.lifecycle_status === 'ChoLanhDaoDuyet' || o.lifecycle_status === 'ChoThamDinh';
+      const isApproved = o.lifecycle_status === 'DaPheDuyet';
+
+      let borderClass = style;
+      let statusBadge = '';
+
+      if (isPending) {
+        borderClass = 'border-2 border-amber-400 bg-amber-50/50 shadow-xs';
+        statusBadge = `
+          <div class="mt-2 pt-1.5 border-t border-amber-200 flex items-center justify-between">
+            <span class="text-[10px] font-bold text-amber-900 flex items-center gap-1">
+              <i class="fa-solid fa-clock text-amber-600 animate-pulse"></i> Chờ duyệt chủ trương
+            </span>
+            <span class="text-[9px] font-mono font-semibold bg-white px-1.5 py-0.2 rounded border border-amber-300 text-slate-600">${o.clearance_code || 'HS-2026'}</span>
+          </div>
+        `;
+      } else if (isApproved) {
+        borderClass = 'border border-emerald-400 bg-emerald-50/30';
+        statusBadge = `
+          <div class="mt-2 pt-1.5 border-t border-emerald-200 flex items-center justify-between">
+            <span class="text-[10px] font-bold text-emerald-800 flex items-center gap-1">
+              <i class="fa-solid fa-circle-check text-emerald-600"></i> Đã phê duyệt chủ trương
+            </span>
+            <span class="text-[9px] font-mono bg-white px-1.5 py-0.2 rounded border border-emerald-300 text-emerald-800">${o.clearance_code || 'Đã duyệt'}</span>
+          </div>
+        `;
+      }
+
+      return `
+        <div onclick="openDrawer('${o.object_id}')" class="arch-card p-3 rounded-lg border ${borderClass} cursor-pointer shadow-2xs hover:border-blue-500 transition relative">
+          <div class="flex items-center justify-between mb-1">
+            <span class="text-[10px] font-mono font-bold text-slate-500">${o.object_id}</span>
+            <div class="flex items-center gap-1">
+              ${isPending ? '<span class="px-1.5 py-0.2 rounded text-[9px] font-black bg-amber-500 text-white animate-pulse">TRÌNH DUYỆT</span>' : ''}
+              ${planBadge}
+            </div>
+          </div>
+          <div class="font-bold text-xs leading-snug text-slate-900">${o.object_name}</div>
+          <div class="text-[10px] text-slate-500 mt-1 flex items-center justify-between">
+            <span class="line-clamp-1"><i class="fa-solid fa-landmark text-slate-400"></i> ${o.managing_dept}</span>
+            <i class="fa-solid fa-chevron-right text-[9px] text-slate-400"></i>
+          </div>
+          ${statusBadge}
+        </div>
+      `;
+    }
+
+    
+    function getPlanBadge(plan) {
+      if (plan === 'TiepTuc') return '<span class="px-1.5 py-0.2 rounded text-[9px] font-bold bg-emerald-100 text-emerald-800">Giữ nguyên</span>';
+      if (plan === 'ChuanHoa') return '<span class="px-1.5 py-0.2 rounded text-[9px] font-bold bg-amber-100 text-amber-800">Chuẩn hóa API</span>';
+      if (plan === 'NangCap') return '<span class="px-1.5 py-0.2 rounded text-[9px] font-bold bg-blue-100 text-blue-800">Nâng cấp</span>';
+      if (plan === 'HopNhat') return '<span class="px-1.5 py-0.2 rounded text-[9px] font-bold bg-indigo-100 text-indigo-800">Hợp nhất</span>';
+      if (plan === 'ThayThe') return '<span class="px-1.5 py-0.2 rounded text-[9px] font-bold bg-rose-100 text-rose-800">Thay thế</span>';
+      return '<span class="px-1.5 py-0.2 rounded text-[9px] font-bold bg-purple-100 text-purple-800">Bổ sung</span>';
+    }
+
+    function openDrawer(objId) {
+      const obj = currentObjects.find(o => o.object_id === objId);
+      currentDrawerObj = obj;
+      if (!obj) return;
+
+      document.getElementById('drawerObjId').textContent = obj.object_id;
+      document.getElementById('drawerObjTitle').textContent = obj.object_name;
+      document.getElementById('drawerObjDept').textContent = obj.managing_dept;
+      document.getElementById('drawerObjLayer').textContent = formatLayerText(obj.arch_layer);
+      document.getElementById('drawerObjScope').textContent = obj.deployment_scope === 'DungChung_ToanTinh' ? 'Dùng chung toàn tỉnh' : 'Dùng riêng chuyên ngành';
+      document.getElementById('drawerObjPlan').textContent = obj.action_plan;
+      document.getElementById('drawerObjProof').textContent = obj.proof_document_url || 'Đang cập nhật';
+
+      const conns = currentConnections.filter(c => c.source_obj_id === objId || c.target_obj_id === objId);
+      const connListEl = document.getElementById('drawerConnList');
+      if (conns.length > 0) {
+        connListEl.innerHTML = conns.map(c => `
+          <div class="p-2 bg-blue-50/70 border border-blue-200 rounded text-[11px]">
+            <div class="font-semibold text-blue-950">${c.data_payload}</div>
+            <div class="text-[10px] text-slate-500 mt-0.5">Kênh: ${c.channel_type} | Trạng thái: <strong class="text-emerald-700">${c.status}</strong></div>
+          </div>
+        `).join('');
+      } else {
+        connListEl.innerHTML = '<div class="text-slate-400 italic text-[11px]">Chưa đăng ký luồng chia sẻ qua LGSP</div>';
+      }
+
+      const stEl = document.getElementById('drawerApprovalStatus');
+      if (stEl) {
+        if (obj.lifecycle_status === 'DaPheDuyet') {
+          stEl.innerHTML = '<span class="px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 font-bold text-xs inline-flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-600"></i> Đã phê duyệt chủ trương ngoài đời</span>';
+        } else if (obj.lifecycle_status === 'ChoLanhDaoDuyet' || obj.lifecycle_status === 'ChoThamDinh') {
+          stEl.innerHTML = '<span class="px-2.5 py-1 rounded bg-amber-100 text-amber-900 font-bold text-xs inline-flex items-center gap-1.5"><i class="fa-solid fa-clock text-amber-600"></i> Đã tự kiểm tra 5 tiêu chí - Đang chờ Lãnh đạo phê duyệt</span>';
+        } else {
+          stEl.innerHTML = '<span class="px-2.5 py-1 rounded bg-slate-100 text-slate-700 font-bold text-xs inline-flex items-center gap-1.5"><i class="fa-solid fa-circle-info text-slate-500"></i> Đang vận hành chính thức</span>';
+        }
+      }
+
+      document.getElementById('sideDrawer').classList.add('drawer-open');
+    }
+
+    function closeDrawer() {
+      document.getElementById('sideDrawer').classList.remove('drawer-open');
+    }
+
+    function openLayerGuideModal(focusLayerNum = null) {
+      const m = document.getElementById('layerGuideModal');
+      if (m) {
+        m.classList.remove('hidden');
+        if (focusLayerNum) {
+          setTimeout(() => {
+            const target = document.getElementById('guide-layer-' + focusLayerNum);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              target.classList.add('ring-4', 'ring-blue-500');
+              setTimeout(() => target.classList.remove('ring-4', 'ring-blue-500'), 2000);
+            }
+          }, 150);
+        }
+      }
+    }
+
+    function closeLayerGuideModal() {
+      const m = document.getElementById('layerGuideModal');
+      if (m) m.classList.add('hidden');
+    }
+
+    function formatLayerBadge(layerCode) {
+      switch (layerCode) {
+        case 'Lop1_HaTang_ANM':
+          return '<span onclick="event.stopPropagation(); openLayerGuideModal(1)" title="Lớp 1: Hạ tầng & An ninh mạng - Data Center, Cloud, CPNet, SOC. Nhấp để xem diễn giải." class="px-2.5 py-1 rounded text-[11px] font-bold bg-amber-100 text-amber-900 border border-amber-300 inline-flex items-center gap-1.5 cursor-pointer hover:bg-amber-200 transition shadow-2xs"><i class="fa-solid fa-server text-amber-600"></i> Lớp 1: Hạ tầng & ANM <i class="fa-solid fa-circle-question text-[9px] text-amber-700 opacity-60"></i></span>';
+        case 'Lop2_DuLieu_NenTang':
+          return '<span onclick="event.stopPropagation(); openLayerGuideModal(2)" title="Lớp 2: Dữ liệu & Nền tảng dùng chung - Trục LGSP, Kho dữ liệu, SSO. Nhấp để xem diễn giải." class="px-2.5 py-1 rounded text-[11px] font-bold bg-teal-100 text-teal-900 border border-teal-300 inline-flex items-center gap-1.5 cursor-pointer hover:bg-teal-200 transition shadow-2xs"><i class="fa-solid fa-database text-teal-600"></i> Lớp 2: Dữ liệu & Nền tảng <i class="fa-solid fa-circle-question text-[9px] text-teal-700 opacity-60"></i></span>';
+        case 'Lop3_UngDung':
+          return '<span onclick="event.stopPropagation(); openLayerGuideModal(3)" title="Lớp 3: Dịch vụ & Ứng dụng nghiệp vụ - Phần mềm các Sở (Y tế, Đất đai, Nông nghiệp...). Nhấp để xem diễn giải." class="px-2.5 py-1 rounded text-[11px] font-bold bg-blue-100 text-blue-900 border border-blue-300 inline-flex items-center gap-1.5 cursor-pointer hover:bg-blue-200 transition shadow-2xs"><i class="fa-solid fa-cubes text-blue-600"></i> Lớp 3: Ứng dụng nghiệp vụ <i class="fa-solid fa-circle-question text-[9px] text-blue-700 opacity-60"></i></span>';
+        case 'Lop4_Kenh_DoLuong':
+          return '<span onclick="event.stopPropagation(); openLayerGuideModal(4)" title="Lớp 4: Kênh tương tác & Đo lường - Cổng DVC, App Công dân, IOC Tỉnh, 1022. Nhấp để xem diễn giải." class="px-2.5 py-1 rounded text-[11px] font-bold bg-purple-100 text-purple-900 border border-purple-300 inline-flex items-center gap-1.5 cursor-pointer hover:bg-purple-200 transition shadow-2xs"><i class="fa-solid fa-chart-line text-purple-600"></i> Lớp 4: Kênh tương tác & Đo lường <i class="fa-solid fa-circle-question text-[9px] text-purple-700 opacity-60"></i></span>';
+        default:
+          return `<span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700">${layerCode || 'Chưa phân lớp'}</span>`;
+      }
+    }
+
+    function formatLayerText(layerCode) {
+      switch (layerCode) {
+        case 'Lop1_HaTang_ANM': return 'Lớp 1: Hạ tầng số & An toàn an ninh mạng';
+        case 'Lop2_DuLieu_NenTang': return 'Lớp 2: Dữ liệu & Nền tảng dùng chung';
+        case 'Lop3_UngDung': return 'Lớp 3: Dịch vụ & Ứng dụng nghiệp vụ';
+        case 'Lop4_Kenh_DoLuong': return 'Lớp 4: Kênh tương tác đa kênh & Đo lường';
+        default: return layerCode || '';
+      }
+    }
+
+    let currentReviewObj = null;
+
+    function renderApprovalsTable() {
+      const tableBody = document.getElementById('tableApprovalsBody');
+      if (!tableBody) return;
+
+      // Filter items in approval workflow or submitted items
+      const submissions = currentObjects.filter(o => 
+        o.lifecycle_status === 'ChoLanhDaoDuyet' || 
+        o.lifecycle_status === 'ChoThamDinh' || 
+        o.lifecycle_status === 'DaPheDuyet' ||
+        o.clearance_code
+      );
+
+      if (submissions.length === 0) {
+        tableBody.innerHTML = `
+          <tr>
+            <td colspan="7" class="py-8 text-center text-slate-400 italic">
+              <i class="fa-solid fa-inbox text-2xl text-slate-300 block mb-2"></i>
+              Hiện chưa có hồ sơ nào đang chờ phê duyệt.<br>
+              Khi các Sở/Ngành nộp hồ sơ từ Trang Nhập liệu, danh sách sẽ tự động xuất hiện tại đây để Lãnh đạo xem xét.
+            </td>
+          </tr>
+        `;
+        return;
+      }
+
+      // Sort pending items to top
+      submissions.sort((a, b) => {
+        const aPend = a.lifecycle_status !== 'DaPheDuyet';
+        const bPend = b.lifecycle_status !== 'DaPheDuyet';
+        if (aPend && !bPend) return -1;
+        if (!aPend && bPend) return 1;
+        return (b.rowid || 0) - (a.rowid || 0);
+      });
+
+      tableBody.innerHTML = submissions.map(s => {
+        const isApproved = s.lifecycle_status === 'DaPheDuyet';
+        const hsCode = s.clearance_code || ('HS-2026-' + s.object_id);
+        const rowBg = isApproved ? 'hover:bg-slate-50' : 'bg-amber-50/60 font-semibold hover:bg-amber-50';
+
+        return `
+          <tr class="${rowBg} transition">
+            <td class="py-3 px-3 font-mono font-bold text-blue-900">${hsCode}</td>
+            <td class="py-3 px-3 font-bold text-slate-900">${s.object_name}</td>
+            <td class="py-3 px-3 text-slate-700">${s.managing_dept}</td>
+            <td class="py-3 px-3">${formatLayerBadge(s.arch_layer)}</td>
+            <td class="py-3 px-3 text-center">
+              <span class="px-2.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 inline-flex items-center gap-1">
+                <i class="fa-solid fa-circle-check text-emerald-600"></i> Đạt 5/5 Tiêu chí
+              </span>
+            </td>
+            <td class="py-3 px-3 text-center">
+              ${isApproved ? 
+                '<span class="px-2.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800"><i class="fa-solid fa-check mr-1"></i>Đã phê duyệt chủ trương</span>' : 
+                '<span class="px-2.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-900 animate-pulse"><i class="fa-solid fa-clock mr-1"></i>Chờ xem xét duyệt</span>'}
+            </td>
+            <td class="py-3 px-3 text-right">
+              <div class="flex items-center justify-end gap-1.5">
+                <button onclick="openReviewModal('${s.object_id}')" class="px-3 py-1 bg-white hover:bg-blue-50 text-blue-700 border border-blue-300 rounded-lg font-bold text-xs transition shadow-2xs">
+                  <i class="fa-solid fa-file-lines mr-1"></i> Xem Phiếu
+                </button>
+                ${!isApproved ? `
+                  <button onclick="promptApproval('${s.object_id}')" class="px-3 py-1 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 text-white rounded-lg font-bold text-xs transition shadow-2xs">
+                    <i class="fa-solid fa-signature mr-1"></i> Ghi nhận QĐ
+                  </button>
+                ` : ''}
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function openReviewModal(objId) {
+      const obj = currentObjects.find(o => o.object_id === objId);
+      if (!obj) return;
+      currentReviewObj = obj;
+
+      document.getElementById('modalHsTitle').textContent = `HỒ SƠ: ${obj.object_name} (${obj.object_id})`;
+      const contentEl = document.getElementById('modalHsContent');
+
+      const isApproved = obj.lifecycle_status === 'DaPheDuyet';
+
+      contentEl.innerHTML = `
+        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl grid grid-cols-2 gap-3 text-xs">
+          <div>
+            <span class="text-[10px] text-slate-400 uppercase font-semibold">Cơ quan trình đề xuất:</span>
+            <div class="font-bold text-slate-900 mt-0.5">${obj.managing_dept}</div>
+          </div>
+          <div>
+            <span class="text-[10px] text-slate-400 uppercase font-semibold">Lớp Kiến trúc & Nhánh:</span>
+            <div class="font-bold text-blue-900 mt-0.5">${formatLayerText(obj.arch_layer)} ${obj.sub_category ? `(${obj.sub_category === 'ChinhQuyenSo' ? 'Chính Quyền Số' : 'Kinh Tế Số & Xã Hội Số'})` : ''}</div>
+          </div>
+          <div>
+            <span class="text-[10px] text-slate-400 uppercase font-semibold">Phương án triển khai:</span>
+            <div class="font-semibold text-emerald-800 mt-0.5">${obj.action_plan} | ${obj.deployment_scope}</div>
+          </div>
+          <div>
+            <span class="text-[10px] text-slate-400 uppercase font-semibold">Văn bản / Tờ trình đề xuất:</span>
+            <div class="font-mono text-slate-700 mt-0.5">${obj.proof_document_url || 'Đã nộp kèm hồ sơ điện tử'}</div>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <div class="font-bold text-xs text-slate-900 uppercase flex items-center justify-between">
+            <span>KẾT QUẢ TỰ KIỂM TRA 05 TIÊU CHÍ (NGHỊ ĐỊNH 224/2026/NĐ-CP):</span>
+            <span class="text-emerald-700 font-bold text-xs"><i class="fa-solid fa-circle-check"></i> ĐẠT 5/5 TIÊU CHÍ</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 text-xs">
+            <div class="p-2.5 rounded-lg border border-emerald-300 bg-emerald-50/50 space-y-1">
+              <div class="font-bold text-slate-800 text-[11px]">1. Vị trí Kiến trúc</div>
+              <div class="text-[10px] text-slate-600">Định vị rõ trong 4 lớp Hình 8</div>
+              <div class="text-emerald-700 font-bold text-[10px]">ĐẠT CHUẨN</div>
+            </div>
+            <div class="p-2.5 rounded-lg border border-emerald-300 bg-emerald-50/50 space-y-1">
+              <div class="font-bold text-slate-800 text-[11px]">2. Kết nối LGSP</div>
+              <div class="text-[10px] text-slate-600">Cam kết chuẩn hóa REST API</div>
+              <div class="text-emerald-700 font-bold text-[10px]">ĐẠT CHUẨN</div>
+            </div>
+            <div class="p-2.5 rounded-lg border border-emerald-300 bg-emerald-50/50 space-y-1">
+              <div class="font-bold text-slate-800 text-[11px]">3. Cloud tập trung</div>
+              <div class="text-[10px] text-slate-600">Đặt tại DC/Cloud tỉnh</div>
+              <div class="text-emerald-700 font-bold text-[10px]">ĐẠT CHUẨN</div>
+            </div>
+            <div class="p-2.5 rounded-lg border border-emerald-300 bg-emerald-50/50 space-y-1">
+              <div class="font-bold text-slate-800 text-[11px]">4. Chống trùng lặp</div>
+              <div class="text-[10px] text-slate-600">Không trùng hệ dùng chung</div>
+              <div class="text-emerald-700 font-bold text-[10px]">ĐẠT CHUẨN</div>
+            </div>
+            <div class="p-2.5 rounded-lg border border-emerald-300 bg-emerald-50/50 space-y-1">
+              <div class="font-bold text-slate-800 text-[11px]">5. An toàn thông tin</div>
+              <div class="text-[10px] text-slate-600">Theo NĐ 85 & kết nối SOC</div>
+              <div class="text-emerald-700 font-bold text-[10px]">ĐẠT CHUẨN</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-3 bg-blue-50 border border-blue-200 rounded-xl text-xs text-blue-900">
+          <strong>Ý kiến đối soát của cơ quan chuyên môn:</strong> Hồ sơ đề xuất của ${obj.managing_dept} đã đáp ứng đầy đủ 5 tiêu chí bắt buộc theo Nghị định 224/2026/NĐ-CP và Quyết định 1425/QĐ-TTg. Đủ điều kiện để Lãnh đạo UBND Tỉnh ban hành Quyết định phê duyệt chủ trương đầu tư ngoài đời.
+        </div>
+      `;
+
+      const btnApprove = document.getElementById('btnRecordApproval');
+      if (btnApprove) {
+        btnApprove.style.display = isApproved ? 'none' : 'inline-flex';
+      }
+
+      document.getElementById('reviewModal').classList.remove('hidden');
+    }
+
+    function closeReviewModal() {
+      document.getElementById('reviewModal').classList.add('hidden');
+      currentReviewObj = null;
+    }
+
+    async function promptApproval(objId) {
+      const obj = currentObjects.find(o => o.object_id === objId);
+      const name = obj ? obj.object_name : objId;
+      const doc = prompt(`Nhập số hiệu Quyết định / Văn bản phê duyệt chủ trương của UBND Tỉnh đối với "${name}":`, `Quyết định số ${Math.floor(100 + Math.random()*900)}/QĐ-UBND ngày ${new Date().toLocaleDateString('vi-VN')}`);
+      if (!doc) return;
+
+      const res = await fetch('/api/approve', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ object_id: objId, approval_doc: doc })
+      }).then(r => r.json());
+
+      if (res.success) {
+        alert(`✅ ĐÃ GHI NHẬN PHÊ DUYỆT CHỦ TRƯƠNG ĐẦU TƯ THÀNH CÔNG:
+Hệ thống: ${name}
+Căn cứ: ${doc}
+Dữ liệu đã được cập nhật đồng bộ vào CSDL và hệ sinh thái.`);
+        await loadAllData(true);
+      }
+    }
+
+    async function recordApprovalAction() {
+      if (currentReviewObj) {
+        const objId = currentReviewObj.object_id;
+        closeReviewModal();
+        await promptApproval(objId);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadAllData();
+    });
+  </script>
+  <!-- MODAL SỔ TAY DIỄN GIẢI 4 LỚP KIẾN TRÚC DÀNH CHO LÃNH ĐẠO -->
+  <div id="layerGuideModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 hidden">
+    <div class="bg-white rounded-2xl max-w-3xl w-full p-6 space-y-4 shadow-2xl border border-slate-200 max-h-[90vh] overflow-y-auto custom-scrollbar">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-book-open-reader"></i>
+          </div>
+          <div>
+            <h3 class="font-extrabold text-sm text-slate-900 uppercase">SỔ TAY DIỄN GIẢI 4 LỚP KIẾN TRÚC CHÍNH QUYỀN SỐ</h3>
+            <p class="text-[11px] text-slate-500">Căn cứ Quyết định số 1425/QĐ-TTg ngày 21/11/2024 của Thủ tướng Chính phủ & Nghị định 224/2026/NĐ-CP</p>
+          </div>
+        </div>
+        <button onclick="closeLayerGuideModal()" class="text-slate-400 hover:text-slate-700 p-1">
           <i class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
 
-      <div class="p-5 space-y-4 text-xs">
-        <div>
-          <label class="font-bold text-slate-700 block mb-1">Tiêu chí kiểm chứng:</label>
-          <div id="modalTaskCriteria" class="p-3 rounded-lg bg-emerald-50 text-emerald-950 border border-emerald-200 leading-relaxed"></div>
-        </div>
-
-        <div>
-          <label class="font-bold text-slate-700 block mb-1">Nguồn dữ liệu kiểm chứng:</label>
-          <div id="modalTaskProofSource" class="p-3 rounded-lg bg-slate-50 text-slate-800 border border-slate-200 leading-relaxed font-mono"></div>
-        </div>
-
-        <div class="flex items-center justify-between p-3 rounded-lg bg-slate-50 border border-slate-200">
-          <div>
-            <span class="text-slate-500 block">Trạng thái kiểm chứng:</span>
-            <span id="modalTaskStatus" class="font-bold text-amber-700 text-sm">⏳ Hoàn thành - chờ kiểm chứng</span>
-          </div>
-          <div class="text-right">
-            <span class="text-slate-500 block">Tiến độ:</span>
-            <span id="modalTaskProgress" class="font-mono font-bold text-blue-900 text-sm">65%</span>
-          </div>
-        </div>
-
-        <div>
-          <div class="w-full bg-slate-200 rounded-full h-2">
-            <div id="modalProgressBar" class="bg-emerald-600 h-2 rounded-full" style="width: 65%"></div>
-          </div>
-        </div>
-
-        <div class="p-3 rounded-lg bg-amber-50 border border-amber-200 text-[11px] text-amber-900 flex items-start gap-2">
-          <i class="fa-solid fa-file-arrow-up text-amber-700 mt-0.5"></i>
-          <div>
-            <strong>Yêu cầu tải lên tệp minh chứng:</strong> Cần đính kèm biên bản nghiệm thu kỹ thuật và trích xuất file log vận hành tự động định dạng PDF có ký số.
-          </div>
-        </div>
+      <!-- Overview Metaphor -->
+      <div class="p-3.5 bg-blue-50 border border-blue-200 rounded-xl text-xs space-y-1.5 text-blue-950">
+        <p class="font-bold flex items-center gap-1.5">
+          <i class="fa-solid fa-landmark text-blue-700"></i>
+          MÔ HÌNH ẨN DỤ: TOÀ NHÀ CHÍNH QUYỀN SỐ 4 TẦNG
+        </p>
+        <p class="text-slate-700 leading-relaxed">
+          Toàn bộ hệ thống CNTT và chuyển đổi số của tỉnh được chuẩn hóa thành <strong>4 Lớp chức năng độc lập nhưng liên thông chặt chẽ</strong>. Việc phân lớp giúp Lãnh đạo tỉnh kiểm soát ngân sách, ngăn chặn triệt để tình trạng đầu tư manh mún, lãng phí và "ốc đảo dữ liệu" giữa các Sở/Ngành.
+        </p>
       </div>
 
-      <div class="p-3 bg-slate-50 border-t border-slate-200 flex justify-end gap-2">
-        <button onclick="document.getElementById('taskModal').classList.add('hidden')" class="px-3 py-1.5 rounded bg-white border border-slate-300 text-slate-700 hover:bg-slate-100 text-xs">
-          Đóng
-        </button>
-        <button onclick="showToast('Đã ghi nhận yêu cầu đính kèm minh chứng!', 'success'); document.getElementById('taskModal').classList.add('hidden');" class="px-3 py-1.5 rounded bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-xs admin-only">
-          <i class="fa-solid fa-upload mr-1"></i> Tải lên tệp minh chứng
+      <!-- 4 Detailed Layer Cards -->
+      <div class="space-y-3 text-xs">
+        
+        <!-- Lớp 4 -->
+        <div id="guide-layer-4" class="p-4 rounded-xl bg-purple-50/70 border border-purple-300 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-black text-purple-950 text-xs uppercase flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-[11px]">4</span>
+              LỚP 4: KÊNH TƯƠNG TÁC ĐA KÊNH &amp; ĐO LƯỜNG GIÁM SÁT (Mặt tiền &amp; Mắt thần)
+            </span>
+            <span class="px-2 py-0.5 rounded bg-purple-200 text-purple-900 font-bold text-[10px]">Tương tác &amp; Giám sát</span>
+          </div>
+          <p class="text-slate-700">
+            <strong>Chức năng:</strong> Là điểm tiếp xúc trực tiếp giữa Chính quyền với Người dân, Doanh nghiệp và nơi Lãnh đạo nhìn vào số liệu điều hành.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] pt-1">
+            <div class="bg-white/80 p-2 rounded border border-purple-200">
+              <strong>Thành phần tiêu biểu:</strong> Cổng Dịch vụ công (DVC) tỉnh, Ứng dụng di động Công dân số (Smart City App), Tổng đài phản ánh hiện trường 1022, Trung tâm Giám sát điều hành thông minh (IOC Tỉnh), Dashboard chỉ số DTI.
+            </div>
+            <div class="bg-purple-100/70 p-2 rounded border border-purple-300 text-purple-950">
+              <strong>Lãnh đạo lưu ý khi phê duyệt:</strong> Mọi thủ tục hành chính và dịch vụ số đều phải có giao diện trên Lớp 4 để người dân tiếp cận mọi lúc, mọi nơi trên thiết bị di động.
+            </div>
+          </div>
+        </div>
+
+        <!-- Lớp 3 -->
+        <div id="guide-layer-3" class="p-4 rounded-xl bg-blue-50/70 border-2 border-blue-400 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-black text-blue-950 text-xs uppercase flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-[11px]">3</span>
+              LỚP 3: DỊCH VỤ &amp; ỨNG DỤNG NGHIỆP VỤ CHUYÊN NGÀNH (Các phòng chức năng)
+            </span>
+            <span class="px-2 py-0.5 rounded bg-blue-200 text-blue-900 font-bold text-[10px]">Chiếm 70% dự án</span>
+          </div>
+          <p class="text-slate-700">
+            <strong>Chức năng:</strong> Là các phần mềm nghiệp vụ chuyên môn phục vụ cán bộ công chức các Sở/Ban/Ngành giải quyết công việc hàng ngày.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] pt-1">
+            <div class="bg-white/80 p-2 rounded border border-blue-200">
+              <strong>Phân nhánh gồm 2 nhóm:</strong>
+              <ul class="list-disc ml-4 mt-1 space-y-0.5">
+                <li><em>Chính quyền số (nội bộ):</em> Quản lý văn bản (iOffice), Hồ sơ công việc, Quản lý tài sản công, Báo cáo tỉnh.</li>
+                <li><em>Kinh tế - Xã hội số (chuyên ngành):</em> CSDL Y tế/Bệnh viện (HIS), Đất đai địa chính (LIS), Nông nghiệp &amp; OCOP, Giáo dục/Học bạ số, Giao thông, Xây dựng...</li>
+              </ul>
+            </div>
+            <div class="bg-blue-100/70 p-2 rounded border border-blue-300 text-blue-950">
+              <strong>Lãnh đạo lưu ý khi phê duyệt (Tiêu chí 4 NĐ 224):</strong> Tuyệt đối không cho phép các Sở lập dự án đầu tư trùng lặp với các hệ thống đã có sẵn của tỉnh hoặc của các Bộ ngành Trung ương đã cấp phát.
+            </div>
+          </div>
+        </div>
+
+        <!-- Lớp 2 -->
+        <div id="guide-layer-2" class="p-4 rounded-xl bg-teal-50/70 border border-teal-300 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-black text-teal-950 text-xs uppercase flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold text-[11px]">2</span>
+              LỚP 2: DỮ LIỆU SỐ &amp; NỀN TẢNG DÙNG CHUNG (Trục xương sống kết nối)
+            </span>
+            <span class="px-2 py-0.5 rounded bg-teal-200 text-teal-900 font-bold text-[10px]">Xóa bỏ ốc đảo</span>
+          </div>
+          <p class="text-slate-700">
+            <strong>Chức năng:</strong> Là trục liên thông và kho tài sản dữ liệu dùng chung toàn tỉnh, kết nối các ứng dụng của Lớp 3 lại với nhau.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] pt-1">
+            <div class="bg-white/80 p-2 rounded border border-teal-200">
+              <strong>Thành phần tiêu biểu:</strong> Trục kết nối liên thông cấp tỉnh (LGSP) nối với Trục quốc gia (NDXP), Kho dữ liệu dùng chung tỉnh (Data Lakehouse), Nền tảng Định danh SSO/VNeID, CSDL Địa lý không gian (GIS), CSDL Doanh nghiệp, CSDL Cán bộ tỉnh.
+            </div>
+            <div class="bg-teal-100/70 p-2 rounded border border-teal-300 text-teal-900">
+              <strong>Lãnh đạo lưu ý khi phê duyệt (Tiêu chí 2 NĐ 224):</strong> Bắt buộc mọi hệ thống phần mềm mới đều phải cam kết mở REST API kết nối qua LGSP để chia sẻ dữ liệu cho các Sở khác, cấm giữ dữ liệu cục bộ.
+            </div>
+          </div>
+        </div>
+
+        <!-- Lớp 1 -->
+        <div id="guide-layer-1" class="p-4 rounded-xl bg-amber-50/70 border border-amber-300 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-black text-amber-950 text-xs uppercase flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-amber-600 text-white flex items-center justify-center font-bold text-[11px]">1</span>
+              LỚP 1: HẠ TẦNG SỐ &amp; AN TOÀN AN NINH MẠNG (Móng nhà &amp; Điện nước ngầm)
+            </span>
+            <span class="px-2 py-0.5 rounded bg-amber-200 text-amber-900 font-bold text-[10px]">Dùng chung hạ tầng</span>
+          </div>
+          <p class="text-slate-700">
+            <strong>Chức năng:</strong> Cung cấp tài nguyên tính toán (CPU, RAM, Lưu trữ) và lá chắn an ninh bảo vệ toàn bộ hệ thống số của tỉnh.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] pt-1">
+            <div class="bg-white/80 p-2 rounded border border-amber-200">
+              <strong>Thành phần tiêu biểu:</strong> Trung tâm dữ liệu tỉnh (Data Center), Nền tảng Cloud tỉnh, Mạng truyền số liệu chuyên dùng (CPNet) từ tỉnh đến 100% xã/phường, Trung tâm Giám sát an toàn thông tin (SOC tỉnh).
+            </div>
+            <div class="bg-amber-100/70 p-2 rounded border border-amber-300 text-amber-950">
+              <strong>Lãnh đạo lưu ý khi phê duyệt (Tiêu chí 3 NĐ 224):</strong> Không phê duyệt kinh phí mua sắm máy chủ riêng cho từng Sở; toàn bộ phải triển khai trên Cloud tập trung của tỉnh để tiết kiệm và bảo mật.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-3 border-t border-slate-100 flex justify-end">
+        <button onclick="closeLayerGuideModal()" class="px-5 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold rounded-lg text-xs transition">
+          Đã hiểu &amp; Đóng
         </button>
       </div>
     </div>
   </div>
 
-  <!-- ============================================================ -->
-  <!-- MODAL: THÊM MỚI TÀI SẢN SỐ (B1)                              -->
-  <!-- ============================================================ -->
-  <div id="addObjectModal" class="fixed inset-0 bg-slate-950/50 z-50 flex items-center justify-center p-4 hidden">
-    <div class="bg-white rounded-xl shadow-2xl max-w-lg w-full overflow-hidden border border-slate-200">
-      <div class="p-4 bg-blue-900 text-white flex justify-between items-center">
-        <div>
-          <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400">KHAI BÁO MỚI TÀI SẢN SỐ</span>
-          <h3 class="text-sm font-bold mt-0.5">Thêm đối tượng vào Bảng 1 (DM_DOITUONG)</h3>
-        </div>
-        <button id="closeAddObjectModalBtn" class="text-white hover:text-amber-400 text-base">
-          <i class="fa-solid fa-xmark text-lg"></i>
-        </button>
-      </div>
-
-      <form id="addObjectForm" class="p-5 space-y-3 text-xs">
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="font-bold text-slate-700 block mb-1">Mã ĐT (*):</label>
-            <input id="newObjId" required type="text" placeholder="KT-11 hoặc QG-xx" class="w-full bg-slate-50 border border-slate-300 rounded p-2 focus:ring-1 focus:ring-blue-600">
-          </div>
-          <div>
-            <label class="font-bold text-slate-700 block mb-1">Mã định danh gốc:</label>
-            <input id="newObjOrigId" type="text" placeholder="Ví dụ: TTHC-888" class="w-full bg-slate-50 border border-slate-300 rounded p-2 focus:ring-1 focus:ring-blue-600">
-          </div>
-        </div>
-
-        <div>
-          <label class="font-bold text-slate-700 block mb-1">Tên đối tượng (*):</label>
-          <input id="newObjName" required type="text" placeholder="Tên hệ thống số / CSDL / Nền tảng..." class="w-full bg-slate-50 border border-slate-300 rounded p-2 focus:ring-1 focus:ring-blue-600">
-        </div>
-
-        <div class="grid grid-cols-3 gap-3">
-          <div>
-            <label class="font-bold text-slate-700 block mb-1">Loại bản ghi:</label>
-            <select id="newObjRecordType" class="w-full bg-slate-50 border border-slate-300 rounded p-2">
-              <option value="Bản ghi gốc">Bản ghi gốc</option>
-              <option value="Tham chiếu">Tham chiếu</option>
-            </select>
-          </div>
-          <div>
-            <label class="font-bold text-slate-700 block mb-1">Loại đối tượng:</label>
-            <select id="newObjType" class="w-full bg-slate-50 border border-slate-300 rounded p-2">
-              <option value="Hệ thống số">Hệ thống số</option>
-              <option value="CSDL">CSDL</option>
-              <option value="Nền tảng số">Nền tảng số</option>
-              <option value="Dịch vụ số">Dịch vụ số</option>
-              <option value="Hạ tầng số">Hạ tầng số</option>
-            </select>
-          </div>
-          <div>
-            <label class="font-bold text-slate-700 block mb-1">Lớp kiến trúc:</label>
-            <select id="newObjLayer" class="w-full bg-slate-50 border border-slate-300 rounded p-2">
-              <option value="Lớp 3">Lớp 3</option>
-              <option value="Lớp 2">Lớp 2</option>
-              <option value="Lớp 1">Lớp 1</option>
-              <option value="Lớp 4">Lớp 4</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="font-bold text-slate-700 block mb-1">Cơ quan chủ quản (*):</label>
-            <input id="newObjOwner" required type="text" placeholder="Ví dụ: UBND tỉnh / Sở TTTT" class="w-full bg-slate-50 border border-slate-300 rounded p-2 focus:ring-1 focus:ring-blue-600">
-          </div>
-          <div>
-            <label class="font-bold text-slate-700 block mb-1">Đơn vị vận hành:</label>
-            <input id="newObjOperator" type="text" placeholder="Ví dụ: Trung tâm CNTT-TT" class="w-full bg-slate-50 border border-slate-300 rounded p-2 focus:ring-1 focus:ring-blue-600">
-          </div>
-        </div>
-
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="font-bold text-slate-700 block mb-1">Phương án xử lý kiến trúc:</label>
-            <select id="newObjSolution" class="w-full bg-slate-50 border border-slate-300 rounded p-2">
-              <option value="Nâng cấp">Nâng cấp</option>
-              <option value="Tiếp tục dùng">Tiếp tục dùng</option>
-              <option value="Chuẩn hóa">Chuẩn hóa</option>
-              <option value="Bổ sung">Bổ sung mới</option>
-              <option value="Tích hợp">Tích hợp</option>
-              <option value="Dùng chung">Dùng chung</option>
-            </select>
-          </div>
-          <div>
-            <label class="font-bold text-slate-700 block mb-1">Mã NAS dự kiến:</label>
-            <input id="newObjNasCode" type="text" placeholder="NAS-x-..." class="w-full bg-slate-50 border border-slate-300 rounded p-2 focus:ring-1 focus:ring-blue-600">
-          </div>
-        </div>
-
-        <div>
-          <label class="font-bold text-slate-700 block mb-1">Nguồn minh chứng căn cứ:</label>
-          <input id="newObjProof" type="text" placeholder="Quyết định, kế hoạch phê duyệt..." class="w-full bg-slate-50 border border-slate-300 rounded p-2 focus:ring-1 focus:ring-blue-600">
-        </div>
-
-        <div class="pt-2 flex justify-end gap-2">
-          <button type="button" onclick="document.getElementById('addObjectModal').classList.add('hidden')" class="px-3 py-1.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700">
-            Hủy
-          </button>
-          <button type="submit" class="px-4 py-1.5 rounded bg-blue-800 hover:bg-blue-900 text-white font-bold">
-            Lưu vào Bảng 1
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- Application Logic -->
-  <script src="app.js"></script>
 </body>
 </html>

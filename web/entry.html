@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khung Kiến trúc số Tỉnh - Cổng Nhập liệu Tác nghiệp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .tab-btn.active { border-bottom: 2px solid #2563eb; color: #1d4ed8; font-weight: 700; }
+    .role-btn.active { background-color: #1e293b; color: #ffffff; }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 h-screen flex flex-col overflow-hidden">
+
+  <!-- ============================================================ -->
+  <!-- HEADER NHẬP LIỆU TÁC NGHIỆP (OPERATIONAL DATA ENTRY)         -->
+  <!-- ============================================================ -->
+  <header class="bg-slate-800 border-b border-slate-700 text-white px-6 py-3 flex items-center justify-between shrink-0 shadow-md z-30">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-lg bg-emerald-600 flex items-center justify-center font-black text-xl text-white shadow-inner">
+        <i class="fa-solid fa-pen-to-square"></i>
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-400/30 uppercase tracking-wide">
+            Cổng Nhập Liệu Tác Nghiệp
+          </span>
+          
+        </div>
+        <h1 class="text-base font-extrabold tracking-tight text-white flex items-center gap-2">
+          HỆ THỐNG KIỂM KÊ &amp; KHAI BÁO KIẾN TRÚC SỐ ĐỊA PHƯƠNG
+        </h1>
+      </div>
+    </div>
+
+    <!-- Switch to Option B or Leadership View Button -->
+    <div class="flex items-center gap-3">
+      <span class="text-xs text-emerald-300 hidden md:inline font-medium">
+        <i class="fa-solid fa-circle-check"></i> Tự động đồng bộ thời gian thực
+      </span>
+      <a href="unified.html" class="px-3.5 py-1.5 bg-gradient-to-r from-amber-600 to-indigo-600 hover:from-amber-500 hover:to-indigo-500 text-white rounded-lg text-xs font-bold shadow flex items-center gap-1.5 border border-amber-400/40 transition transform hover:-translate-y-0.5" title="Mở Phương án B: Khung Kiến Trúc Hợp Nhất &amp; Thẩm Tra Trực Quan">
+        <i class="fa-solid fa-layer-group text-yellow-300"></i>
+        <span>PHƯƠNG ÁN B (HỢP NHẤT)</span>
+      </a>
+      <a href="index.html" class="px-4 py-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-bold shadow flex items-center gap-2 border border-blue-400 transition transform hover:-translate-y-0.5">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>VỀ TRANG BÁO CÁO LÃNH ĐẠO (A)</span>
+        <i class="fa-solid fa-arrow-left text-[10px]"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- SUB-NAV: BIỂU MẪU TÁC NGHIỆP SỞ, BAN, NGÀNH -->
+  <div class="bg-white border-b border-slate-200 px-6 py-2 flex items-center justify-between shrink-0 shadow-2xs">
+    <div class="flex items-center gap-4 text-xs overflow-x-auto custom-scrollbar">
+      <button onclick="switchDeptTab('precheck')" id="dtab-precheck" class="tab-btn active pb-1 flex items-center gap-1.5 font-bold text-blue-700 border-b-2 border-blue-700 whitespace-nowrap">
+        <i class="fa-solid fa-magnifying-glass-chart text-amber-500"></i>
+        <span>Kiểm Tra Trùng Lặp CSDL</span>
+      </button>
+      <button onclick="switchDeptTab('bm1')" id="dtab-bm1" class="text-slate-600 hover:text-slate-900 pb-1 flex items-center gap-1.5 whitespace-nowrap">
+        <i class="fa-solid fa-cubes text-blue-600"></i>
+        <span>Biểu Mẫu 1: Đăng Ký Hệ Thống &amp; Tự Kiểm Tra (NĐ 224)</span>
+      </button>
+      <button onclick="switchDeptTab('bm2')" id="dtab-bm2" class="text-slate-600 hover:text-slate-900 pb-1 flex items-center gap-1.5 whitespace-nowrap">
+        <i class="fa-solid fa-network-wired text-cyan-600"></i>
+        <span>Biểu Mẫu 2: Kết Nối Trục LGSP</span>
+      </button>
+      <button onclick="switchDeptTab('bm3')" id="dtab-bm3" class="text-slate-600 hover:text-slate-900 pb-1 flex items-center gap-1.5 whitespace-nowrap">
+        <i class="fa-solid fa-calendar-check text-purple-600"></i>
+        <span>Biểu Mẫu 3: Tiến Độ Nhiệm Vụ CĐS</span>
+      </button>
+    </div>
+
+    <div class="text-xs text-slate-500 hidden lg:flex items-center gap-2 shrink-0">
+      <span class="px-2.5 py-1 rounded bg-blue-50 text-blue-800 font-bold border border-blue-200">
+        <i class="fa-solid fa-building-user text-blue-600 mr-1"></i> Tác Nghiệp: Sở, Ban, Ngành Tỉnh
+      </span>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- MAIN DATA ENTRY BODY                                         -->
+  <!-- ============================================================ -->
+  <main class="flex-1 overflow-y-auto p-6 custom-scrollbar bg-slate-50">
+
+    <!-- ========================================================== -->
+    <!-- PHÂN HỆ 1: DÀNH CHO CHUYÊN VIÊN SỞ / BAN / NGÀNH          -->
+    <!-- ========================================================== -->
+    <div id="role-view-dept" class="space-y-6 max-w-5xl mx-auto">
+
+
+
+      <!-- TAB 1: PRE-CHECK TOOL -->
+      <div id="dept-sub-precheck" class="bg-white p-6 rounded-xl shadow-xs border border-slate-200 space-y-4">
+        <div class="border-b border-slate-100 pb-3">
+          <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+            <i class="fa-solid fa-shield-virus text-amber-500"></i>
+            KIỂM TRA TRÙNG LẶP HỆ THỐNG &amp; DỰ ÁN
+          </h2>
+          
+        </div>
+
+        <div class="flex gap-2">
+          <input type="text" id="precheckInput" placeholder="Nhập tên phần mềm, từ khóa dự kiến đầu tư (VD: văn bản điều hành, kho dữ liệu, truyền hình trực tuyến, camera...)" class="flex-1 px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-blue-500 outline-hidden">
+          <button onclick="runPreCheck()" class="px-5 py-2.5 bg-amber-600 hover:bg-amber-700 text-white font-bold rounded-lg text-xs flex items-center gap-2 shadow transition">
+            <i class="fa-solid fa-magnifying-glass"></i> Quét Trùng Lặp
+          </button>
+        </div>
+
+        <div id="precheckResult" class="hidden"></div>
+      </div>
+
+      <!-- TAB 2: BIỂU MẪU 1 -->
+      <div id="dept-sub-bm1" class="bg-white p-6 rounded-xl shadow-xs border border-slate-200 space-y-4 hidden">
+        <div class="border-b border-slate-100 pb-3">
+          <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+            <i class="fa-solid fa-file-pen text-blue-600"></i>
+            BIỂU MẪU 1: KHAI BÁO HỆ THỐNG &amp; CSDL
+          </h2>
+          
+        </div>
+
+        <form id="formBm1" onsubmit="submitBm1(event)" class="space-y-4 text-xs">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Tên Hệ Thống / CSDL / Phần Mềm <span class="text-red-500">*</span></label>
+              <input type="text" id="bm1_name" required placeholder="VD: CSDL Thú y &amp; Phòng chống dịch bệnh gia súc" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-hidden">
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Đơn vị chủ quản / Sở ngành <span class="text-red-500">*</span></label>
+              <select id="bm1_dept" required class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-hidden">
+                <option value="Sở Thông tin và Truyền thông">Sở Thông tin và Truyền thông</option>
+                <option value="Văn phòng UBND tỉnh">Văn phòng UBND tỉnh</option>
+                <option value="Sở Nông nghiệp và PTNT">Sở Nông nghiệp và PTNT</option>
+                <option value="Sở Tài nguyên và Môi trường">Sở Tài nguyên và Môi trường</option>
+                <option value="Sở Y tế">Sở Y tế</option>
+                <option value="Sở Xây dựng">Sở Xây dựng</option>
+                <option value="Sở Công thương">Sở Công thương</option>
+                <option value="Sở Tài chính">Sở Tài chính</option>
+                <option value="Công an tỉnh">Công an tỉnh</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Lớp Kiến trúc <span class="text-red-500">*</span></label>
+              <select id="bm1_layer" required onchange="toggleSubCategory()" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-hidden">
+                <option value="Lop3_UngDung">Lớp 3: Ứng dụng &amp; Nghiệp vụ chuyên ngành</option>
+                <option value="Lop2_DuLieu_NenTang">Lớp 2: Dữ liệu &amp; Nền tảng dùng chung</option>
+                <option value="Lop1_HaTang_ANM">Lớp 1: Hạ tầng số &amp; An ninh mạng</option>
+                <option value="Lop4_Kenh_DoLuong">Lớp 4: Kênh tương tác đa kênh &amp; Đo lường</option>
+              </select>
+            </div>
+
+            <div id="subCategoryWrapper">
+              <label class="block font-bold text-slate-700 mb-1">Phân nhánh Lớp 3 <span class="text-red-500">*</span></label>
+              <select id="bm1_sub" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-hidden">
+                <option value="ChinhQuyenSo">Chính Quyền Số</option>
+                <option value="KinhTeSo_XaHoiSo">Kinh Tế Số &amp; Xã Hội Số</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Phạm vi triển khai</label>
+              <select id="bm1_scope" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-hidden">
+                <option value="DungChung_ToanTinh">Dùng chung toàn tỉnh</option>
+                <option value="ChuyenNganh_NoiBo">Dùng riêng nội bộ Sở</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Hiện trạng</label>
+              <select id="bm1_status" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-hidden">
+                <option value="DangVanHanh">Đang vận hành khai thác</option>
+                <option value="DauTuMoi">Đang lập dự án đầu tư mới</option>
+                <option value="NangCap">Đang nâng cấp</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Phương án xử lý</label>
+              <select id="bm1_plan" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-hidden">
+                <option value="TiepTuc">Tiếp tục duy trì</option>
+                <option value="ChuanHoa">Chuẩn hóa API chia sẻ qua LGSP</option>
+                <option value="NangCap">Nâng cấp mở rộng</option>
+                <option value="HopNhat">Hợp nhất vào nền tảng tỉnh</option>
+                <option value="BoSung">Đầu tư bổ sung mới</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Văn bản pháp lý phê duyệt <span class="text-red-500">*</span></label>
+            <input type="text" id="bm1_proof" required placeholder="VD: Quyết định số 123/QĐ-UBND ngày 15/01/2026 hoặc Hồ sơ đề xuất dự án" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-hidden">
+          </div>
+
+          <!-- KHỐI TỰ KIỂM TRA 5 TIÊU CHÍ NGHỊ ĐỊNH 224 TRƯỚC KHI TRÌNH DUYỆT -->
+          <div class="mt-4 p-4 rounded-xl border-2 border-emerald-400/80 bg-emerald-50/40 space-y-3">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div>
+                <span class="font-black text-xs text-emerald-950 uppercase tracking-wide flex items-center gap-2">
+                  <i class="fa-solid fa-shield-halved text-emerald-600 text-sm"></i>
+                  TỰ KIỂM TRA ĐỐI SOÁT 05 TIÊU CHÍ (NGHỊ ĐỊNH 224/2026/NĐ-CP)
+                </span>
+                <p class="text-[11px] text-slate-600 mt-0.5">
+                  Đơn vị chủ động tự kiểm tra đối chiếu quy định trước khi nộp hồ sơ lên Dashboard của Lãnh đạo tỉnh.
+                </p>
+              </div>
+              <button type="button" onclick="runSelfCheckInBm1()" class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-bold text-xs shadow flex items-center justify-center gap-2 transition shrink-0">
+                <i class="fa-solid fa-wand-magic-sparkles text-amber-300"></i>
+                <span>Chạy Tự Kiểm Tra 5 Tiêu Chí</span>
+              </button>
+            </div>
+
+            <!-- Kết quả 5 tiêu chí -->
+            <div id="selfCheckResultArea" class="hidden space-y-2 pt-2 border-t border-emerald-200">
+              <div class="grid grid-cols-1 sm:grid-cols-5 gap-2" id="selfCheckCards">
+                <!-- Dynamic cards -->
+              </div>
+              <div id="selfCheckStatusSummary" class="p-2.5 rounded-lg bg-emerald-100 text-emerald-900 font-bold text-xs flex items-center gap-2 border border-emerald-300">
+                <i class="fa-solid fa-circle-check text-emerald-600 text-base"></i>
+                <span id="selfCheckSummaryText">Hồ sơ đã ĐẠT 5/5 tiêu chí theo NĐ 224/2026/NĐ-CP! Đủ điều kiện nộp trình Lãnh đạo.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-3">
+            <button type="reset" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold rounded-lg transition text-xs">
+              Nhập lại biểu mẫu
+            </button>
+            <div class="flex items-center gap-3">
+              <button type="submit" class="px-6 py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-black text-xs rounded-xl transition shadow-md flex items-center gap-2 transform active:scale-95">
+                <i class="fa-solid fa-paper-plane text-yellow-300"></i>
+                <span>NỘP HỒ SƠ TRÌNH LÃNH ĐẠO PHÊ DUYỆT</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- TAB 3: BIỂU MẪU 2 -->
+      <div id="dept-sub-bm2" class="bg-white p-6 rounded-xl shadow-xs border border-slate-200 space-y-4 hidden">
+        <div class="border-b border-slate-100 pb-3">
+          <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+            <i class="fa-solid fa-network-wired text-cyan-600"></i>
+            BIỂU MẪU 2: ĐĂNG KÝ KẾT NỐI QUA TRỤC LGSP
+          </h2>
+          
+        </div>
+
+        <form id="formBm2" onsubmit="submitBm2(event)" class="space-y-4 text-xs">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Hệ thống nguồn cung cấp dữ liệu <span class="text-red-500">*</span></label>
+              <select id="bm2_source" required class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-hidden">
+                <!-- Loaded dynamically -->
+              </select>
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Nền tảng Đích tiếp nhận <span class="text-red-500">*</span></label>
+              <select id="bm2_target" required class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-hidden">
+                <option value="T-DL-03">T-DL-03 - Nền tảng Tích hợp, Chia sẻ dữ liệu tỉnh (LGSP)</option>
+                <option value="T-DL-01">T-DL-01 - Kho dữ liệu dùng chung tỉnh</option>
+                <option value="T-CQ-03">T-CQ-03 - Trung tâm Điều hành thông minh (IOC)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Gói dữ liệu trao đổi <span class="text-red-500">*</span></label>
+              <input type="text" id="bm2_payload" required placeholder="VD: Dữ liệu hồ sơ TTHC, Dữ liệu đất đai, Thú y..." class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-hidden">
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Phương thức kết nối</label>
+              <select id="bm2_channel" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-hidden">
+                <option value="LGSP">Trục LGSP / NDXP</option>
+                <option value="TSLCD">Mạng Truyền số liệu chuyên dùng</option>
+                <option value="API_Direct">Kết nối API trực tiếp an toàn</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Trạng thái kết nối</label>
+              <select id="bm2_status" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-hidden">
+                <option value="DangKhaiThac">Đang khai thác chính thức</option>
+                <option value="DangThuNghiem">Đang tích hợp thử nghiệm</option>
+                <option value="ChuaKetNoi">Chưa kết nối</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 flex justify-end gap-3">
+            <button type="submit" class="px-5 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-bold rounded-lg transition shadow flex items-center gap-2">
+              <i class="fa-solid fa-floppy-disk"></i> Đăng Ký Điểm Kết Nối LGSP
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- TAB 4: BIỂU MẪU 3 -->
+      <div id="dept-sub-bm3" class="bg-white p-6 rounded-xl shadow-xs border border-slate-200 space-y-4 hidden">
+        <div class="border-b border-slate-100 pb-3">
+          <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+            <i class="fa-solid fa-calendar-check text-purple-600"></i>
+            BIỂU MẪU 3: BÁO CÁO TIẾN ĐỘ NHIỆM VỤ
+          </h2>
+          
+        </div>
+
+        <form id="formBm3" onsubmit="submitBm3(event)" class="space-y-4 text-xs">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Tên Nhiệm vụ / Dự án <span class="text-red-500">*</span></label>
+              <input type="text" id="bm3_name" required placeholder="VD: Nâng cấp Trục tích hợp chia sẻ LGSP đạt chuẩn NDOP quốc gia" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-hidden">
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Cơ quan chủ trì <span class="text-red-500">*</span></label>
+              <input type="text" id="bm3_lead" required placeholder="VD: Sở Thông tin và Truyền thông" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-hidden">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Thời hạn hoàn thành</label>
+              <input type="date" id="bm3_deadline" value="2026-12-31" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-hidden">
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Kinh phí đầu tư (Triệu đồng)</label>
+              <input type="number" id="bm3_budget" value="1500" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-hidden">
+            </div>
+
+            <div>
+              <label class="block font-bold text-slate-700 mb-1">Trạng thái thực hiện</label>
+              <select id="bm3_status" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-hidden">
+                <option value="DangThucHien">Đang thực hiện đúng hạn</option>
+                <option value="HoanThanh_ChoKiemChung">Hoàn thành chờ nghiệm thu</option>
+                <option value="DaKiemChung">Đã kiểm chứng đạt chuẩn</option>
+                <option value="ChamTienDo">Chậm tiến độ</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">Biên bản kiểm chứng nghiệm thu <span class="text-red-500">*</span></label>
+            <input type="text" id="bm3_evidence" required placeholder="VD: Biên bản nghiệm thu kỹ thuật số 45/BB-STTTT hoặc QĐ phê duyệt dự án" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg outline-hidden">
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 flex justify-end gap-3">
+            <button type="submit" class="px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg transition shadow flex items-center gap-2">
+              <i class="fa-solid fa-floppy-disk"></i> Lưu Báo Cáo Tiến Độ
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    
+
+  </main>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-5 right-5 bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl text-xs z-50 transform transition-all duration-300 translate-y-20 opacity-0 flex items-center gap-3 border border-slate-700">
+    <i id="toastIcon" class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
+    <div id="toastContent">
+      <div id="toastText" class="font-bold">Đã cập nhật thành công!</div>
+      <div id="toastAction" class="mt-1"></div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    let currentObjects = [];
+
+    let isBm1SelfChecked = false;
+
+    async function runSelfCheckInBm1() {
+      const name = document.getElementById('bm1_name').value.trim();
+      if (!name) {
+        alert('Vui lòng nhập Tên Hệ thống / CSDL trước khi tự kiểm tra!');
+        document.getElementById('bm1_name').focus();
+        return;
+      }
+
+      const res = await fetch('/api/selfcheck', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          object_name: name,
+          managing_dept: document.getElementById('bm1_dept').value,
+          arch_layer: document.getElementById('bm1_layer').value
+        })
+      }).then(r => r.json());
+
+      const area = document.getElementById('selfCheckResultArea');
+      const cardsEl = document.getElementById('selfCheckCards');
+      const summaryText = document.getElementById('selfCheckSummaryText');
+
+      cardsEl.innerHTML = res.criteria.map(c => `
+        <div class="p-2.5 rounded-lg border ${c.status === 'DAT' ? 'border-emerald-300 bg-white text-emerald-950' : 'border-amber-300 bg-amber-50 text-amber-950'} space-y-1">
+          <div class="flex items-center justify-between">
+            <span class="font-black text-[10px] text-slate-500">Tiêu chí ${c.id}</span>
+            <i class="fa-solid ${c.status === 'DAT' ? 'fa-circle-check text-emerald-600' : 'fa-triangle-exclamation text-amber-600'} text-xs"></i>
+          </div>
+          <div class="font-bold text-[11px] leading-tight">${c.title}</div>
+          <div class="text-[9px] ${c.status === 'DAT' ? 'text-emerald-700' : 'text-amber-700'}">${c.status === 'DAT' ? 'ĐẠT CHUẨN' : 'CẢNH BÁO'}</div>
+        </div>
+      `).join('');
+
+      summaryText.textContent = res.summary;
+      area.classList.remove('hidden');
+      isBm1SelfChecked = true;
+    }
+
+    const syncChannel = new BroadcastChannel('province_arch_sync');
+
+    function notifySync(table, objId = null, objName = null, dept = null) {
+      const syncData = {
+        type: 'DATA_CHANGED',
+        table: table,
+        object_id: objId,
+        object_name: objName,
+        dept: dept,
+        ts: Date.now()
+      };
+      syncChannel.postMessage(syncData);
+      localStorage.setItem('province_arch_sync_data', JSON.stringify(syncData));
+      localStorage.setItem('province_arch_sync_ts', Date.now());
+    }
+
+    function switchDeptTab(tabId) {
+      ['precheck', 'bm1', 'bm2', 'bm3'].forEach(t => {
+        document.getElementById('dept-sub-' + t).classList.add('hidden');
+        const btn = document.getElementById('dtab-' + t);
+        btn.className = 'text-slate-600 hover:text-slate-900 pb-1 flex items-center gap-1.5';
+      });
+
+      document.getElementById('dept-sub-' + tabId).classList.remove('hidden');
+      const activeBtn = document.getElementById('dtab-' + tabId);
+      activeBtn.className = 'tab-btn active pb-1 flex items-center gap-1.5';
+    }
+
+    function toggleSubCategory() {
+      const layer = document.getElementById('bm1_layer').value;
+      const subWrap = document.getElementById('subCategoryWrapper');
+      if (layer === 'Lop3_UngDung') {
+        subWrap.style.display = 'block';
+      } else {
+        subWrap.style.display = 'none';
+      }
+    }
+
+    async function loadObjectsForBm2() {
+      try {
+        const objs = await fetch('/api/objects').then(r => r.json());
+        currentObjects = objs;
+        const srcEl = document.getElementById('bm2_source');
+        srcEl.innerHTML = objs.map(o => `<option value="${o.object_id}">${o.object_id} - ${o.object_name} (${o.managing_dept})</option>`).join('');
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    async function runPreCheck() {
+      const q = document.getElementById('precheckInput').value.trim();
+      if (!q) return alert('Vui lòng nhập từ khóa hoặc mục tiêu dự án!');
+
+      const res = await fetch('/api/precheck', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: q })
+      }).then(r => r.json());
+
+      const resBox = document.getElementById('precheckResult');
+      resBox.classList.remove('hidden');
+
+      if (res.flag === 'RED') {
+        resBox.className = 'mt-4 p-4 rounded-xl border border-rose-300 bg-rose-50 text-rose-900 text-xs';
+        resBox.innerHTML = `
+          <div class="font-bold text-sm text-rose-800 mb-1 flex items-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation text-base"></i> ${res.message}
+          </div>
+          <div class="mt-2 font-bold text-slate-700">Hệ thống dùng chung trùng lặp phát hiện trong CSDL tỉnh:</div>
+          <ul class="list-disc pl-5 mt-1 space-y-1">
+            ${res.matches.map(m => `<li><strong>${m.object_id} - ${m.object_name}</strong> (Cơ quan: ${m.managing_dept})</li>`).join('')}
+          </ul>
+        `;
+      } else if (res.flag === 'YELLOW') {
+        resBox.className = 'mt-4 p-4 rounded-xl border border-amber-300 bg-amber-50 text-amber-900 text-xs';
+        resBox.innerHTML = `
+          <div class="font-bold text-sm text-amber-800 mb-1 flex items-center gap-2">
+            <i class="fa-solid fa-circle-exclamation text-base"></i> ${res.message}
+          </div>
+        `;
+      } else {
+        resBox.className = 'mt-4 p-4 rounded-xl border border-emerald-300 bg-emerald-50 text-emerald-900 text-xs';
+        resBox.innerHTML = `
+          <div class="font-bold text-sm text-emerald-800 mb-1 flex items-center gap-2">
+            <i class="fa-solid fa-circle-check text-base"></i> ${res.message}
+          </div>
+        `;
+      }
+    }
+
+    async function submitBm1(e) {
+      e.preventDefault();
+      const payload = {
+        object_name: document.getElementById('bm1_name').value,
+        managing_dept: document.getElementById('bm1_dept').value,
+        arch_layer: document.getElementById('bm1_layer').value,
+        sub_category: document.getElementById('bm1_sub').value,
+        deployment_scope: document.getElementById('bm1_scope').value,
+        action_plan: document.getElementById('bm1_plan').value,
+        proof_document_url: document.getElementById('bm1_proof').value,
+        lifecycle_status: 'ChoLanhDaoDuyet'
+      };
+
+      const res = await fetch('/api/objects', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(r => r.json());
+
+      if (res.success) {
+        notifySync('objects', res.object_id, payload.object_name, payload.managing_dept);
+        showToast('✅ Đã nộp hồ sơ trình Lãnh đạo thành công: ' + res.object_id, true);
+        document.getElementById('formBm1').reset();
+        document.getElementById('selfCheckResultArea').classList.add('hidden');
+        isBm1SelfChecked = false;
+        await loadObjectsForBm2();
+      }
+    }
+
+    async function submitBm2(e) {
+      e.preventDefault();
+      const payload = {
+        source_obj_id: document.getElementById('bm2_source').value,
+        target_obj_id: document.getElementById('bm2_target').value,
+        data_payload: document.getElementById('bm2_payload').value,
+        channel_type: document.getElementById('bm2_channel').value,
+        status: document.getElementById('bm2_status').value
+      };
+
+      const res = await fetch('/api/connections', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(r => r.json());
+
+      if (res.success) {
+        notifySync('connections');
+        showToast('✅ Đã đăng ký luồng LGSP: ' + res.conn_id, true);
+        document.getElementById('formBm2').reset();
+      }
+    }
+
+    async function submitBm3(e) {
+      e.preventDefault();
+      const payload = {
+        task_name: document.getElementById('bm3_name').value,
+        lead_department: document.getElementById('bm3_lead').value,
+        timeline_deadline: document.getElementById('bm3_deadline').value,
+        investment_budget: document.getElementById('bm3_budget').value,
+        task_status: document.getElementById('bm3_status').value,
+        verification_evidence: document.getElementById('bm3_evidence').value
+      };
+
+      const res = await fetch('/api/tasks', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(r => r.json());
+
+      if (res.success) {
+        notifySync('tasks');
+        showToast('✅ Đã cập nhật tiến độ nhiệm vụ: ' + res.task_id, true);
+        document.getElementById('formBm3').reset();
+      }
+    }
+
+    function showToast(msg, showLink = false) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastText').textContent = msg;
+      const actEl = document.getElementById('toastAction');
+      if (showLink) {
+        actEl.innerHTML = '<a href="index.html" class="inline-flex items-center gap-1 text-amber-300 hover:text-amber-200 font-bold underline"><i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Xem ngay trên Trang Báo cáo Lãnh đạo</a>';
+      } else {
+        actEl.innerHTML = '';
+      }
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => toast.classList.add('translate-y-20', 'opacity-0'), 5000);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadObjectsForBm2();
+      toggleSubCategory();
+    });
+  </script>
+</body>
+</html>
