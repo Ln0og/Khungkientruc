@@ -232,6 +232,12 @@ class ArchitectureRequestHandler(http.server.SimpleHTTPRequestHandler):
         path = parsed.path
         query = urllib.parse.parse_qs(parsed.query)
 
+        if path in ('/', '/index.html'):
+            self.send_response(302)
+            self.send_header('Location', '/unified.html')
+            self.end_headers()
+            return
+
         if path == '/api/objects':
             conn = get_db()
             cur = conn.cursor()
