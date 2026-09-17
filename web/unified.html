@@ -33,20 +33,14 @@
 
     /* Fixed Panel Widths */
     #panel-selector {
-      width: 300px !important;
-      min-width: 300px !important;
-      max-width: 310px !important;
-      flex: 0 0 300px !important;
+      width: 320px !important;
+      min-width: 320px !important;
+      max-width: 330px !important;
+      flex: 0 0 320px !important;
     }
     #panel-canvas {
       flex: 1 1 0% !important;
       min-width: 0 !important;
-    }
-    #panel-hud {
-      width: 400px !important;
-      min-width: 400px !important;
-      max-width: 410px !important;
-      flex: 0 0 400px !important;
     }
 
     /* Clean Tier Styling */
@@ -213,7 +207,47 @@
     <!-- ------------------------------------------------------------ -->
     <section id="panel-canvas" class="flex-1 min-w-0 flex flex-col blueprint-canvas relative overflow-y-auto p-6 custom-scrollbar">
       
-      <div class="max-w-3xl mx-auto w-full space-y-4 my-auto">
+      <div class="max-w-4xl mx-auto w-full space-y-4 my-auto">
+
+        <!-- 0. EXECUTIVE ACTION BAR (TOP OF CANVAS) -->
+        <div class="p-3.5 px-4 rounded-2xl border border-slate-300 bg-white/95 backdrop-blur-xs shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-3">
+          <div class="min-w-0 space-y-1">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span id="canvas-header-id" class="text-xs font-mono font-black px-2.5 py-0.5 rounded-md bg-blue-100 text-blue-800 border border-blue-200">
+                SNNMT-01
+              </span>
+              <span id="canvas-header-stt" class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">
+                STT: 1
+              </span>
+              <span id="canvas-header-badge">
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">🟢 Đang dùng</span>
+              </span>
+              <span id="canvas-header-layer" class="text-[10px] font-bold px-2.5 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-200 font-mono">
+                Lớp 3: Ứng dụng nghiệp vụ
+              </span>
+            </div>
+            <h2 id="canvas-header-title" class="text-sm md:text-base font-extrabold text-slate-900 leading-snug line-clamp-1">
+              Phần mềm quản lý vùng canh tác &amp; bản đồ nông nghiệp
+            </h2>
+            <p class="text-xs text-slate-500 truncate flex items-center gap-1.5">
+              <i class="fa-solid fa-landmark text-slate-400 text-[10px]"></i>
+              <span id="canvas-header-dept">Sở Nông nghiệp và Môi trường</span>
+            </p>
+          </div>
+
+          <div class="flex items-center gap-2 shrink-0">
+            <!-- NÚT MỞ MODAL XEM CHI TIẾT 16 CỘT & THẨM ĐỊNH -->
+            <button onclick="openDetailModal()" class="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-xs transition flex items-center gap-2 cursor-pointer active:scale-95">
+              <i class="fa-solid fa-file-waveform text-sm"></i>
+              <span>Xem Hồ Sơ &amp; Thẩm Tra Chi Tiết</span>
+            </button>
+            <!-- NÚT PHÊ DUYỆT NHANH -->
+            <button onclick="approveDirectly()" class="px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-xs transition flex items-center gap-1.5 cursor-pointer active:scale-95" title="Phê duyệt chủ trương đầu tư">
+              <i class="fa-solid fa-stamp"></i>
+              <span class="hidden sm:inline">Phê Duyệt</span>
+            </button>
+          </div>
+        </div>
 
         <!-- 1. ĐẦU VÀO: CƠ QUAN CHỦ TRÌ (CLEAN HERO CARD) -->
         <div class="p-3.5 rounded-xl border border-slate-300 bg-white shadow-xs flex items-center justify-between gap-3">
@@ -351,215 +385,217 @@
     </section>
 
     <!-- ------------------------------------------------------------ -->
-        <!-- ------------------------------------------------------------ -->
-    <!-- PANEL 3: TRẠM THẨM TRA CHIẾN LƯỢC & ĐỐI SOÁT HỒ SƠ THỰC TẾ   -->
-    <!-- ------------------------------------------------------------ -->
-    <section id="panel-hud" class="bg-white border-l border-slate-200 flex flex-col shrink-0 z-10 shadow-sm">
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- MODAL POPUP: HỒ SƠ THẨM TRA & ĐỐI SOÁT 16 Ô EXCEL CHI TIẾT  -->
+  <!-- ============================================================ -->
+  <div id="system-detail-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div class="relative w-full max-w-5xl bg-white rounded-2xl shadow-2xl border border-slate-200 flex flex-col max-h-[90vh] overflow-hidden my-auto">
       
-      <!-- HUD Header: System Title & Badges -->
-      <div class="p-4 border-b border-slate-200 bg-slate-50/80 space-y-1.5">
-        <div class="flex items-center justify-between">
-          <span class="text-[11px] font-black uppercase tracking-wider text-slate-500 font-mono flex items-center gap-1.5">
-            <i class="fa-solid fa-gavel text-blue-600"></i> HỒ SƠ THẨM TRA
-          </span>
-          <div class="flex items-center gap-1.5">
-            <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-200 text-slate-800 font-bold" id="hud-stt-badge">STT: 1</span>
-            <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-blue-100 text-blue-800 border border-blue-200 font-black" id="hud-system-id">
-              SNNMT-01
-            </span>
+      <!-- MODAL HEADER -->
+      <div class="px-6 py-4 border-b border-slate-200 bg-slate-50/90 flex items-center justify-between gap-4 shrink-0">
+        <div class="flex items-center gap-3.5 min-w-0">
+          <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold text-base shadow-sm shrink-0">
+            <i class="fa-solid fa-file-invoice"></i>
+          </div>
+          <div class="min-w-0">
+            <div class="flex items-center gap-2 flex-wrap mb-0.5">
+              <span class="text-[10px] font-mono uppercase tracking-wider text-slate-500 font-extrabold flex items-center gap-1">
+                <i class="fa-solid fa-gavel text-blue-600"></i> HỒ SƠ THẨM TRA &amp; ĐỐI SOÁT
+              </span>
+              <span id="hud-stt-badge" class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-200 text-slate-800 font-bold">STT: 1</span>
+              <span id="hud-system-id" class="text-[10px] font-mono px-2.5 py-0.5 rounded-md bg-blue-100 text-blue-800 border border-blue-200 font-black">SNNMT-01</span>
+              <span id="modal-status-badge">
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">🟢 Đang dùng</span>
+              </span>
+            </div>
+            <h3 id="hud-system-name" class="text-base font-extrabold text-slate-900 leading-snug truncate">
+              Phần mềm quản lý vùng canh tác &amp; bản đồ nông nghiệp
+            </h3>
+            <p id="hud-dept-subtitle" class="text-xs text-slate-500 truncate">
+              Sở Nông nghiệp và Môi trường &bull; Chi cục Trồng trọt và BVTV
+            </p>
           </div>
         </div>
-        <h3 class="text-sm font-extrabold text-slate-900 leading-snug" id="hud-system-name">
-          Phần mềm quản lý vùng canh tác &amp; bản đồ nông nghiệp
-        </h3>
-        <p class="text-xs text-slate-500 truncate" id="hud-dept-subtitle">
-          Sở Nông nghiệp và Môi trường
-        </p>
+
+        <button onclick="closeDetailModal()" class="w-9 h-9 rounded-xl hover:bg-slate-200 text-slate-400 hover:text-slate-700 flex items-center justify-center transition shrink-0 cursor-pointer" title="Đóng (ESC)">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
       </div>
 
-      <!-- HUD Scrollable Body -->
-      <div class="flex-1 overflow-y-auto p-4 space-y-3.5 custom-scrollbar bg-slate-50/20">
-
-        <!-- ══════════════════════════════════════════════════════════ -->
-        <!-- 1. BĂNG KẾT LUẬN TIÊU ĐIỂM (EXECUTIVE KEY FINDING BANNER)   -->
-        <!-- ══════════════════════════════════════════════════════════ -->
-        <div id="hud-hero-banner" class="p-3 rounded-xl border border-blue-200 bg-blue-50/70 space-y-1">
-          <div class="flex items-center gap-1.5 text-xs font-extrabold text-blue-900 font-mono">
-            <i class="fa-solid fa-circle-info text-blue-600"></i>
-            <span id="hud-hero-title">ĐÁNH GIÁ TỔNG QUAN</span>
+      <!-- MODAL SCROLLABLE BODY (2 BALANCED COLUMNS) -->
+      <div class="flex-1 overflow-y-auto p-6 space-y-5 custom-scrollbar bg-slate-50/30">
+        
+        <!-- HERO BANNER TỔNG QUAN -->
+        <div id="hud-hero-banner" class="p-3.5 rounded-xl border border-blue-200 bg-blue-50/80 space-y-1">
+          <div class="flex items-center gap-2 text-xs font-black text-blue-900 font-mono">
+            <i class="fa-solid fa-circle-info text-blue-600 text-sm"></i>
+            <span id="hud-hero-title">ĐÁNH GIÁ TỔNG QUAN HỒ SƠ</span>
           </div>
-          <p class="text-xs text-slate-800 font-medium leading-relaxed" id="hud-hero-text">
+          <p id="hud-hero-text" class="text-xs text-slate-800 font-medium leading-relaxed">
             Hệ thống đang được khai thác sử dụng thường xuyên.
           </p>
         </div>
 
-        <!-- ══════════════════════════════════════════════════════════ -->
-        <!-- 2. BỐN THÔNG SỐ CỐT LÕI (4 QUICK METRIC PILLS)             -->
-        <!-- ══════════════════════════════════════════════════════════ -->
-        <div class="grid grid-cols-2 gap-2">
-          <!-- Metric 1: Trạng thái sử dụng -->
-          <div class="p-2.5 rounded-lg bg-white border border-slate-200 space-y-0.5">
-            <span class="text-[10px] text-slate-500 block font-medium">Tình Trạng (Cột J):</span>
-            <div class="text-xs font-bold text-slate-900 truncate" id="hud-metric-usage">
-              Đang sử dụng
-            </div>
-          </div>
-          <!-- Metric 2: Hình thức chia sẻ -->
-          <div class="p-2.5 rounded-lg bg-white border border-slate-200 space-y-0.5">
-            <span class="text-[10px] text-slate-500 block font-medium">Chia Sẻ (Cột L):</span>
-            <div class="text-xs font-bold text-blue-700 font-mono truncate" id="hud-metric-share">
-              API
-            </div>
-          </div>
-          <!-- Metric 3: Tần suất cập nhật -->
-          <div class="p-2.5 rounded-lg bg-white border border-slate-200 space-y-0.5">
-            <span class="text-[10px] text-slate-500 block font-medium">Tần Suất (Cột M):</span>
-            <div class="text-xs font-bold text-slate-900 truncate" id="hud-metric-freq">
-              Thường xuyên
-            </div>
-          </div>
-          <!-- Metric 4: Rà soát sáp nhập -->
-          <div class="p-2.5 rounded-lg bg-white border border-slate-200 space-y-0.5">
-            <span class="text-[10px] text-slate-500 block font-medium">Rà Soát (Cột I):</span>
-            <div class="text-xs font-bold text-slate-900 truncate" id="hud-metric-review">
-              Đã rà soát
-            </div>
-          </div>
-        </div>
+        <!-- GRID 2 CỘT CÂN ĐỐI -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
 
-        <!-- ══════════════════════════════════════════════════════════ -->
-        <!-- 3. BỘ 4 QUYẾT ĐỊNH CHIẾN LƯỢC (2x2 DECISION CARDS)         -->
-        <!-- ══════════════════════════════════════════════════════════ -->
-        <div class="space-y-2">
-          <div class="text-[11px] uppercase font-black tracking-wider text-slate-700 font-mono flex items-center justify-between">
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-scale-balanced text-blue-600"></i> KẾT LUẬN THẨM TRA 4 TIÊU CHÍ</span>
-            <span class="text-[9px] text-slate-400 font-normal">NĐ 278 &bull; QĐ 1425</span>
-          </div>
-
-          <div class="grid grid-cols-2 gap-2">
-            <!-- 1. Trùng lặp -->
-            <div id="hud-action-dup" class="p-2.5 rounded-lg bg-white border border-slate-200 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="text-[10px] font-bold text-slate-500 font-mono">1. TRÙNG LẶP?</span>
-              </div>
-              <div id="hud-badge-dup" class="inline-block text-[9px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
-                KHÔNG TRÙNG
-              </div>
-              <p class="text-[10px] text-slate-600 leading-tight line-clamp-2" id="hud-text-dup"></p>
+          <!-- CỘT 1: BỘ 4 TIÊU CHÍ THẨM ĐỊNH (NĐ 278 & QĐ 1425) -->
+          <div class="space-y-3.5">
+            <div class="flex items-center justify-between pb-1 border-b border-slate-200">
+              <h4 class="text-xs uppercase font-black tracking-wider text-slate-800 font-mono flex items-center gap-1.5">
+                <i class="fa-solid fa-scale-balanced text-blue-600"></i>
+                <span>1. BỘ 4 TIÊU CHÍ THẨM ĐỊNH</span>
+              </h4>
+              <span class="text-[10px] text-slate-400 font-mono">QĐ 1425 &bull; NĐ 278</span>
             </div>
 
-            <!-- 2. Nâng cấp -->
-            <div id="hud-action-upg" class="p-2.5 rounded-lg bg-white border border-slate-200 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="text-[10px] font-bold text-slate-500 font-mono">2. NÂNG CẤP?</span>
+            <!-- 4 DECISION CARDS -->
+            <div class="space-y-2.5">
+              <!-- Tiêu chí 1: Trùng lặp -->
+              <div id="hud-action-dup" class="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-bold text-slate-600 font-mono">1. CÓ TRÙNG LẶP KHÔNG?</span>
+                  <span id="hud-badge-dup" class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">KHÔNG TRÙNG</span>
+                </div>
+                <p id="hud-text-dup" class="text-xs text-slate-700 leading-relaxed"></p>
               </div>
-              <div id="hud-badge-upg" class="inline-block text-[9px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-800">
-                CẦN API
+
+              <!-- Tiêu chí 2: Nâng cấp -->
+              <div id="hud-action-upg" class="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-bold text-slate-600 font-mono">2. CÓ CẦN NÂNG CẤP KHÔNG?</span>
+                  <span id="hud-badge-upg" class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-800">CẦN API</span>
+                </div>
+                <p id="hud-text-upg" class="text-xs text-slate-700 leading-relaxed"></p>
               </div>
-              <p class="text-[10px] text-slate-600 leading-tight line-clamp-2" id="hud-text-upg"></p>
+
+              <!-- Tiêu chí 3: Gom gộp -->
+              <div id="hud-action-merge" class="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-bold text-slate-600 font-mono">3. CÓ CẦN GOM GỘP KHÔNG?</span>
+                  <span id="hud-badge-merge" class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">ĐỘC LẬP</span>
+                </div>
+                <p id="hud-text-merge" class="text-xs text-slate-700 leading-relaxed"></p>
+              </div>
+
+              <!-- Tiêu chí 4: Loại bỏ -->
+              <div id="hud-action-retire" class="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-bold text-slate-600 font-mono">4. CÓ THU HỒI / LOẠI BỎ KHÔNG?</span>
+                  <span id="hud-badge-retire" class="text-[9px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">GIỮ DÙNG</span>
+                </div>
+                <p id="hud-text-retire" class="text-xs text-slate-700 leading-relaxed"></p>
+              </div>
             </div>
 
-            <!-- 3. Gom gộp -->
-            <div id="hud-action-merge" class="p-2.5 rounded-lg bg-white border border-slate-200 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="text-[10px] font-bold text-slate-500 font-mono">3. GOM GỘP?</span>
+            <!-- 4 Quick metrics -->
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <div class="p-2 rounded-lg bg-white border border-slate-200 text-center">
+                <span class="text-[10px] text-slate-400 block font-medium">Tình Trạng (Cột J)</span>
+                <span class="text-xs font-bold text-slate-800 truncate block mt-0.5" id="hud-metric-usage">Đang sử dụng</span>
               </div>
-              <div id="hud-badge-merge" class="inline-block text-[9px] font-bold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">
-                ĐỘC LẬP
+              <div class="p-2 rounded-lg bg-white border border-slate-200 text-center">
+                <span class="text-[10px] text-slate-400 block font-medium">Hình Thức (Cột L)</span>
+                <span class="text-xs font-bold text-blue-700 font-mono truncate block mt-0.5" id="hud-metric-share">API</span>
               </div>
-              <p class="text-[10px] text-slate-600 leading-tight line-clamp-2" id="hud-text-merge"></p>
-            </div>
-
-            <!-- 4. Loại bỏ -->
-            <div id="hud-action-retire" class="p-2.5 rounded-lg bg-white border border-slate-200 space-y-1">
-              <div class="flex items-center justify-between">
-                <span class="text-[10px] font-bold text-slate-500 font-mono">4. LOẠI BỎ?</span>
+              <div class="p-2 rounded-lg bg-white border border-slate-200 text-center">
+                <span class="text-[10px] text-slate-400 block font-medium">Tần Suất (Cột M)</span>
+                <span class="text-xs font-bold text-slate-800 truncate block mt-0.5" id="hud-metric-freq">Hàng ngày</span>
               </div>
-              <div id="hud-badge-retire" class="inline-block text-[9px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
-                GIỮ DÙNG
+              <div class="p-2 rounded-lg bg-white border border-slate-200 text-center">
+                <span class="text-[10px] text-slate-400 block font-medium">Rà Soát (Cột I)</span>
+                <span class="text-xs font-bold text-slate-800 truncate block mt-0.5" id="hud-metric-review">Đã rà soát</span>
               </div>
-              <p class="text-[10px] text-slate-600 leading-tight line-clamp-2" id="hud-text-retire"></p>
             </div>
           </div>
-        </div>
 
-        <!-- ══════════════════════════════════════════════════════════ -->
-        <!-- 4. KHỐI DỮ LIỆU CHI TIẾT (ACCORDION THU GỌN - SẠCH SẼ)       -->
-        <!-- ══════════════════════════════════════════════════════════ -->
-        <div class="space-y-2 pt-1">
-          <!-- Accordion 1: Dữ liệu nguyên văn từ báo cáo Excel -->
-          <div class="rounded-lg border border-slate-200 bg-white overflow-hidden">
-            <button onclick="toggleAccordion('acc-raw')" class="w-full p-2.5 text-left text-xs font-bold text-slate-700 hover:bg-slate-50 flex items-center justify-between transition">
-              <span class="flex items-center gap-1.5">
-                <i class="fa-solid fa-file-lines text-slate-400"></i>
-                <span>Xem Chi Tiết Báo Cáo Cơ Quan (16 Ô Excel)</span>
+          <!-- CỘT 2: ĐỐI SOÁT 16 Ô BÁO CÁO GỐC TỪ EXCEL -->
+          <div class="space-y-3.5">
+            <div class="flex items-center justify-between pb-1 border-b border-slate-200">
+              <h4 class="text-xs uppercase font-black tracking-wider text-slate-800 font-mono flex items-center gap-1.5">
+                <i class="fa-solid fa-table-list text-emerald-600"></i>
+                <span>2. ĐỐI SOÁT HỒ SƠ GỐC EXCEL (16 CỘT)</span>
+              </h4>
+              <span class="text-[10px] text-slate-400 font-mono">Báo cáo Sở ngành</span>
+            </div>
+
+            <!-- Metadata specs -->
+            <div class="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs space-y-2 text-xs">
+              <div class="flex justify-between border-b border-slate-100 pb-1.5">
+                <span class="text-slate-500">Tên miền / URL:</span>
+                <span class="font-mono text-blue-700 font-bold truncate max-w-[260px]" id="raw-url">-</span>
+              </div>
+              <div class="flex justify-between border-b border-slate-100 pb-1.5">
+                <span class="text-slate-500">Đơn vị trực tiếp:</span>
+                <span class="text-slate-900 font-semibold text-right truncate max-w-[260px]" id="raw-subdept">-</span>
+              </div>
+              <div class="flex justify-between border-b border-slate-100 pb-1.5">
+                <span class="text-slate-500">Năm &amp; Hình thức:</span>
+                <span class="text-slate-900 font-semibold" id="raw-year-procure">-</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-500">Kết nối hiện tại:</span>
+                <span class="text-slate-900 font-semibold" id="raw-conn">-</span>
+              </div>
+            </div>
+
+            <!-- Cột K: Lý do báo cáo -->
+            <div class="p-3 rounded-xl bg-amber-50 border border-amber-200 space-y-1">
+              <span class="text-[10px] font-bold text-amber-900 font-mono flex items-center gap-1.5">
+                <i class="fa-solid fa-comment-dots text-amber-600"></i>
+                LÝ DO CHƯA CHIA SẺ / GIẢI TRÌNH BÁO CÁO (CỘT K):
               </span>
-              <i id="acc-raw-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform"></i>
-            </button>
-            <div id="acc-raw" class="accordion-content p-3 pt-0 text-xs text-slate-700 space-y-2 border-t border-slate-100 bg-slate-50/40">
-              <!-- Raw items -->
-              <div class="space-y-1 pt-2">
-                <div class="flex justify-between border-b border-slate-200/60 pb-1">
-                  <span class="text-slate-500">Tên miền / URL:</span>
-                  <span class="font-mono text-slate-900 font-bold" id="raw-url">-</span>
-                </div>
-                <div class="flex justify-between border-b border-slate-200/60 pb-1">
-                  <span class="text-slate-500">Đơn vị trực tiếp:</span>
-                  <span class="text-slate-900 font-semibold" id="raw-subdept">-</span>
-                </div>
-                <div class="flex justify-between border-b border-slate-200/60 pb-1">
-                  <span class="text-slate-500">Năm &amp; Hình thức:</span>
-                  <span class="text-slate-900 font-semibold" id="raw-year-procure">-</span>
-                </div>
-                <div class="flex justify-between border-b border-slate-200/60 pb-1">
-                  <span class="text-slate-500">Kết nối hiện tại:</span>
-                  <span class="text-slate-900 font-semibold" id="raw-conn">-</span>
-                </div>
-              </div>
-              <div class="p-2 rounded bg-amber-50 border border-amber-200 space-y-0.5">
-                <span class="text-[10px] font-bold text-amber-900 font-mono block">LÝ DO BÁO CÁO (CỘT K):</span>
-                <p class="text-xs text-amber-950 font-medium italic leading-relaxed" id="raw-reason">-</p>
-              </div>
-              <div class="p-2 rounded bg-blue-50 border border-blue-200 space-y-0.5">
-                <span class="text-[10px] font-bold text-blue-900 font-mono block">HÌNH THỨC CHIA SẺ DỮ LIỆU (CỘT L):</span>
-                <p class="text-xs text-blue-950 font-medium leading-relaxed whitespace-pre-line" id="raw-share-method">-</p>
-              </div>
+              <p class="text-xs text-amber-950 font-medium leading-relaxed italic" id="raw-reason">-</p>
             </div>
-          </div>
 
-          <!-- Accordion 2: Danh mục dữ liệu chia sẻ -->
-          <div class="rounded-lg border border-slate-200 bg-white overflow-hidden">
-            <button onclick="toggleAccordion('acc-catalog')" class="w-full p-2.5 text-left text-xs font-bold text-slate-700 hover:bg-slate-50 flex items-center justify-between transition">
-              <span class="flex items-center gap-1.5">
-                <i class="fa-solid fa-boxes-stacked text-blue-500"></i>
-                <span>Danh Mục Dữ Liệu Có Thể Chia Sẻ</span>
-                <span class="text-[10px] font-mono text-blue-700 font-bold" id="hud-catalog-count"></span>
+            <!-- Cột L: Hình thức chia sẻ -->
+            <div class="p-3 rounded-xl bg-blue-50 border border-blue-200 space-y-1">
+              <span class="text-[10px] font-bold text-blue-900 font-mono flex items-center gap-1.5">
+                <i class="fa-solid fa-network-wired text-blue-600"></i>
+                HÌNH THỨC CHIA SẺ DỮ LIỆU (CỘT L):
               </span>
-              <i id="acc-catalog-icon" class="fa-solid fa-chevron-down text-slate-400 text-xs transition-transform"></i>
-            </button>
-            <div id="acc-catalog" class="accordion-content p-3 pt-0 border-t border-slate-100 bg-slate-50/40">
-              <div id="hud-catalog-list" class="max-h-48 overflow-y-auto custom-scrollbar text-xs text-slate-800 space-y-1 pt-2">
-                <!-- Injected items -->
+              <p class="text-xs text-blue-950 font-medium leading-relaxed whitespace-pre-line" id="raw-share-method">-</p>
+            </div>
+
+            <!-- Cột N & O: Danh mục dữ liệu -->
+            <div class="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs space-y-1">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] font-bold text-slate-700 font-mono flex items-center gap-1.5">
+                  <i class="fa-solid fa-boxes-stacked text-purple-600"></i>
+                  DANH MỤC DỮ LIỆU CHIA SẺ (CỘT N &amp; O):
+                </span>
+                <span id="hud-catalog-count" class="text-[10px] font-mono text-purple-700 font-bold"></span>
+              </div>
+              <div id="hud-catalog-list" class="max-h-36 overflow-y-auto custom-scrollbar text-xs text-slate-700 space-y-1 pt-1">
               </div>
             </div>
+
           </div>
+
         </div>
-
-
 
       </div>
 
-      <!-- HUD Bottom Action -->
-      <div class="p-3.5 border-t border-slate-200 bg-white">
-        <button onclick="approveDirectly()" class="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs shadow-sm transition flex items-center justify-center gap-2">
-          <i class="fa-solid fa-stamp text-sm"></i>
-          <span>PHÊ DUYỆT CHỦ TRƯƠNG ĐẦU TƯ</span>
-        </button>
+      <!-- MODAL FOOTER -->
+      <div class="px-6 py-3.5 border-t border-slate-200 bg-white flex items-center justify-between shrink-0">
+        <div class="text-[11px] text-slate-400 font-mono">
+          Nhấn phím <kbd class="px-1.5 py-0.5 bg-slate-100 border border-slate-300 rounded text-slate-700">ESC</kbd> hoặc click bên ngoài để đóng
+        </div>
+        <div class="flex items-center gap-2.5">
+          <button onclick="closeDetailModal()" class="px-4 py-2 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 text-xs font-bold transition cursor-pointer">
+            Đóng
+          </button>
+          <button onclick="approveDirectly()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+            <i class="fa-solid fa-stamp"></i>
+            <span>Phê Duyệt Chủ Trương</span>
+          </button>
+        </div>
       </div>
 
-    </section>
-
-  </main>
+    </div>
+  </div>
 
   <!-- ============================================================ -->
     <!-- ============================================================ -->
@@ -683,11 +719,19 @@
 
         return `
           <div onclick="selectCheckItem('${obj.object_id}')" 
+               ondblclick="openDetailModal()"
                class="system-card p-2.5 rounded-xl border border-slate-200 bg-white cursor-pointer ${isSelected ? 'active-selected' : ''}">
             
             <div class="flex items-center justify-between mb-1">
               <span class="font-mono text-[10px] font-bold text-slate-500">${obj.object_id}</span>
-              ${badgeHtml}
+              <div class="flex items-center gap-1.5">
+                ${badgeHtml}
+                <button onclick="event.stopPropagation(); selectCheckItem('${obj.object_id}'); openDetailModal();" 
+                        class="p-1 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded text-[10px] transition cursor-pointer" 
+                        title="Xem hồ sơ &amp; thẩm định chi tiết">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </button>
+              </div>
             </div>
 
             <h4 class="text-xs font-bold text-slate-900 line-clamp-2 leading-snug">
@@ -726,9 +770,48 @@
       const obj = allObjects.find(o => o.object_id === id);
       if (!obj) return;
 
-      // 1. Cập nhật Cơ quan chủ trì (Top Canvas Box)
       const deptName = obj.col_dept || obj.managing_dept;
       const subDeptName = obj.col_sub_dept || obj.sub_dept || deptName;
+
+      // 0. Cập nhật Executive Action Bar (Top Canvas)
+      const isDup = (obj.audit_dup_status === 'CanhBaoTrungLap');
+      const isUpg = (obj.audit_upg_status === 'CanNangCap');
+      const isMerge = (obj.audit_merge_status === 'CanHopNhat');
+      const isRetire = (obj.audit_retire_status === 'KienNghiLoaiBo');
+
+      let badgeHtml = '';
+      if (isDup) {
+        badgeHtml = '<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200">🔴 Trùng lặp</span>';
+      } else if (isRetire) {
+        badgeHtml = '<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-300">⚫ Loại bỏ</span>';
+      } else if (isMerge) {
+        badgeHtml = '<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200">🟣 Cần gộp</span>';
+      } else if (isUpg) {
+        badgeHtml = '<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">🔵 Nâng cấp</span>';
+      } else {
+        badgeHtml = '<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">🟢 Đang dùng</span>';
+      }
+
+      const hId = document.getElementById('canvas-header-id');
+      if (hId) hId.textContent = obj.object_id;
+      const hStt = document.getElementById('canvas-header-stt');
+      if (hStt) hStt.textContent = obj.col_stt ? `STT: ${obj.col_stt}` : 'Hồ sơ';
+      const hBadge = document.getElementById('canvas-header-badge');
+      if (hBadge) hBadge.innerHTML = badgeHtml;
+
+      let layerLabel = 'Lớp 3: Ứng dụng nghiệp vụ';
+      if (obj.arch_layer && obj.arch_layer.includes('Lop1')) layerLabel = 'Lớp 1: Hạ tầng số & ANM';
+      else if (obj.arch_layer && obj.arch_layer.includes('Lop2')) layerLabel = 'Lớp 2: Dữ liệu & Nền tảng lõi';
+      else if (obj.arch_layer && obj.arch_layer.includes('Lop4')) layerLabel = 'Lớp 4: Kênh trải nghiệm số';
+      const hLayer = document.getElementById('canvas-header-layer');
+      if (hLayer) hLayer.textContent = layerLabel;
+
+      const hTitle = document.getElementById('canvas-header-title');
+      if (hTitle) hTitle.textContent = obj.col_name || obj.object_name;
+      const hDept = document.getElementById('canvas-header-dept');
+      if (hDept) hDept.textContent = `${deptName} • ${subDeptName}`;
+
+      // 1. Cập nhật Cơ quan chủ trì (Top Canvas Box)
       document.getElementById('canvas-managing-name').textContent = deptName;
       document.getElementById('canvas-managing-code').textContent = obj.object_id;
       document.getElementById('canvas-sub-dept').textContent = `Đơn vị trực tiếp: ${subDeptName}`;
@@ -804,6 +887,21 @@
       const isUpg = (obj.audit_upg_status === 'CanNangCap');
       const isMerge = (obj.audit_merge_status === 'CanHopNhat');
       const isRetire = (obj.audit_retire_status === 'KienNghiLoaiBo');
+
+      let badgeHtml = '';
+      if (isDup) {
+        badgeHtml = '<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 border border-rose-200">🔴 Trùng lặp</span>';
+      } else if (isRetire) {
+        badgeHtml = '<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-300">⚫ Loại bỏ</span>';
+      } else if (isMerge) {
+        badgeHtml = '<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200">🟣 Cần gộp</span>';
+      } else if (isUpg) {
+        badgeHtml = '<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">🔵 Nâng cấp</span>';
+      } else {
+        badgeHtml = '<span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">🟢 Đang dùng</span>';
+      }
+      const mBadge = document.getElementById('modal-status-badge');
+      if (mBadge) mBadge.innerHTML = badgeHtml;
 
       // 1. HERO BANNER
       const heroBanner = document.getElementById('hud-hero-banner');
@@ -942,6 +1040,33 @@
         }
       }
     }
+
+    // MODAL POPUP CONTROLLERS
+    function openDetailModal() {
+      const modal = document.getElementById('system-detail-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeDetailModal() {
+      const modal = document.getElementById('system-detail-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    }
+
+    // Keyboard ESC & backdrop click listeners
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeDetailModal();
+    });
+
+    document.addEventListener('click', (e) => {
+      const modal = document.getElementById('system-detail-modal');
+      if (modal && e.target === modal) closeDetailModal();
+    });
   </script>
 </body>
 </html>
