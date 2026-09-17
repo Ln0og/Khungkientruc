@@ -345,45 +345,63 @@ class ArchitectureRequestHandler(http.server.SimpleHTTPRequestHandler):
 
             hs_code = data.get('clearance_code') or f"HS-2026-{datetime.now().strftime('%m%d%H%M')}"
             life_status = data.get('lifecycle_status', 'ChoLanhDaoDuyet')
-            cur.execute("""
-                INSERT OR REPLACE INTO province_arch_objects 
-                (object_id, object_name, managing_dept, arch_layer, sub_category, deployment_scope, lifecycle_status, action_plan, proof_document_url, clearance_code)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
-            """, (
-                obj_id,
-                data.get('object_name', ''),
-                data.get('managing_dept', 'Sở chuyên ngành'),
-                data.get('arch_layer', 'Lop3_UngDung'),
-                data.get('sub_category', None),
-                data.get('deployment_scope', 'DungChung_ToanTinh'),
-                life_status,
-                data.get('action_plan', 'TiepTuc'),
-                data.get('proof_document_url', 'Tờ trình đề xuất'),
-                hs_code
-            ))
+            cur.execute("SELECT 1 FROM province_arch_objects WHERE object_id = ?", (obj_id,))
+            exists = cur.fetchone()
+            if exists:
+                set_clauses = []
+                params = []
+                for k, v in data.items():
+                    if k != 'object_id':
+                        set_clauses.append(f"{k} = ?")
+                        params.append(v)
+                if set_clauses:
+                    params.append(obj_id)
+                    cur.execute(f"UPDATE province_arch_objects SET {', '.join(set_clauses)} WHERE object_id = ?", params)
+            else:
+                hs_code = data.get('clearance_code') or f"HS-2026-{datetime.now().strftime('%m%d%H%M')}"
+                life_status = data.get('lifecycle_status', 'ChoLanhDaoDuyet')
+                cur.execute("""
+                    INSERT INTO province_arch_objects 
+                    (object_id, object_name, managing_dept, arch_layer, sub_category, deployment_scope, lifecycle_status, action_plan, proof_document_url, clearance_code, leadership_directive)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+                """, (
+                    obj_id,
+                    data.get('object_name', ''),
+                    data.get('managing_dept', 'Sở chuyên ngành'),
+                    data.get('arch_layer', 'Lop3_UngDung'),
+                    data.get('sub_category', None),
+                    data.get('deployment_scope', 'DungChung_ToanTinh'),
+                    life_status,
+                    data.get('action_plan', 'TiepTuc'),
+                    data.get('proof_document_url', 'Tờ trình đề xuất'),
+                    hs_code,
+                    data.get('leadership_directive', '')
+                ))
             conn.commit()
             conn.close()
 
             # Live sync to SQL Server (ProvinceArch)
-            sync_sqlserver("""
-                IF EXISTS (SELECT 1 FROM province_arch_objects WHERE object_id = ?)
-                    UPDATE province_arch_objects 
-                    SET object_name=?, managing_dept=?, arch_layer=?, sub_category=?, deployment_scope=?, lifecycle_status=?, action_plan=?, proof_document_url=? 
-                    WHERE object_id=?
-                ELSE
+            if exists:
+                sql_sets = []
+                sql_params = []
+                for k, v in data.items():
+                    if k != 'object_id':
+                        sql_sets.append(f"{k} = ?")
+                        sql_params.append(v)
+                if sql_sets:
+                    sql_params.append(obj_id)
+                    sync_sqlserver(f"UPDATE province_arch_objects SET {', '.join(sql_sets)} WHERE object_id = ?", sql_params)
+            else:
+                sync_sqlserver("""
                     INSERT INTO province_arch_objects 
-                    (object_id, object_name, managing_dept, arch_layer, sub_category, deployment_scope, lifecycle_status, action_plan, proof_document_url) 
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """, (
-                obj_id,
-                data.get('object_name', ''), data.get('managing_dept', 'Sở chuyên ngành'), data.get('arch_layer', 'Lop3_UngDung'),
-                data.get('sub_category', None), data.get('deployment_scope', 'DungChung_ToanTinh'), data.get('lifecycle_status', 'ChoThamDinh'),
-                data.get('action_plan', 'TiepTuc'), data.get('proof_document_url', 'Văn bản số hóa'), obj_id,
-                obj_id,
-                data.get('object_name', ''), data.get('managing_dept', 'Sở chuyên ngành'), data.get('arch_layer', 'Lop3_UngDung'),
-                data.get('sub_category', None), data.get('deployment_scope', 'DungChung_ToanTinh'), data.get('lifecycle_status', 'ChoThamDinh'),
-                data.get('action_plan', 'TiepTuc'), data.get('proof_document_url', 'Văn bản số hóa')
-            ))
+                    (object_id, object_name, managing_dept, arch_layer, sub_category, deployment_scope, lifecycle_status, action_plan, proof_document_url, clearance_code, leadership_directive)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """, (
+                    obj_id, data.get('object_name', ''), data.get('managing_dept', 'Sở chuyên ngành'), data.get('arch_layer', 'Lop3_UngDung'),
+                    data.get('sub_category', None), data.get('deployment_scope', 'DungChung_ToanTinh'), data.get('lifecycle_status', 'ChoThamDinh'),
+                    data.get('action_plan', 'TiepTuc'), data.get('proof_document_url', 'Văn bản số hóa'), data.get('clearance_code', f"HS-{obj_id}"),
+                    data.get('leadership_directive', '')
+                ))
 
             self._send_json({"success": True, "object_id": obj_id, "message": "Đã lưu thành công đối tượng kiến trúc vào CSDL!"})
             return
