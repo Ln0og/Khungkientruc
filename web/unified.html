@@ -57,6 +57,41 @@
       header, #panel-selector, .no-print { display: none !important; }
       #panel-canvas, #panel-hud { width: 100% !important; }
     }
+
+    /* Cố định kích thước 3 phân vùng chuẩn xác */
+    #panel-selector {
+      width: 320px !important;
+      min-width: 320px !important;
+      max-width: 330px !important;
+      flex: 0 0 320px !important;
+    }
+    #panel-canvas {
+      flex: 1 1 0% !important;
+      min-width: 0 !important;
+      overflow-x: hidden !important;
+    }
+    #panel-hud {
+      width: 380px !important;
+      min-width: 380px !important;
+      max-width: 390px !important;
+      flex: 0 0 380px !important;
+    }
+
+    .line-clamp-1 {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      word-break: break-word;
+    }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      word-break: break-word;
+    }
+
   </style>
 </head>
 <body class="h-screen flex flex-col overflow-hidden bg-slate-50 text-slate-900">
@@ -106,7 +141,7 @@
     <!-- ------------------------------------------------------------ -->
     <!-- PANEL 1: CHECKLIST DANH MỤC PHẦN MỀM & WEBSITE (310px)       -->
     <!-- ------------------------------------------------------------ -->
-    <section id="panel-selector" class="w-76 lg:w-84 bg-white border-r border-slate-200 flex flex-col shrink-0 z-10 shadow-xs">
+    <section id="panel-selector" class="bg-white border-r border-slate-200 flex flex-col shrink-0 z-10 shadow-xs">
       
       <!-- Panel Header & Compact Search -->
       <div class="p-2.5 border-b border-slate-200 space-y-2 bg-slate-50/50">
@@ -190,7 +225,7 @@
     <!-- ------------------------------------------------------------ -->
     <!-- PANEL 2: BỘ KHUNG KIẾN TRÚC TOÀN TỈNH (GỌN GÀNG, SÁNG RÕ)    -->
     <!-- ------------------------------------------------------------ -->
-    <section id="panel-canvas" class="flex-1 flex flex-col blueprint-grid relative overflow-y-auto p-3.5 custom-scrollbar">
+    <section id="panel-canvas" class="flex-1 min-w-0 flex flex-col blueprint-grid relative overflow-y-auto p-3.5 custom-scrollbar">
       
       <!-- Canvas Header Bar -->
       <div class="flex items-center justify-between mb-2 z-10">
@@ -377,7 +412,7 @@
     <!-- ------------------------------------------------------------ -->
     <!-- PANEL 3: BỘ 4 CÂU HỎI THẨM TRA CHIẾN LƯỢC LÃNH ĐẠO (390px)   -->
     <!-- ------------------------------------------------------------ -->
-    <section id="panel-hud" class="w-84 lg:w-96 bg-white border-l border-slate-200 flex flex-col shrink-0 z-10 shadow-xs">
+    <section id="panel-hud" class="bg-white border-l border-slate-200 flex flex-col shrink-0 z-10 shadow-xs">
       
       <!-- HUD Header -->
       <div class="p-3 border-b border-slate-200 bg-slate-50/70 space-y-0.5">
