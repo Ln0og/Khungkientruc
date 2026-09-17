@@ -7,48 +7,49 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
     
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #0b0f19;
-      color: #e2e8f0;
+      background-color: #f8fafc;
+      color: #0f172a;
     }
     .heading-font {
       font-family: 'Space Grotesk', sans-serif;
     }
     
-    .custom-scrollbar::-webkit-scrollbar { width: 5px; height: 5px; }
-    .custom-scrollbar::-webkit-scrollbar-track { background: #0f172a; }
-    .custom-scrollbar::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #475569; }
+    .custom-scrollbar::-webkit-scrollbar { width: 4px; height: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
-    /* Canvas Grid Background */
+    /* Light Blueprint Grid */
     .blueprint-grid {
-      background-size: 30px 30px;
+      background-color: #f8fafc;
+      background-size: 24px 24px;
       background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        linear-gradient(to right, rgba(148, 163, 184, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(148, 163, 184, 0.15) 1px, transparent 1px);
     }
 
-    /* Glowing Focus Effect */
+    /* Active Highlight Tier */
     .active-tier {
-      border-color: #38bdf8 !important;
-      background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(99, 102, 241, 0.12)) !important;
-      box-shadow: 0 0 20px rgba(56, 189, 248, 0.2), inset 0 0 10px rgba(56, 189, 248, 0.1) !important;
-      transition: all 0.2s ease;
+      border-color: #0284c7 !important;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%) !important;
+      box-shadow: 0 4px 12px -2px rgba(2, 132, 199, 0.18), 0 0 0 1px #0284c7 !important;
     }
 
     .check-item {
-      transition: all 0.2s ease;
+      transition: all 0.15s ease;
     }
     .check-item:hover {
-      background: rgba(30, 41, 59, 0.9);
-      border-color: #475569;
+      background: #f1f5f9;
+      border-color: #94a3b8;
     }
     .check-item.active {
-      background: rgba(14, 165, 233, 0.12);
+      background: #f0f9ff;
       border-color: #0284c7;
+      box-shadow: 0 0 0 1px #0284c7;
     }
 
     @media print {
@@ -58,26 +59,26 @@
     }
   </style>
 </head>
-<body class="h-screen flex flex-col overflow-hidden bg-slate-950 text-slate-100">
+<body class="h-screen flex flex-col overflow-hidden bg-slate-50 text-slate-900">
 
   <!-- ============================================================ -->
-  <!-- TOP BAR: BẢN ĐỒ KHUNG KIẾN TRÚC SỐ SỐNG (PHƯƠNG ÁN B)          -->
+  <!-- TOP BAR: THANH TIÊU ĐỀ HÀNH CHÍNH GỌN GÀNG (LIGHT THEME)    -->
   <!-- ============================================================ -->
-  <header class="bg-slate-900/90 backdrop-blur border-b border-slate-800 text-white px-6 py-2.5 flex items-center justify-between shrink-0 shadow-lg z-30">
-    <div class="flex items-center gap-3.5">
-      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-purple-600 flex items-center justify-center font-black text-xl text-white shadow-cyan-500/20 shadow-lg border border-cyan-300/30">
+  <header class="bg-white border-b border-slate-200 text-slate-800 px-4 py-1.5 flex items-center justify-between shrink-0 shadow-xs z-30">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-700 via-indigo-600 to-sky-500 flex items-center justify-center font-black text-sm text-white shadow-sm shrink-0">
         <i class="fa-solid fa-network-wired"></i>
       </div>
       <div>
         <div class="flex items-center gap-2">
-          <span class="text-[10px] px-2.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 font-extrabold border border-cyan-400/30 uppercase tracking-widest flex items-center gap-1">
-            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> PHƯƠNG ÁN B: MÀN HÌNH KHUNG KIẾN TRÚC SỐNG
+          <span class="text-[9px] px-2 py-0.2 rounded-full bg-blue-50 text-blue-700 font-extrabold border border-blue-200 uppercase tracking-wider flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span> PHƯƠNG ÁN B: MÀN HÌNH KHUNG KIẾN TRÚC SỐNG
           </span>
-          <span class="text-xs text-slate-400 font-mono">QĐ 1425/QĐ-TTg &amp; NĐ 278/2025/NĐ-CP</span>
+          <span class="text-[11px] text-slate-500 font-mono">QĐ 1425/QĐ-TTg &bull; NĐ 278/2025/NĐ-CP</span>
         </div>
-        <h1 class="text-sm md:text-base font-extrabold tracking-tight text-white flex items-center gap-2.5 heading-font">
-          BẢN ĐỒ KHUNG KIẾN TRÚC &amp; BỘ QUÉT ĐỐI SOÁT HỆ THỐNG TOÀN TỈNH
-          <span class="text-[11px] font-normal text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/40 hidden lg:inline-flex items-center gap-1 font-mono">
+        <h1 class="text-xs md:text-sm font-extrabold tracking-tight text-slate-900 flex items-center gap-2 heading-font">
+          BẢN ĐỒ KHUNG KIẾN TRÚC &amp; BỘ ĐỐI SOÁT HỆ THỐNG TOÀN TỈNH
+          <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.2 rounded border border-emerald-200 hidden lg:inline-flex items-center gap-1 font-mono">
             <i class="fa-solid fa-users"></i> Lãnh đạo &amp; Sở Ngành cùng xem
           </span>
         </h1>
@@ -85,14 +86,14 @@
     </div>
 
     <!-- Right Header Controls -->
-    <div class="flex items-center gap-3">
-      <div class="hidden xl:flex items-center gap-2 text-xs font-mono text-slate-300 bg-slate-950/80 px-3 py-1.5 rounded-lg border border-slate-800">
-        <span class="text-slate-500">CSDL Tổng Hợp:</span>
-        <b class="text-cyan-400" id="top-total-badge">646 Hệ thống &amp; CSDL</b>
+    <div class="flex items-center gap-2.5">
+      <div class="hidden xl:flex items-center gap-1.5 text-[11px] font-mono text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200">
+        <span class="text-slate-400">CSDL Tổng Hợp:</span>
+        <b class="text-blue-700" id="top-total-badge">646 Hệ thống &amp; CSDL</b>
       </div>
-      <button onclick="window.print()" class="py-1.5 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs transition flex items-center gap-1.5 border border-slate-700 shadow-sm">
-        <i class="fa-solid fa-print text-cyan-400"></i>
-        <span>In Khung Thẩm Tra</span>
+      <button onclick="window.print()" class="py-1 px-2.5 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-[11px] transition flex items-center gap-1.5 border border-slate-300 shadow-2xs">
+        <i class="fa-solid fa-print text-blue-600"></i>
+        <span>In Phiếu Thẩm Tra</span>
       </button>
     </div>
   </header>
@@ -103,272 +104,269 @@
   <main class="flex-1 flex overflow-hidden relative">
 
     <!-- ------------------------------------------------------------ -->
-    <!-- PANEL 1: CHECKLIST DANH MỤC PHẦN MỀM & WEBSITE (330px)       -->
+    <!-- PANEL 1: CHECKLIST DANH MỤC PHẦN MỀM & WEBSITE (310px)       -->
     <!-- ------------------------------------------------------------ -->
-    <section id="panel-selector" class="w-80 lg:w-92 bg-slate-900/95 border-r border-slate-800 flex flex-col shrink-0 z-10 shadow-xl">
+    <section id="panel-selector" class="w-76 lg:w-84 bg-white border-r border-slate-200 flex flex-col shrink-0 z-10 shadow-xs">
       
-      <!-- Panel Header & Quick Search -->
-      <div class="p-3.5 border-b border-slate-800 space-y-2.5 bg-slate-900/60">
+      <!-- Panel Header & Compact Search -->
+      <div class="p-2.5 border-b border-slate-200 space-y-2 bg-slate-50/50">
         <div class="flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <i class="fa-solid fa-list-check text-cyan-400 text-sm"></i>
-            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200 heading-font">
+          <div class="flex items-center gap-1.5">
+            <i class="fa-solid fa-list-check text-blue-600 text-xs"></i>
+            <h3 class="text-[11px] font-bold uppercase tracking-wider text-slate-800 heading-font">
               DANH MỤC PHẦN MỀM &amp; WEB
             </h3>
           </div>
-          <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-800 text-cyan-400 border border-slate-700" id="item-counter-badge">
+          <span class="text-[10px] font-mono font-bold px-1.5 py-0.2 rounded bg-slate-100 text-blue-700 border border-slate-200" id="item-counter-badge">
             Đang tải...
           </span>
         </div>
 
         <!-- Filter by Department (Dropdown) -->
         <div>
-          <label class="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">
-            <i class="fa-solid fa-filter text-cyan-400 mr-1"></i> Chọn Cơ quan / Sở / Ngành:
-          </label>
-          <select id="deptSelect" onchange="filterChecklist()" class="w-full py-1.5 px-2 text-xs bg-slate-950 border border-slate-700 rounded-lg text-slate-100 font-medium focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500">
-            <option value="ALL">-- Tất cả Sở Ban Ngành & CSDL (Toàn tỉnh & QG) --</option>
-            <option value="Sở Nông nghiệp và Môi trường" selected>🌾 Sở Nông nghiệp và Môi trường (42 hệ thống)</option>
-            <option value="Sở Khoa học và Công nghệ">🔬 Sở Khoa học và Công nghệ (19 hệ thống)</option>
-            <option value="Sở Xây dựng">🏗️ Sở Xây dựng (13 hệ thống)</option>
-            <option value="Sở Văn hóa, Thể thao và Du lịch">🎭 Sở Văn hóa, Thể thao và Du lịch (10 hệ thống)</option>
-            <option value="Sở Y tế">🏥 Sở Y tế (10 hệ thống)</option>
-            <option value="Sở Nội vụ">👥 Sở Nội vụ (9 hệ thống)</option>
-            <option value="Sở Giáo dục và Đào tạo">🎓 Sở Giáo dục và Đào tạo (9 hệ thống)</option>
-            <option value="Sở Công thương">⚡ Sở Công thương (8 hệ thống)</option>
-            <option value="Sở Tài chính">💰 Sở Tài chính (7 hệ thống)</option>
-            <option value="Sở Tư pháp">⚖️ Sở Tư pháp (5 hệ thống)</option>
-            <option value="Công an tỉnh">🛡️ Công an tỉnh (4 hệ thống)</option>
-            <option value="Văn phòng UBND tỉnh">🏛️ Văn phòng UBND tỉnh (4 hệ thống)</option>
-            <option value="Ban quản lý khu kinh tế">🏭 Ban quản lý khu kinh tế (1 hệ thống)</option>
-            <option value="Sở Dân tộc và Tôn giáo">🤝 Sở Dân tộc và Tôn giáo (1 hệ thống)</option>
-            <option value="CSDL_QUOC_GIA">🌐 CSDL Trọng Điểm Quốc Gia (NĐ 278) (235 CSDL)</option>
-            <option value="CORE_FOUNDATION">⚙️ Nền Tảng Dùng Chung Cốt Lõi (32 nền tảng)</option>
+          <select id="deptSelect" onchange="filterChecklist()" class="w-full py-1 px-2 text-[11px] bg-white border border-slate-300 rounded-md text-slate-800 font-medium focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 shadow-2xs">
+            <option value="ALL">-- Tất cả Sở Ban Ngành &amp; CSDL (Toàn tỉnh) --</option>
+            <option value="Sở Nông nghiệp và Môi trường" selected>🌾 Sở Nông nghiệp và Môi trường (42)</option>
+            <option value="Sở Khoa học và Công nghệ">🔬 Sở Khoa học và Công nghệ (19)</option>
+            <option value="Sở Xây dựng">🏗️ Sở Xây dựng (13)</option>
+            <option value="Sở Văn hóa, Thể thao và Du lịch">🎭 Sở Văn hóa, Thể thao &amp; Du lịch (10)</option>
+            <option value="Sở Y tế">🏥 Sở Y tế (10)</option>
+            <option value="Sở Nội vụ">👥 Sở Nội vụ (9)</option>
+            <option value="Sở Giáo dục và Đào tạo">🎓 Sở Giáo dục và Đào tạo (9)</option>
+            <option value="Sở Công thương">⚡ Sở Công thương (8)</option>
+            <option value="Sở Tài chính">💰 Sở Tài chính (7)</option>
+            <option value="Sở Tư pháp">⚖️ Sở Tư pháp (5)</option>
+            <option value="Công an tỉnh">🛡️ Công an tỉnh (4)</option>
+            <option value="Văn phòng UBND tỉnh">🏛️ Văn phòng UBND tỉnh (4)</option>
+            <option value="Ban quản lý khu kinh tế">🏭 Ban QL khu kinh tế (1)</option>
+            <option value="Sở Dân tộc và Tôn giáo">🤝 Sở Dân tộc &amp; Tôn giáo (1)</option>
+            <option value="CSDL_QUOC_GIA">🌐 CSDL Quốc Gia (NĐ 278) (235)</option>
+            <option value="CORE_FOUNDATION">⚙️ Nền Tảng Dùng Chung Cốt Lõi (32)</option>
           </select>
         </div>
 
         <!-- Search Input -->
         <div class="relative">
-          <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-500 text-xs"></i>
-          <input type="text" id="checkSearchInput" oninput="filterChecklist()" placeholder="Tìm tên phần mềm, tên miền, CSDL..." class="w-full pl-8 pr-7 py-1.5 text-xs bg-slate-950 border border-slate-700 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 font-medium">
-          <button onclick="clearSearch()" id="clearBtn" class="hidden absolute right-2.5 top-2 text-slate-500 hover:text-slate-300 text-xs">
+          <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-2 text-slate-400 text-[10px]"></i>
+          <input type="text" id="checkSearchInput" oninput="filterChecklist()" placeholder="Tìm tên phần mềm, tên miền, CSDL..." class="w-full pl-7 pr-6 py-1 text-[11px] bg-white border border-slate-300 rounded-md text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 font-medium shadow-2xs">
+          <button onclick="clearSearch()" id="clearBtn" class="hidden absolute right-2 top-1.5 text-slate-400 hover:text-slate-600 text-[10px]">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
 
         <!-- Quick Filter Chips -->
-        <div class="grid grid-cols-4 gap-1 text-[10px] font-semibold">
-          <button onclick="setFilterGroup('ALL')" id="fg-ALL" class="py-1 px-1 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-bold text-center truncate">
+        <div class="grid grid-cols-4 gap-1 text-[9px] font-semibold">
+          <button onclick="setFilterGroup('ALL')" id="fg-ALL" class="py-0.5 px-1 rounded bg-blue-100 text-blue-800 border border-blue-300 font-bold text-center truncate">
             Tất cả
           </button>
-          <button onclick="setFilterGroup('WARN')" id="fg-WARN" class="py-1 px-1 rounded bg-slate-800 text-rose-400 hover:bg-slate-700 border border-slate-700 text-center truncate" title="Hệ thống có cảnh báo trùng lặp hoặc cần loại bỏ">
+          <button onclick="setFilterGroup('WARN')" id="fg-WARN" class="py-0.5 px-1 rounded bg-white text-rose-700 hover:bg-rose-50 border border-slate-200 text-center truncate" title="Cảnh báo trùng lặp hoặc cần loại bỏ">
             🔴 Trùng lặp
           </button>
-          <button onclick="setFilterGroup('UPG')" id="fg-UPG" class="py-1 px-1 rounded bg-slate-800 text-blue-400 hover:bg-slate-700 border border-slate-700 text-center truncate" title="Hệ thống cần nâng cấp API">
+          <button onclick="setFilterGroup('UPG')" id="fg-UPG" class="py-0.5 px-1 rounded bg-white text-blue-700 hover:bg-blue-50 border border-slate-200 text-center truncate" title="Cần nâng cấp API">
             🔵 Nâng cấp
           </button>
-          <button onclick="setFilterGroup('MERGE')" id="fg-MERGE" class="py-1 px-1 rounded bg-slate-800 text-purple-400 hover:bg-slate-700 border border-slate-700 text-center truncate" title="Hệ thống cần hợp nhất / gom gộp">
+          <button onclick="setFilterGroup('MERGE')" id="fg-MERGE" class="py-0.5 px-1 rounded bg-white text-purple-700 hover:bg-purple-50 border border-slate-200 text-center truncate" title="Cần hợp nhất / gom gộp">
             🟣 Cần gộp
           </button>
         </div>
       </div>
 
       <!-- Checklist Items Container -->
-      <div id="checklist-container" class="flex-1 overflow-y-auto p-2.5 space-y-1.5 custom-scrollbar">
+      <div id="checklist-container" class="flex-1 overflow-y-auto p-2 space-y-1.5 custom-scrollbar bg-slate-50/30">
         <!-- Generated dynamically -->
       </div>
 
       <!-- Footer Info -->
-      <div class="p-2.5 border-t border-slate-800 bg-slate-950/80 text-[11px] text-slate-400 flex items-center justify-between">
-        <span class="flex items-center gap-1 text-cyan-400 font-mono text-[10px]">
-          <i class="fa-solid fa-circle-info"></i> Click để quét &amp; đối soát
+      <div class="p-2 border-t border-slate-200 bg-white text-[10px] text-slate-500 flex items-center justify-between">
+        <span class="flex items-center gap-1 text-blue-700 font-mono">
+          <i class="fa-solid fa-circle-info"></i> Click xem đối soát
         </span>
-        <button onclick="resetChecklist()" class="text-slate-400 hover:text-white underline text-[10px]">
+        <button onclick="resetChecklist()" class="text-slate-500 hover:text-blue-700 underline">
           Mặc định SNNMT
         </button>
       </div>
     </section>
 
     <!-- ------------------------------------------------------------ -->
-    <!-- PANEL 2: BỘ KHUNG KIẾN TRÚC TOÀN TỈNH (VISUAL CANVAS)        -->
+    <!-- PANEL 2: BỘ KHUNG KIẾN TRÚC TOÀN TỈNH (GỌN GÀNG, SÁNG RÕ)    -->
     <!-- ------------------------------------------------------------ -->
-    <section id="panel-canvas" class="flex-1 flex flex-col bg-slate-950 blueprint-grid relative overflow-hidden p-5 custom-scrollbar">
+    <section id="panel-canvas" class="flex-1 flex flex-col blueprint-grid relative overflow-y-auto p-3.5 custom-scrollbar">
       
       <!-- Canvas Header Bar -->
-      <div class="flex items-center justify-between mb-3 z-10">
-        <div class="flex items-center gap-2.5">
-          <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
-          <h2 class="text-xs uppercase font-extrabold tracking-wider text-cyan-300 heading-font flex items-center gap-2">
-            <i class="fa-solid fa-cubes-stacked"></i> BỘ KHUNG KIẾN TRÚC CHÍNH QUYỀN SỐ (HÌNH 8 - QĐ 1425)
+      <div class="flex items-center justify-between mb-2 z-10">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+          <h2 class="text-[11px] uppercase font-extrabold tracking-wider text-slate-800 heading-font flex items-center gap-1.5">
+            <i class="fa-solid fa-cubes-stacked text-blue-600"></i> BỘ KHUNG KIẾN TRÚC CHÍNH QUYỀN SỐ (HÌNH 8 - QĐ 1425)
           </h2>
         </div>
-        <div class="flex items-center gap-3 text-xs">
-          <span class="text-slate-400 font-mono text-[11px]">ĐỐI SOÁT KIẾN TRÚC:</span>
-          <span id="scanner-state-badge" class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 font-mono font-bold text-[10px] flex items-center gap-1.5">
-            <i class="fa-solid fa-circle-check text-emerald-400"></i> ĐỐI SOÁT THỰC TẾ THEO NĐ 278
+        <div class="flex items-center gap-2 text-[10px]">
+          <span class="text-slate-500 font-mono">ĐỐI SOÁT KIẾN TRÚC:</span>
+          <span id="scanner-state-badge" class="px-2 py-0.2 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-300 font-mono font-bold flex items-center gap-1">
+            <i class="fa-solid fa-circle-check text-emerald-600"></i> CHUẨN HÓA THEO NĐ 278 &amp; QĐ 1425
           </span>
         </div>
       </div>
 
-      <!-- ARCHITECTURE FRAMEWORK VERTICAL STACK (THE CORE "BỘ KHUNG") -->
-      <div class="flex-1 flex flex-col justify-between space-y-3 z-10 max-w-4xl mx-auto w-full">
+      <!-- ARCHITECTURE FRAMEWORK VERTICAL STACK (COMPACT 4-TIER) -->
+      <div class="flex-1 flex flex-col justify-between space-y-2 z-10 max-w-4xl mx-auto w-full">
 
         <!-- ══════════════════════════════════════════════════════════ -->
         <!-- KHUNG ĐỈNH: CƠ QUAN CHỦ QUẢN (CHỦ TRÌ VẬN HÀNH)          -->
         <!-- ══════════════════════════════════════════════════════════ -->
-        <div id="canvas-source-box" class="p-3.5 rounded-xl border-2 border-indigo-500 bg-indigo-950/40 backdrop-blur flex items-center justify-between transition-all shadow-xl">
-          <div class="flex items-center gap-3.5 flex-1 min-w-0 mr-3">
-            <div class="w-11 h-11 rounded-xl bg-indigo-600 border border-indigo-300 text-white flex items-center justify-center text-xl font-black shadow-lg shrink-0">
+        <div id="canvas-source-box" class="p-2.5 rounded-lg border-2 border-indigo-200 bg-white shadow-xs flex items-center justify-between transition-all">
+          <div class="flex items-center gap-2.5 flex-1 min-w-0 mr-2">
+            <div class="w-9 h-9 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-base font-black shadow-xs shrink-0">
               <i class="fa-solid fa-building-flag"></i>
             </div>
             <div class="min-w-0 flex-1">
-              <div class="text-[11px] font-black uppercase tracking-wider text-indigo-300 font-mono flex items-center gap-2">
+              <div class="text-[10px] font-black uppercase tracking-wider text-indigo-700 font-mono flex items-center gap-1.5">
                 <span>🏛️ ĐÂU LÀ CƠ QUAN CHỦ QUẢN (CHỦ TRÌ VẬN HÀNH)?</span>
-                <span class="px-2 py-0.5 rounded bg-indigo-500/30 border border-indigo-400 text-indigo-200 text-[10px] font-bold">ĐẦU VÀO DỮ LIỆU</span>
+                <span class="px-1.5 py-0.2 rounded bg-indigo-50 border border-indigo-200 text-indigo-700 text-[9px] font-bold">ĐẦU VÀO</span>
               </div>
-              <h3 class="text-base font-black text-white mt-0.5 truncate" id="canvas-managing-name">
+              <h3 class="text-sm font-extrabold text-slate-900 truncate" id="canvas-managing-name">
                 Sở Nông nghiệp và Môi trường
               </h3>
-              <div class="flex flex-wrap items-center gap-3 text-xs text-slate-300 font-medium mt-1">
-                <span id="canvas-sub-dept" class="text-indigo-200 flex items-center gap-1">
-                  <i class="fa-solid fa-sitemap text-indigo-400"></i> Đơn vị trực tiếp: <b class="text-white">Chi cục Trồng trọt và BVTV</b>
+              <div class="flex flex-wrap items-center gap-2 text-[11px] text-slate-600 font-medium">
+                <span id="canvas-sub-dept" class="flex items-center gap-1">
+                  <i class="fa-solid fa-sitemap text-indigo-500"></i> Trực tiếp: <b class="text-slate-800">Chi cục Trồng trọt và BVTV</b>
                 </span>
-                <span class="text-slate-600">|</span>
-                <span id="canvas-domain-url" class="text-cyan-300 flex items-center gap-1 truncate font-mono text-[11px]">
-                  <i class="fa-solid fa-globe text-cyan-400"></i> https://vinhlong-nongnghiep.vnpt.vn/
+                <span class="text-slate-300">&bull;</span>
+                <span id="canvas-domain-url" class="text-blue-700 flex items-center gap-1 truncate font-mono text-[10px]">
+                  <i class="fa-solid fa-globe text-blue-500"></i> https://vinhlong-nongnghiep.vnpt.vn/
                 </span>
               </div>
             </div>
           </div>
-          <div class="text-right shrink-0 font-mono text-[11px] text-indigo-300">
-            <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-indigo-500/50">Mã Đơn Vị: <b class="text-white text-xs" id="canvas-managing-code">SNNMT</b></span>
+          <div class="text-right shrink-0 font-mono text-[10px]">
+            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-700 font-bold">Mã: <b class="text-indigo-700" id="canvas-managing-code">SNNMT-01</b></span>
           </div>
         </div>
 
-        <!-- DÒNG KẾT NỐI XUỐNG BỘ KHUNG 4 TẦNG -->
-        <div class="flex items-center justify-center py-0.5">
-          <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-cyan-500/40 text-[10px] text-cyan-300 font-mono shadow-md">
-            <i class="fa-solid fa-arrow-down text-cyan-400"></i>
-            <span>ĐỊNH VỊ VÀ ĐỐI SOÁT VÀO BỘ KHUNG KIẾN TRÚC HÌNH 8</span>
-            <i class="fa-solid fa-arrow-down text-cyan-400"></i>
+        <!-- MŨI TÊN LIÊN THÔNG GỌN -->
+        <div class="flex items-center justify-center py-0">
+          <div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white border border-slate-200 text-[9px] text-slate-600 font-mono shadow-2xs">
+            <i class="fa-solid fa-arrow-down text-blue-600"></i>
+            <span>ĐỊNH VỊ VÀ ĐỐI SOÁT VÀO BỘ KHUNG 4 LỚP KIẾN TRÚC</span>
+            <i class="fa-solid fa-arrow-down text-blue-600"></i>
           </div>
         </div>
 
         <!-- ══════════════════════════════════════════════════════════ -->
         <!-- KHUNG TRỌNG TÂM: 4 LỚP KIẾN TRÚC TOÀN TỈNH (HÌNH 8)       -->
         <!-- ══════════════════════════════════════════════════════════ -->
-        <div class="flex-1 flex flex-col justify-between space-y-2">
+        <div class="flex-1 flex flex-col justify-between space-y-1.5">
 
           <!-- LỚP 4: KÊNH TƯƠNG TÁC & ĐO LƯỜNG HIỆU QUẢ -->
-          <div id="canvas-tier-4" class="p-3 rounded-xl border border-slate-800 bg-slate-900/60 transition-all duration-300 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <div class="w-7 h-7 rounded-lg bg-purple-500/20 border border-purple-500/40 text-purple-300 flex items-center justify-center font-mono font-bold text-xs">
+          <div id="canvas-tier-4" class="p-2.5 rounded-lg border border-slate-200 bg-white transition-all duration-200 flex items-center justify-between shadow-2xs">
+            <div class="flex items-center gap-2.5">
+              <div class="w-6 h-6 rounded bg-purple-100 border border-purple-200 text-purple-700 flex items-center justify-center font-mono font-bold text-xs">
                 4
               </div>
               <div>
-                <div class="flex items-center gap-2">
-                  <span class="text-xs font-black text-slate-200 heading-font">LỚP 4: KÊNH GIAO TIẾP &amp; ĐO LƯỜNG CĐS</span>
-                  <span class="text-[10px] font-mono text-purple-400">(QĐ 1425)</span>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs font-bold text-slate-900 heading-font">LỚP 4: KÊNH GIAO TIẾP &amp; ĐO LƯỜNG CĐS</span>
+                  <span class="text-[9px] font-mono text-purple-700 font-semibold">(QĐ 1425)</span>
                 </div>
-                <p class="text-[11px] text-slate-400">Cổng TTĐT Tỉnh &amp; Xã/Phường, App Smart Vĩnh Long, App Nông Nghiệp, Kênh Tiếp Dân 1022, DTI Tỉnh</p>
+                <p class="text-[10px] text-slate-500">Cổng TTĐT Tỉnh &amp; Xã/Phường, App Smart Vĩnh Long, App Nông Nghiệp, Kênh Tiếp Dân 1022, DTI Tỉnh</p>
               </div>
             </div>
-            <div class="tier-indicator text-right">
-              <span class="text-[10px] font-mono text-slate-500 px-2 py-0.5 rounded bg-slate-950 border border-slate-800">Chờ quét...</span>
+            <div class="tier-indicator text-right shrink-0">
+              <span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-slate-50 border border-slate-200">Chờ quét...</span>
             </div>
           </div>
 
           <!-- LỚP 3: ỨNG DỤNG & DỊCH VỤ (CHÍNH QUYỀN SỐ & KINH TẾ/XÃ HỘI SỐ) -->
-          <div id="canvas-tier-3" class="p-3 rounded-xl border border-slate-800 bg-slate-900/60 transition-all duration-300 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <div class="w-7 h-7 rounded-lg bg-blue-500/20 border border-blue-500/40 text-blue-300 flex items-center justify-center font-mono font-bold text-xs">
+          <div id="canvas-tier-3" class="p-2.5 rounded-lg border border-slate-200 bg-white transition-all duration-200 flex items-center justify-between shadow-2xs">
+            <div class="flex items-center gap-2.5">
+              <div class="w-6 h-6 rounded bg-blue-100 border border-blue-200 text-blue-700 flex items-center justify-center font-mono font-bold text-xs">
                 3
               </div>
               <div>
-                <div class="flex items-center gap-2">
-                  <span class="text-xs font-black text-slate-200 heading-font">LỚP 3: ỨNG DỤNG &amp; DỊCH VỤ NGHIỆP VỤ</span>
-                  <span class="text-[10px] font-mono text-blue-400">(Chính quyền số &amp; Kinh tế số)</span>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs font-bold text-slate-900 heading-font">LỚP 3: ỨNG DỤNG &amp; DỊCH VỤ NGHIỆP VỤ</span>
+                  <span class="text-[9px] font-mono text-blue-700 font-semibold">(Chính quyền số &amp; Kinh tế số)</span>
                 </div>
-                <p class="text-[11px] text-slate-400">Kiểm dịch thú y, Sàn NSVL, VMS Tàu cá, VnFishbase, QLVBĐH, TTHC Một cửa, ATVSTP, Ngân sách, Giáo dục...</p>
+                <p class="text-[10px] text-slate-500">Kiểm dịch thú y, Sàn NSVL, VMS Tàu cá, VnFishbase, QLVBĐH, TTHC Một cửa, ATVSTP, Ngân sách, Giáo dục...</p>
               </div>
             </div>
-            <div class="tier-indicator text-right">
-              <span class="text-[10px] font-mono text-slate-500 px-2 py-0.5 rounded bg-slate-950 border border-slate-800">Chờ quét...</span>
+            <div class="tier-indicator text-right shrink-0">
+              <span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-slate-50 border border-slate-200">Chờ quét...</span>
             </div>
           </div>
 
           <!-- LỚP 2: DỮ LIỆU & NỀN TẢNG LÕI DÙNG CHUNG (LGSP / NDXP) -->
-          <div id="canvas-tier-2" class="p-3 rounded-xl border border-slate-800 bg-slate-900/60 transition-all duration-300 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <div class="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 flex items-center justify-center font-mono font-bold text-xs">
+          <div id="canvas-tier-2" class="p-2.5 rounded-lg border border-slate-200 bg-white transition-all duration-200 flex items-center justify-between shadow-2xs">
+            <div class="flex items-center gap-2.5">
+              <div class="w-6 h-6 rounded bg-emerald-100 border border-emerald-200 text-emerald-700 flex items-center justify-center font-mono font-bold text-xs">
                 2
               </div>
               <div>
-                <div class="flex items-center gap-2">
-                  <span class="text-xs font-black text-slate-200 heading-font">LỚP 2: DỮ LIỆU &amp; NỀN TẢNG LÕI (TRỤC LGSP / CSDL ĐẤT ĐAI VBDLIS / NĐ 278)</span>
-                  <span class="text-[10px] font-mono text-emerald-400">(Nền tảng chia sẻ dùng chung)</span>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs font-bold text-slate-900 heading-font">LỚP 2: DỮ LIỆU &amp; NỀN TẢNG LÕI DÙNG CHUNG (LGSP / NDXP)</span>
+                  <span class="text-[9px] font-mono text-emerald-700 font-semibold">(Nền tảng chia sẻ)</span>
                 </div>
-                <p class="text-[11px] text-slate-400">Kho dữ liệu dùng chung (T-DL-01), Trục LGSP (T-DL-03), CSDL Đất đai VBDLIS, WebGIS Nông nghiệp, 235 CSDL Quốc gia</p>
+                <p class="text-[10px] text-slate-500">Kho dữ liệu dùng chung (T-DL-01), Trục LGSP (T-DL-03), CSDL Đất đai VBDLIS, WebGIS Nông nghiệp, 235 CSDL Quốc gia</p>
               </div>
             </div>
-            <div class="tier-indicator text-right">
-              <span class="text-[10px] font-mono text-slate-500 px-2 py-0.5 rounded bg-slate-950 border border-slate-800">Chờ quét...</span>
+            <div class="tier-indicator text-right shrink-0">
+              <span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-slate-50 border border-slate-200">Chờ quét...</span>
             </div>
           </div>
 
           <!-- LỚP 1: HẠ TẦNG SỐ & AN NINH MẠNG -->
-          <div id="canvas-tier-1" class="p-3 rounded-xl border border-slate-800 bg-slate-900/60 transition-all duration-300 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-              <div class="w-7 h-7 rounded-lg bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 flex items-center justify-center font-mono font-bold text-xs">
+          <div id="canvas-tier-1" class="p-2.5 rounded-lg border border-slate-200 bg-white transition-all duration-200 flex items-center justify-between shadow-2xs">
+            <div class="flex items-center gap-2.5">
+              <div class="w-6 h-6 rounded bg-sky-100 border border-sky-200 text-sky-700 flex items-center justify-center font-mono font-bold text-xs">
                 1
               </div>
               <div>
-                <div class="flex items-center gap-2">
-                  <span class="text-xs font-black text-slate-200 heading-font">LỚP 1: HẠ TẦNG SỐ &amp; AN NINH MẠNG TỈNH</span>
-                  <span class="text-[10px] font-mono text-cyan-400">(Cloud / Mạng TSLCD / SOC / Quan trắc)</span>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-xs font-bold text-slate-900 heading-font">LỚP 1: HẠ TẦNG SỐ &amp; AN NINH MẠNG TỈNH</span>
+                  <span class="text-[9px] font-mono text-sky-700 font-semibold">(Cloud / TSLCD / SOC / IoT)</span>
                 </div>
-                <p class="text-[11px] text-slate-400">Trạm quan trắc khí tượng thủy văn VnEmisoft, Giám sát khai thác cát, Môi trường tự động, SOC Tỉnh, Cloud Tỉnh</p>
+                <p class="text-[10px] text-slate-500">Trạm quan trắc VnEmisoft, Giám sát cát, Môi trường tự động, SOC Tỉnh, Cloud tập trung, Mạng TSLCD</p>
               </div>
             </div>
-            <div class="tier-indicator text-right">
-              <span class="text-[10px] font-mono text-slate-500 px-2 py-0.5 rounded bg-slate-950 border border-slate-800">Chờ quét...</span>
+            <div class="tier-indicator text-right shrink-0">
+              <span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-slate-50 border border-slate-200">Chờ quét...</span>
             </div>
           </div>
 
         </div>
 
-        <!-- DÒNG DẪN DỮ LIỆU VỀ ĐÍCH TIẾP NHẬN CUỐI -->
-        <div class="flex items-center justify-center py-0.5">
-          <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-teal-500/40 text-[10px] text-teal-300 font-mono shadow-md">
-            <i class="fa-solid fa-arrow-down text-teal-400"></i>
+        <!-- MŨI TÊN DẪN DỮ LIỆU ĐẾN TIẾP NHẬN CUỐI -->
+        <div class="flex items-center justify-center py-0">
+          <div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white border border-teal-200 text-[9px] text-teal-800 font-mono shadow-2xs">
+            <i class="fa-solid fa-arrow-down text-teal-600"></i>
             <span id="canvas-pipeline-protocol">KẾT NỐI QUA TRỤC LGSP / MẠNG TSLCD VỀ ĐẦU MỐI TIẾP NHẬN</span>
-            <i class="fa-solid fa-arrow-down text-teal-400"></i>
+            <i class="fa-solid fa-arrow-down text-teal-600"></i>
           </div>
         </div>
 
         <!-- ══════════════════════════════════════════════════════════ -->
-        <!-- KHUNG ĐÁY: CƠ QUAN TIẾP NHẬN ĐẦU CUỐI (ĐÍCH THỤ HƯỞNG)   -->
+        <!-- KHUNG ĐÁY: CƠ QUAN TIẾP NHẬN ĐẦU CUỐI (ĐÍCH DỮ LIỆU)      -->
         <!-- ══════════════════════════════════════════════════════════ -->
-        <div id="canvas-target-box" class="p-3.5 rounded-xl border-2 border-teal-500 bg-teal-950/40 backdrop-blur flex items-center justify-between transition-all shadow-xl">
-          <div class="flex items-center gap-3.5 flex-1 min-w-0 mr-3">
-            <div class="w-11 h-11 rounded-xl bg-teal-600 border border-teal-300 text-white flex items-center justify-center text-xl font-black shadow-lg shrink-0">
+        <div id="canvas-target-box" class="p-2.5 rounded-lg border-2 border-teal-200 bg-white shadow-xs flex items-center justify-between transition-all">
+          <div class="flex items-center gap-2.5 flex-1 min-w-0 mr-2">
+            <div class="w-9 h-9 rounded-lg bg-teal-600 text-white flex items-center justify-center text-base font-black shadow-xs shrink-0">
               <i class="fa-solid fa-bullseye"></i>
             </div>
             <div class="min-w-0 flex-1">
-              <div class="text-[11px] font-black uppercase tracking-wider text-teal-300 font-mono flex items-center gap-2">
+              <div class="text-[10px] font-black uppercase tracking-wider text-teal-700 font-mono flex items-center gap-1.5">
                 <span>🎯 ĐÂU LÀ CƠ QUAN TIẾP NHẬN ĐẦU CUỐI (ĐÍCH DỮ LIỆU)?</span>
-                <span class="px-2 py-0.5 rounded bg-teal-500/30 border border-teal-400 text-teal-200 text-[10px] font-bold" id="canvas-target-type">Trục LGSP / Data Lake</span>
+                <span class="px-1.5 py-0.2 rounded bg-teal-50 border border-teal-200 text-teal-800 text-[9px] font-bold" id="canvas-target-type">Trục LGSP / Data Lake</span>
               </div>
-              <h3 class="text-base font-black text-white mt-0.5 truncate" id="canvas-target-name">
+              <h3 class="text-sm font-extrabold text-slate-900 truncate" id="canvas-target-name">
                 Kho Dữ Liệu Dùng Chung Cấp Tỉnh (T-DL-01 - Sở TT&amp;TT)
               </h3>
-              <p class="text-xs text-slate-300 font-medium truncate" id="canvas-target-desc">
+              <p class="text-[11px] text-slate-600 font-medium truncate" id="canvas-target-desc">
                 Dữ liệu được thu gom, chuẩn hóa và lưu trữ tại Kho dữ liệu dùng chung tỉnh để phục vụ chia sẻ liên ngành và báo cáo điều hành IOC.
               </p>
             </div>
           </div>
-          <div class="text-right shrink-0 font-mono text-[11px] text-teal-300">
-            <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-teal-500/50">Mã Đích: <b class="text-white text-xs" id="canvas-target-code">T-DL-01</b></span>
+          <div class="text-right shrink-0 font-mono text-[10px]">
+            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-700 font-bold">Mã: <b class="text-teal-700" id="canvas-target-code">T-DL-01</b></span>
           </div>
         </div>
 
@@ -377,72 +375,72 @@
     </section>
 
     <!-- ------------------------------------------------------------ -->
-    <!-- PANEL 3: BỘ 4 CÂU HỎI THẨM TRA CHIẾN LƯỢC LÃNH ĐẠO (420px)   -->
+    <!-- PANEL 3: BỘ 4 CÂU HỎI THẨM TRA CHIẾN LƯỢC LÃNH ĐẠO (390px)   -->
     <!-- ------------------------------------------------------------ -->
-    <section id="panel-hud" class="w-96 lg:w-[420px] bg-slate-900 border-l border-slate-800 flex flex-col shrink-0 z-10 shadow-2xl">
+    <section id="panel-hud" class="w-84 lg:w-96 bg-white border-l border-slate-200 flex flex-col shrink-0 z-10 shadow-xs">
       
       <!-- HUD Header -->
-      <div class="p-4 border-b border-slate-800 bg-slate-900/90 space-y-1">
+      <div class="p-3 border-b border-slate-200 bg-slate-50/70 space-y-0.5">
         <div class="flex items-center justify-between">
-          <div class="flex items-center gap-2 text-amber-400">
-            <i class="fa-solid fa-gavel text-sm"></i>
-            <h3 class="text-xs font-black uppercase tracking-wider text-amber-300 heading-font">
-              TRẠM THẨM TRA CHIẾN LƯỢC LÃNH ĐẠO
+          <div class="flex items-center gap-1.5 text-amber-700">
+            <i class="fa-solid fa-gavel text-xs"></i>
+            <h3 class="text-[11px] font-black uppercase tracking-wider text-amber-800 heading-font">
+              TRẠM THẨM TRA CHIẾN LƯỢC
             </h3>
           </div>
-          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 font-black" id="hud-system-id">
+          <span class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-white text-slate-700 border border-slate-200 font-black" id="hud-system-id">
             SNNMT-01
           </span>
         </div>
-        <h4 class="text-sm font-extrabold text-white line-clamp-2 heading-font" id="hud-system-name">
+        <h4 class="text-xs font-extrabold text-slate-900 line-clamp-1 heading-font" id="hud-system-name">
           Phần mềm quản lý vùng canh tác &amp; bản đồ nông nghiệp
         </h4>
       </div>
 
       <!-- HUD Scrollable Body: ĐỊNH DANH 2 ĐẦU MỐI & BỘ 4 CÂU HỎI THẨM TRA -->
-      <div class="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar">
+      <div class="flex-1 overflow-y-auto p-3 space-y-2.5 custom-scrollbar bg-white">
 
         <!-- ══════════════════════════════════════════════════════════ -->
         <!-- ĐÂU LÀ CƠ QUAN CHỦ QUẢN & CƠ QUAN TIẾP NHẬN ĐẦU CUỐI?      -->
         <!-- ══════════════════════════════════════════════════════════ -->
-        <div class="p-3 rounded-xl border-2 border-amber-500/60 bg-slate-950 space-y-2.5 shadow-xl">
-          <div class="text-[11px] uppercase font-black tracking-wider text-amber-400 font-mono flex items-center justify-between border-b border-slate-800 pb-1.5">
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-arrows-split-up-and-left text-amber-400"></i> ĐỊNH DANH 2 ĐẦU MỐI CHỦ TRÌ &amp; TIẾP NHẬN</span>
-            <span class="text-emerald-400 font-bold text-[10px] bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/40">● ĐÃ XÁC ĐỊNH</span>
+        <div class="p-2.5 rounded-lg border border-amber-300 bg-amber-50/40 space-y-2 shadow-2xs">
+          <div class="text-[10px] uppercase font-black tracking-wider text-amber-800 font-mono flex items-center justify-between border-b border-amber-200/80 pb-1">
+            <span class="flex items-center gap-1"><i class="fa-solid fa-arrows-split-up-and-left text-amber-600"></i> 2 ĐẦU MỐI: CHỦ TRÌ &amp; TIẾP NHẬN</span>
+            <span class="text-emerald-700 font-bold text-[9px] bg-emerald-100 px-1.5 py-0.2 rounded border border-emerald-200">ĐÃ XÁC ĐỊNH</span>
           </div>
 
           <!-- 1. ĐÂU LÀ CƠ QUAN CHỦ QUẢN (CHỦ TRÌ) -->
-          <div class="p-2.5 rounded-lg bg-indigo-950/50 border border-indigo-500/50 space-y-1">
-            <div class="text-[10px] font-black uppercase tracking-wider text-indigo-300 font-mono flex items-center justify-between">
-              <span class="flex items-center gap-1.5"><i class="fa-solid fa-building-flag text-indigo-400"></i> 1. ĐÂU LÀ CƠ QUAN CHỦ QUẢN (CHỦ TRÌ)?</span>
-              <span class="px-2 py-0.2 rounded bg-indigo-500/30 text-indigo-200 text-[9px] font-bold">ĐẦU VÀO</span>
+          <div class="p-2 rounded-md bg-white border border-indigo-200 space-y-0.5 shadow-2xs">
+            <div class="text-[9px] font-black uppercase tracking-wider text-indigo-700 font-mono flex items-center justify-between">
+              <span class="flex items-center gap-1"><i class="fa-solid fa-building-flag text-indigo-500"></i> 1. CƠ QUAN CHỦ QUẢN (CHỦ TRÌ):</span>
+              <span class="px-1 py-0.1 rounded bg-indigo-50 text-indigo-700 text-[8px] font-bold">ĐẦU VÀO</span>
             </div>
-            <div class="text-xs font-black text-white" id="hud-managing-dept">
+            <div class="text-[11px] font-bold text-slate-900" id="hud-managing-dept">
               Sở Nông nghiệp và Môi trường
             </div>
-            <p class="text-[11px] text-slate-300 font-medium" id="hud-sub-dept-text">
-              Đơn vị trực tiếp quản lý: Chi cục Trồng trọt và Bảo vệ thực vật
+            <p class="text-[10px] text-slate-500" id="hud-sub-dept-text">
+              Đơn vị quản lý: Chi cục Trồng trọt và Bảo vệ thực vật
             </p>
           </div>
 
           <!-- MŨI TÊN CHỈ HƯỚNG LIÊN THÔNG -->
-          <div class="text-center text-slate-400 text-[10px] font-mono flex items-center justify-center gap-2 py-0.5">
-            <i class="fa-solid fa-arrow-down text-cyan-400"></i>
+          <div class="text-center text-slate-500 text-[9px] font-mono flex items-center justify-center gap-1 py-0">
+            <i class="fa-solid fa-arrow-down text-blue-600"></i>
             <span id="hud-channel-label">Liên thông qua API RESTful / Trục LGSP</span>
-            <i class="fa-solid fa-arrow-down text-cyan-400"></i>
+            <i class="fa-solid fa-arrow-down text-blue-600"></i>
           </div>
 
           <!-- 2. ĐÂU LÀ CƠ QUAN TIẾP NHẬN ĐẦU CUỐI -->
-          <div class="p-2.5 rounded-lg bg-teal-950/50 border border-teal-500/50 space-y-1">
-            <div class="text-[10px] font-black uppercase tracking-wider text-teal-300 font-mono flex items-center justify-between">
-              <span class="flex items-center gap-1.5"><i class="fa-solid fa-bullseye text-teal-400"></i> 2. ĐÂU LÀ CƠ QUAN TIẾP NHẬN ĐẦU CUỐI?</span>
-              <span class="px-2 py-0.2 rounded bg-teal-500/30 text-teal-200 text-[9px] font-bold">ĐẦU RA</span>
+          <div class="p-2 rounded-md bg-white border border-teal-200 space-y-0.5 shadow-2xs">
+            <div class="text-[9px] font-black uppercase tracking-wider text-teal-700 font-mono flex items-center justify-between">
+              <span class="flex items-center gap-1"><i class="fa-solid fa-bullseye text-teal-500"></i> 2. CƠ QUAN TIẾP NHẬN ĐẦU CUỐI:</span>
+              <span class="px-1 py-0.1 rounded bg-teal-50 text-teal-700 text-[8px] font-bold">ĐẦU RA</span>
             </div>
-            <div class="text-xs font-black text-white" id="hud-target-dept">
+            <div class="text-[11px] font-bold text-slate-900" id="hud-target-dept">
               Kho CSDL Dùng Chung Tỉnh (T-DL-01) &amp; Trung Tâm IOC Tỉnh (T-CQ-03)
             </div>
-            <p class="text-[11px] text-slate-300 font-medium" id="hud-target-desc">
-              Dữ liệu được thu gom, chuẩn hóa và lưu trữ tại Kho dữ liệu dùng chung tỉnh để phục vụ chia sẻ liên ngành và báo cáo điều hành IOC.
+            <p class="text-[10px] text-slate-500 truncate" id="hud-target-desc">
+              Dữ liệu được thu gom, chuẩn hóa và lưu trữ tại Kho dữ liệu dùng chung tỉnh.
             </p>
           </div>
         </div>
@@ -451,83 +449,83 @@
         <!-- BỘ 4 CÂU HỎI THẨM TRA CHIẾN LƯỢC CỐT LÕI                 -->
         <!-- ══════════════════════════════════════════════════════════ -->
         <!-- CÂU HỎI 1: CÓ TRÙNG LẶP KHÔNG? -->
-        <div id="hud-card-dup" class="p-3.5 rounded-xl border border-slate-700 bg-slate-950/80 transition-all space-y-2">
+        <div id="hud-card-dup" class="p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 transition-all space-y-1">
           <div class="flex items-center justify-between">
-            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wide flex items-center gap-1.5">
-              <span class="w-4 h-4 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center text-[10px] font-mono font-black">1</span>
+            <span class="text-[10px] font-bold text-slate-700 uppercase tracking-wide flex items-center gap-1">
+              <span class="w-3.5 h-3.5 rounded-full bg-rose-100 text-rose-700 flex items-center justify-center text-[9px] font-mono font-black">1</span>
               <span>CÓ TRÙNG LẶP KHÔNG?</span>
             </span>
-            <span id="hud-badge-dup" class="text-[11px] font-mono font-black px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
-              <i class="fa-solid fa-circle-check"></i> KHÔNG TRÙNG LẶP
+            <span id="hud-badge-dup" class="text-[9px] font-mono font-black px-2 py-0.2 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
+              <i class="fa-solid fa-circle-check text-emerald-600"></i> KHÔNG TRÙNG LẶP
             </span>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed font-medium" id="hud-text-dup">
-            Đối soát CSDL toàn tỉnh: Hệ thống giữ vị trí nguồn dữ liệu chuyên ngành duy nhất, bảo đảm tính đơn nhất (Single Source of Truth), không trùng lặp chức năng.
+          <p class="text-[11px] text-slate-700 leading-relaxed" id="hud-text-dup">
+            Đối soát CSDL toàn tỉnh: Hệ thống giữ vị trí nguồn dữ liệu chuyên ngành duy nhất, bảo đảm tính đơn nhất (Single Source of Truth).
           </p>
-          <div id="hud-dup-alert" class="hidden p-2 rounded-lg bg-rose-950/60 border border-rose-500/50 text-rose-200 text-xs font-medium space-y-1">
-            <div class="flex items-center gap-1.5 text-rose-400 font-bold">
+          <div id="hud-dup-alert" class="hidden p-1.5 rounded bg-rose-50 border border-rose-200 text-rose-800 text-[10px] font-medium">
+            <div class="flex items-center gap-1 text-rose-700 font-bold mb-0.5">
               <i class="fa-solid fa-triangle-exclamation"></i>
               <span>Cảnh báo trùng lặp:</span>
             </div>
-            <p class="text-[11px]" id="hud-dup-detail"></p>
+            <p id="hud-dup-detail"></p>
           </div>
         </div>
 
         <!-- CÂU HỎI 2: CÓ CẦN NÂNG CẤP KHÔNG? -->
-        <div id="hud-card-upg" class="p-3.5 rounded-xl border border-slate-700 bg-slate-950/80 transition-all space-y-2">
+        <div id="hud-card-upg" class="p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 transition-all space-y-1">
           <div class="flex items-center justify-between">
-            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wide flex items-center gap-1.5">
-              <span class="w-4 h-4 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-[10px] font-mono font-black">2</span>
+            <span class="text-[10px] font-bold text-slate-700 uppercase tracking-wide flex items-center gap-1">
+              <span class="w-3.5 h-3.5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-[9px] font-mono font-black">2</span>
               <span>CÓ CẦN NÂNG CẤP KHÔNG?</span>
             </span>
-            <span id="hud-badge-upg" class="text-[11px] font-mono font-black px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/40">
-              <i class="fa-solid fa-wrench"></i> CẦN NÂNG CẤP API
+            <span id="hud-badge-upg" class="text-[9px] font-mono font-black px-2 py-0.2 rounded-full bg-blue-100 text-blue-800 border border-blue-300">
+              <i class="fa-solid fa-wrench text-blue-600"></i> CẦN NÂNG CẤP API
             </span>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed font-medium" id="hud-text-upg">
+          <p class="text-[11px] text-slate-700 leading-relaxed" id="hud-text-upg">
             Cần nâng cấp chuẩn kết nối API RESTful đồng bộ về Trục LGSP tỉnh (T-DL-03) và hoàn thiện phương án an toàn thông tin theo Cấp độ 3.
           </p>
         </div>
 
         <!-- CÂU HỎI 3: CÓ CẦN GỘP KHÔNG? -->
-        <div id="hud-card-merge" class="p-3.5 rounded-xl border border-slate-700 bg-slate-950/80 transition-all space-y-2">
+        <div id="hud-card-merge" class="p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 transition-all space-y-1">
           <div class="flex items-center justify-between">
-            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wide flex items-center gap-1.5">
-              <span class="w-4 h-4 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-[10px] font-mono font-black">3</span>
+            <span class="text-[10px] font-bold text-slate-700 uppercase tracking-wide flex items-center gap-1">
+              <span class="w-3.5 h-3.5 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-[9px] font-mono font-black">3</span>
               <span>CÓ CẦN GỘP KHÔNG?</span>
             </span>
-            <span id="hud-badge-merge" class="text-[11px] font-mono font-black px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
-              <i class="fa-solid fa-cubes"></i> HỆ THỐNG ĐỘC LẬP
+            <span id="hud-badge-merge" class="text-[9px] font-mono font-black px-2 py-0.2 rounded-full bg-slate-100 text-slate-700 border border-slate-300">
+              <i class="fa-solid fa-cubes text-slate-500"></i> HỆ THỐNG ĐỘC LẬP
             </span>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed font-medium" id="hud-text-merge">
+          <p class="text-[11px] text-slate-700 leading-relaxed" id="hud-text-merge">
             Hệ thống có quy mô toàn tỉnh và tính chất chuyên sâu, không thuộc diện phải gộp. Các phân hệ cấp huyện kết nối trực tiếp vào đây.
           </p>
         </div>
 
         <!-- CÂU HỎI 4: CÓ BỊ CŨ QUÁ CẦN LOẠI BỎ KHÔNG? -->
-        <div id="hud-card-replace" class="p-3.5 rounded-xl border border-slate-700 bg-slate-950/80 transition-all space-y-2">
+        <div id="hud-card-replace" class="p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 transition-all space-y-1">
           <div class="flex items-center justify-between">
-            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wide flex items-center gap-1.5">
-              <span class="w-4 h-4 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center text-[10px] font-mono font-black">4</span>
+            <span class="text-[10px] font-bold text-slate-700 uppercase tracking-wide flex items-center gap-1">
+              <span class="w-3.5 h-3.5 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-[9px] font-mono font-black">4</span>
               <span>CÓ BỊ CŨ QUÁ LOẠI BỎ KHÔNG?</span>
             </span>
-            <span id="hud-badge-replace" class="text-[11px] font-mono font-black px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
-              <i class="fa-solid fa-shield-halved"></i> VÒNG ĐỜI AN TOÀN
+            <span id="hud-badge-replace" class="text-[9px] font-mono font-black px-2 py-0.2 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
+              <i class="fa-solid fa-shield-halved text-emerald-600"></i> VÒNG ĐỜI AN TOÀN
             </span>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed font-medium" id="hud-text-replace">
+          <p class="text-[11px] text-slate-700 leading-relaxed" id="hud-text-replace">
             Hệ thống đang trong chu kỳ bảo trì và khai thác hiệu quả giai đoạn 2026-2030, chưa thuộc diện phải thanh lý hoặc dừng hoạt động.
           </p>
         </div>
 
         <!-- Ý KIẾN CHỈ ĐẠO CỦA LÃNH ĐẠO UBND TỈNH -->
-        <div class="p-3.5 rounded-xl border border-amber-500/40 bg-amber-950/20 space-y-2">
-          <div class="flex items-center justify-between text-[11px] text-amber-300 font-extrabold font-mono">
+        <div class="p-2.5 rounded-lg border border-amber-300 bg-amber-50 space-y-1">
+          <div class="flex items-center justify-between text-[10px] text-amber-900 font-extrabold font-mono">
             <span>📝 Ý KIẾN CHỈ ĐẠO LÃNH ĐẠO:</span>
-            <span class="text-[10px] text-slate-400" id="hud-compliance-score">100% Tuân thủ NĐ 224</span>
+            <span class="text-[9px] text-emerald-700 font-bold" id="hud-compliance-score">100% Tuân thủ NĐ 278</span>
           </div>
-          <p class="text-xs text-amber-100 font-medium leading-relaxed" id="hud-directive-text">
+          <p class="text-[11px] text-amber-950 font-medium leading-relaxed" id="hud-directive-text">
             Đồng ý chủ trương giao đơn vị tiếp tục quản lý, khai thác. Bố trí kinh phí chuẩn hóa API RESTful kết nối Trục LGSP tỉnh trong năm 2026.
           </p>
         </div>
@@ -535,18 +533,18 @@
       </div>
 
       <!-- HUD Bottom Action Buttons -->
-      <div class="p-4 border-t border-slate-800 bg-slate-950/80 space-y-2">
-        <div class="flex items-center justify-between text-xs text-slate-400 font-mono">
+      <div class="p-3 border-t border-slate-200 bg-slate-50 space-y-1.5">
+        <div class="flex items-center justify-between text-[11px] text-slate-500 font-mono">
           <span>Mã Hồ Sơ Thẩm Tra:</span>
-          <b class="text-cyan-400" id="hud-ref-code">HS-2026-SNNMT-01</b>
+          <b class="text-blue-700" id="hud-ref-code">HS-2026-SNNMT-01</b>
         </div>
         <div class="grid grid-cols-2 gap-2">
-          <button onclick="approveDirectly()" class="py-2 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-1.5 border border-emerald-400/30">
+          <button onclick="approveDirectly()" class="py-1.5 px-2.5 rounded-md bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-xs transition flex items-center justify-center gap-1">
             <i class="fa-solid fa-check"></i>
             <span>Duyệt Chủ Trương</span>
           </button>
-          <button onclick="window.print()" class="py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs transition flex items-center justify-center gap-1.5 border border-slate-700">
-            <i class="fa-solid fa-file-pdf text-amber-400"></i>
+          <button onclick="window.print()" class="py-1.5 px-2.5 rounded-md bg-white hover:bg-slate-100 text-slate-700 font-bold text-xs transition flex items-center justify-center gap-1 border border-slate-300 shadow-xs">
+            <i class="fa-solid fa-file-pdf text-amber-600"></i>
             <span>Xuất Phiếu Thẩm Tra</span>
           </button>
         </div>
@@ -632,8 +630,8 @@
 
       if (filtered.length === 0) {
         container.innerHTML = `
-          <div class="p-6 text-center text-slate-500 text-xs font-mono">
-            <i class="fa-solid fa-search mb-2 text-xl text-slate-600"></i>
+          <div class="p-6 text-center text-slate-400 text-xs font-mono">
+            <i class="fa-solid fa-search mb-2 text-lg text-slate-300"></i>
             <p>Không tìm thấy phần mềm / website phù hợp</p>
           </div>
         `;
@@ -652,51 +650,51 @@
         return `
           <div onclick="selectCheckItem('${obj.object_id}')" 
                id="chk-${obj.object_id}"
-               class="check-item p-2.5 rounded-lg border border-slate-800 bg-slate-900 cursor-pointer flex items-start gap-2.5 ${isChecked ? 'active' : ''}">
+               class="check-item p-2 rounded-lg border border-slate-200 bg-white cursor-pointer flex items-start gap-2 ${isChecked ? 'active' : ''}">
             
             <!-- Custom Checkbox Indicator -->
             <input type="checkbox" 
                    ${isChecked ? 'checked' : ''} 
-                   class="mt-1 rounded bg-slate-950 border-slate-700 text-cyan-500 focus:ring-0 focus:ring-offset-0 cursor-pointer pointer-events-none">
+                   class="mt-0.5 rounded bg-white border-slate-300 text-blue-600 focus:ring-0 focus:ring-offset-0 cursor-pointer pointer-events-none">
 
             <div class="flex-1 min-w-0">
               <div class="flex items-center justify-between gap-1 mb-0.5">
-                <span class="font-mono text-[10px] font-black text-cyan-400">
+                <span class="font-mono text-[9px] font-black text-blue-700">
                   ${obj.object_id}
                 </span>
                 ${isDup ? `
-                  <span class="text-[9px] font-black px-1.5 py-0.2 rounded bg-rose-500/20 text-rose-400 border border-rose-500/40">
+                  <span class="text-[8px] font-black px-1.5 py-0.1 rounded bg-rose-100 text-rose-700 border border-rose-200">
                     🔴 Trùng lặp
                   </span>
                 ` : isRetire ? `
-                  <span class="text-[9px] font-black px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-400 border border-amber-500/40">
+                  <span class="text-[8px] font-black px-1.5 py-0.1 rounded bg-amber-100 text-amber-800 border border-amber-300">
                     ⚫ Loại bỏ
                   </span>
                 ` : isMerge ? `
-                  <span class="text-[9px] font-black px-1.5 py-0.2 rounded bg-purple-500/20 text-purple-400 border border-purple-500/40">
+                  <span class="text-[8px] font-black px-1.5 py-0.1 rounded bg-purple-100 text-purple-700 border border-purple-200">
                     🟣 Cần gộp
                   </span>
                 ` : isUpg ? `
-                  <span class="text-[9px] font-black px-1.5 py-0.2 rounded bg-blue-500/20 text-blue-400 border border-blue-500/40">
+                  <span class="text-[8px] font-black px-1.5 py-0.1 rounded bg-blue-100 text-blue-700 border border-blue-200">
                     🔵 Nâng cấp
                   </span>
                 ` : `
-                  <span class="text-[9px] font-medium text-emerald-400 bg-emerald-950/60 px-1.5 py-0.2 rounded border border-emerald-500/30">
+                  <span class="text-[8px] font-medium text-emerald-700 bg-emerald-50 px-1.5 py-0.1 rounded border border-emerald-200">
                     🟢 Đang dùng
                   </span>
                 `}
               </div>
 
-              <div class="text-xs font-bold text-slate-200 line-clamp-2" title="${obj.object_name}">
+              <div class="text-[11px] font-bold text-slate-800 line-clamp-2" title="${obj.object_name}">
                 ${obj.object_name}
               </div>
 
-              <div class="text-[10px] text-slate-400 truncate mt-1 flex items-center justify-between">
+              <div class="text-[9px] text-slate-500 truncate mt-0.5 flex items-center justify-between">
                 <span class="truncate">
-                  <i class="fa-solid fa-landmark text-slate-500 mr-1 text-[9px]"></i>${obj.sub_dept || obj.managing_dept}
+                  <i class="fa-solid fa-landmark text-slate-400 mr-1 text-[8px]"></i>${obj.sub_dept || obj.managing_dept}
                 </span>
                 ${hasUrl ? `
-                  <a href="${obj.domain_url}" target="_blank" onclick="event.stopPropagation()" class="text-cyan-400 hover:underline shrink-0 ml-1 text-[9px] flex items-center gap-0.5">
+                  <a href="${obj.domain_url}" target="_blank" onclick="event.stopPropagation()" class="text-blue-600 hover:underline shrink-0 ml-1 text-[8px] flex items-center gap-0.5">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> Web
                   </a>
                 ` : ''}
@@ -720,13 +718,13 @@
       // 1. Cập nhật thông tin Cơ quan chủ trì (Top Canvas Box)
       document.getElementById('canvas-managing-name').textContent = obj.managing_dept;
       document.getElementById('canvas-managing-code').textContent = obj.object_id;
-      document.getElementById('canvas-sub-dept').innerHTML = `<i class="fa-solid fa-sitemap text-indigo-400"></i> Đơn vị trực tiếp: <b class="text-white">${obj.sub_dept || obj.managing_dept}</b>`;
+      document.getElementById('canvas-sub-dept').innerHTML = `<i class="fa-solid fa-sitemap text-indigo-500"></i> Trực tiếp: <b class="text-slate-800">${obj.sub_dept || obj.managing_dept}</b>`;
       
       const hasUrl = obj.domain_url && obj.domain_url.startsWith('http');
       if (hasUrl) {
-        document.getElementById('canvas-domain-url').innerHTML = `<i class="fa-solid fa-globe text-cyan-400"></i> <a href="${obj.domain_url}" target="_blank" class="hover:underline text-cyan-300 font-mono">${obj.domain_url}</a>`;
+        document.getElementById('canvas-domain-url').innerHTML = `<i class="fa-solid fa-globe text-blue-500"></i> <a href="${obj.domain_url}" target="_blank" class="hover:underline text-blue-700 font-mono">${obj.domain_url}</a>`;
       } else {
-        document.getElementById('canvas-domain-url').innerHTML = `<i class="fa-solid fa-network-wired text-slate-400"></i> <span class="text-slate-400">${obj.domain_url || 'Hệ thống nội bộ / TSLCD'}</span>`;
+        document.getElementById('canvas-domain-url').innerHTML = `<i class="fa-solid fa-network-wired text-slate-400"></i> <span class="text-slate-500">${obj.domain_url || 'Hệ thống nội bộ / TSLCD'}</span>`;
       }
 
       // 2. Cập nhật Cơ quan tiếp nhận đầu cuối (Bottom Canvas Box)
@@ -753,8 +751,8 @@
     function highlightTier(layerKey, objName) {
       for (let i = 1; i <= 4; i++) {
         const el = document.getElementById(`canvas-tier-${i}`);
-        el.className = 'p-3 rounded-xl border border-slate-800 bg-slate-900/60 transition-all duration-300 flex items-center justify-between';
-        el.querySelector('.tier-indicator').innerHTML = '<span class="text-[10px] font-mono text-slate-500 px-2 py-0.5 rounded bg-slate-950 border border-slate-800">Chờ quét...</span>';
+        el.className = 'p-2.5 rounded-lg border border-slate-200 bg-white transition-all duration-200 flex items-center justify-between shadow-2xs';
+        el.querySelector('.tier-indicator').innerHTML = '<span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-slate-50 border border-slate-200">Chờ quét...</span>';
       }
 
       let activeNum = 3;
@@ -764,10 +762,10 @@
       else if (layerKey && layerKey.includes('Lop4')) activeNum = 4;
 
       const activeEl = document.getElementById(`canvas-tier-${activeNum}`);
-      activeEl.className = 'active-tier p-3 rounded-xl border-2 flex items-center justify-between';
+      activeEl.className = 'active-tier p-2.5 rounded-lg border-2 flex items-center justify-between';
       activeEl.querySelector('.tier-indicator').innerHTML = `
-        <span class="text-[11px] font-mono font-black text-cyan-300 px-3 py-1 rounded-full bg-cyan-950 border border-cyan-400/50 shadow-md flex items-center gap-1.5">
-          <i class="fa-solid fa-crosshairs text-cyan-400"></i> VỊ TRÍ HỆ THỐNG Ở ĐÂY
+        <span class="text-[10px] font-mono font-black text-blue-700 px-2.5 py-0.5 rounded-full bg-blue-100 border border-blue-300 shadow-xs flex items-center gap-1">
+          <i class="fa-solid fa-crosshairs text-blue-600"></i> VỊ TRÍ HỆ THỐNG Ở ĐÂY
         </span>
       `;
     }
@@ -779,7 +777,7 @@
 
       // Cập nhật rõ ràng 2 Đầu mối: Cơ quan chủ quản & Cơ quan tiếp nhận đầu cuối
       document.getElementById('hud-managing-dept').textContent = `${obj.managing_dept}`;
-      document.getElementById('hud-sub-dept-text').textContent = `Đơn vị trực tiếp quản lý: ${obj.sub_dept || obj.managing_dept}`;
+      document.getElementById('hud-sub-dept-text').textContent = `Đơn vị quản lý: ${obj.sub_dept || obj.managing_dept}`;
       document.getElementById('hud-target-dept').textContent = targetDeptName;
       document.getElementById('hud-target-desc').textContent = document.getElementById('canvas-target-desc').textContent;
       document.getElementById('hud-channel-label').textContent = `Liên thông qua ${channelProto}`;
@@ -797,16 +795,16 @@
       const detailDup = document.getElementById('hud-dup-detail');
 
       if (isDup) {
-        cardDup.className = 'p-3.5 rounded-xl border border-rose-500/50 bg-rose-950/20 transition-all space-y-2';
-        badgeDup.className = 'text-[11px] font-mono font-black px-2.5 py-0.5 rounded-full bg-rose-500/30 text-rose-300 border border-rose-500/60';
+        cardDup.className = 'p-2.5 rounded-lg border-2 border-rose-300 bg-rose-50/50 transition-all space-y-1';
+        badgeDup.className = 'text-[9px] font-mono font-black px-2 py-0.2 rounded-full bg-rose-600 text-white shadow-2xs';
         badgeDup.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> CẢNH BÁO: TRÙNG LẶP!';
         textDup.textContent = obj.audit_dup_detail;
         alertDup.classList.remove('hidden');
         detailDup.textContent = obj.audit_dup_detail;
       } else {
-        cardDup.className = 'p-3.5 rounded-xl border border-slate-700 bg-slate-950/80 transition-all space-y-2';
-        badgeDup.className = 'text-[11px] font-mono font-black px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
-        badgeDup.innerHTML = '<i class="fa-solid fa-circle-check"></i> KHÔNG TRÙNG LẶP';
+        cardDup.className = 'p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 transition-all space-y-1';
+        badgeDup.className = 'text-[9px] font-mono font-black px-2 py-0.2 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300';
+        badgeDup.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600"></i> KHÔNG TRÙNG LẶP';
         textDup.textContent = obj.audit_dup_detail || 'Đối soát CSDL toàn tỉnh: Hệ thống giữ vị trí nguồn dữ liệu chuyên ngành duy nhất, bảo đảm tính đơn nhất (Single Source of Truth).';
         alertDup.classList.add('hidden');
       }
@@ -817,14 +815,14 @@
       const textUpg = document.getElementById('hud-text-upg');
 
       if (isUpg) {
-        cardUpg.className = 'p-3.5 rounded-xl border border-blue-500/50 bg-blue-950/20 transition-all space-y-2';
-        badgeUpg.className = 'text-[11px] font-mono font-black px-2.5 py-0.5 rounded-full bg-blue-500/30 text-blue-300 border border-blue-500/50';
+        cardUpg.className = 'p-2.5 rounded-lg border-2 border-blue-300 bg-blue-50/50 transition-all space-y-1';
+        badgeUpg.className = 'text-[9px] font-mono font-black px-2 py-0.2 rounded-full bg-blue-600 text-white shadow-2xs';
         badgeUpg.innerHTML = '<i class="fa-solid fa-wrench"></i> CẦN NÂNG CẤP API';
         textUpg.textContent = obj.audit_upg_detail;
       } else {
-        cardUpg.className = 'p-3.5 rounded-xl border border-slate-700 bg-slate-950/80 transition-all space-y-2';
-        badgeUpg.className = 'text-[11px] font-mono font-black px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
-        badgeUpg.innerHTML = '<i class="fa-solid fa-check"></i> ĐANG VẬN HÀNH ỔN ĐỊNH';
+        cardUpg.className = 'p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 transition-all space-y-1';
+        badgeUpg.className = 'text-[9px] font-mono font-black px-2 py-0.2 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300';
+        badgeUpg.innerHTML = '<i class="fa-solid fa-check text-emerald-600"></i> ĐANG VẬN HÀNH ỔN ĐỊNH';
         textUpg.textContent = obj.audit_upg_detail || 'Hệ thống đang hoạt động ổn định trên nền tảng kỹ thuật hiện hành, tiếp tục duy trì bảo trì định kỳ.';
       }
 
@@ -834,14 +832,14 @@
       const textMerge = document.getElementById('hud-text-merge');
 
       if (isMerge) {
-        cardMerge.className = 'p-3.5 rounded-xl border border-purple-500/50 bg-purple-950/20 transition-all space-y-2';
-        badgeMerge.className = 'text-[11px] font-mono font-black px-2.5 py-0.5 rounded-full bg-purple-500/30 text-purple-300 border border-purple-500/50';
+        cardMerge.className = 'p-2.5 rounded-lg border-2 border-purple-300 bg-purple-50/50 transition-all space-y-1';
+        badgeMerge.className = 'text-[9px] font-mono font-black px-2 py-0.2 rounded-full bg-purple-600 text-white shadow-2xs';
         badgeMerge.innerHTML = '<i class="fa-solid fa-compress"></i> CẦN GỘP VÀO NỀN TẢNG CHUNG';
         textMerge.textContent = obj.audit_merge_detail;
       } else {
-        cardMerge.className = 'p-3.5 rounded-xl border border-slate-700 bg-slate-950/80 transition-all space-y-2';
-        badgeMerge.className = 'text-[11px] font-mono font-black px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700';
-        badgeMerge.innerHTML = '<i class="fa-solid fa-cubes"></i> HỆ THỐNG ĐỘC LẬP';
+        cardMerge.className = 'p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 transition-all space-y-1';
+        badgeMerge.className = 'text-[9px] font-mono font-black px-2 py-0.2 rounded-full bg-slate-100 text-slate-700 border border-slate-300';
+        badgeMerge.innerHTML = '<i class="fa-solid fa-cubes text-slate-500"></i> HỆ THỐNG ĐỘC LẬP';
         textMerge.textContent = obj.audit_merge_detail || 'Hệ thống có quy mô toàn tỉnh và tính chất chuyên sâu, không thuộc diện phải gom gộp.';
       }
 
@@ -851,14 +849,14 @@
       const textReplace = document.getElementById('hud-text-replace');
 
       if (isRetire) {
-        cardReplace.className = 'p-3.5 rounded-xl border border-amber-500/50 bg-amber-950/20 transition-all space-y-2';
-        badgeReplace.className = 'text-[11px] font-mono font-black px-2.5 py-0.5 rounded-full bg-amber-500/30 text-amber-300 border border-amber-500/50';
+        cardReplace.className = 'p-2.5 rounded-lg border-2 border-amber-300 bg-amber-50 transition-all space-y-1';
+        badgeReplace.className = 'text-[9px] font-mono font-black px-2 py-0.2 rounded-full bg-amber-700 text-white shadow-2xs';
         badgeReplace.innerHTML = '<i class="fa-solid fa-trash-can"></i> KIẾN NGHỊ THU HỒI / DỪNG CHI';
         textReplace.textContent = obj.audit_retire_detail;
       } else {
-        cardReplace.className = 'p-3.5 rounded-xl border border-slate-700 bg-slate-950/80 transition-all space-y-2';
-        badgeReplace.className = 'text-[11px] font-mono font-black px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40';
-        badgeReplace.innerHTML = '<i class="fa-solid fa-shield-halved"></i> VÒNG ĐỜI AN TOÀN';
+        cardReplace.className = 'p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 transition-all space-y-1';
+        badgeReplace.className = 'text-[9px] font-mono font-black px-2 py-0.2 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300';
+        badgeReplace.innerHTML = '<i class="fa-solid fa-shield-halved text-emerald-600"></i> VÒNG ĐỜI AN TOÀN';
         textReplace.textContent = obj.audit_retire_detail || 'Hệ thống trong chu kỳ khai thác tối ưu (2026-2030), được SOC tỉnh giám sát an toàn 24/7.';
       }
 
@@ -868,10 +866,10 @@
 
       if (isDup || isRetire) {
         compScore.textContent = 'Cảnh báo rà soát theo NĐ 278';
-        compScore.className = 'text-[10px] text-rose-400 font-mono font-bold';
+        compScore.className = 'text-[9px] text-rose-700 font-mono font-bold';
       } else {
-        compScore.textContent = '100% Tuân thủ NĐ 224 & NĐ 278';
-        compScore.className = 'text-[10px] text-emerald-400 font-mono font-bold';
+        compScore.textContent = '100% Tuân thủ NĐ 278';
+        compScore.className = 'text-[9px] text-emerald-700 font-mono font-bold';
       }
       dirText.textContent = obj.leadership_directive || `Đồng ý chủ trương giao ${obj.managing_dept} tiếp tục quản lý, vận hành và chuẩn hóa kết nối API về Trục LGSP tỉnh.`;
     }
@@ -886,9 +884,9 @@
         const btn = document.getElementById(`fg-${t}`);
         if (!btn) return;
         if (t === type) {
-          btn.className = 'py-1 px-1 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-bold text-center truncate';
+          btn.className = 'py-0.5 px-1 rounded bg-blue-100 text-blue-800 border border-blue-300 font-bold text-center truncate';
         } else {
-          btn.className = 'py-1 px-1 rounded bg-slate-800 text-slate-400 hover:bg-slate-700 border border-slate-700 text-center truncate';
+          btn.className = 'py-0.5 px-1 rounded bg-white text-slate-700 hover:bg-slate-50 border border-slate-200 text-center truncate';
         }
       });
       renderChecklist();
