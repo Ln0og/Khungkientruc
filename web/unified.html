@@ -192,6 +192,17 @@
         </div>
       </div>
 
+      <!-- Active Layer Filter Notification Bar -->
+      <div id="layer-filter-bar" class="hidden px-2.5 py-1.5 bg-blue-50 border-b border-blue-200 flex items-center justify-between text-[11px] text-blue-800 shrink-0">
+        <div class="flex items-center gap-1.5 font-bold truncate">
+          <i class="fa-solid fa-layer-group text-blue-600 text-[10px]"></i>
+          <span id="layer-filter-label">Đang lọc: Lớp 3</span>
+        </div>
+        <button onclick="clearLayerFilter()" class="text-[10px] font-bold text-blue-600 hover:text-blue-900 px-1.5 py-0.5 rounded bg-white border border-blue-200 shadow-2xs cursor-pointer" title="Huỷ lọc tầng">
+          ✕ Bỏ lọc
+        </button>
+      </div>
+
       <!-- Checklist Items Container -->
       <div id="checklist-container" class="flex-1 overflow-y-auto p-2 space-y-1 custom-scrollbar bg-slate-50/40">
         <!-- Injected via JS: Clean, scannable cards -->
@@ -287,17 +298,20 @@
           
           <div class="flex items-center justify-between px-1 text-[10px] font-mono text-slate-400 uppercase tracking-wider font-bold">
             <span>Khung Kiến Trúc 4 Lớp Chính Quyền Số (QĐ 1425)</span>
-            <span>Định Vị Tầng Vận Hành</span>
+            <span class="text-blue-600 font-bold"><i class="fa-solid fa-hand-pointer mr-1"></i> Nhấp vào lớp để lọc danh sách</span>
           </div>
 
           <!-- LỚP 4: KÊNH GIAO TIẾP & TRẢI NGHIỆM SỐ -->
-          <div id="canvas-tier-4" class="arch-tier p-2.5 px-3.5 rounded-xl border border-slate-200 bg-white flex items-center justify-between gap-3">
+          <div id="canvas-tier-4" onclick="toggleLayerFilter('Lop4')" class="arch-tier p-2.5 px-3.5 rounded-xl border border-slate-200 bg-white flex items-center justify-between gap-3 cursor-pointer hover:border-purple-400 hover:shadow-2xs transition group" title="Nhấn để lọc các kênh tương tác thuộc Lớp 4 (11 hệ thống)">
             <div class="flex items-center gap-2.5 min-w-0">
-              <div class="w-6 h-6 rounded-md bg-purple-100 text-purple-700 flex items-center justify-center font-mono font-black text-xs shrink-0">
+              <div class="w-6 h-6 rounded-md bg-purple-100 text-purple-700 flex items-center justify-center font-mono font-black text-xs shrink-0 group-hover:scale-105 transition">
                 4
               </div>
               <div class="min-w-0">
-                <h4 class="text-[11.5px] font-extrabold text-slate-800 uppercase leading-none">LỚP 4: KÊNH GIAO TIẾP &amp; TRẢI NGHIỆM SỐ</h4>
+                <div class="flex items-center gap-2">
+                  <h4 class="text-[11.5px] font-extrabold text-slate-800 uppercase leading-none">LỚP 4: KÊNH GIAO TIẾP &amp; TRẢI NGHIỆM SỐ</h4>
+                  <span class="text-[9px] font-mono font-bold px-1.5 py-0.25 rounded bg-purple-50 text-purple-700 border border-purple-200 shrink-0">11 Kênh</span>
+                </div>
                 <p class="text-[10px] text-slate-400 truncate mt-0.5">Cổng Thông tin điện tử &bull; App Smart Vĩnh Long &bull; Tổng đài 1022 &bull; Đánh giá DTI</p>
               </div>
             </div>
@@ -305,13 +319,16 @@
           </div>
 
           <!-- LỚP 3: ỨNG DỤNG & DỊCH VỤ NGHIỆP VỤ -->
-          <div id="canvas-tier-3" class="arch-tier p-2.5 px-3.5 rounded-xl border border-slate-200 bg-white flex items-center justify-between gap-3">
+          <div id="canvas-tier-3" onclick="toggleLayerFilter('Lop3')" class="arch-tier p-2.5 px-3.5 rounded-xl border border-slate-200 bg-white flex items-center justify-between gap-3 cursor-pointer hover:border-blue-400 hover:shadow-2xs transition group" title="Nhấn để lọc các ứng dụng nghiệp vụ thuộc Lớp 3 (118 hệ thống)">
             <div class="flex items-center gap-2.5 min-w-0">
-              <div class="w-6 h-6 rounded-md bg-blue-100 text-blue-700 flex items-center justify-center font-mono font-black text-xs shrink-0">
+              <div class="w-6 h-6 rounded-md bg-blue-100 text-blue-700 flex items-center justify-center font-mono font-black text-xs shrink-0 group-hover:scale-105 transition">
                 3
               </div>
               <div class="min-w-0">
-                <h4 class="text-[11.5px] font-extrabold text-slate-800 uppercase leading-none">LỚP 3: ỨNG DỤNG &amp; DỊCH VỤ NGHIỆP VỤ (CHÍNH QUYỀN &amp; KINH TẾ SỐ)</h4>
+                <div class="flex items-center gap-2">
+                  <h4 class="text-[11.5px] font-extrabold text-slate-800 uppercase leading-none">LỚP 3: ỨNG DỤNG &amp; DỊCH VỤ NGHIỆP VỤ (CHÍNH QUYỀN &amp; KINH TẾ SỐ)</h4>
+                  <span class="text-[9px] font-mono font-bold px-1.5 py-0.25 rounded bg-blue-50 text-blue-700 border border-blue-200 shrink-0">118 Ứng dụng</span>
+                </div>
                 <p class="text-[10px] text-slate-400 truncate mt-0.5">Một cửa điện tử &bull; QLVB &bull; Bản đồ nông nghiệp &bull; Đất đai VBDLIS &bull; Y tế &bull; Giáo dục</p>
               </div>
             </div>
@@ -319,13 +336,16 @@
           </div>
 
           <!-- LỚP 2: DỮ LIỆU & NỀN TẢNG LÕI -->
-          <div id="canvas-tier-2" class="arch-tier p-2.5 px-3.5 rounded-xl border border-slate-200 bg-white flex items-center justify-between gap-3">
+          <div id="canvas-tier-2" onclick="toggleLayerFilter('Lop2')" class="arch-tier p-2.5 px-3.5 rounded-xl border border-slate-200 bg-white flex items-center justify-between gap-3 cursor-pointer hover:border-emerald-400 hover:shadow-2xs transition group" title="Nhấn để lọc các CSDL và nền tảng dùng chung thuộc Lớp 2 (473 hệ thống)">
             <div class="flex items-center gap-2.5 min-w-0">
-              <div class="w-6 h-6 rounded-md bg-emerald-100 text-emerald-700 flex items-center justify-center font-mono font-black text-xs shrink-0">
+              <div class="w-6 h-6 rounded-md bg-emerald-100 text-emerald-700 flex items-center justify-center font-mono font-black text-xs shrink-0 group-hover:scale-105 transition">
                 2
               </div>
               <div class="min-w-0">
-                <h4 class="text-[11.5px] font-extrabold text-slate-800 uppercase leading-none">LỚP 2: DỮ LIỆU &amp; NỀN TẢNG LÕI (TRỤC XƯƠNG SỐNG TÍCH HỢP)</h4>
+                <div class="flex items-center gap-2">
+                  <h4 class="text-[11.5px] font-extrabold text-slate-800 uppercase leading-none">LỚP 2: DỮ LIỆU &amp; NỀN TẢNG LÕI (TRỤC XƯƠNG SỐNG TÍCH HỢP)</h4>
+                  <span class="text-[9px] font-mono font-bold px-1.5 py-0.25 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 shrink-0">473 CSDL &amp; Nền tảng</span>
+                </div>
                 <p class="text-[10px] text-slate-400 truncate mt-0.5">Kho CSDL Dùng Chung Tỉnh (T-DL-01) &bull; Trục Chia Sẻ LGSP/NDXP &bull; 235 CSDL Quốc Gia (NĐ 278)</p>
               </div>
             </div>
@@ -333,13 +353,16 @@
           </div>
 
           <!-- LỚP 1: HẠ TẦNG SỐ & AN TOÀN THÔNG TIN -->
-          <div id="canvas-tier-1" class="arch-tier p-2.5 px-3.5 rounded-xl border border-slate-200 bg-white flex items-center justify-between gap-3">
+          <div id="canvas-tier-1" onclick="toggleLayerFilter('Lop1')" class="arch-tier p-2.5 px-3.5 rounded-xl border border-slate-200 bg-white flex items-center justify-between gap-3 cursor-pointer hover:border-sky-400 hover:shadow-2xs transition group" title="Nhấn để lọc các hệ thống hạ tầng và an toàn mạng thuộc Lớp 1 (16 hệ thống)">
             <div class="flex items-center gap-2.5 min-w-0">
-              <div class="w-6 h-6 rounded-md bg-sky-100 text-sky-700 flex items-center justify-center font-mono font-black text-xs shrink-0">
+              <div class="w-6 h-6 rounded-md bg-sky-100 text-sky-700 flex items-center justify-center font-mono font-black text-xs shrink-0 group-hover:scale-105 transition">
                 1
               </div>
               <div class="min-w-0">
-                <h4 class="text-[11.5px] font-extrabold text-slate-800 uppercase leading-none">LỚP 1: HẠ TẦNG SỐ, MẠNG TRUYỀN DẪN &amp; AN NINH MẠNG</h4>
+                <div class="flex items-center gap-2">
+                  <h4 class="text-[11.5px] font-extrabold text-slate-800 uppercase leading-none">LỚP 1: HẠ TẦNG SỐ, MẠNG TRUYỀN DẪN &amp; AN NINH MẠNG</h4>
+                  <span class="text-[9px] font-mono font-bold px-1.5 py-0.25 rounded bg-sky-50 text-sky-700 border border-sky-200 shrink-0">16 Hạ tầng</span>
+                </div>
                 <p class="text-[10px] text-slate-400 truncate mt-0.5">Trung tâm Dữ liệu Cloud Tỉnh (T-HT-01) &bull; Mạng TSLCD 3 cấp &bull; Cảm biến IoT &bull; SOC 24/7</p>
               </div>
             </div>
@@ -570,6 +593,7 @@
     let allConnections = [];
     let selectedId = 'SNNMT-01';
     let currentFilter = 'ALL';
+    let activeLayerFilter = null;
 
     document.addEventListener('DOMContentLoaded', () => {
       loadData();
@@ -616,7 +640,29 @@
       const kw = document.getElementById('checkSearchInput').value.trim().toLowerCase();
       const selectedDept = document.getElementById('deptSelect').value;
 
+      // Cập nhật thanh thông báo Lớp đang lọc
+      const layerBar = document.getElementById('layer-filter-bar');
+      const layerLabel = document.getElementById('layer-filter-label');
+      if (layerBar && layerLabel) {
+        if (activeLayerFilter) {
+          let layerName = 'Lớp 3';
+          if (activeLayerFilter === 'Lop1') layerName = 'Lớp 1 (Hạ tầng & ANM - 16 HT)';
+          else if (activeLayerFilter === 'Lop2') layerName = 'Lớp 2 (Dữ liệu & Nền tảng - 473 CSDL)';
+          else if (activeLayerFilter === 'Lop3') layerName = 'Lớp 3 (Ứng dụng nghiệp vụ - 118 HT)';
+          else if (activeLayerFilter === 'Lop4') layerName = 'Lớp 4 (Kênh tương tác - 11 Kênh)';
+          layerLabel.textContent = `Đang lọc: ${layerName}`;
+          layerBar.classList.remove('hidden');
+        } else {
+          layerBar.classList.add('hidden');
+        }
+      }
+
       let filtered = allObjects.filter(obj => {
+        // 0. Filter by Architecture Layer (khi click vào Lớp trên bản đồ)
+        if (activeLayerFilter) {
+          if (!obj.arch_layer || !obj.arch_layer.includes(activeLayerFilter)) return false;
+        }
+
         // 1. Filter by Department dropdown
         if (selectedDept === 'CSDL_QUOC_GIA') {
           if (!obj.object_id.startsWith('QG-')) return false;
@@ -808,11 +854,39 @@
       updateHUD(obj, targetDeptName, rawProto);
     }
 
+    function toggleLayerFilter(layerKey) {
+      if (activeLayerFilter === layerKey) {
+        activeLayerFilter = null;
+      } else {
+        activeLayerFilter = layerKey;
+      }
+      renderChecklist();
+
+      // Nếu hệ thống đang chọn không thuộc tầng này, tự động chọn phần tử đầu tiên của tầng vừa lọc
+      const currentObj = allObjects.find(o => o.object_id === selectedId);
+      const isMatch = currentObj && currentObj.arch_layer && currentObj.arch_layer.includes(layerKey);
+      if (activeLayerFilter && !isMatch) {
+        const firstMatch = allObjects.find(o => o.arch_layer && o.arch_layer.includes(layerKey));
+        if (firstMatch) {
+          selectCheckItem(firstMatch.object_id);
+        }
+      } else if (currentObj) {
+        highlightTier(currentObj.arch_layer);
+      }
+    }
+
+    function clearLayerFilter() {
+      activeLayerFilter = null;
+      renderChecklist();
+      const currentObj = allObjects.find(o => o.object_id === selectedId);
+      if (currentObj) highlightTier(currentObj.arch_layer);
+    }
+
     function highlightTier(layerKey, objName, objId) {
       for (let i = 1; i <= 4; i++) {
         const el = document.getElementById(`canvas-tier-${i}`);
         if (el) {
-          el.classList.remove('active-focus');
+          el.classList.remove('active-focus', 'ring-2', 'ring-blue-500');
           const ind = el.querySelector('.tier-indicator');
           if (ind) ind.innerHTML = '';
         }
@@ -829,11 +903,37 @@
         activeEl.classList.add('active-focus');
         const ind = activeEl.querySelector('.tier-indicator');
         if (ind) {
+          const isFilteringThis = (activeLayerFilter === `Lop${activeNum}`);
+          const filterSuffix = isFilteringThis ? ' • ĐANG LỌC' : '';
           ind.innerHTML = `
-            <span class="text-[10px] font-mono font-black text-blue-700 px-2.5 py-1 rounded-full bg-blue-100 border border-blue-300 shadow-2xs flex items-center gap-1.5 shrink-0">
-              <i class="fa-solid fa-crosshairs text-blue-600"></i> VỊ TRÍ HỆ THỐNG: LỚP ${activeNum}
+            <span class="text-[9.5px] font-mono font-black text-blue-700 px-2 py-0.5 rounded-full bg-blue-100 border border-blue-300 shadow-2xs flex items-center gap-1 shrink-0">
+              <i class="fa-solid fa-crosshairs text-blue-600"></i> VỊ TRÍ: LỚP ${activeNum}${filterSuffix}
             </span>
           `;
+        }
+      }
+
+      // Đánh dấu lớp đang lọc nếu khác với vị trí của hệ thống đang chọn
+      if (activeLayerFilter) {
+        let fNum = null;
+        if (activeLayerFilter === 'Lop1') fNum = 1;
+        else if (activeLayerFilter === 'Lop2') fNum = 2;
+        else if (activeLayerFilter === 'Lop3') fNum = 3;
+        else if (activeLayerFilter === 'Lop4') fNum = 4;
+
+        if (fNum && fNum !== activeNum) {
+          const fEl = document.getElementById(`canvas-tier-${fNum}`);
+          if (fEl) {
+            fEl.classList.add('ring-2', 'ring-blue-400');
+            const ind = fEl.querySelector('.tier-indicator');
+            if (ind && !ind.innerHTML) {
+              ind.innerHTML = `
+                <span class="text-[9.5px] font-mono font-bold text-blue-600 px-2 py-0.5 rounded-full bg-blue-50 border border-blue-200 shrink-0">
+                  <i class="fa-solid fa-filter text-blue-500 mr-1"></i> ĐANG LỌC
+                </span>
+              `;
+            }
+          }
         }
       }
     }
