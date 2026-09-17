@@ -92,6 +92,44 @@
       word-break: break-word;
     }
 
+
+    /* ARCHITECTURE BLUEPRINT STYLES */
+    .arch-pillar {
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      border: 1px dashed #cbd5e1;
+    }
+    
+    .tier-box {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+    
+    .tier-box:hover {
+      border-color: #94a3b8;
+      box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .tier-box.active-tier {
+      border-color: #2563eb !important;
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%) !important;
+      box-shadow: 0 0 0 2px #3b82f6, 0 8px 20px -4px rgba(37, 99, 235, 0.2) !important;
+    }
+    
+    .tier-submodule {
+      transition: all 0.15s ease;
+    }
+    
+    .tier-submodule:hover {
+      background: #f8fafc;
+      border-color: #94a3b8;
+    }
+    
+    .tier-submodule.active-sub {
+      background: #ffffff !important;
+      border-color: #2563eb !important;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15) !important;
+    }
+
   </style>
 </head>
 <body class="h-screen flex flex-col overflow-hidden bg-slate-50 text-slate-900">
@@ -223,48 +261,56 @@
     </section>
 
     <!-- ------------------------------------------------------------ -->
-    <!-- PANEL 2: BỘ KHUNG KIẾN TRÚC TOÀN TỈNH (GỌN GÀNG, SÁNG RÕ)    -->
+        <!-- ------------------------------------------------------------ -->
+    <!-- PANEL 2: BỘ KHUNG KIẾN TRÚC TOÀN TỈNH (KIẾN TRÚC HÌNH 8 THỰC) -->
     <!-- ------------------------------------------------------------ -->
-    <section id="panel-canvas" class="flex-1 min-w-0 flex flex-col blueprint-grid relative overflow-y-auto p-3.5 custom-scrollbar">
+    <section id="panel-canvas" class="flex-1 min-w-0 flex flex-col blueprint-grid relative overflow-y-auto p-4 custom-scrollbar">
       
       <!-- Canvas Header Bar -->
-      <div class="flex items-center justify-between mb-2 z-10">
+      <div class="flex items-center justify-between mb-2.5 z-10 shrink-0">
         <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-          <h2 class="text-[11px] uppercase font-extrabold tracking-wider text-slate-800 heading-font flex items-center gap-1.5">
-            <i class="fa-solid fa-cubes-stacked text-blue-600"></i> BỘ KHUNG KIẾN TRÚC CHÍNH QUYỀN SỐ (HÌNH 8 - QĐ 1425)
-          </h2>
+          <div class="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse"></div>
+          <div>
+            <h2 class="text-xs uppercase font-extrabold tracking-wider text-slate-800 heading-font flex items-center gap-2">
+              <i class="fa-solid fa-layer-group text-blue-600"></i>
+              <span>MÔ HÌNH THAM CHIẾU KIẾN TRÚC CHÍNH QUYỀN SỐ CẤP TỈNH</span>
+            </h2>
+            <p class="text-[10px] text-slate-500 font-mono">Hình 8 - Quyết định 1425/QĐ-TTg &bull; Nghị định 278/2025/NĐ-CP &bull; Nghị định 224/2026/NĐ-CP</p>
+          </div>
         </div>
         <div class="flex items-center gap-2 text-[10px]">
-          <span class="text-slate-500 font-mono">ĐỐI SOÁT KIẾN TRÚC:</span>
-          <span id="scanner-state-badge" class="px-2 py-0.2 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-300 font-mono font-bold flex items-center gap-1">
-            <i class="fa-solid fa-circle-check text-emerald-600"></i> CHUẨN HÓA THEO NĐ 278 &amp; QĐ 1425
+          <span class="text-slate-500 font-mono hidden md:inline">TIÊU CHÍ ĐỐI SOÁT:</span>
+          <span id="scanner-state-badge" class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-300 font-mono font-bold flex items-center gap-1.5 shadow-2xs">
+            <i class="fa-solid fa-circle-check text-emerald-600"></i>
+            <span>ĐỐI SOÁT 4 CÂU HỎI THẨM TRA</span>
           </span>
         </div>
       </div>
 
-      <!-- ARCHITECTURE FRAMEWORK VERTICAL STACK (COMPACT 4-TIER) -->
-      <div class="flex-1 flex flex-col justify-between space-y-2 z-10 max-w-4xl mx-auto w-full">
+      <!-- MAIN ARCHITECTURE STACK WITH DUAL ANCHORS (SOURCE & TARGET) -->
+      <div class="flex-1 flex flex-col space-y-2.5 z-10 max-w-4xl mx-auto w-full">
 
         <!-- ══════════════════════════════════════════════════════════ -->
-        <!-- KHUNG ĐỈNH: CƠ QUAN CHỦ QUẢN (CHỦ TRÌ VẬN HÀNH)          -->
+        <!-- ĐẦU VÀO: CƠ QUAN CHỦ QUẢN (CHỦ TRÌ VẬN HÀNH)              -->
         <!-- ══════════════════════════════════════════════════════════ -->
-        <div id="canvas-source-box" class="p-2.5 rounded-lg border-2 border-indigo-200 bg-white shadow-xs flex items-center justify-between transition-all">
-          <div class="flex items-center gap-2.5 flex-1 min-w-0 mr-2">
-            <div class="w-9 h-9 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-base font-black shadow-xs shrink-0">
+        <div id="canvas-source-box" class="p-3 rounded-xl border-2 border-indigo-200 bg-white shadow-xs flex items-center justify-between transition-all">
+          <div class="flex items-center gap-3 flex-1 min-w-0 mr-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-blue-700 text-white flex items-center justify-center text-lg font-black shadow-xs shrink-0">
               <i class="fa-solid fa-building-flag"></i>
             </div>
             <div class="min-w-0 flex-1">
-              <div class="text-[10px] font-black uppercase tracking-wider text-indigo-700 font-mono flex items-center gap-1.5">
-                <span>🏛️ ĐÂU LÀ CƠ QUAN CHỦ QUẢN (CHỦ TRÌ VẬN HÀNH)?</span>
-                <span class="px-1.5 py-0.2 rounded bg-indigo-50 border border-indigo-200 text-indigo-700 text-[9px] font-bold">ĐẦU VÀO</span>
+              <div class="flex items-center gap-2 mb-0.5">
+                <span class="text-[10px] font-black uppercase tracking-wider text-indigo-700 font-mono flex items-center gap-1">
+                  <i class="fa-solid fa-arrow-right-to-bracket text-indigo-500"></i> ĐÂU LÀ CƠ QUAN CHỦ QUẢN (CHỦ TRÌ)?
+                </span>
+                <span class="px-1.5 py-0.1 rounded bg-indigo-100 text-indigo-800 text-[9px] font-bold border border-indigo-200">ĐẦU VÀO HỆ THỐNG</span>
               </div>
               <h3 class="text-sm font-extrabold text-slate-900 truncate" id="canvas-managing-name">
                 Sở Nông nghiệp và Môi trường
               </h3>
-              <div class="flex flex-wrap items-center gap-2 text-[11px] text-slate-600 font-medium">
+              <div class="flex flex-wrap items-center gap-3 text-[11px] text-slate-600 font-medium mt-0.5">
                 <span id="canvas-sub-dept" class="flex items-center gap-1">
-                  <i class="fa-solid fa-sitemap text-indigo-500"></i> Trực tiếp: <b class="text-slate-800">Chi cục Trồng trọt và BVTV</b>
+                  <i class="fa-solid fa-sitemap text-indigo-500"></i> Đơn vị trực tiếp: <b class="text-slate-800">Chi cục Trồng trọt và BVTV</b>
                 </span>
                 <span class="text-slate-300">&bull;</span>
                 <span id="canvas-domain-url" class="text-blue-700 flex items-center gap-1 truncate font-mono text-[10px]">
@@ -274,123 +320,208 @@
             </div>
           </div>
           <div class="text-right shrink-0 font-mono text-[10px]">
-            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-700 font-bold">Mã: <b class="text-indigo-700" id="canvas-managing-code">SNNMT-01</b></span>
+            <div class="px-2.5 py-1 rounded-lg bg-indigo-50/80 border border-indigo-200 text-indigo-900 font-bold">
+              <span>Mã Hệ Thống:</span>
+              <div class="text-xs font-black text-indigo-700 mt-0.5" id="canvas-managing-code">SNNMT-01</div>
+            </div>
           </div>
         </div>
 
-        <!-- MŨI TÊN LIÊN THÔNG GỌN -->
+        <!-- FLOW CONNECTOR: ĐẦU VÀO -> BỘ KHUNG -->
         <div class="flex items-center justify-center py-0">
-          <div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white border border-slate-200 text-[9px] text-slate-600 font-mono shadow-2xs">
+          <div class="flex items-center gap-2 px-3 py-0.5 rounded-full bg-white border border-slate-200 text-[10px] text-slate-600 font-mono shadow-2xs">
             <i class="fa-solid fa-arrow-down text-blue-600"></i>
-            <span>ĐỊNH VỊ VÀ ĐỐI SOÁT VÀO BỘ KHUNG 4 LỚP KIẾN TRÚC</span>
+            <span>ĐỊNH VỊ VÀ ĐỐI SOÁT VÀO BỘ KHUNG 4 LỚP KIẾN TRÚC SỐ CẤP TỈNH</span>
             <i class="fa-solid fa-arrow-down text-blue-600"></i>
           </div>
         </div>
 
         <!-- ══════════════════════════════════════════════════════════ -->
-        <!-- KHUNG TRỌNG TÂM: 4 LỚP KIẾN TRÚC TOÀN TỈNH (HÌNH 8)       -->
+        <!-- BỘ KHUNG KIẾN TRÚC 4 PHÂN LỚP + 2 TRỤ CỘT BẢO ĐẢM XUYÊN SUỐT-->
         <!-- ══════════════════════════════════════════════════════════ -->
-        <div class="flex-1 flex flex-col justify-between space-y-1.5">
+        <div class="rounded-xl border border-slate-300 bg-white p-2.5 shadow-sm space-y-2 relative">
 
-          <!-- LỚP 4: KÊNH TƯƠNG TÁC & ĐO LƯỜNG HIỆU QUẢ -->
-          <div id="canvas-tier-4" class="p-2.5 rounded-lg border border-slate-200 bg-white transition-all duration-200 flex items-center justify-between shadow-2xs">
-            <div class="flex items-center gap-2.5">
-              <div class="w-6 h-6 rounded bg-purple-100 border border-purple-200 text-purple-700 flex items-center justify-center font-mono font-bold text-xs">
-                4
-              </div>
-              <div>
-                <div class="flex items-center gap-1.5">
-                  <span class="text-xs font-bold text-slate-900 heading-font">LỚP 4: KÊNH GIAO TIẾP &amp; ĐO LƯỜNG CĐS</span>
-                  <span class="text-[9px] font-mono text-purple-700 font-semibold">(QĐ 1425)</span>
-                </div>
-                <p class="text-[10px] text-slate-500">Cổng TTĐT Tỉnh &amp; Xã/Phường, App Smart Vĩnh Long, App Nông Nghiệp, Kênh Tiếp Dân 1022, DTI Tỉnh</p>
-              </div>
+          <!-- TRỤ CỘT BẢO ĐẢM ĐỈNH: THỂ CHẾ & AN NINH MẠNG BANNER -->
+          <div class="grid grid-cols-2 gap-2 text-[10px] font-mono font-bold">
+            <div class="px-2.5 py-1 rounded bg-slate-100/90 text-slate-700 border border-slate-200 flex items-center justify-between">
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-scale-balanced text-blue-600"></i> 1. QUY CHUẨN &amp; THỂ CHẾ SỐ:</span>
+              <span class="text-blue-700">QĐ 1425 &bull; NĐ 278 &bull; NĐ 224</span>
             </div>
-            <div class="tier-indicator text-right shrink-0">
-              <span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-slate-50 border border-slate-200">Chờ quét...</span>
+            <div class="px-2.5 py-1 rounded bg-slate-100/90 text-slate-700 border border-slate-200 flex items-center justify-between">
+              <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-600"></i> 2. AN TOÀN THÔNG TIN 4 LỚP:</span>
+              <span class="text-emerald-700">Cấp độ 3/4 &bull; SOC Tỉnh 24/7</span>
             </div>
           </div>
 
-          <!-- LỚP 3: ỨNG DỤNG & DỊCH VỤ (CHÍNH QUYỀN SỐ & KINH TẾ/XÃ HỘI SỐ) -->
-          <div id="canvas-tier-3" class="p-2.5 rounded-lg border border-slate-200 bg-white transition-all duration-200 flex items-center justify-between shadow-2xs">
-            <div class="flex items-center gap-2.5">
-              <div class="w-6 h-6 rounded bg-blue-100 border border-blue-200 text-blue-700 flex items-center justify-center font-mono font-bold text-xs">
-                3
+          <!-- LỚP 4: KÊNH GIAO TIẾP & ĐO LƯỜNG CĐS -->
+          <div id="canvas-tier-4" class="tier-box p-2.5 rounded-lg border border-purple-200 bg-purple-50/20 space-y-1.5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-5 rounded bg-purple-600 text-white flex items-center justify-center text-[10px] font-mono font-black">4</span>
+                <span class="text-xs font-black uppercase text-purple-950 heading-font">LỚP 4: KÊNH TƯƠNG TÁC &amp; ĐO LƯỜNG HIỆU QUẢ CĐS</span>
+                <span class="text-[9px] px-1.5 py-0.2 rounded bg-purple-100 text-purple-800 font-semibold border border-purple-200">Giao tiếp công dân &amp; Đo lường</span>
               </div>
-              <div>
-                <div class="flex items-center gap-1.5">
-                  <span class="text-xs font-bold text-slate-900 heading-font">LỚP 3: ỨNG DỤNG &amp; DỊCH VỤ NGHIỆP VỤ</span>
-                  <span class="text-[9px] font-mono text-blue-700 font-semibold">(Chính quyền số &amp; Kinh tế số)</span>
-                </div>
-                <p class="text-[10px] text-slate-500">Kiểm dịch thú y, Sàn NSVL, VMS Tàu cá, VnFishbase, QLVBĐH, TTHC Một cửa, ATVSTP, Ngân sách, Giáo dục...</p>
+              <div class="tier-indicator">
+                <span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-white border border-slate-200">Chờ quét...</span>
               </div>
             </div>
-            <div class="tier-indicator text-right shrink-0">
-              <span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-slate-50 border border-slate-200">Chờ quét...</span>
-            </div>
-          </div>
-
-          <!-- LỚP 2: DỮ LIỆU & NỀN TẢNG LÕI DÙNG CHUNG (LGSP / NDXP) -->
-          <div id="canvas-tier-2" class="p-2.5 rounded-lg border border-slate-200 bg-white transition-all duration-200 flex items-center justify-between shadow-2xs">
-            <div class="flex items-center gap-2.5">
-              <div class="w-6 h-6 rounded bg-emerald-100 border border-emerald-200 text-emerald-700 flex items-center justify-center font-mono font-bold text-xs">
-                2
+            <!-- Sub-modules of Layer 4 -->
+            <div class="grid grid-cols-4 gap-1.5 text-[10px]">
+              <div id="sub-l4-portal" class="tier-submodule p-1.5 rounded bg-white border border-slate-200 text-slate-700">
+                <b class="block text-slate-900 truncate"><i class="fa-solid fa-globe text-purple-500 mr-1"></i>Cổng TTĐT Hợp Nhất</b>
+                <span class="text-[9px] text-slate-500 truncate block">Tỉnh &amp; 124 xã/phường</span>
               </div>
-              <div>
-                <div class="flex items-center gap-1.5">
-                  <span class="text-xs font-bold text-slate-900 heading-font">LỚP 2: DỮ LIỆU &amp; NỀN TẢNG LÕI DÙNG CHUNG (LGSP / NDXP)</span>
-                  <span class="text-[9px] font-mono text-emerald-700 font-semibold">(Nền tảng chia sẻ)</span>
-                </div>
-                <p class="text-[10px] text-slate-500">Kho dữ liệu dùng chung (T-DL-01), Trục LGSP (T-DL-03), CSDL Đất đai VBDLIS, WebGIS Nông nghiệp, 235 CSDL Quốc gia</p>
+              <div id="sub-l4-app" class="tier-submodule p-1.5 rounded bg-white border border-slate-200 text-slate-700">
+                <b class="block text-slate-900 truncate"><i class="fa-solid fa-mobile-screen-button text-purple-500 mr-1"></i>App Di Động Công Dân</b>
+                <span class="text-[9px] text-slate-500 truncate block">Smart Vĩnh Long / Nông Nghiệp</span>
               </div>
-            </div>
-            <div class="tier-indicator text-right shrink-0">
-              <span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-slate-50 border border-slate-200">Chờ quét...</span>
+              <div id="sub-l4-ioc" class="tier-submodule p-1.5 rounded bg-white border border-slate-200 text-slate-700">
+                <b class="block text-slate-900 truncate"><i class="fa-solid fa-headset text-purple-500 mr-1"></i>Trung Tâm 1022 &amp; IOC</b>
+                <span class="text-[9px] text-slate-500 truncate block">Tiếp nhận &amp; Giám sát điều hành</span>
+              </div>
+              <div id="sub-l4-dti" class="tier-submodule p-1.5 rounded bg-white border border-slate-200 text-slate-700">
+                <b class="block text-slate-900 truncate"><i class="fa-solid fa-chart-line text-purple-500 mr-1"></i>Đo Lường Bộ Chỉ Số DTI</b>
+                <span class="text-[9px] text-slate-500 truncate block">Đánh giá chuyển đổi số</span>
+              </div>
             </div>
           </div>
 
-          <!-- LỚP 1: HẠ TẦNG SỐ & AN NINH MẠNG -->
-          <div id="canvas-tier-1" class="p-2.5 rounded-lg border border-slate-200 bg-white transition-all duration-200 flex items-center justify-between shadow-2xs">
-            <div class="flex items-center gap-2.5">
-              <div class="w-6 h-6 rounded bg-sky-100 border border-sky-200 text-sky-700 flex items-center justify-center font-mono font-bold text-xs">
-                1
+          <!-- LỚP 3: ỨNG DỤNG & DỊCH VỤ NGHIỆP VỤ (2 CÁNH: CHÍNH QUYỀN SỐ & KINH TẾ/XÃ HỘI SỐ) -->
+          <div id="canvas-tier-3" class="tier-box p-2.5 rounded-lg border border-blue-200 bg-blue-50/20 space-y-1.5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-5 rounded bg-blue-600 text-white flex items-center justify-center text-[10px] font-mono font-black">3</span>
+                <span class="text-xs font-black uppercase text-blue-950 heading-font">LỚP 3: ỨNG DỤNG &amp; DỊCH VỤ NGHIỆP VỤ (CHÍNH QUYỀN SỐ &bull; KINH TẾ SỐ)</span>
+                <span class="text-[9px] px-1.5 py-0.2 rounded bg-blue-100 text-blue-800 font-semibold border border-blue-200">Nghiệp vụ các Sở Ban Ngành</span>
               </div>
-              <div>
-                <div class="flex items-center gap-1.5">
-                  <span class="text-xs font-bold text-slate-900 heading-font">LỚP 1: HẠ TẦNG SỐ &amp; AN NINH MẠNG TỈNH</span>
-                  <span class="text-[9px] font-mono text-sky-700 font-semibold">(Cloud / TSLCD / SOC / IoT)</span>
-                </div>
-                <p class="text-[10px] text-slate-500">Trạm quan trắc VnEmisoft, Giám sát cát, Môi trường tự động, SOC Tỉnh, Cloud tập trung, Mạng TSLCD</p>
+              <div class="tier-indicator">
+                <span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-white border border-slate-200">Chờ quét...</span>
               </div>
             </div>
-            <div class="tier-indicator text-right shrink-0">
-              <span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-slate-50 border border-slate-200">Chờ quét...</span>
+            <!-- Dual wings: Government & Economy -->
+            <div class="grid grid-cols-2 gap-2 text-[10px]">
+              <!-- Wing 1: Chính quyền số -->
+              <div id="sub-l3-cq" class="p-2 rounded-lg bg-white border border-slate-200 space-y-1">
+                <div class="flex items-center justify-between font-bold text-slate-800 border-b border-slate-100 pb-1">
+                  <span class="flex items-center gap-1 text-blue-700"><i class="fa-solid fa-landmark"></i> PHÂN HỆ CHÍNH QUYỀN SỐ</span>
+                  <span class="text-[9px] text-slate-400 font-mono">DVC &bull; QLVB</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1 text-[9px] text-slate-600">
+                  <span class="p-1 rounded bg-slate-50 border border-slate-100 truncate">&bull; Một cửa TTHC &amp; DVCQG</span>
+                  <span class="p-1 rounded bg-slate-50 border border-slate-100 truncate">&bull; QLVB &amp; Điều hành liên thông</span>
+                  <span class="p-1 rounded bg-slate-50 border border-slate-100 truncate">&bull; Hệ thống họp không giấy</span>
+                  <span class="p-1 rounded bg-slate-50 border border-slate-100 truncate">&bull; Trợ lý AI công vụ &amp; DTI</span>
+                </div>
+              </div>
+              <!-- Wing 2: Kinh tế số & Xã hội số -->
+              <div id="sub-l3-ktxh" class="p-2 rounded-lg bg-white border border-slate-200 space-y-1">
+                <div class="flex items-center justify-between font-bold text-slate-800 border-b border-slate-100 pb-1">
+                  <span class="flex items-center gap-1 text-emerald-700"><i class="fa-solid fa-seedling"></i> KINH TẾ SỐ &amp; XÃ HỘI SỐ</span>
+                  <span class="text-[9px] text-slate-400 font-mono">Nông nghiệp &bull; Đất đai &bull; Y tế</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1 text-[9px] text-slate-600">
+                  <span class="p-1 rounded bg-slate-50 border border-slate-100 truncate">&bull; Bản đồ nông nghiệp &amp; VBDLIS</span>
+                  <span class="p-1 rounded bg-slate-50 border border-slate-100 truncate">&bull; Sàn NSVL &amp; Giá cả thị trường</span>
+                  <span class="p-1 rounded bg-slate-50 border border-slate-100 truncate">&bull; Tàu cá VMS &amp; VnFishbase</span>
+                  <span class="p-1 rounded bg-slate-50 border border-slate-100 truncate">&bull; Y tế số &bull; Giáo dục &bull; ATTP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- LỚP 2: DỮ LIỆU & NỀN TẢNG LÕI DÙNG CHUNG (LGSP / NDXP / DATA LAKE) -->
+          <div id="canvas-tier-2" class="tier-box p-2.5 rounded-lg border-2 border-emerald-300 bg-emerald-50/30 space-y-1.5 shadow-2xs">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-5 rounded bg-emerald-600 text-white flex items-center justify-center text-[10px] font-mono font-black">2</span>
+                <span class="text-xs font-black uppercase text-emerald-950 heading-font">LỚP 2: DỮ LIỆU &amp; NỀN TẢNG LÕI (TRỤC XƯƠNG SỐNG TÍCH HỢP)</span>
+                <span class="text-[9px] px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800 font-bold border border-emerald-300">TRỌNG TÂM KẾT NỐI</span>
+              </div>
+              <div class="tier-indicator">
+                <span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-white border border-slate-200">Chờ quét...</span>
+              </div>
+            </div>
+            <!-- Core platforms and data repositories -->
+            <div class="grid grid-cols-3 gap-1.5 text-[10px]">
+              <div id="sub-l2-datalake" class="tier-submodule p-1.5 rounded-md bg-white border border-emerald-200 text-slate-700">
+                <div class="font-bold text-emerald-900 truncate flex items-center gap-1">
+                  <i class="fa-solid fa-database text-emerald-600"></i> Kho Dữ Liệu Dùng Chung (T-DL-01)
+                </div>
+                <p class="text-[9px] text-slate-500 mt-0.5">Data Lakehouse &bull; Kho hồ sơ điện tử tổ chức, cá nhân</p>
+              </div>
+              <div id="sub-l2-lgsp" class="tier-submodule p-1.5 rounded-md bg-white border border-emerald-200 text-slate-700">
+                <div class="font-bold text-emerald-900 truncate flex items-center gap-1">
+                  <i class="fa-solid fa-diagram-project text-emerald-600"></i> Trục LGSP / LDOP Tỉnh (T-DL-03)
+                </div>
+                <p class="text-[9px] text-slate-500 mt-0.5">Liên thông Trục Quốc gia NDXP &bull; API Gateway tỉnh</p>
+              </div>
+              <div id="sub-l2-nd278" class="tier-submodule p-1.5 rounded-md bg-white border border-emerald-200 text-slate-700">
+                <div class="font-bold text-emerald-900 truncate flex items-center gap-1">
+                  <i class="fa-solid fa-network-wired text-emerald-600"></i> 235 CSDL Quốc Gia (NĐ 278)
+                </div>
+                <p class="text-[9px] text-slate-500 mt-0.5">Đất đai &bull; Hộ tịch &bull; GPLX &bull; Căn cước &bull; Tài chính</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- LỚP 1: HẠ TẦNG SỐ & AN NINH MẠNG DÙNG CHUNG -->
+          <div id="canvas-tier-1" class="tier-box p-2.5 rounded-lg border border-sky-200 bg-sky-50/20 space-y-1.5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-5 rounded bg-sky-600 text-white flex items-center justify-center text-[10px] font-mono font-black">1</span>
+                <span class="text-xs font-black uppercase text-sky-950 heading-font">LỚP 1: HẠ TẦNG SỐ, MẠNG TRUYỀN DẪN &amp; AN NINH MẠNG</span>
+                <span class="text-[9px] px-1.5 py-0.2 rounded bg-sky-100 text-sky-800 font-semibold border border-sky-200">Nền tảng vật lý &amp; Quan trắc</span>
+              </div>
+              <div class="tier-indicator">
+                <span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-white border border-slate-200">Chờ quét...</span>
+              </div>
+            </div>
+            <!-- Sub-modules of Layer 1 -->
+            <div class="grid grid-cols-4 gap-1.5 text-[10px]">
+              <div id="sub-l1-cloud" class="tier-submodule p-1.5 rounded bg-white border border-slate-200 text-slate-700">
+                <b class="block text-slate-900 truncate"><i class="fa-solid fa-cloud text-sky-500 mr-1"></i>Trung Tâm Dữ Liệu Cloud</b>
+                <span class="text-[9px] text-slate-500 truncate block">Máy chủ ảo tỉnh (T-HT-01)</span>
+              </div>
+              <div id="sub-l1-tslcd" class="tier-submodule p-1.5 rounded bg-white border border-slate-200 text-slate-700">
+                <b class="block text-slate-900 truncate"><i class="fa-solid fa-network-wired text-sky-500 mr-1"></i>Mạng TSLCD Cấp Tỉnh</b>
+                <span class="text-[9px] text-slate-500 truncate block">Kết nối bảo mật 3 cấp (T-HT-02)</span>
+              </div>
+              <div id="sub-l1-iot" class="tier-submodule p-1.5 rounded bg-white border border-slate-200 text-slate-700">
+                <b class="block text-slate-900 truncate"><i class="fa-solid fa-tower-broadcast text-sky-500 mr-1"></i>Trạm Quan Trắc &amp; IoT</b>
+                <span class="text-[9px] text-slate-500 truncate block">VnEmisoft &bull; Cát &bull; Nước &bull; Camera</span>
+              </div>
+              <div id="sub-l1-soc" class="tier-submodule p-1.5 rounded bg-white border border-slate-200 text-slate-700">
+                <b class="block text-slate-900 truncate"><i class="fa-solid fa-shield-virus text-sky-500 mr-1"></i>Trung Tâm SOC Tỉnh</b>
+                <span class="text-[9px] text-slate-500 truncate block">Giám sát ANM 24/7 (T-HT-03)</span>
+              </div>
             </div>
           </div>
 
         </div>
 
-        <!-- MŨI TÊN DẪN DỮ LIỆU ĐẾN TIẾP NHẬN CUỐI -->
+        <!-- FLOW CONNECTOR: BỘ KHUNG -> TIẾP NHẬN ĐẦU CUỐI -->
         <div class="flex items-center justify-center py-0">
-          <div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white border border-teal-200 text-[9px] text-teal-800 font-mono shadow-2xs">
+          <div class="flex items-center gap-2 px-3 py-0.5 rounded-full bg-white border border-teal-200 text-[10px] text-teal-800 font-mono shadow-2xs">
             <i class="fa-solid fa-arrow-down text-teal-600"></i>
-            <span id="canvas-pipeline-protocol">KẾT NỐI QUA TRỤC LGSP / MẠNG TSLCD VỀ ĐẦU MỐI TIẾP NHẬN</span>
+            <span id="canvas-pipeline-protocol">KẾT NỐI QUA TRỤC LGSP / MẠNG TSLCD VỀ ĐẦU MỐI TIẾP NHẬN ĐẦU CUỐI</span>
             <i class="fa-solid fa-arrow-down text-teal-600"></i>
           </div>
         </div>
 
         <!-- ══════════════════════════════════════════════════════════ -->
-        <!-- KHUNG ĐÁY: CƠ QUAN TIẾP NHẬN ĐẦU CUỐI (ĐÍCH DỮ LIỆU)      -->
+        <!-- ĐẦU RA: CƠ QUAN TIẾP NHẬN ĐẦU CUỐI (ĐÍCH DỮ LIỆU)          -->
         <!-- ══════════════════════════════════════════════════════════ -->
-        <div id="canvas-target-box" class="p-2.5 rounded-lg border-2 border-teal-200 bg-white shadow-xs flex items-center justify-between transition-all">
-          <div class="flex items-center gap-2.5 flex-1 min-w-0 mr-2">
-            <div class="w-9 h-9 rounded-lg bg-teal-600 text-white flex items-center justify-center text-base font-black shadow-xs shrink-0">
+        <div id="canvas-target-box" class="p-3 rounded-xl border-2 border-teal-200 bg-white shadow-xs flex items-center justify-between transition-all">
+          <div class="flex items-center gap-3 flex-1 min-w-0 mr-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-600 to-emerald-700 text-white flex items-center justify-center text-lg font-black shadow-xs shrink-0">
               <i class="fa-solid fa-bullseye"></i>
             </div>
             <div class="min-w-0 flex-1">
-              <div class="text-[10px] font-black uppercase tracking-wider text-teal-700 font-mono flex items-center gap-1.5">
-                <span>🎯 ĐÂU LÀ CƠ QUAN TIẾP NHẬN ĐẦU CUỐI (ĐÍCH DỮ LIỆU)?</span>
-                <span class="px-1.5 py-0.2 rounded bg-teal-50 border border-teal-200 text-teal-800 text-[9px] font-bold" id="canvas-target-type">Trục LGSP / Data Lake</span>
+              <div class="flex items-center gap-2 mb-0.5">
+                <span class="text-[10px] font-black uppercase tracking-wider text-teal-700 font-mono flex items-center gap-1">
+                  <i class="fa-solid fa-arrow-right-from-bracket text-teal-500"></i> ĐÂU LÀ CƠ QUAN TIẾP NHẬN ĐẦU CUỐI?
+                </span>
+                <span class="px-1.5 py-0.1 rounded bg-teal-100 text-teal-800 text-[9px] font-bold border border-teal-200" id="canvas-target-type">Trục LGSP / Data Lake</span>
               </div>
               <h3 class="text-sm font-extrabold text-slate-900 truncate" id="canvas-target-name">
                 Kho Dữ Liệu Dùng Chung Cấp Tỉnh (T-DL-01 - Sở TT&amp;TT)
@@ -401,7 +532,10 @@
             </div>
           </div>
           <div class="text-right shrink-0 font-mono text-[10px]">
-            <span class="px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-700 font-bold">Mã: <b class="text-teal-700" id="canvas-target-code">T-DL-01</b></span>
+            <div class="px-2.5 py-1 rounded-lg bg-teal-50/80 border border-teal-200 text-teal-900 font-bold">
+              <span>Đích Tiếp Nhận:</span>
+              <div class="text-xs font-black text-teal-700 mt-0.5" id="canvas-target-code">T-DL-01</div>
+            </div>
           </div>
         </div>
 
@@ -777,19 +911,31 @@
       document.getElementById('canvas-pipeline-protocol').textContent = `KẾT NỐI QUA [${channelProto.toUpperCase()}] VỀ [${targetCode}]`;
 
       // 3. Highlight Layer in Visual 4-Tier Stack
-      highlightTier(obj.arch_layer, obj.object_name);
+      highlightTier(obj.arch_layer, obj.object_name, obj.object_id);
 
       // 4. Update HUD Right Panel (The 4 Strategic Questions)
       updateHUD(obj, targetDeptName, channelProto);
     }
 
-    function highlightTier(layerKey, objName) {
+    function highlightTier(layerKey, objName, objId) {
+      // 1. Reset all tiers
       for (let i = 1; i <= 4; i++) {
         const el = document.getElementById(`canvas-tier-${i}`);
-        el.className = 'p-2.5 rounded-lg border border-slate-200 bg-white transition-all duration-200 flex items-center justify-between shadow-2xs';
-        el.querySelector('.tier-indicator').innerHTML = '<span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-slate-50 border border-slate-200">Chờ quét...</span>';
+        if (el) {
+          el.classList.remove('active-tier');
+          const ind = el.querySelector('.tier-indicator');
+          if (ind) ind.innerHTML = '<span class="text-[9px] font-mono text-slate-400 px-1.5 py-0.2 rounded bg-white border border-slate-200">Chờ quét...</span>';
+        }
       }
 
+      // Reset submodules
+      document.querySelectorAll('.tier-submodule').forEach(sm => sm.classList.remove('active-sub'));
+      const cqWing = document.getElementById('sub-l3-cq');
+      const ktxhWing = document.getElementById('sub-l3-ktxh');
+      if (cqWing) cqWing.className = 'p-2 rounded-lg bg-white border border-slate-200 space-y-1';
+      if (ktxhWing) ktxhWing.className = 'p-2 rounded-lg bg-white border border-slate-200 space-y-1';
+
+      // 2. Identify active layer
       let activeNum = 3;
       if (layerKey && layerKey.includes('Lop1')) activeNum = 1;
       else if (layerKey && layerKey.includes('Lop2')) activeNum = 2;
@@ -797,12 +943,67 @@
       else if (layerKey && layerKey.includes('Lop4')) activeNum = 4;
 
       const activeEl = document.getElementById(`canvas-tier-${activeNum}`);
-      activeEl.className = 'active-tier p-2.5 rounded-lg border-2 flex items-center justify-between';
-      activeEl.querySelector('.tier-indicator').innerHTML = `
-        <span class="text-[10px] font-mono font-black text-blue-700 px-2.5 py-0.5 rounded-full bg-blue-100 border border-blue-300 shadow-xs flex items-center gap-1">
-          <i class="fa-solid fa-crosshairs text-blue-600"></i> VỊ TRÍ HỆ THỐNG Ở ĐÂY
-        </span>
-      `;
+      if (activeEl) {
+        activeEl.classList.add('active-tier');
+        const ind = activeEl.querySelector('.tier-indicator');
+        if (ind) {
+          ind.innerHTML = `
+            <span class="text-[9px] font-mono font-black text-blue-800 px-2 py-0.5 rounded-full bg-blue-100 border border-blue-300 shadow-xs flex items-center gap-1">
+              <i class="fa-solid fa-crosshairs text-blue-600"></i> VỊ TRÍ: LỚP ${activeNum} (${objId || ''})
+            </span>
+          `;
+        }
+      }
+
+      // 3. Highlight specific submodule inside active layer
+      const nameL = (objName || '').toLowerCase();
+      if (activeNum === 3) {
+        const isEcon = nameL.includes('nông nghiệp') || nameL.includes('thủy sản') || nameL.includes('đất đai') || nameL.includes('vbdlis') || nameL.includes('sàn') || nameL.includes('giá cả') || nameL.includes('tàu cá') || nameL.includes('y tế') || nameL.includes('giáo dục') || nameL.includes('thực phẩm') || nameL.includes('môi trường');
+        if (isEcon && ktxhWing) {
+          ktxhWing.className = 'p-2 rounded-lg bg-emerald-50/70 border-2 border-emerald-500 shadow-xs space-y-1';
+        } else if (cqWing) {
+          cqWing.className = 'p-2 rounded-lg bg-blue-50/70 border-2 border-blue-500 shadow-xs space-y-1';
+        }
+      } else if (activeNum === 2) {
+        if (nameL.includes('nd278') || (objId && objId.startsWith('QG-'))) {
+          const sub = document.getElementById('sub-l2-nd278');
+          if (sub) sub.classList.add('active-sub');
+        } else if (nameL.includes('lgsp') || nameL.includes('trục') || nameL.includes('ldop')) {
+          const sub = document.getElementById('sub-l2-lgsp');
+          if (sub) sub.classList.add('active-sub');
+        } else {
+          const sub = document.getElementById('sub-l2-datalake');
+          if (sub) sub.classList.add('active-sub');
+        }
+      } else if (activeNum === 1) {
+        if (nameL.includes('quan trắc') || nameL.includes('emisoft') || nameL.includes('cát') || nameL.includes('nước') || nameL.includes('camera')) {
+          const sub = document.getElementById('sub-l1-iot');
+          if (sub) sub.classList.add('active-sub');
+        } else if (nameL.includes('soc') || nameL.includes('an ninh')) {
+          const sub = document.getElementById('sub-l1-soc');
+          if (sub) sub.classList.add('active-sub');
+        } else if (nameL.includes('tslcd') || nameL.includes('truyền số liệu')) {
+          const sub = document.getElementById('sub-l1-tslcd');
+          if (sub) sub.classList.add('active-sub');
+        } else {
+          const sub = document.getElementById('sub-l1-cloud');
+          if (sub) sub.classList.add('active-sub');
+        }
+      } else if (activeNum === 4) {
+        if (nameL.includes('app') || nameL.includes('smart')) {
+          const sub = document.getElementById('sub-l4-app');
+          if (sub) sub.classList.add('active-sub');
+        } else if (nameL.includes('1022') || nameL.includes('ioc') || nameL.includes('tiếp nhận')) {
+          const sub = document.getElementById('sub-l4-ioc');
+          if (sub) sub.classList.add('active-sub');
+        } else if (nameL.includes('dti') || nameL.includes('đánh giá')) {
+          const sub = document.getElementById('sub-l4-dti');
+          if (sub) sub.classList.add('active-sub');
+        } else {
+          const sub = document.getElementById('sub-l4-portal');
+          if (sub) sub.classList.add('active-sub');
+        }
+      }
     }
 
     function updateHUD(obj, targetDeptName, channelProto) {
