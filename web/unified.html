@@ -541,24 +541,7 @@
           </div>
         </div>
 
-        <!-- ══════════════════════════════════════════════════════════ -->
-        <!-- 5. Ý KIẾN CHỈ ĐẠO CỦA LÃNH ĐẠO (COMPACT INPUT)              -->
-        <!-- ══════════════════════════════════════════════════════════ -->
-        <div class="p-3 rounded-xl border border-slate-200 bg-white space-y-2">
-          <div class="flex items-center justify-between text-xs font-bold text-slate-800">
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-pen-nib text-slate-500"></i> Ý KIẾN CHỈ ĐẠO CỦA LÃNH ĐẠO:</span>
-            <span id="hud-save-status" class="text-[10px] text-emerald-600 font-bold hidden"><i class="fa-solid fa-check"></i> Đã lưu</span>
-          </div>
-          <textarea id="hud-directive-input" rows="2" 
-                    class="w-full p-2 text-xs text-slate-900 bg-slate-50 border border-slate-200 rounded-lg focus:ring-1 focus:ring-blue-500 focus:border-blue-500 focus:bg-white resize-none leading-relaxed" 
-                    placeholder="Nhập ý kiến chỉ đạo của Lãnh đạo..."></textarea>
-          <div class="flex items-center justify-end">
-            <button onclick="saveDirectiveOnly()" class="py-1 px-3 rounded-md bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs transition flex items-center gap-1">
-              <i class="fa-solid fa-floppy-disk text-[10px]"></i>
-              <span>Lưu Ý Kiến</span>
-            </button>
-          </div>
-        </div>
+
 
       </div>
 
@@ -890,32 +873,6 @@
         `).join('');
       }
 
-      // 5. DIRECTIVE
-      document.getElementById('hud-directive-input').value = obj.leadership_directive || `Giao ${deptName} chủ trì hoàn thiện kết nối API về Trục LGSP tỉnh trong năm 2026.`;
-    }
-
-    async function saveDirectiveOnly() {
-      const obj = allObjects.find(o => o.object_id === selectedId);
-      if (!obj) return;
-      const newDirective = document.getElementById('hud-directive-input').value.trim();
-      try {
-        const res = await fetch('/api/objects', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            object_id: obj.object_id,
-            leadership_directive: newDirective
-          })
-        });
-        if (res.ok) {
-          obj.leadership_directive = newDirective;
-          const st = document.getElementById('hud-save-status');
-          st.classList.remove('hidden');
-          setTimeout(() => st.classList.add('hidden'), 2500);
-        }
-      } catch (e) {
-        alert('Lỗi lưu ý kiến: ' + e.message);
-      }
     }
 
     function filterChecklist() {
@@ -945,11 +902,7 @@
     async function approveDirectly() {
       const obj = allObjects.find(o => o.object_id === selectedId);
       if (!obj) return;
-      const newDirective = document.getElementById('hud-directive-input').value.trim();
-      if (confirm(`Lãnh đạo UBND tỉnh phê duyệt chủ trương cho hệ thống:
-
-"${obj.col_name || obj.object_name}"
-(Mã: ${obj.object_id} - ${obj.col_dept || obj.managing_dept})?`)) {
+      if (confirm(`Lãnh đạo UBND tỉnh phê duyệt chủ trương đầu tư cho hệ thống:\n\n"${obj.col_name || obj.object_name}"\n(Mã: ${obj.object_id} - ${obj.col_dept || obj.managing_dept})?`)) {
         try {
           const res = await fetch('/api/objects', {
             method: 'POST',
@@ -957,13 +910,11 @@
             body: JSON.stringify({
               object_id: obj.object_id,
               lifecycle_status: 'DaPheDuyet',
-              leadership_directive: newDirective,
               clearance_code: `CLEARANCE-${Date.now()}`
             })
           });
           if (res.ok) {
-            alert(`ĐÃ LƯU THÀNH CÔNG:
-Lãnh đạo UBND tỉnh đã phê duyệt chủ trương cho hệ thống ${obj.col_name || obj.object_name}!`);
+            alert(`ĐÃ PHÊ DUYỆT THÀNH CÔNG:\nLãnh đạo UBND tỉnh đã phê duyệt chủ trương cho hệ thống ${obj.col_name || obj.object_name}!`);
             loadData();
           }
         } catch (e) {
