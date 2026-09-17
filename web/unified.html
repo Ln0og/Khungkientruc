@@ -216,15 +216,15 @@
       <div class="max-w-3xl mx-auto w-full space-y-4 my-auto">
 
         <!-- 1. ĐẦU VÀO: CƠ QUAN CHỦ TRÌ (CLEAN HERO CARD) -->
-        <div class="p-3.5 rounded-xl border border-slate-300 bg-white shadow-xs flex items-center justify-between">
-          <div class="flex items-center gap-3.5 min-w-0">
+        <div class="p-3.5 rounded-xl border border-slate-300 bg-white shadow-xs flex items-center justify-between gap-3">
+          <div class="flex items-center gap-3.5 min-w-0 flex-1">
             <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-700 border border-blue-200 flex items-center justify-center text-base font-bold shrink-0">
               <i class="fa-solid fa-building-columns"></i>
             </div>
-            <div class="min-w-0">
+            <div class="min-w-0 flex-1">
               <div class="flex items-center gap-2">
-                <span class="text-[10px] font-bold uppercase text-blue-600 font-mono tracking-wider">CƠ QUAN CHỦ TRÌ (ĐẦU VÀO)</span>
-                <span class="font-mono text-xs font-black text-slate-800" id="canvas-managing-code">SNNMT-01</span>
+                <span class="text-[10px] font-bold uppercase text-blue-600 font-mono tracking-wider whitespace-nowrap">CƠ QUAN CHỦ TRÌ (ĐẦU VÀO)</span>
+                <span class="font-mono text-xs font-black text-slate-800 shrink-0" id="canvas-managing-code">SNNMT-01</span>
               </div>
               <h3 class="text-sm font-extrabold text-slate-900 truncate" id="canvas-managing-name">
                 Sở Nông nghiệp và Môi trường
@@ -234,8 +234,8 @@
               </p>
             </div>
           </div>
-          <div class="shrink-0 text-right">
-            <span id="canvas-domain-url" class="inline-flex items-center gap-1 text-xs font-mono text-blue-600 bg-blue-50/60 px-2.5 py-1 rounded-lg border border-blue-200">
+          <div class="shrink-0 text-right max-w-[160px]">
+            <span id="canvas-domain-url" class="inline-block max-w-full truncate text-xs font-mono text-blue-600 bg-blue-50/60 px-2.5 py-1 rounded-lg border border-blue-200">
               -
             </span>
           </div>
@@ -313,23 +313,23 @@
 
         <!-- FLOW CONNECTOR 2 -->
         <div class="flex items-center justify-center">
-          <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-300 text-[10px] text-slate-600 font-mono shadow-2xs">
-            <i class="fa-solid fa-arrow-down text-emerald-600"></i>
-            <span id="canvas-pipeline-protocol">KẾT NỐI LIÊN THÔNG VỀ CƠ QUAN TIẾP NHẬN ĐẦU CUỐI</span>
-            <i class="fa-solid fa-arrow-down text-emerald-600"></i>
+          <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-300 text-[10px] text-slate-600 font-mono shadow-2xs max-w-full">
+            <i class="fa-solid fa-arrow-down text-emerald-600 shrink-0"></i>
+            <span id="canvas-pipeline-protocol" class="truncate max-w-md text-center font-bold">KẾT NỐI LIÊN THÔNG VỀ CƠ QUAN TIẾP NHẬN ĐẦU CUỐI</span>
+            <i class="fa-solid fa-arrow-down text-emerald-600 shrink-0"></i>
           </div>
         </div>
 
         <!-- 3. ĐẦU RA: TIẾP NHẬN ĐẦU CUỐI (CLEAN HERO CARD) -->
-        <div class="p-3.5 rounded-xl border border-emerald-300 bg-emerald-50/50 shadow-xs flex items-center justify-between">
-          <div class="flex items-center gap-3.5 min-w-0">
+        <div class="p-3.5 rounded-xl border border-emerald-300 bg-emerald-50/50 shadow-xs flex items-center justify-between gap-3">
+          <div class="flex items-center gap-3.5 min-w-0 flex-1">
             <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-base font-bold shrink-0">
               <i class="fa-solid fa-bullseye"></i>
             </div>
-            <div class="min-w-0">
+            <div class="min-w-0 flex-1">
               <div class="flex items-center gap-2">
-                <span class="text-[10px] font-bold uppercase text-emerald-800 font-mono tracking-wider">CƠ QUAN TIẾP NHẬN ĐẦU CUỐI (ĐẦU RA)</span>
-                <span class="font-mono text-xs font-black text-emerald-900" id="canvas-target-code">T-DL-01</span>
+                <span class="text-[10px] font-bold uppercase text-emerald-800 font-mono tracking-wider whitespace-nowrap">CƠ QUAN TIẾP NHẬN ĐẦU CUỐI (ĐẦU RA)</span>
+                <span class="font-mono text-xs font-black text-emerald-900 shrink-0" id="canvas-target-code">T-DL-01</span>
               </div>
               <h3 class="text-sm font-extrabold text-slate-900 truncate" id="canvas-target-name">
                 Kho Dữ Liệu Dùng Chung Cấp Tỉnh (T-DL-01 - Sở TT&amp;TT)
@@ -339,8 +339,8 @@
               </p>
             </div>
           </div>
-          <div class="shrink-0 text-right">
-            <span id="canvas-target-type" class="inline-flex items-center gap-1 text-xs font-mono text-emerald-800 bg-white px-2.5 py-1 rounded-lg border border-emerald-200 font-bold">
+          <div class="shrink-0 text-right max-w-[160px]">
+            <span id="canvas-target-type" class="inline-block max-w-full truncate text-xs font-mono text-emerald-800 bg-white px-2.5 py-1 rounded-lg border border-emerald-200 font-bold" title="">
               API
             </span>
           </div>
@@ -519,6 +519,10 @@
               <div class="p-2 rounded bg-amber-50 border border-amber-200 space-y-0.5">
                 <span class="text-[10px] font-bold text-amber-900 font-mono block">LÝ DO BÁO CÁO (CỘT K):</span>
                 <p class="text-xs text-amber-950 font-medium italic leading-relaxed" id="raw-reason">-</p>
+              </div>
+              <div class="p-2 rounded bg-blue-50 border border-blue-200 space-y-0.5">
+                <span class="text-[10px] font-bold text-blue-900 font-mono block">HÌNH THỨC CHIA SẺ DỮ LIỆU (CỘT L):</span>
+                <p class="text-xs text-blue-950 font-medium leading-relaxed whitespace-pre-line" id="raw-share-method">-</p>
               </div>
             </div>
           </div>
@@ -705,6 +709,19 @@
       scanSystem(id);
     }
 
+    function formatProto(raw) {
+      if (!raw) return 'Trục LGSP';
+      const l = raw.toLowerCase();
+      if (l.includes('api') && l.includes('ftp')) return 'RESTful API / FTP';
+      if (l.includes('restful') || l.includes('api')) return 'RESTful API';
+      if (l.includes('web service') || l.includes('soap')) return 'Web Service';
+      if (l.includes('excel') || l.includes('file')) return 'File Sync (Excel)';
+      if (l.includes('chưa') || l.includes('không')) return 'Chưa kết nối API';
+      if (l.includes('lgsp') || l.includes('ndxp')) return 'Trục LGSP/NDXP';
+      if (raw.length <= 25) return raw.trim();
+      return raw.trim().substring(0, 22) + '...';
+    }
+
     function scanSystem(id) {
       const obj = allObjects.find(o => o.object_id === id);
       if (!obj) return;
@@ -726,20 +743,22 @@
       // 2. Cập nhật Cơ quan tiếp nhận đầu cuối (Bottom Canvas Box)
       const conn = allConnections.find(c => c.source_obj_id === obj.object_id);
       const targetDeptName = obj.target_receiving_dept || (conn ? `${conn.target_name || conn.target_obj_id}` : 'Kho CSDL Dùng Chung Cấp Tỉnh (T-DL-01)');
-      const channelProto = obj.col_share_method || (conn ? conn.channel_type : (obj.share_method && obj.share_method !== 'Chưa chia sẻ' ? obj.share_method : 'Trục LGSP / TSLCD'));
+      const rawProto = obj.col_share_method || (conn ? conn.channel_type : (obj.share_method && obj.share_method !== 'Chưa chia sẻ' ? obj.share_method : 'Trục LGSP / TSLCD'));
+      const shortProto = formatProto(rawProto);
       const targetCode = conn ? conn.target_obj_id : 'T-DL-01';
 
       document.getElementById('canvas-target-name').textContent = targetDeptName;
       document.getElementById('canvas-target-code').textContent = targetCode;
-      document.getElementById('canvas-target-type').textContent = channelProto;
-      document.getElementById('canvas-target-desc').textContent = `Dữ liệu liên thông về ${targetCode} qua giao thức ${channelProto}`;
-      document.getElementById('canvas-pipeline-protocol').textContent = `KẾT NỐI QUA [${channelProto.toUpperCase()}] VỀ [${targetCode}]`;
+      document.getElementById('canvas-target-type').textContent = shortProto;
+      document.getElementById('canvas-target-type').title = rawProto;
+      document.getElementById('canvas-target-desc').textContent = `Dữ liệu liên thông về ${targetCode} qua ${shortProto}`;
+      document.getElementById('canvas-pipeline-protocol').textContent = `KẾT NỐI QUA [${shortProto.toUpperCase()}] VỀ [${targetCode}]`;
 
       // 3. Highlight Layer in Visual 4-Tier Stack
       highlightTier(obj.arch_layer, obj.col_name || obj.object_name, obj.object_id);
 
       // 4. Update HUD Right Panel
-      updateHUD(obj, targetDeptName, channelProto);
+      updateHUD(obj, targetDeptName, rawProto);
     }
 
     function highlightTier(layerKey, objName, objId) {
@@ -850,6 +869,7 @@
       document.getElementById('raw-year-procure').textContent = `${obj.col_year || '2024'} &bull; ${obj.col_procure_type || 'Mua sắm/Thuê'}`;
       document.getElementById('raw-conn').textContent = obj.col_conn_status || 'Đang kết nối';
       document.getElementById('raw-reason').textContent = obj.col_share_reason ? `"${obj.col_share_reason}"` : '"Chưa có giải trình riêng"';
+      document.getElementById('raw-share-method').textContent = obj.col_share_method ? obj.col_share_method : 'Chưa có thông tin chia sẻ cụ thể';
 
       // Catalog
       const rawScope = (obj.col_share_scope || '').trim();
